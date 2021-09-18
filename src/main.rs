@@ -79,8 +79,8 @@ async fn on_room_message(
     room: Room,
     nvim: Arc<Mutex<nvim_rs::Neovim<Compat<ChildStdin>>>>,
 ) {
+    // Don't send a message on edits.
     if let Some(Relation::Replacement(_)) = event.content.relates_to {
-        // Don't do this for edits.
         return;
     }
 
