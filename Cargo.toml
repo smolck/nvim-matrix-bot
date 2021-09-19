@@ -12,5 +12,9 @@ fancy-regex = "0.7.1" # We use this over `regex` for the look-around support
 tokio = { version = "1.11.0", features = ["full"] }
 
 # matrix-sdk = "0.4.1"
-matrix-sdk = { git = "https://github.com/matrix-org/matrix-rust-sdk", features = ["markdown"] } # Used for `send_raw`, apparently that's not in 0.4.1
 nvim-rs = { git = "https://github.com/killthemule/nvim-rs", features = ["use_tokio"] }
+
+[dependencies.matrix-sdk]
+git = "https://github.com/matrix-org/matrix-rust-sdk"
+default-features = false
+features = ["markdown", "native-tls"]
