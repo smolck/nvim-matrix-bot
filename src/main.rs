@@ -26,7 +26,7 @@ use matrix_sdk::{
 };
 use std::convert::TryFrom;
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq, Eq, Hash)]
 struct Link {
     link: String,
     help_file: String,
@@ -50,6 +50,11 @@ async fn potentially_invalid_doc_links(
 
         let mut links = Vec::with_capacity(somethings.len());
         for (full_help_with_backticks, doc_name) in somethings {
+            // Don't push duplicates
+            if let Some(_) = links.iter().find(|l: &&Link| l.help == doc_name) {
+                continue;
+            }
+
             // TODO(smolck): ew format! and .to_string() allocations or something
             if let Ok(()) = nvim
                 .command(&full_help_with_backticks.replace("`", "").replace(":", ""))
