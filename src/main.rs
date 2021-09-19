@@ -61,10 +61,13 @@ async fn potentially_invalid_doc_links(
                 .await
             {
                 let fname_root = nvim.command_output("echo expand(\"%:t:r\")").await.unwrap();
+
                 links.push(Link {
                     link: format!(
                         "https://neovim.io/doc/user/{}.html#{}",
-                        fname_root, doc_name
+                        // We special-case "index" because index.html points to help.txt on the
+                        // website because reasons.
+                        if fname_root == "index" { "vimindex" } else { fname_root.as_str() }, doc_name
                     ),
                     help_file: fname_root.to_owned() + ".txt",
                     help: doc_name.to_owned(),
