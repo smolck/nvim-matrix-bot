@@ -17,4 +17,4 @@ nvim-rs = { git = "https://github.com/killthemule/nvim-rs", features = ["use_tok
 [dependencies.matrix-sdk]
 git = "https://github.com/matrix-org/matrix-rust-sdk"
 default-features = false
-features = ["markdown", "native-tls"]
+features = ["markdown", "native-tls", "encryption"]
