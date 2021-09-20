@@ -6,7 +6,6 @@ use fancy_regex::Regex;
 use nvim_rs::{
     compat::tokio::Compat, create::tokio as create, rpc::handler::Dummy as DummyHandler,
 };
-use serde_json::json;
 use tokio::process::{ChildStdin, Command};
 
 use matrix_sdk::{
@@ -40,11 +39,8 @@ enum BotCommand<'a> {
 }
 
 impl<'a> BotCommand<'a> {
-    fn parse(string: &'a str) -> Option<BotCommand<'a>> {
+    fn parse(regex: &Regex, string: &'a str) -> Option<BotCommand<'a>> {
         use BotCommand::*;
-
-        // let regex = Regex::new(r"^!(\w+) (.+)").unwrap();
-        let regex = Regex::new(r"^!(\w+)( *)(.*)").unwrap();
 
         if regex.is_match(string).unwrap() {
             let mut iter = regex.captures_iter(string);
@@ -117,10 +113,10 @@ async fn get_links_for(
 
 async fn potentially_invalid_doc_links(
     nvim: &nvim_rs::Neovim<Compat<ChildStdin>>,
+    regex: &Regex,
     string: &str,
 ) -> Option<Vec<Link>> {
     // TODO(smolck): Perf of creating this regex every time? Does it matter?
-    let regex = Regex::new(r"(?:`:(?:help|h|he|hel) (((?!`).)*)`)").unwrap();
 
     if regex.is_match(&string).unwrap() {
         // TODO(smolck): Yeah I know naming and all that
@@ -159,20 +155,11 @@ async fn maybe_send_help_reply(room: JoinedRoom, links: Vec<Link>) {
     let reply_body = format!("Links to referenced help pages:\n{}", reply_body);
     let formatted_reply_body = FormattedBody::markdown(&reply_body).unwrap();
 
-    room.send_raw(
-        // See https://matrix.org/docs/spec/client_server/r0.6.1#rich-replies
-        json!({
-            "msgtype": "m.text",
-            "body": reply_body,
-            "formatted_body": formatted_reply_body.body,
-            "format": "org.matrix.custom.html",
-            /*"m.relates_to": {
-                "m.in_reply_to": {
-                    "event_id": event.event_id
-                }
-            }*/
-        }),
-        "m.room.message",
+    room.send(
+        AnyMessageEventContent::RoomMessage(MessageEventContent::text_html(
+            reply_body,
+            formatted_reply_body.body,
+        )),
         None,
     )
     .await
@@ -183,7 +170,7 @@ async fn maybe_send_help_reply(room: JoinedRoom, links: Vec<Link>) {
 async fn on_room_message(
     event: SyncMessageEvent<MessageEventContent>,
     room: Room,
-    nvim: Arc<Mutex<nvim_rs::Neovim<Compat<ChildStdin>>>>,
+    state: Arc<Mutex<State>>,
 ) {
     // Don't send a message on edits.
     if let Some(Relation::Replacement(_)) = event.content.relates_to {
@@ -201,18 +188,20 @@ async fn on_room_message(
             ..
         } = event
         {
-            let nvim = nvim.lock().await;
+            let state = state.lock().await;
 
-            let links = potentially_invalid_doc_links(&nvim, &msg_body).await;
+            let links =
+                potentially_invalid_doc_links(&state.nvim, &state.backticked_help_regex, &msg_body)
+                    .await;
             if let Some(links) = links {
                 maybe_send_help_reply(room, links).await;
             } else {
-                let maybe_command = BotCommand::parse(&msg_body);
+                let maybe_command = BotCommand::parse(&state.bot_command_regex, &msg_body);
 
                 if let Some(command) = maybe_command {
                     match command {
                         BotCommand::Help { docs } => {
-                            let links = get_links_for(&nvim, docs).await;
+                            let links = get_links_for(&state.nvim, docs).await;
                             maybe_send_help_reply(room, links).await;
                         }
                         BotCommand::Sandwich { to } => {
@@ -241,6 +230,12 @@ async fn on_room_message(
     }
 }
 
+struct State {
+    pub nvim: nvim_rs::Neovim<Compat<ChildStdin>>,
+    pub bot_command_regex: Regex,
+    pub backticked_help_regex: Regex,
+}
+
 #[tokio::main]
 async fn main() -> Result<()> {
     let (nvim, _io_handle, _child) = create::new_child_cmd(
@@ -252,8 +247,15 @@ async fn main() -> Result<()> {
     .await
     .unwrap();
 
-    // let regex = Regex::new(r"(?:`:help (((?!`).)*)`)").unwrap();
-    let nvim = Arc::new(Mutex::new(nvim));
+    let backticked_help_regex = Regex::new(r"(?:`:(?:help|h|he|hel) (((?!`).)*)`)").unwrap();
+    let bot_command_regex = Regex::new(r"^!(\w+)( *)(.*)").unwrap();
+
+    let state = Arc::new(Mutex::new(State {
+        nvim,
+        backticked_help_regex,
+        bot_command_regex,
+    }));
+
     let username = env::var("MATRIX_USERNAME").expect("Need MATRIX_USERNAME set");
     let password = env::var("MATRIX_PASSWORD").expect("Need MATRIX_PASSWORD set");
 
@@ -266,7 +268,7 @@ async fn main() -> Result<()> {
     client
         .register_event_handler(
             move |ev: SyncMessageEvent<MessageEventContent>, room: Room| {
-                on_room_message(ev, room, nvim.clone())
+                on_room_message(ev, room, state.clone())
             },
         )
         .await;
