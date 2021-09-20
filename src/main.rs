@@ -11,14 +11,14 @@ use tokio::process::{ChildStdin, Command};
 
 use matrix_sdk::{
     config::SyncSettings,
-    room::Room,
+    room::{Joined as JoinedRoom, Room},
     ruma::{
         /*RoomId,*/
         events::{
             room::message::{
                 FormattedBody, MessageEventContent, MessageType, Relation, TextMessageEventContent,
             },
-            SyncMessageEvent,
+            AnyMessageEventContent, SyncMessageEvent,
         },
         /*room_id,*/ UserId,
     },
@@ -33,52 +33,150 @@ struct Link {
     help: String,
 }
 
+#[derive(Debug, PartialEq, Eq)]
+enum BotCommand<'a> {
+    Help { docs: Vec<&'a str> },
+    Sandwich { to: &'a str },
+}
+
+impl<'a> BotCommand<'a> {
+    fn parse(string: &'a str) -> Option<BotCommand<'a>> {
+        use BotCommand::*;
+
+        // let regex = Regex::new(r"^!(\w+) (.+)").unwrap();
+        let regex = Regex::new(r"^!(\w+)( *)(.*)").unwrap();
+
+        if regex.is_match(string).unwrap() {
+            let mut iter = regex.captures_iter(string);
+            let caps = iter.next()?.ok()?;
+            let command = caps.get(1)?.as_str();
+            let args: Option<Vec<&str>> = caps.get(3).map(|args| {
+                args.as_str()
+                    .split(" ")
+                    .filter(|str| !str.is_empty())
+                    .collect()
+            });
+
+            match command {
+                "help" | "h" | "he" | "hel" => {
+                    let docs = args?;
+                    if docs.len() > 0 {
+                        Some(Help { docs })
+                    } else {
+                        None
+                    }
+                }
+                "sandwich" => {
+                    let args = args?;
+                    Some(Sandwich { to: args[0] })
+                }
+                _ => None,
+            }
+        } else {
+            None
+        }
+    }
+}
+
+async fn get_links_for(
+    nvim: &nvim_rs::Neovim<Compat<ChildStdin>>,
+    docs_names: Vec<&str>,
+) -> Vec<Link> {
+    let mut links = Vec::with_capacity(docs_names.len());
+
+    for doc_name in docs_names {
+        // Don't push duplicates
+        if let Some(_) = links.iter().find(|l: &&Link| l.help == doc_name) {
+            continue;
+        }
+
+        let cmd = format!("help {}", doc_name);
+        if let Ok(()) = nvim.command(&cmd).await {
+            let fname_root = nvim.command_output("echo expand(\"%:t:r\")").await.unwrap();
+
+            links.push(Link {
+                link: format!(
+                    "https://neovim.io/doc/user/{}.html#{}",
+                    // We special-case "index" because index.html points to help.txt on the
+                    // website because reasons.
+                    if fname_root == "index" {
+                        "vimindex"
+                    } else {
+                        fname_root.as_str()
+                    },
+                    doc_name
+                ),
+                help_file: fname_root.to_owned() + ".txt",
+                help: doc_name.to_owned(),
+            });
+        }
+    }
+
+    links
+}
+
 async fn potentially_invalid_doc_links(
     nvim: &nvim_rs::Neovim<Compat<ChildStdin>>,
-    regex: &Regex,
-    string: &String,
+    string: &str,
 ) -> Option<Vec<Link>> {
+    // TODO(smolck): Perf of creating this regex every time? Does it matter?
+    let regex = Regex::new(r"(?:`:(?:help|h|he|hel) (((?!`).)*)`)").unwrap();
+
     if regex.is_match(&string).unwrap() {
         // TODO(smolck): Yeah I know naming and all that
         let somethings = regex
             .captures_iter(&string)
             .map(|caps| {
                 let caps = caps.as_ref().unwrap();
-                (caps.get(0).unwrap().as_str(), caps.get(1).unwrap().as_str())
+                caps.get(1).unwrap().as_str()
             })
-            .collect::<Vec<(&str, &str)>>();
+            .collect::<Vec<&str>>();
 
-        let mut links = Vec::with_capacity(somethings.len());
-        for (full_help_with_backticks, doc_name) in somethings {
-            // Don't push duplicates
-            if let Some(_) = links.iter().find(|l: &&Link| l.help == doc_name) {
-                continue;
-            }
-
-            // TODO(smolck): ew format! and .to_string() allocations or something
-            if let Ok(()) = nvim
-                .command(&full_help_with_backticks.replace("`", "").replace(":", ""))
-                .await
-            {
-                let fname_root = nvim.command_output("echo expand(\"%:t:r\")").await.unwrap();
-
-                links.push(Link {
-                    link: format!(
-                        "https://neovim.io/doc/user/{}.html#{}",
-                        // We special-case "index" because index.html points to help.txt on the
-                        // website because reasons.
-                        if fname_root == "index" { "vimindex" } else { fname_root.as_str() }, doc_name
-                    ),
-                    help_file: fname_root.to_owned() + ".txt",
-                    help: doc_name.to_owned(),
-                });
-            }
-        }
-
+        let links = get_links_for(&nvim, somethings).await;
         Some(links)
     } else {
         None
     }
+}
+
+async fn maybe_send_help_reply(room: JoinedRoom, links: Vec<Link>) {
+    if links.len() == 0 {
+        return;
+    }
+
+    let reply_body = links
+        .iter()
+        .map(|l| {
+            format!(
+                "* [`{help}`]({link}) in *{file}*",
+                help = l.help,
+                link = l.link,
+                file = l.help_file
+            )
+        })
+        .collect::<Vec<String>>()
+        .join("\n");
+    let reply_body = format!("Links to referenced help pages:\n{}", reply_body);
+    let formatted_reply_body = FormattedBody::markdown(&reply_body).unwrap();
+
+    room.send_raw(
+        // See https://matrix.org/docs/spec/client_server/r0.6.1#rich-replies
+        json!({
+            "msgtype": "m.text",
+            "body": reply_body,
+            "formatted_body": formatted_reply_body.body,
+            "format": "org.matrix.custom.html",
+            /*"m.relates_to": {
+                "m.in_reply_to": {
+                    "event_id": event.event_id
+                }
+            }*/
+        }),
+        "m.room.message",
+        None,
+    )
+    .await
+    .unwrap();
 }
 
 // see https://github.com/matrix-org/matrix-rust-sdk/blob/70ab0f446dc83ddf5d522bc783d0ab4bef1ff6b2/crates/matrix-sdk/examples/image_bot.rs#L23
@@ -103,57 +201,44 @@ async fn on_room_message(
             ..
         } = event
         {
-            // TODO(smolck): Perf of creating this regex every time? Does it matter?
-            let regex = Regex::new(r"(?:`:(?:help|h|he|hel) (((?!`).)*)`)").unwrap();
-
             let nvim = nvim.lock().await;
 
-            let links = potentially_invalid_doc_links(&nvim, &regex, &msg_body).await;
+            let links = potentially_invalid_doc_links(&nvim, &msg_body).await;
             if let Some(links) = links {
-                if links.len() == 0 {
-                    println!("No help docs in '{}'", msg_body);
-                    return;
-                }
+                maybe_send_help_reply(room, links).await;
+            } else {
+                let maybe_command = BotCommand::parse(&msg_body);
 
-                let reply_body = links
-                    .iter()
-                    .map(|l| {
-                        format!(
-                            "* [`{help}`]({link}) in *{file}*",
-                            help = l.help,
-                            link = l.link,
-                            file = l.help_file
-                        )
-                    })
-                    .collect::<Vec<String>>()
-                    .join("\n");
-                let reply_body = format!("Links to referenced help pages:\n{}", reply_body);
-                let formatted_reply_body = FormattedBody::markdown(&reply_body).unwrap();
-
-                room.send_raw(
-                    // See https://matrix.org/docs/spec/client_server/r0.6.1#rich-replies
-                    json!({
-                        "msgtype": "m.text",
-                        "body": reply_body,
-                        "formatted_body": formatted_reply_body.body,
-                        "format": "org.matrix.custom.html",
-                        /*"m.relates_to": {
-                            "m.in_reply_to": {
-                                "event_id": event.event_id
+                if let Some(command) = maybe_command {
+                    match command {
+                        BotCommand::Help { docs } => {
+                            let links = get_links_for(&nvim, docs).await;
+                            maybe_send_help_reply(room, links).await;
+                        }
+                        BotCommand::Sandwich { to } => {
+                            if event.sender
+                                // TODO(smolck): probably have some sort of list of people that can
+                                // call this; for now though, only I can trigger it
+                                == UserId::try_from("@shadowwolf_01:matrix.org").unwrap()
+                            {
+                                room.send(
+                                    AnyMessageEventContent::RoomMessage(
+                                        MessageEventContent::text_plain(&format!(
+                                            "here's a sandwich for you, {}: 🥪",
+                                            to
+                                        )),
+                                    ),
+                                    None,
+                                )
+                                .await
+                                .unwrap();
                             }
-                        }*/
-                    }),
-                    "m.room.message",
-                    None,
-                )
-                .await
-                .unwrap();
+                        }
+                    }
+                }
             }
         }
     }
-    /*if room.room_id() == &room_id!("!neovim-chat:matrix.org") {
-        println!("Received a message from neovim-chat: {:?}", ev);
-    }*/
 }
 
 #[tokio::main]
@@ -189,4 +274,42 @@ async fn main() -> Result<()> {
     client.sync(SyncSettings::default()).await;
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn bot_command_parse_works() {
+        assert_eq!(BotCommand::parse("foo foo foo"), None);
+
+        // !help takes args, so shouldn't parse when none are given.
+        assert_eq!(BotCommand::parse("!help"), None);
+
+        assert_eq!(
+            BotCommand::parse("!help diff.vim help things"),
+            Some(BotCommand::Help {
+                docs: vec!["diff.vim", "help", "things"]
+            })
+        );
+
+        // Shortened version should also work
+        assert_eq!(
+            BotCommand::parse("!h diff.vim help things"),
+            Some(BotCommand::Help {
+                docs: vec!["diff.vim", "help", "things"]
+            })
+        );
+
+        assert_eq!(
+            BotCommand::parse("!sandwich some_person"),
+            Some(BotCommand::Sandwich { to: "some_person" })
+        );
+
+        assert_eq!(
+            BotCommand::parse("!sandwich some_person other_people idontgetasandwich"),
+            Some(BotCommand::Sandwich { to: "some_person" })
+        );
+    }
 }
