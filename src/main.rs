@@ -36,6 +36,7 @@ struct Link {
 enum BotCommand<'a> {
     Help { docs: Vec<&'a str> },
     Sandwich { to: &'a str },
+    Guide,
 }
 
 impl<'a> BotCommand<'a> {
@@ -66,6 +67,7 @@ impl<'a> BotCommand<'a> {
                     let args = args?;
                     Some(Sandwich { to: args[0] })
                 }
+                "guide" => Some(Guide),
                 _ => None,
             }
         } else {
@@ -222,6 +224,18 @@ async fn on_room_message(
                                 .await
                                 .unwrap();
                             }
+                        }
+                        BotCommand::Guide => {
+                            room.send(
+                                AnyMessageEventContent::RoomMessage(
+                                    MessageEventContent::text_plain(
+                                        "https://github.com/nanotee/nvim-lua-guide",
+                                    ),
+                                ),
+                                None,
+                            )
+                            .await
+                            .unwrap();
                         }
                     }
                 }
