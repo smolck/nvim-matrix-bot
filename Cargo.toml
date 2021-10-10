@@ -9,7 +9,6 @@ edition = "2018"
 futures = "0.3.17"
 fancy-regex = "0.7.1" # We use this over `regex` for the look-around support
 tokio = { version = "1.11.0", features = ["full"] }
-uwuify = "^0.2"
 
 # matrix-sdk = "0.4.1"
 nvim-rs = { git = "https://github.com/killthemule/nvim-rs", features = ["use_tokio"] }

@@ -34,16 +34,8 @@ struct Link {
 
 #[derive(Debug, PartialEq, Eq)]
 enum BotCommand<'a> {
-    Help {
-        docs: Vec<&'a str>,
-    },
-    Sandwich {
-        to: &'a str,
-    },
-    #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
-    Uwu {
-        thing_to_uwuify: String,
-    },
+    Help { docs: Vec<&'a str> },
+    Sandwich { to: &'a str },
 }
 
 impl<'a> BotCommand<'a> {
@@ -73,13 +65,6 @@ impl<'a> BotCommand<'a> {
                 "sandwich" => {
                     let args = args?;
                     Some(Sandwich { to: args[0] })
-                }
-                #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
-                "uwu" => {
-                    let args = args?;
-                    Some(Uwu {
-                        thing_to_uwuify: args.join(" ").to_string(),
-                    })
                 }
                 _ => None,
             }
@@ -236,24 +221,6 @@ async fn on_room_message(
                                 )
                                 .await
                                 .unwrap();
-                            }
-                        }
-
-                        #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
-                        BotCommand::Uwu { thing_to_uwuify } => {
-                            if let Some(room_name) = room.name() {
-                                if room_name == "Neovim chat" {
-                                    room.send(
-                                        AnyMessageEventContent::RoomMessage(
-                                            MessageEventContent::text_plain(
-                                                uwuifier::uwuify_str_sse(&thing_to_uwuify),
-                                            ),
-                                        ),
-                                        None,
-                                    )
-                                    .await
-                                    .unwrap();
-                                }
                             }
                         }
                     }
