@@ -37,6 +37,7 @@ enum BotCommand<'a> {
     Help { docs: Vec<&'a str> },
     Sandwich { to: &'a str },
     Guide,
+    Uwu,
 }
 
 impl<'a> BotCommand<'a> {
@@ -68,6 +69,7 @@ impl<'a> BotCommand<'a> {
                     Some(Sandwich { to: args[0] })
                 }
                 "guide" => Some(Guide),
+                "uwu" => Some(Uwu),
                 _ => None,
             }
         } else {
@@ -168,6 +170,17 @@ async fn maybe_send_help_reply(room: JoinedRoom, links: Vec<Link>) {
     .unwrap();
 }
 
+fn uwu(s: &str) -> String {
+    let mut result = String::new();
+    for char in s.chars() {
+        result.push(match char {
+            'l' | 'r' => 'w',
+            _ => char,
+        });
+    }
+    result
+}
+
 // see https://github.com/matrix-org/matrix-rust-sdk/blob/70ab0f446dc83ddf5d522bc783d0ab4bef1ff6b2/crates/matrix-sdk/examples/image_bot.rs#L23
 async fn on_room_message(
     event: SyncMessageEvent<MessageEventContent>,
@@ -190,7 +203,7 @@ async fn on_room_message(
             ..
         } = event
         {
-            let state = state.lock().await;
+            let mut state = state.lock().await;
 
             let links =
                 potentially_invalid_doc_links(&state.nvim, &state.backticked_help_regex, &msg_body)
@@ -237,9 +250,22 @@ async fn on_room_message(
                             .await
                             .unwrap();
                         }
+                        BotCommand::Uwu => {
+                            room.send(
+                                AnyMessageEventContent::RoomMessage(
+                                    MessageEventContent::text_plain(
+                                        uwu(&state.previous_message)
+                                    ),
+                                ),
+                                None,
+                            )
+                            .await
+                            .unwrap();
+                        }
                     }
                 }
             }
+            state.previous_message = msg_body.clone();
         }
     }
 }
@@ -248,6 +274,7 @@ struct State {
     pub nvim: nvim_rs::Neovim<Compat<ChildStdin>>,
     pub bot_command_regex: Regex,
     pub backticked_help_regex: Regex,
+    pub previous_message: String,
 }
 
 #[tokio::main]
@@ -264,10 +291,12 @@ async fn main() -> Result<()> {
     let backticked_help_regex = Regex::new(r"(?:`:(?:help|h|he|hel) (((?!`).)*)`)").unwrap();
     let bot_command_regex = Regex::new(r"^!(\w+)( *)(.*)").unwrap();
 
+    let previous_message = String::new();
     let state = Arc::new(Mutex::new(State {
         nvim,
         backticked_help_regex,
         bot_command_regex,
+        previous_message,
     }));
 
     let username = env::var("MATRIX_USERNAME").expect("Need MATRIX_USERNAME set");
@@ -327,5 +356,12 @@ mod tests {
             BotCommand::parse("!sandwich some_person other_people idontgetasandwich"),
             Some(BotCommand::Sandwich { to: "some_person" })
         );
+
+        assert_eq!(
+            BotCommand::parse(&"!uwu"),
+            Some(BotCommand::Uwu)
+        );
+
+        assert_eq!(uwu("Hello world!"), "Hewwo wowwd!");
     }
 }
