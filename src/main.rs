@@ -1,334 +1,252 @@
-use futures::lock::Mutex;
-use std::env;
-use std::sync::Arc;
+#![feature(try_blocks)]
 
-use fancy_regex::Regex;
-use nvim_rs::{
-    compat::tokio::Compat, create::tokio as create, rpc::handler::Dummy as DummyHandler,
-};
-use tokio::process::{ChildStdin, Command};
+mod command;
+mod tag_search;
 
-use matrix_sdk::{
-    config::SyncSettings,
-    room::{Joined as JoinedRoom, Room},
-    ruma::{
-        /*RoomId,*/
-        events::{
-            room::message::{
-                FormattedBody, MessageEventContent, MessageType, Relation, TextMessageEventContent,
-            },
-            AnyMessageEventContent, SyncMessageEvent,
-        },
-        /*room_id,*/ UserId,
-    },
-    Client, Result,
-};
-use std::convert::TryFrom;
+use serde_json::Value as Json;
 
-#[derive(Debug, PartialEq, Eq, Hash)]
-struct Link {
-    link: String,
-    help_file: String,
-    help: String,
+const HOMESERVER: &str = "https://matrix.org";
+
+struct MatrixClient<'a> {
+    pub access_token: Option<String>,
+    pub command_parser: command::CommandParser,
+    pub tags: Vec<tag_search::Tag<'a>>,
 }
 
-#[derive(Debug, PartialEq, Eq)]
-enum BotCommand<'a> {
-    Help { docs: Vec<&'a str> },
-    Sandwich { to: &'a str },
-    #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
-    Uwu { thing_to_uwuify: String },
-}
-
-impl<'a> BotCommand<'a> {
-    fn parse(regex: &Regex, string: &'a str) -> Option<BotCommand<'a>> {
-        use BotCommand::*;
-
-        if regex.is_match(string).unwrap() {
-            let mut iter = regex.captures_iter(string);
-            let caps = iter.next()?.ok()?;
-            let command = caps.get(1)?.as_str();
-            let args: Option<Vec<&str>> = caps.get(3).map(|args| {
-                args.as_str()
-                    .split(" ")
-                    .filter(|str| !str.is_empty())
-                    .collect()
-            });
-
-            match command {
-                "help" | "h" | "he" | "hel" => {
-                    let docs = args?;
-                    if docs.len() > 0 {
-                        Some(Help { docs })
-                    } else {
-                        None
-                    }
-                }
-                "sandwich" => {
-                    let args = args?;
-                    Some(Sandwich { to: args[0] })
-                }
-                #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
-                "uwu" => {
-                    let args = args?;
-                    Some(Uwu { thing_to_uwuify: args.join(" ").to_string() })
-                }
-                _ => None,
-            }
-        } else {
-            None
-        }
-    }
-}
-
-async fn get_links_for(
-    nvim: &nvim_rs::Neovim<Compat<ChildStdin>>,
-    docs_names: Vec<&str>,
-) -> Vec<Link> {
-    let mut links = Vec::with_capacity(docs_names.len());
-
-    for doc_name in docs_names {
-        // Don't push duplicates
-        if let Some(_) = links.iter().find(|l: &&Link| l.help == doc_name) {
-            continue;
-        }
-
-        let cmd = format!("help {}", doc_name);
-        if let Ok(()) = nvim.command(&cmd).await {
-            let fname_root = nvim.command_output("echo expand(\"%:t:r\")").await.unwrap();
-
-            links.push(Link {
-                link: format!(
-                    "https://neovim.io/doc/user/{}.html#{}",
-                    // We special-case "index" because index.html points to help.txt on the
-                    // website because reasons.
-                    if fname_root == "index" {
-                        "vimindex"
-                    } else {
-                        fname_root.as_str()
-                    },
-                    doc_name
-                ),
-                help_file: fname_root.to_owned() + ".txt",
-                help: doc_name.to_owned(),
-            });
+impl<'a> MatrixClient<'a> {
+    fn new(tags: Vec<tag_search::Tag<'a>>) -> Self {
+        Self {
+            tags,
+            access_token: None,
+            command_parser: command::CommandParser::new(),
         }
     }
 
-    links
-}
+    fn login(&mut self, user: &str, password: &str) -> Result<(), ureq::Error> {
+        let response: String = ureq::post(&format!("{}/_matrix/client/r0/login", HOMESERVER))
+            // TODO(smolck): These headers necessary?
+            .set("Accept", "application/json")
+            .set("Content-Type", "application/json")
+            .set("Charset", "utf-8")
+            .send_string(
+                &serde_json::json!({
+                    "type": "m.login.password",
+                    "user": user,
+                    "password": password,
+                })
+                .to_string(),
+            )?
+            .into_string()?;
 
-async fn potentially_invalid_doc_links(
-    nvim: &nvim_rs::Neovim<Compat<ChildStdin>>,
-    regex: &Regex,
-    string: &str,
-) -> Option<Vec<Link>> {
-    // TODO(smolck): Perf of creating this regex every time? Does it matter?
+        let json = serde_json::from_str::<Json>(&response).unwrap();
+        self.access_token = Some(json["access_token"].as_str().unwrap().to_string());
 
-    if regex.is_match(&string).unwrap() {
-        // TODO(smolck): Yeah I know naming and all that
-        let somethings = regex
-            .captures_iter(&string)
-            .map(|caps| {
-                let caps = caps.as_ref().unwrap();
-                caps.get(1).unwrap().as_str()
+        Ok(())
+    }
+    /*
+    let body = body.as_ref();
+    let mut html_body = String::new();
+
+    pulldown_cmark::html::push_html(&mut html_body, pulldown_cmark::Parser::new(body));
+
+    (html_body != format!("<p>{}</p>\n", body)).then(|| Self::html(html_body))
+    */
+
+    fn send_message(
+        &self,
+        use_markdown: bool,
+        message: &str,
+        room_id: &str,
+    ) -> Result<(), ureq::Error> {
+        let json = if use_markdown {
+            let mut html_message = String::new();
+            pulldown_cmark::html::push_html(
+                &mut html_message,
+                pulldown_cmark::Parser::new(message),
+            );
+
+            serde_json::json!({
+                "msgtype": "m.text",
+                "body": message,
+                "format": "org.matrix.custom.html",
+                "formatted_body": html_message,
             })
-            .collect::<Vec<&str>>();
+            .to_string()
+        } else {
+            serde_json::json!({
+                "msgtype": "m.text",
+                "body": message,
+            })
+            .to_string()
+        };
 
-        let links = get_links_for(&nvim, somethings).await;
-        Some(links)
-    } else {
-        None
-    }
-}
+        // TODO(smolck): Maybe deal with response or use it or something?
+        let _response: String = ureq::post(&format!(
+            "{}/_matrix/client/r0/rooms/{}/send/m.room.message",
+            HOMESERVER, room_id
+        ))
+        .set("Accept", "application/json")
+        .set("Content-Type", "application/json")
+        .set("Charset", "utf-8")
+        .query("access_token", self.access_token.as_ref().unwrap())
+        // .set("Authorization", &format!("Bearer {}", self.access_token.as_ref().unwrap()))
+        .send_string(&json)?
+        .into_string()?;
 
-async fn maybe_send_help_reply(room: JoinedRoom, links: Vec<Link>) {
-    if links.len() == 0 {
-        return;
-    }
+        // let json = serde_json::from_str::<Json>(&response).unwrap();
 
-    let reply_body = links
-        .iter()
-        .map(|l| {
-            format!(
-                "* [`{help}`]({link}) in *{file}*",
-                help = l.help,
-                link = l.link,
-                file = l.help_file
-            )
-        })
-        .collect::<Vec<String>>()
-        .join("\n");
-    let reply_body = format!("Links to referenced help pages:\n{}", reply_body);
-    let formatted_reply_body = FormattedBody::markdown(&reply_body).unwrap();
-
-    room.send(
-        AnyMessageEventContent::RoomMessage(MessageEventContent::text_html(
-            reply_body,
-            formatted_reply_body.body,
-        )),
-        None,
-    )
-    .await
-    .unwrap();
-}
-
-// see https://github.com/matrix-org/matrix-rust-sdk/blob/70ab0f446dc83ddf5d522bc783d0ab4bef1ff6b2/crates/matrix-sdk/examples/image_bot.rs#L23
-async fn on_room_message(
-    event: SyncMessageEvent<MessageEventContent>,
-    room: Room,
-    state: Arc<Mutex<State>>,
-) {
-    // Don't send a message on edits.
-    if let Some(Relation::Replacement(_)) = event.content.relates_to {
-        return;
+        Ok(())
     }
 
-    if let Room::Joined(room) = room {
-        // see https://github.com/matrix-org/matrix-rust-sdk/blob/15e9d03c2cc4000b04889af6d0c32fa4a96632ce/crates/matrix-sdk/examples/command_bot.rs#L16
-        if let SyncMessageEvent {
-            content:
-                MessageEventContent {
-                    msgtype: MessageType::Text(TextMessageEventContent { body: msg_body, .. }),
-                    ..
-                },
-            ..
-        } = event
-        {
-            let state = state.lock().await;
+    fn sync_once(
+        &self,
+        next_batch: Option<&str>,
+        filter: Option<&str>,
+    ) -> Result<String, ureq::Error> {
+        let mut req = ureq::get(&format!("{}/_matrix/client/r0/sync", HOMESERVER))
+            .set("Accept", "application/json")
+            .set("Content-Type", "application/json")
+            .set("Charset", "utf-8")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .query("timeout", "10000");
 
-            let links =
-                potentially_invalid_doc_links(&state.nvim, &state.backticked_help_regex, &msg_body)
-                    .await;
-            if let Some(links) = links {
-                maybe_send_help_reply(room, links).await;
-            } else {
-                let maybe_command = BotCommand::parse(&state.bot_command_regex, &msg_body);
+        if let Some(filter) = filter {
+            req = req.query("filter", filter);
+        }
 
-                if let Some(command) = maybe_command {
-                    match command {
-                        BotCommand::Help { docs } => {
-                            let links = get_links_for(&state.nvim, docs).await;
-                            maybe_send_help_reply(room, links).await;
-                        }
-                        BotCommand::Sandwich { to } => {
-                            if event.sender
-                                // TODO(smolck): probably have some sort of list of people that can
-                                // call this; for now though, only I can trigger it
-                                == UserId::try_from("@shadowwolf_01:matrix.org").unwrap()
-                            {
-                                room.send(
-                                    AnyMessageEventContent::RoomMessage(
-                                        MessageEventContent::text_plain(&format!(
-                                            "here's a sandwich for you, {}: 🥪",
-                                            to
-                                        )),
-                                    ),
-                                    None,
-                                )
-                                .await
-                                .unwrap();
-                            }
-                        }
+        if let Some(next_batch) = next_batch {
+            req = req.query("since", next_batch);
+        }
 
-                        #[cfg(any(target_arch = "x86", target_arch = "x86_64"))]
-                        BotCommand::Uwu { thing_to_uwuify } => {
-                            room.send(
-                                    AnyMessageEventContent::RoomMessage(
-                                        MessageEventContent::text_plain(uwuifier::uwuify_str_sse(&thing_to_uwuify)),
-                                    ),
-                                    None,
-                                ).await.unwrap();
-                        }
+        let response: String = req.call()?.into_string()?;
+        let response_json = serde_json::from_str::<Json>(&response).unwrap();
+
+        self.handle_sync_response(&response_json);
+
+        Ok(response_json["next_batch"].as_str().unwrap().to_string())
+    }
+
+    fn handle_cmd(&self, cmd: command::Command, room_id: &str) {
+        use command::Command::*;
+        match cmd {
+            Help { docs } => {
+                let mut indexes = vec![];
+                let mut not_found = vec![];
+                for doc in docs {
+                    let needle = tag_search::Tag::from_name(doc);
+                    if let Ok(idx) = self.tags.binary_search(&needle) {
+                        indexes.push(idx);
+                    } else {
+                        not_found.push(doc);
                     }
                 }
+
+                let body = indexes
+                    .into_iter()
+                    .map(|idx| {
+                        let tag = &self.tags[idx];
+
+                        format!(
+                            "* [`{help}`]({link}) in *{file}*",
+                            help = tag.name,
+                            link = tag.to_url(),
+                            file = tag.file
+                        )
+                    })
+                    .collect::<Vec<String>>()
+                    .join("\n");
+
+                if !body.is_empty() {
+                    self.send_message(true, &body, room_id).unwrap();
+                }
+
+                if not_found.len() > 0 {
+                    let not_found_body = format!(
+                        "No help found for:\n{}",
+                        not_found
+                            .into_iter()
+                            .map(|name| format!("* `{}`", name))
+                            .collect::<Vec<String>>()
+                            .join("\n")
+                    );
+                    self.send_message(true, &not_found_body, room_id).unwrap();
+                }
             }
+            Sandwich { to } => {
+                self.send_message(
+                    true,
+                    &format!("here's a sandwich, {}: 🥪", to),
+                    room_id,
+                ).unwrap();
+            }
+            Url { url } => {
+                self.send_message(true, &url, room_id).unwrap();
+            }
+        }
+    }
+
+    fn handle_sync_response(&self, response: &Json) {
+        if let Some(joined) = response["rooms"]
+            .as_object()
+            .and_then(|rooms| rooms["join"].as_object())
+        {
+            for (_room, room_id) in joined.values().zip(joined.keys()) {
+                if let Some(events) = joined
+                    .get(room_id)
+                    .and_then(|room| {
+                        room.get("timeline")
+                            .and_then(|timeline| timeline.as_object())
+                    })
+                    .and_then(|timeline| timeline.get("events").and_then(|x| x.as_array()))
+                {
+                    for event in events {
+                        let _: Option<_> = try {
+                            let event_type = event.get("type")?.as_str().unwrap();
+                            let _sender = event.get("sender")?.as_str().unwrap();
+                            let content = event.get("content")?.as_object().unwrap();
+                            let body = content.get("body")?.as_str().unwrap();
+
+                            if event_type == "m.room.message" {
+                                if let Some(cmd) = self.command_parser.parse(&body)
+                                {
+                                    self.handle_cmd(cmd, room_id);
+                                }
+                            }
+                        };
+                    }
+                };
+            }
+        }
+    }
+
+    fn sync(&self) -> Result<(), ureq::Error> {
+        let mut next_batch: Option<String> = None;
+        loop {
+            next_batch = Some(self.sync_once(next_batch.as_deref(), None)?);
+            std::thread::sleep(std::time::Duration::from_millis(1000));
         }
     }
 }
 
-struct State {
-    pub nvim: nvim_rs::Neovim<Compat<ChildStdin>>,
-    pub bot_command_regex: Regex,
-    pub backticked_help_regex: Regex,
-}
+fn main() -> Result<(), ureq::Error> {
+    let tags = std::fs::read_to_string("/usr/local/share/nvim/runtime/doc/tags").unwrap();
+    let tags = tags
+        .split("\n")
+        .filter(|line| !line.is_empty())
+        .map(|line| tag_search::Tag::from_str(line))
+        .collect::<Vec<tag_search::Tag>>();
 
-#[tokio::main]
-async fn main() -> Result<()> {
-    let (nvim, _io_handle, _child) = create::new_child_cmd(
-        Command::new("nvim")
-            .args(&["-u", "NONE", "--embed", "--headless"])
-            .env("NVIM_LOG_FILE", "nvimlog"),
-        DummyHandler::new(),
-    )
-    .await
-    .unwrap();
+    let user =
+        std::env::var("MATRIX_USER").expect("Please set the environment variable MATRIX_USER");
 
-    let backticked_help_regex = Regex::new(r"(?:`:(?:help|h|he|hel) (((?!`).)*)`)").unwrap();
-    let bot_command_regex = Regex::new(r"^!(\w+)( *)(.*)").unwrap();
+    let password = std::env::var("MATRIX_PASSWORD")
+        .expect("Please set the environment variable MATRIX_PASSWORD");
 
-    let state = Arc::new(Mutex::new(State {
-        nvim,
-        backticked_help_regex,
-        bot_command_regex,
-    }));
-
-    let username = env::var("MATRIX_USERNAME").expect("Need MATRIX_USERNAME set");
-    let password = env::var("MATRIX_PASSWORD").expect("Need MATRIX_PASSWORD set");
-
-    let user_id = UserId::try_from(format!("@{}:matrix.org", username))?; // Assumes matrix.org homeserver
-    let client = Client::new_from_user_id(&user_id).await?;
-    client
-        .login(user_id.localpart(), &password, None, None)
-        .await?;
-
-    client
-        .register_event_handler(
-            move |ev: SyncMessageEvent<MessageEventContent>, room: Room| {
-                on_room_message(ev, room, state.clone())
-            },
-        )
-        .await;
-
-    client.sync(SyncSettings::default()).await;
+    let mut client = MatrixClient::new(tags);
+    client.login(&user, &password)?;
+    // client.sync_once(None, Some("{\"room\":{\"timeline\":{\"limit\":1}}}"))?;
+    // client.sync_once(None, None)?;
+    client.sync()?;
 
     Ok(())
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn bot_command_parse_works() {
-        assert_eq!(BotCommand::parse("foo foo foo"), None);
-
-        // !help takes args, so shouldn't parse when none are given.
-        assert_eq!(BotCommand::parse("!help"), None);
-
-        assert_eq!(
-            BotCommand::parse("!help diff.vim help things"),
-            Some(BotCommand::Help {
-                docs: vec!["diff.vim", "help", "things"]
-            })
-        );
-
-        // Shortened version should also work
-        assert_eq!(
-            BotCommand::parse("!h diff.vim help things"),
-            Some(BotCommand::Help {
-                docs: vec!["diff.vim", "help", "things"]
-            })
-        );
-
-        assert_eq!(
-            BotCommand::parse("!sandwich some_person"),
-            Some(BotCommand::Sandwich { to: "some_person" })
-        );
-
-        assert_eq!(
-            BotCommand::parse("!sandwich some_person other_people idontgetasandwich"),
-            Some(BotCommand::Sandwich { to: "some_person" })
-        );
-    }
 }
