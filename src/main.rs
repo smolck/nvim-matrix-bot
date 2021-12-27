@@ -173,11 +173,8 @@ impl<'a> MatrixClient<'a> {
                 }
             }
             Sandwich { to } => {
-                self.send_message(
-                    true,
-                    &format!("here's a sandwich, {}: 🥪", to),
-                    room_id,
-                ).unwrap();
+                self.send_message(true, &format!("here's a sandwich, {}: 🥪", to), room_id)
+                    .unwrap();
             }
             Url { url } => {
                 self.send_message(true, &url, room_id).unwrap();
@@ -207,8 +204,7 @@ impl<'a> MatrixClient<'a> {
                             let body = content.get("body")?.as_str().unwrap();
 
                             if event_type == "m.room.message" {
-                                if let Some(cmd) = self.command_parser.parse(&body)
-                                {
+                                if let Some(cmd) = self.command_parser.parse(&body) {
                                     self.handle_cmd(cmd, room_id);
                                 }
                             }

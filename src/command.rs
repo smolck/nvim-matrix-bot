@@ -9,6 +9,7 @@ pub enum Command<'a> {
 
 pub struct CommandParser {
     command_regex: Regex,
+    backticked_help_regex: Regex,
     url_commands_json: serde_json::Value,
 }
 
@@ -20,6 +21,7 @@ impl CommandParser {
         Self {
             url_commands_json: json,
             command_regex: Regex::new(r"^!(\w+)( *)(.*)").unwrap(),
+            backticked_help_regex: Regex::new(r"(?:`:(?:help|h|he|hel) (((?!`).)*)`)").unwrap(),
         }
     }
 
@@ -38,7 +40,12 @@ impl CommandParser {
             use Command::*;
             match command {
                 "help" | "h" | "he" | "hel" => {
-                    let docs = args?;
+                    let mut docs = args?;
+
+                    // Get rid of duplicates (see https://stackoverflow.com/a/47636725)
+                    docs.sort_unstable();
+                    docs.dedup();
+
                     if docs.len() > 0 {
                         Some(Help { docs })
                     } else {
@@ -51,12 +58,30 @@ impl CommandParser {
                 }
                 x => {
                     if let Some(url) = self.url_commands_json.get(x) {
-                        Some(Url { url: url.as_str().unwrap() })
+                        Some(Url {
+                            url: url.as_str().unwrap(),
+                        })
                     } else {
                         None
                     }
                 }
             }
+        } else if self.backticked_help_regex.is_match(&string).unwrap() {
+            // TODO(smolck): Yeah I know naming and all that
+            let mut docs = self
+                .backticked_help_regex
+                .captures_iter(&string)
+                .map(|caps| {
+                    let caps = caps.as_ref().unwrap();
+                    caps.get(1).unwrap().as_str()
+                })
+                .collect::<Vec<&str>>();
+
+            // Get rid of duplicates (see https://stackoverflow.com/a/47636725)
+            docs.sort_unstable();
+            docs.dedup();
+
+            Some(Command::Help { docs })
         } else {
             None
         }
