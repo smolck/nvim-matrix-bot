@@ -233,7 +233,7 @@ fn main() -> Result<(), ureq::Error> {
         .collect::<Vec<tag_search::Tag>>();
 
     let user =
-        std::env::var("MATRIX_USER").expect("Please set the environment variable MATRIX_USER");
+        std::env::var("MATRIX_USERNAME").expect("Please set the environment variable MATRIX_USERNAME");
 
     let password = std::env::var("MATRIX_PASSWORD")
         .expect("Please set the environment variable MATRIX_PASSWORD");
