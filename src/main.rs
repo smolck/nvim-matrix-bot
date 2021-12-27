@@ -43,14 +43,6 @@ impl<'a> MatrixClient<'a> {
 
         Ok(())
     }
-    /*
-    let body = body.as_ref();
-    let mut html_body = String::new();
-
-    pulldown_cmark::html::push_html(&mut html_body, pulldown_cmark::Parser::new(body));
-
-    (html_body != format!("<p>{}</p>\n", body)).then(|| Self::html(html_body))
-    */
 
     fn send_message(
         &self,
@@ -240,8 +232,6 @@ fn main() -> Result<(), ureq::Error> {
 
     let mut client = MatrixClient::new(tags);
     client.login(&user, &password)?;
-    // client.sync_once(None, Some("{\"room\":{\"timeline\":{\"limit\":1}}}"))?;
-    // client.sync_once(None, None)?;
     client.sync()?;
 
     Ok(())

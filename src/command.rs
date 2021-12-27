@@ -67,7 +67,6 @@ impl CommandParser {
                 }
             }
         } else if self.backticked_help_regex.is_match(&string).unwrap() {
-            // TODO(smolck): Yeah I know naming and all that
             let mut docs = self
                 .backticked_help_regex
                 .captures_iter(&string)
