@@ -1,19 +1,16 @@
-[package]
-name = "nvim-bot"
-version = "0.1.0"
-edition = "2018"
+cargo-features = ["strip"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[package]
+name = "nvim-matrix-bot"
+version = "0.2.0"
+edition = "2021"
+
+[profile.release]
+strip = true  # Automatically strip symbols from the binary.
+lto = true
 
 [dependencies]
-futures = "0.3.17"
-fancy-regex = "0.7.1" # We use this over `regex` for the look-around support
-tokio = { version = "1.11.0", features = ["full"] }
-
-# matrix-sdk = "0.4.1"
-nvim-rs = { git = "https://github.com/killthemule/nvim-rs", features = ["use_tokio"] }
-
-[dependencies.matrix-sdk]
-git = "https://github.com/matrix-org/matrix-rust-sdk"
-default-features = false
-features = ["markdown", "native-tls", "encryption"]
+ureq = "2.3.0"
+serde_json = "1.0.69"
+fancy-regex = "0.7.1" # Used over `regex` for the look-around support
+pulldown-cmark = "0.9.0"
