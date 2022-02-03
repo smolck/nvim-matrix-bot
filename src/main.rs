@@ -217,8 +217,7 @@ impl<'a> MatrixClient<'a> {
 }
 
 fn main() -> Result<(), ureq::Error> {
-    let tags = std::fs::read_to_string("/usr/local/share/nvim/runtime/doc/tags").unwrap();
-    let tags = tags
+    let tags = include_str!("tags")
         .split("\n")
         .filter(|line| !line.is_empty())
         .map(|line| tag_search::Tag::from_str(line))
