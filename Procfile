@@ -1,1 +1,1 @@
-release: ./target/release/nvim-matrix-bot
+worker: ./target/release/nvim-matrix-bot
