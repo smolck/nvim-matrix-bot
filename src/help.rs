@@ -230,5 +230,7 @@ mod test {
         t!("'cd", "'cd'", "options.txt");
         t!("\\c", "/\\c", "pattern.txt");
         t!("let-&", ":let-&", "eval.txt");
+        t!("wildmenu", "'wildmenu'", "options.txt");
+        t!("'wildmenu'", "'wildmenu'", "options.txt");
     }
 }
