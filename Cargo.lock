@@ -172,6 +172,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "lua-patterns"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2f3da90ef01f4466adefe593c05d534fe270d04a2b067608cf8b230123e5a281"
+
+[[package]]
 name = "matches"
 version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -198,6 +204,8 @@ name = "nvim-matrix-bot"
 version = "0.2.0"
 dependencies = [
  "fancy-regex",
+ "lazy_static",
+ "lua-patterns",
  "pulldown-cmark",
  "serde_json",
  "ureq",
