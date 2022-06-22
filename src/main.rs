@@ -1,22 +1,20 @@
 #![feature(try_blocks)]
 
 mod command;
-mod tag_search;
+mod help;
 
 use serde_json::Value as Json;
 
 const HOMESERVER: &str = "https://matrix.org";
 
-struct MatrixClient<'a> {
+struct MatrixClient {
     pub access_token: Option<String>,
     pub command_parser: command::CommandParser,
-    pub tags: Vec<tag_search::Tag<'a>>,
 }
 
-impl<'a> MatrixClient<'a> {
-    fn new(tags: Vec<tag_search::Tag<'a>>) -> Self {
+impl MatrixClient {
+    fn new() -> Self {
         Self {
-            tags,
             access_token: None,
             command_parser: command::CommandParser::new(),
         }
@@ -122,22 +120,19 @@ impl<'a> MatrixClient<'a> {
         use command::Command::*;
         match cmd {
             Help { docs } => {
-                let mut indexes = vec![];
+                let mut tags = vec![];
                 let mut not_found = vec![];
                 for doc in docs {
-                    let needle = tag_search::Tag::from_name(doc);
-                    if let Ok(idx) = self.tags.binary_search(&needle) {
-                        indexes.push(idx);
+                    if let Some(tag) = help::help(doc) {
+                        tags.push(tag);
                     } else {
                         not_found.push(doc);
                     }
                 }
 
-                let body = indexes
+                let body = tags
                     .into_iter()
-                    .map(|idx| {
-                        let tag = &self.tags[idx];
-
+                    .map(|tag| {
                         format!(
                             "* [`{help}`]({link}) in *{file}*",
                             help = tag.name,
@@ -217,19 +212,13 @@ impl<'a> MatrixClient<'a> {
 }
 
 fn main() -> Result<(), ureq::Error> {
-    let tags = include_str!("tags")
-        .split("\n")
-        .filter(|line| !line.is_empty())
-        .map(|line| tag_search::Tag::from_str(line))
-        .collect::<Vec<tag_search::Tag>>();
-
-    let user =
-        std::env::var("MATRIX_USERNAME").expect("Please set the environment variable MATRIX_USERNAME");
+    let user = std::env::var("MATRIX_USERNAME")
+        .expect("Please set the environment variable MATRIX_USERNAME");
 
     let password = std::env::var("MATRIX_PASSWORD")
         .expect("Please set the environment variable MATRIX_PASSWORD");
 
-    let mut client = MatrixClient::new(tags);
+    let mut client = MatrixClient::new();
     client.login(&user, &password)?;
     client.sync()?;
 
