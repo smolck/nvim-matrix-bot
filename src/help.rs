@@ -209,15 +209,9 @@ impl<'a> Tag<'a> {
 mod test {
     use super::*;
 
-    macro_rules! h {
-        ($thing:expr) => {
-            help($thing).map(|t| (t.name, t.file))
-        };
-    }
-
     macro_rules! t {
         ($input:expr, $result_name:expr, $result_file:expr) => {
-            assert_eq!(h!($input), Some(($result_name, $result_file)));
+            assert_eq!(help($input).map(|t| (t.name, t.file)), Some(($result_name, $result_file)));
         };
     }
 
