@@ -173,7 +173,7 @@ fn find_in_tagfile_and_score<'a>(tagfile: &'a str, patterns: Patterns) -> Vec<Ma
                     name: entry[0],
                     file: entry[1],
                 },
-                score
+                score,
             });
         }
         add = false;
@@ -184,14 +184,15 @@ fn find_in_tagfile_and_score<'a>(tagfile: &'a str, patterns: Patterns) -> Vec<Ma
 }
 
 pub fn help<'a>(thing: &str) -> Option<Tag<'a>> {
-    if let Some(m) = find_in_tagfile_and_score(include_str!("tags"), generate_search_patterns(thing))
-        .into_iter()
-        .min_by_key(|m| m.score) {
-            Some(m.tag)
-        } else {
-            None
-        }
-
+    if let Some(m) =
+        find_in_tagfile_and_score(include_str!("tags"), generate_search_patterns(thing))
+            .into_iter()
+            .min_by_key(|m| m.score)
+    {
+        Some(m.tag)
+    } else {
+        None
+    }
 }
 
 impl<'a> Tag<'a> {
@@ -211,7 +212,10 @@ mod test {
 
     macro_rules! t {
         ($input:expr, $result_name:expr, $result_file:expr) => {
-            assert_eq!(help($input).map(|t| (t.name, t.file)), Some(($result_name, $result_file)));
+            assert_eq!(
+                help($input).map(|t| (t.name, t.file)),
+                Some(($result_name, $result_file))
+            );
         };
     }
 
