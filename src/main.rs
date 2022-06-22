@@ -203,10 +203,7 @@ impl MatrixClient {
                                 // TODO(smolck): This feels like it could be broken pretty
                                 // easily. But hopefully not? Since stuff like this *should* get
                                 // escaped if it was typed by the user . . . I think. Maybe.
-                                //
-                                // Also other TODO, I think unwrap() should be fine maybe instead of
-                                // unwrap_or . . . maybe.
-                                body = body.split("</mx_reply>").collect::<Vec<_>>().get(1).unwrap_or(&"");
+                                body = body.split("</mx_reply>").collect::<Vec<_>>().get(1).unwrap_or(&body);
                             }
 
                             if event_type == "m.room.message" {
