@@ -188,7 +188,23 @@ impl MatrixClient {
                             let event_type = event.get("type")?.as_str().unwrap();
                             let _sender = event.get("sender")?.as_str().unwrap();
                             let content = event.get("content")?.as_object().unwrap();
-                            let body = content.get("body")?.as_str().unwrap();
+
+                            // Use formatted_body if available
+                            let (mut body, escape_reply) = if let Some(body) = content.get("formatted_body") {
+                                (body.as_str().unwrap(), true)
+                            } else {
+                                (content.get("body")?.as_str().unwrap(), false)
+                            };
+
+                            // Don't search in the message the user is replying to so we don't
+                            // duplicate messages if the message being replied to had a
+                            // help doc reference
+                            if escape_reply {
+                                // TODO(smolck): This feels like it could be broken pretty
+                                // easily. But hopefully not? Since stuff like this *should* get
+                                // escaped if it was typed by the user . . . I think. Maybe.
+                                body = body.split("</mx_reply>").next().unwrap();
+                            }
 
                             if event_type == "m.room.message" {
                                 if let Some(cmd) = self.command_parser.parse(&body) {
