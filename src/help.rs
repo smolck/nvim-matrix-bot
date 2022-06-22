@@ -197,7 +197,15 @@ pub fn help<'a>(thing: &str) -> Option<Tag<'a>> {
 
 impl<'a> Tag<'a> {
     pub fn to_url(&self) -> String {
-        let file_without_ext = self.file.split('.').next().unwrap();
+        let file_without_ext = {
+            let s = self.file.split('.').next().unwrap();
+            // index.txt maps to vimindex.html on the website because reasons
+            if s == "index" {
+                "vimindex"
+            } else {
+                s
+            }
+        };
 
         format!(
             "https://neovim.io/doc/user/{}.html#{}",
