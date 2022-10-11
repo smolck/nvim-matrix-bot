@@ -1,0 +1,17 @@
+name: update tags file
+
+on:
+  schedule:
+    - cron:  '0 7 * * 1'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          git clone https://github.com/neovim/neovim
+          cd neovim
+          make nvim
+          cat runtime/docs/tags
