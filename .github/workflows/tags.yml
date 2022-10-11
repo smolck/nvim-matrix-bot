@@ -1,0 +1,39 @@
+name: update tags file
+
+on:
+  schedule:
+    - cron:  '0 7 * * 1'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install pre-reqs for building nvim
+        run: sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
+
+      - name: Check out neovim repo
+        uses: actions/checkout@v3
+        with:
+          repository: neovim/neovim
+          path: './neovim'
+
+      - name: Build nvim and update tags file
+        run: |
+          cd ./neovim
+          make nvim
+
+          mv build/runtime/doc/tags ../src/tags
+
+          cd ../
+          git config user.name "GitHub Actions"
+          git add src/tags
+          git commit -m "update tags file"
+
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
