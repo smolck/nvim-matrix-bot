@@ -1,4 +1,4 @@
-use lua_patterns::LuaPattern;
+use lua_patterns::{LuaPattern, errors::PatternError as LuaPatternError};
 use std::collections::HashMap;
 
 struct Replacement {
@@ -70,8 +70,10 @@ pub struct Match<'a> {
     score: i32,
 }
 
-fn escape_pattern(text: &str) -> String {
-    LuaPattern::new("([^%w])").gsub(text, "%%%1")
+fn escape_pattern(text: &str) -> Result<String, LuaPatternError> {
+    // gsub_checked in case emojis or something are used which would make this
+    // create invalid unicode and crash the program if we used the normal gsub
+    LuaPattern::new("([^%w])").gsub_checked(text, "%%%1")
 }
 
 fn ignorecase_pattern(text: &str) -> String {
@@ -81,14 +83,17 @@ fn ignorecase_pattern(text: &str) -> String {
     })
 }
 
-fn generate_search_patterns(name: &str) -> Patterns {
+fn generate_search_patterns(name: &str) -> Option<Patterns> {
     let name = if let Some(replacement) = FULL_REPLACEMENTS.get(&name) {
         replacement.to_string()
     } else {
         let mut name = name.to_string();
         for r in REPLACEMENTS.iter() {
             let patt = if r.should_escape_pattern {
-                escape_pattern(&r.pattern)
+                let Ok(escaped) = escape_pattern(&r.pattern) else {
+                    continue;
+                };
+                escaped
             } else {
                 r.pattern.to_string()
             };
@@ -97,10 +102,12 @@ fn generate_search_patterns(name: &str) -> Patterns {
         name
     };
 
-    let escaped = escape_pattern(&name);
+    let Ok(escaped) = escape_pattern(&name) else {
+        return None;
+    };
     let wildcard = LuaPattern::new("%%%*").gsub(&escaped, ".*");
     let wildcard = LuaPattern::new("%%%?").gsub(&wildcard, ".");
-    Patterns {
+    Some(Patterns {
         icase: ignorecase_pattern(&escaped),
         // TODO(smolck): Umm . . . what
         wildcard: if escaped == wildcard {
@@ -109,7 +116,7 @@ fn generate_search_patterns(name: &str) -> Patterns {
             wildcard
         },
         escaped,
-    }
+    })
 }
 
 fn find_in_tagfile_and_score<'a>(tagfile: &'a str, patterns: Patterns) -> Vec<Match<'a>> {
@@ -184,8 +191,12 @@ fn find_in_tagfile_and_score<'a>(tagfile: &'a str, patterns: Patterns) -> Vec<Ma
 }
 
 pub fn help<'a>(thing: &str) -> Option<Tag<'a>> {
+    let Some(patterns) = generate_search_patterns(thing) else {
+        return None;
+    };
+
     if let Some(m) =
-        find_in_tagfile_and_score(include_str!("tags"), generate_search_patterns(thing))
+        find_in_tagfile_and_score(include_str!("tags"), patterns)
             .into_iter()
             .min_by_key(|m| m.score)
     {
