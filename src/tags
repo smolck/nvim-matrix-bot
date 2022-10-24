@@ -1767,10 +1767,9 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 :changes	motion.txt	/*:changes*
 :chd	editing.txt	/*:chd*
 :chdir	editing.txt	/*:chdir*
-:che	tagsrch.txt	/*:che*
-:chec	tagsrch.txt	/*:chec*
-:check	tagsrch.txt	/*:check*
+:che	pi_health.txt	/*:che*
 :checkhealth	pi_health.txt	/*:checkhealth*
+:checkp	tagsrch.txt	/*:checkp*
 :checkpath	tagsrch.txt	/*:checkpath*
 :checkt	editing.txt	/*:checkt*
 :checktime	editing.txt	/*:checktime*
@@ -7296,6 +7295,7 @@ luv-timer-handle	luvref.txt	/*luv-timer-handle*
 luv-tty-handle	luvref.txt	/*luv-tty-handle*
 luv-udp-handle	luvref.txt	/*luv-udp-handle*
 luv-version-checking	luvref.txt	/*luv-version-checking*
+luvref	luvref.txt	/*luvref*
 luvref.txt	luvref.txt	/*luvref.txt*
 m	motion.txt	/*m*
 m'	motion.txt	/*m'*
@@ -8797,6 +8797,7 @@ subscript	eval.txt	/*subscript*
 substitute()	builtin.txt	/*substitute()*
 substring	eval.txt	/*substring*
 suffixes	cmdline.txt	/*suffixes*
+support	support.txt	/*support*
 support.txt	support.txt	/*support.txt*
 supported-platforms	support.txt	/*supported-platforms*
 suspend	starting.txt	/*suspend*
@@ -9947,6 +9948,8 @@ vimrc-filetype	usr_05.txt	/*vimrc-filetype*
 vimrc-intro	usr_05.txt	/*vimrc-intro*
 vimrc-option-example	starting.txt	/*vimrc-option-example*
 vimrc_example.vim	usr_05.txt	/*vimrc_example.vim*
+vimscript	eval.txt	/*vimscript*
+vimscript-functions	builtin.txt	/*vimscript-functions*
 vimtutor	usr_01.txt	/*vimtutor*
 virtcol()	builtin.txt	/*virtcol()*
 virtcol2col()	builtin.txt	/*virtcol2col()*
