@@ -200,7 +200,9 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'emoji'	options.txt	/*'emoji'*
 'enc'	options.txt	/*'enc'*
 'encoding'	options.txt	/*'encoding'*
+'endoffile'	options.txt	/*'endoffile'*
 'endofline'	options.txt	/*'endofline'*
+'eof'	options.txt	/*'eof'*
 'eol'	options.txt	/*'eol'*
 'ep'	options.txt	/*'ep'*
 'equalalways'	options.txt	/*'equalalways'*
@@ -508,7 +510,9 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'noedcompatible'	vim_diff.txt	/*'noedcompatible'*
 'noemo'	options.txt	/*'noemo'*
 'noemoji'	options.txt	/*'noemoji'*
+'noendoffile'	options.txt	/*'noendoffile'*
 'noendofline'	options.txt	/*'noendofline'*
+'noeof'	options.txt	/*'noeof'*
 'noeol'	options.txt	/*'noeol'*
 'noequalalways'	options.txt	/*'noequalalways'*
 'noerrorbells'	options.txt	/*'noerrorbells'*
@@ -5922,8 +5926,11 @@ g:html_id_expr	syntax.txt	/*g:html_id_expr*
 g:html_ignore_conceal	syntax.txt	/*g:html_ignore_conceal*
 g:html_ignore_folding	syntax.txt	/*g:html_ignore_folding*
 g:html_line_ids	syntax.txt	/*g:html_line_ids*
+g:html_no_doc	syntax.txt	/*g:html_no_doc*
 g:html_no_foldcolumn	syntax.txt	/*g:html_no_foldcolumn*
 g:html_no_invalid	syntax.txt	/*g:html_no_invalid*
+g:html_no_links	syntax.txt	/*g:html_no_links*
+g:html_no_modeline	syntax.txt	/*g:html_no_modeline*
 g:html_no_pre	syntax.txt	/*g:html_no_pre*
 g:html_no_progress	syntax.txt	/*g:html_no_progress*
 g:html_number_lines	syntax.txt	/*g:html_number_lines*
@@ -6202,6 +6209,7 @@ gettabinfo()	builtin.txt	/*gettabinfo()*
 gettabvar()	builtin.txt	/*gettabvar()*
 gettabwinvar()	builtin.txt	/*gettabwinvar()*
 gettagstack()	builtin.txt	/*gettagstack()*
+gettext()	builtin.txt	/*gettext()*
 getwininfo()	builtin.txt	/*getwininfo()*
 getwinpos()	builtin.txt	/*getwinpos()*
 getwinposx()	builtin.txt	/*getwinposx()*
