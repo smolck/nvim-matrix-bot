@@ -3361,8 +3361,10 @@ E127	userfunc.txt	/*E127*
 E1274	cmdline.txt	/*E1274*
 E128	userfunc.txt	/*E128*
 E1280	spell.txt	/*E1280*
+E1281	pattern.txt	/*E1281*
 E129	userfunc.txt	/*E129*
 E1290	change.txt	/*E1290*
+E1299	tagsrch.txt	/*E1299*
 E13	message.txt	/*E13*
 E131	userfunc.txt	/*E131*
 E132	userfunc.txt	/*E132*
@@ -4386,6 +4388,7 @@ Terminal-mode	intro.txt	/*Terminal-mode*
 TextChanged	autocmd.txt	/*TextChanged*
 TextChangedI	autocmd.txt	/*TextChangedI*
 TextChangedP	autocmd.txt	/*TextChangedP*
+TextChangedT	autocmd.txt	/*TextChangedT*
 TextYankPost	autocmd.txt	/*TextYankPost*
 Transact-SQL	ft_sql.txt	/*Transact-SQL*
 U	undo.txt	/*U*
@@ -5388,6 +5391,7 @@ encryption	editing.txt	/*encryption*
 end	intro.txt	/*end*
 end-of-file	pattern.txt	/*end-of-file*
 environ()	builtin.txt	/*environ()*
+eol-and-eof	editing.txt	/*eol-and-eof*
 erlang.vim	syntax.txt	/*erlang.vim*
 errmsg-variable	eval.txt	/*errmsg-variable*
 error-file-format	quickfix.txt	/*error-file-format*
@@ -8296,6 +8300,7 @@ range()	builtin.txt	/*range()*
 rcp	pi_netrw.txt	/*rcp*
 read-messages	insert.txt	/*read-messages*
 read-only-share	editing.txt	/*read-only-share*
+readblob()	builtin.txt	/*readblob()*
 readdir()	builtin.txt	/*readdir()*
 readfile()	builtin.txt	/*readfile()*
 readline.vim	syntax.txt	/*readline.vim*
@@ -8758,6 +8763,7 @@ str2float()	builtin.txt	/*str2float()*
 str2list()	builtin.txt	/*str2list()*
 str2nr()	builtin.txt	/*str2nr()*
 strcasestr()	builtin.txt	/*strcasestr()*
+strcharlen()	builtin.txt	/*strcharlen()*
 strcharpart()	builtin.txt	/*strcharpart()*
 strchars()	builtin.txt	/*strchars()*
 strchr()	builtin.txt	/*strchr()*
