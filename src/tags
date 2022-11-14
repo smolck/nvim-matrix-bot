@@ -2450,6 +2450,9 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 :r!	insert.txt	/*:r!*
 :range	cmdline.txt	/*:range*
 :range!	change.txt	/*:range!*
+:range-closed-fold	cmdline.txt	/*:range-closed-fold*
+:range-offset	cmdline.txt	/*:range-offset*
+:range-pattern	cmdline.txt	/*:range-pattern*
 :re	insert.txt	/*:re*
 :read	insert.txt	/*:read*
 :read!	insert.txt	/*:read!*
@@ -3366,6 +3369,7 @@ E129	userfunc.txt	/*E129*
 E1290	change.txt	/*E1290*
 E1299	tagsrch.txt	/*E1299*
 E13	message.txt	/*E13*
+E1308	builtin.txt	/*E1308*
 E131	userfunc.txt	/*E131*
 E132	userfunc.txt	/*E132*
 E133	userfunc.txt	/*E133*
