@@ -212,9 +212,9 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'errorformat'	options.txt	/*'errorformat'*
 'et'	options.txt	/*'et'*
 'eventignore'	options.txt	/*'eventignore'*
-'ex'	deprecated.txt	/*'ex'*
+'ex'	options.txt	/*'ex'*
 'expandtab'	options.txt	/*'expandtab'*
-'exrc'	deprecated.txt	/*'exrc'*
+'exrc'	options.txt	/*'exrc'*
 'fcl'	options.txt	/*'fcl'*
 'fcs'	options.txt	/*'fcs'*
 'fdc'	options.txt	/*'fdc'*
@@ -517,7 +517,9 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'noequalalways'	options.txt	/*'noequalalways'*
 'noerrorbells'	options.txt	/*'noerrorbells'*
 'noet'	options.txt	/*'noet'*
+'noex'	options.txt	/*'noex'*
 'noexpandtab'	options.txt	/*'noexpandtab'*
+'noexrc'	options.txt	/*'noexrc'*
 'nofen'	options.txt	/*'nofen'*
 'nofic'	options.txt	/*'nofic'*
 'nofileignorecase'	options.txt	/*'nofileignorecase'*
@@ -601,7 +603,6 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'noscb'	options.txt	/*'noscb'*
 'noscrollbind'	options.txt	/*'noscrollbind'*
 'noscs'	options.txt	/*'noscs'*
-'nosecure'	options.txt	/*'nosecure'*
 'nosft'	options.txt	/*'nosft'*
 'noshellslash'	options.txt	/*'noshellslash'*
 'noshelltemp'	options.txt	/*'noshelltemp'*
@@ -778,7 +779,7 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'sdf'	options.txt	/*'sdf'*
 'sect'	options.txt	/*'sect'*
 'sections'	options.txt	/*'sections'*
-'secure'	options.txt	/*'secure'*
+'secure'	vim_diff.txt	/*'secure'*
 'sel'	options.txt	/*'sel'*
 'selection'	options.txt	/*'selection'*
 'selectmode'	options.txt	/*'selectmode'*
@@ -3757,7 +3758,6 @@ E52	syntax.txt	/*E52*
 E520	options.txt	/*E520*
 E521	options.txt	/*E521*
 E5210	channel.txt	/*E5210*
-E523	options.txt	/*E523*
 E524	options.txt	/*E524*
 E5248	syntax.txt	/*E5248*
 E525	options.txt	/*E525*
@@ -6527,6 +6527,7 @@ home	intro.txt	/*home*
 home-replace	editing.txt	/*home-replace*
 hostname()	builtin.txt	/*hostname()*
 html-flavor	insert.txt	/*html-flavor*
+html-folding	syntax.txt	/*html-folding*
 html-indent	indent.txt	/*html-indent*
 html-indenting	indent.txt	/*html-indenting*
 html.vim	syntax.txt	/*html.vim*
@@ -6948,6 +6949,7 @@ lua-package-path	lua.txt	/*lua-package-path*
 lua-patterns	lua.txt	/*lua-patterns*
 lua-regex	lua.txt	/*lua-regex*
 lua-require	lua.txt	/*lua-require*
+lua-secure	lua.txt	/*lua-secure*
 lua-special-tbl	lua.txt	/*lua-special-tbl*
 lua-spell	lua.txt	/*lua-spell*
 lua-stdlib	lua.txt	/*lua-stdlib*
@@ -9914,6 +9916,7 @@ vim.rpcnotify()	lua.txt	/*vim.rpcnotify()*
 vim.rpcrequest()	lua.txt	/*vim.rpcrequest()*
 vim.schedule()	lua.txt	/*vim.schedule()*
 vim.schedule_wrap()	lua.txt	/*vim.schedule_wrap()*
+vim.secure.read()	lua.txt	/*vim.secure.read()*
 vim.spell.check()	lua.txt	/*vim.spell.check()*
 vim.split()	lua.txt	/*vim.split()*
 vim.startswith()	lua.txt	/*vim.startswith()*
