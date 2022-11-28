@@ -4435,7 +4435,10 @@ WinClosed	autocmd.txt	/*WinClosed*
 WinEnter	autocmd.txt	/*WinEnter*
 WinLeave	autocmd.txt	/*WinLeave*
 WinNew	autocmd.txt	/*WinNew*
+WinResized	autocmd.txt	/*WinResized*
+WinResized-event	windows.txt	/*WinResized-event*
 WinScrolled	autocmd.txt	/*WinScrolled*
+WinScrolled-event	windows.txt	/*WinScrolled-event*
 X	change.txt	/*X*
 X1Drag	term.txt	/*X1Drag*
 X1Mouse	term.txt	/*X1Mouse*
@@ -5415,6 +5418,8 @@ escape	intro.txt	/*escape*
 escape()	builtin.txt	/*escape()*
 euphoria3.vim	syntax.txt	/*euphoria3.vim*
 euphoria4.vim	syntax.txt	/*euphoria4.vim*
+euro	digraph.txt	/*euro*
+euro-digraph	digraph.txt	/*euro-digraph*
 eval	eval.txt	/*eval*
 eval()	builtin.txt	/*eval()*
 eval-api	builtin.txt	/*eval-api*
@@ -6177,6 +6182,7 @@ get_query_files()	treesitter.txt	/*get_query_files()*
 get_string_parser()	treesitter.txt	/*get_string_parser()*
 getbufinfo()	builtin.txt	/*getbufinfo()*
 getbufline()	builtin.txt	/*getbufline()*
+getbufoneline()	builtin.txt	/*getbufoneline()*
 getbufvar()	builtin.txt	/*getbufvar()*
 getchangelist()	builtin.txt	/*getchangelist()*
 getchar()	builtin.txt	/*getchar()*
@@ -6865,6 +6871,7 @@ linewise-visual	visual.txt	/*linewise-visual*
 lisp.vim	syntax.txt	/*lisp.vim*
 lispindent()	builtin.txt	/*lispindent()*
 list	eval.txt	/*list*
+list-concatenation	eval.txt	/*list-concatenation*
 list-functions	usr_41.txt	/*list-functions*
 list-identity	eval.txt	/*list-identity*
 list-index	eval.txt	/*list-index*
@@ -10000,6 +10007,7 @@ whitespace	pattern.txt	/*whitespace*
 wildcard	editing.txt	/*wildcard*
 wildcards	editing.txt	/*wildcards*
 wildmenumode()	builtin.txt	/*wildmenumode()*
+win-scrolled-resized	windows.txt	/*win-scrolled-resized*
 win32-hidden-menus	gui.txt	/*win32-hidden-menus*
 win_execute()	builtin.txt	/*win_execute()*
 win_findbuf()	builtin.txt	/*win_findbuf()*
