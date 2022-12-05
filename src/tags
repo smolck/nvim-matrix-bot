@@ -1602,7 +1602,6 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 :XMLent	insert.txt	/*:XMLent*
 :XMLns	insert.txt	/*:XMLns*
 :[range]	motion.txt	/*:[range]*
-:[vV\x16]	autocmd.txt	/*:[vV\\x16]*
 :\bar	cmdline.txt	/*:\\bar*
 :_!	cmdline.txt	/*:_!*
 :_#	cmdline.txt	/*:_#*
@@ -2845,6 +2844,7 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 :tprevious	tagsrch.txt	/*:tprevious*
 :tr	tagsrch.txt	/*:tr*
 :trewind	tagsrch.txt	/*:trewind*
+:trust	editing.txt	/*:trust*
 :try	eval.txt	/*:try*
 :ts	tagsrch.txt	/*:ts*
 :tselect	tagsrch.txt	/*:tselect*
@@ -3806,6 +3806,7 @@ E5555	builtin.txt	/*E5555*
 E556	tagsrch.txt	/*E556*
 E5560	lua.txt	/*E5560*
 E557	term.txt	/*E557*
+E5570	editing.txt	/*E5570*
 E558	term.txt	/*E558*
 E559	term.txt	/*E559*
 E5600	remote.txt	/*E5600*
@@ -4776,7 +4777,6 @@ bookmark	usr_03.txt	/*bookmark*
 boolean	options.txt	/*boolean*
 bracketed-paste-mode	provider.txt	/*bracketed-paste-mode*
 break-finally	eval.txt	/*break-finally*
-browse()	builtin.txt	/*browse()*
 browsedir()	builtin.txt	/*browsedir()*
 browsefilter	editing.txt	/*browsefilter*
 bufadd()	builtin.txt	/*bufadd()*
@@ -6971,10 +6971,7 @@ lua-ui	lua.txt	/*lua-ui*
 lua-uri	lua.txt	/*lua-uri*
 lua-variable	eval.txt	/*lua-variable*
 lua-vim	lua.txt	/*lua-vim*
-lua-vim-opt	lua.txt	/*lua-vim-opt*
-lua-vim-optglobal	lua.txt	/*lua-vim-optglobal*
 lua-vim-options	lua.txt	/*lua-vim-options*
-lua-vim-optlocal	lua.txt	/*lua-vim-optlocal*
 lua-vim-set	lua.txt	/*lua-vim-set*
 lua-vim-setlocal	lua.txt	/*lua-vim-setlocal*
 lua-vim-variables	lua.txt	/*lua-vim-variables*
@@ -7998,7 +7995,6 @@ ocaml.vim	syntax.txt	/*ocaml.vim*
 octal	eval.txt	/*octal*
 octal-nrformats	options.txt	/*octal-nrformats*
 octal-number	eval.txt	/*octal-number*
-old-style-testing	testing.txt	/*old-style-testing*
 oldfiles-variable	eval.txt	/*oldfiles-variable*
 omap-info	map.txt	/*omap-info*
 omni-sql-completion	ft_sql.txt	/*omni-sql-completion*
@@ -9064,6 +9060,7 @@ trojan-horse	starting.txt	/*trojan-horse*
 true-color	term.txt	/*true-color*
 true-variable	eval.txt	/*true-variable*
 trunc()	builtin.txt	/*trunc()*
+trust	editing.txt	/*trust*
 try-conditionals	eval.txt	/*try-conditionals*
 try-echoerr	eval.txt	/*try-echoerr*
 try-finally	eval.txt	/*try-finally*
@@ -9107,8 +9104,6 @@ tutor	usr_01.txt	/*tutor*
 two-engines	pattern.txt	/*two-engines*
 type()	builtin.txt	/*type()*
 type-mistakes	tips.txt	/*type-mistakes*
-typecorr-settings	usr_41.txt	/*typecorr-settings*
-typecorr.txt	usr_41.txt	/*typecorr.txt*
 u	undo.txt	/*u*
 uganda	uganda.txt	/*uganda*
 uganda.txt	uganda.txt	/*uganda.txt*
@@ -9913,6 +9908,8 @@ vim.opt:append()	lua.txt	/*vim.opt:append()*
 vim.opt:get()	lua.txt	/*vim.opt:get()*
 vim.opt:prepend()	lua.txt	/*vim.opt:prepend()*
 vim.opt:remove()	lua.txt	/*vim.opt:remove()*
+vim.opt_global	lua.txt	/*vim.opt_global*
+vim.opt_local	lua.txt	/*vim.opt_local*
 vim.paste()	lua.txt	/*vim.paste()*
 vim.pesc()	lua.txt	/*vim.pesc()*
 vim.pretty_print()	lua.txt	/*vim.pretty_print()*
@@ -9924,6 +9921,7 @@ vim.rpcrequest()	lua.txt	/*vim.rpcrequest()*
 vim.schedule()	lua.txt	/*vim.schedule()*
 vim.schedule_wrap()	lua.txt	/*vim.schedule_wrap()*
 vim.secure.read()	lua.txt	/*vim.secure.read()*
+vim.secure.trust()	lua.txt	/*vim.secure.trust()*
 vim.spell.check()	lua.txt	/*vim.spell.check()*
 vim.split()	lua.txt	/*vim.split()*
 vim.startswith()	lua.txt	/*vim.startswith()*
