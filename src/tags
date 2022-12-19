@@ -1558,6 +1558,8 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 :GnatPretty	ft_ada.txt	/*:GnatPretty*
 :GnatTags	ft_ada.txt	/*:GnatTags*
 :Hexplore	pi_netrw.txt	/*:Hexplore*
+:Inspect	lua.txt	/*:Inspect*
+:Inspect!	lua.txt	/*:Inspect!*
 :Lexplore	pi_netrw.txt	/*:Lexplore*
 :Lfilter	quickfix.txt	/*:Lfilter*
 :Man	filetype.txt	/*:Man*
@@ -5539,6 +5541,7 @@ expression-syntax	eval.txt	/*expression-syntax*
 exrc	starting.txt	/*exrc*
 extend()	builtin.txt	/*extend()*
 extension-removal	cmdline.txt	/*extension-removal*
+extmark	api.txt	/*extmark*
 extmarks	api.txt	/*extmarks*
 f	motion.txt	/*f*
 f-args-example	map.txt	/*f-args-example*
@@ -6953,6 +6956,7 @@ lua-guide-vim-functions	lua-guide.txt	/*lua-guide-vim-functions*
 lua-guide-vimscript	lua-guide.txt	/*lua-guide-vimscript*
 lua-guide.txt	lua-guide.txt	/*lua-guide.txt*
 lua-highlight	lua.txt	/*lua-highlight*
+lua-inspector	lua.txt	/*lua-inspector*
 lua-intro	lua.txt	/*lua-intro*
 lua-keymap	lua.txt	/*lua-keymap*
 lua-loop	lua.txt	/*lua-loop*
@@ -9782,6 +9786,7 @@ vim.highlight.range()	lua.txt	/*vim.highlight.range()*
 vim.iconv()	lua.txt	/*vim.iconv()*
 vim.in_fast_event()	lua.txt	/*vim.in_fast_event()*
 vim.inspect()	lua.txt	/*vim.inspect()*
+vim.inspect_pos()	lua.txt	/*vim.inspect_pos()*
 vim.is_callable()	lua.txt	/*vim.is_callable()*
 vim.keymap.del()	lua.txt	/*vim.keymap.del()*
 vim.keymap.set()	lua.txt	/*vim.keymap.set()*
@@ -9882,6 +9887,7 @@ vim.lsp.rpc.request()	lsp.txt	/*vim.lsp.rpc.request()*
 vim.lsp.rpc.rpc_response_error()	lsp.txt	/*vim.lsp.rpc.rpc_response_error()*
 vim.lsp.rpc.start()	lsp.txt	/*vim.lsp.rpc.start()*
 vim.lsp.semantic_tokens.force_refresh()	lsp.txt	/*vim.lsp.semantic_tokens.force_refresh()*
+vim.lsp.semantic_tokens.get_at_pos()	lsp.txt	/*vim.lsp.semantic_tokens.get_at_pos()*
 vim.lsp.semantic_tokens.start()	lsp.txt	/*vim.lsp.semantic_tokens.start()*
 vim.lsp.semantic_tokens.stop()	lsp.txt	/*vim.lsp.semantic_tokens.stop()*
 vim.lsp.set_log_level()	lsp.txt	/*vim.lsp.set_log_level()*
@@ -9951,6 +9957,7 @@ vim.schedule()	lua.txt	/*vim.schedule()*
 vim.schedule_wrap()	lua.txt	/*vim.schedule_wrap()*
 vim.secure.read()	lua.txt	/*vim.secure.read()*
 vim.secure.trust()	lua.txt	/*vim.secure.trust()*
+vim.show_pos()	lua.txt	/*vim.show_pos()*
 vim.spell.check()	lua.txt	/*vim.spell.check()*
 vim.split()	lua.txt	/*vim.split()*
 vim.startswith()	lua.txt	/*vim.startswith()*
