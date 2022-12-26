@@ -806,6 +806,7 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'shortname'	vim_diff.txt	/*'shortname'*
 'showbreak'	options.txt	/*'showbreak'*
 'showcmd'	options.txt	/*'showcmd'*
+'showcmdloc'	options.txt	/*'showcmdloc'*
 'showfulltag'	options.txt	/*'showfulltag'*
 'showmatch'	options.txt	/*'showmatch'*
 'showmode'	options.txt	/*'showmode'*
@@ -818,6 +819,7 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'siso'	options.txt	/*'siso'*
 'sj'	options.txt	/*'sj'*
 'slm'	options.txt	/*'slm'*
+'sloc'	options.txt	/*'sloc'*
 'sm'	options.txt	/*'sm'*
 'smartcase'	options.txt	/*'smartcase'*
 'smartindent'	options.txt	/*'smartindent'*
