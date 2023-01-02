@@ -1057,6 +1057,7 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 --remote-tab-silent	remote.txt	/*--remote-tab-silent*
 --remote-tab-wait	remote.txt	/*--remote-tab-wait*
 --remote-tab-wait-silent	remote.txt	/*--remote-tab-wait-silent*
+--remote-ui	remote.txt	/*--remote-ui*
 --remote-wait	remote.txt	/*--remote-wait*
 --remote-wait-silent	remote.txt	/*--remote-wait-silent*
 --server	remote.txt	/*--server*
@@ -6367,20 +6368,25 @@ hl-DiagnosticError	diagnostic.txt	/*hl-DiagnosticError*
 hl-DiagnosticFloatingError	diagnostic.txt	/*hl-DiagnosticFloatingError*
 hl-DiagnosticFloatingHint	diagnostic.txt	/*hl-DiagnosticFloatingHint*
 hl-DiagnosticFloatingInfo	diagnostic.txt	/*hl-DiagnosticFloatingInfo*
+hl-DiagnosticFloatingOk	diagnostic.txt	/*hl-DiagnosticFloatingOk*
 hl-DiagnosticFloatingWarn	diagnostic.txt	/*hl-DiagnosticFloatingWarn*
 hl-DiagnosticHint	diagnostic.txt	/*hl-DiagnosticHint*
 hl-DiagnosticInfo	diagnostic.txt	/*hl-DiagnosticInfo*
+hl-DiagnosticOk	diagnostic.txt	/*hl-DiagnosticOk*
 hl-DiagnosticSignError	diagnostic.txt	/*hl-DiagnosticSignError*
 hl-DiagnosticSignHint	diagnostic.txt	/*hl-DiagnosticSignHint*
 hl-DiagnosticSignInfo	diagnostic.txt	/*hl-DiagnosticSignInfo*
+hl-DiagnosticSignOk	diagnostic.txt	/*hl-DiagnosticSignOk*
 hl-DiagnosticSignWarn	diagnostic.txt	/*hl-DiagnosticSignWarn*
 hl-DiagnosticUnderlineError	diagnostic.txt	/*hl-DiagnosticUnderlineError*
 hl-DiagnosticUnderlineHint	diagnostic.txt	/*hl-DiagnosticUnderlineHint*
 hl-DiagnosticUnderlineInfo	diagnostic.txt	/*hl-DiagnosticUnderlineInfo*
+hl-DiagnosticUnderlineOk	diagnostic.txt	/*hl-DiagnosticUnderlineOk*
 hl-DiagnosticUnderlineWarn	diagnostic.txt	/*hl-DiagnosticUnderlineWarn*
 hl-DiagnosticVirtualTextError	diagnostic.txt	/*hl-DiagnosticVirtualTextError*
 hl-DiagnosticVirtualTextHint	diagnostic.txt	/*hl-DiagnosticVirtualTextHint*
 hl-DiagnosticVirtualTextInfo	diagnostic.txt	/*hl-DiagnosticVirtualTextInfo*
+hl-DiagnosticVirtualTextOk	diagnostic.txt	/*hl-DiagnosticVirtualTextOk*
 hl-DiagnosticVirtualTextWarn	diagnostic.txt	/*hl-DiagnosticVirtualTextWarn*
 hl-DiagnosticWarn	diagnostic.txt	/*hl-DiagnosticWarn*
 hl-DiffAdd	syntax.txt	/*hl-DiffAdd*
@@ -6960,6 +6966,7 @@ lua-guide.txt	lua-guide.txt	/*lua-guide.txt*
 lua-highlight	lua.txt	/*lua-highlight*
 lua-inspector	lua.txt	/*lua-inspector*
 lua-intro	lua.txt	/*lua-intro*
+lua-json	lua.txt	/*lua-json*
 lua-keymap	lua.txt	/*lua-keymap*
 lua-loop	lua.txt	/*lua-loop*
 lua-loop-callbacks	lua.txt	/*lua-loop-callbacks*
@@ -7971,6 +7978,7 @@ nvim_ui_attach()	api.txt	/*nvim_ui_attach()*
 nvim_ui_detach()	api.txt	/*nvim_ui_detach()*
 nvim_ui_pum_set_bounds()	api.txt	/*nvim_ui_pum_set_bounds()*
 nvim_ui_pum_set_height()	api.txt	/*nvim_ui_pum_set_height()*
+nvim_ui_set_focus()	api.txt	/*nvim_ui_set_focus()*
 nvim_ui_set_option()	api.txt	/*nvim_ui_set_option()*
 nvim_ui_try_resize()	api.txt	/*nvim_ui_try_resize()*
 nvim_ui_try_resize_grid()	api.txt	/*nvim_ui_try_resize_grid()*
@@ -8578,6 +8586,7 @@ shm-A	options.txt	/*shm-A*
 shm-C	options.txt	/*shm-C*
 shm-F	options.txt	/*shm-F*
 shm-I	options.txt	/*shm-I*
+shm-O	options.txt	/*shm-O*
 shm-S	options.txt	/*shm-S*
 shm-T	options.txt	/*shm-T*
 shm-W	options.txt	/*shm-W*
@@ -8627,7 +8636,6 @@ slice	eval.txt	/*slice*
 slow-fast-terminal	term.txt	/*slow-fast-terminal*
 slow-start	starting.txt	/*slow-start*
 slow-terminal	term.txt	/*slow-terminal*
-smh-O	options.txt	/*smh-O*
 sockconnect()	builtin.txt	/*sockconnect()*
 sort()	builtin.txt	/*sort()*
 sorting	change.txt	/*sorting*
@@ -9790,6 +9798,9 @@ vim.in_fast_event()	lua.txt	/*vim.in_fast_event()*
 vim.inspect()	lua.txt	/*vim.inspect()*
 vim.inspect_pos()	lua.txt	/*vim.inspect_pos()*
 vim.is_callable()	lua.txt	/*vim.is_callable()*
+vim.json	lua.txt	/*vim.json*
+vim.json.decode	lua.txt	/*vim.json.decode*
+vim.json.encode	lua.txt	/*vim.json.encode*
 vim.keymap.del()	lua.txt	/*vim.keymap.del()*
 vim.keymap.set()	lua.txt	/*vim.keymap.set()*
 vim.list_extend()	lua.txt	/*vim.list_extend()*
@@ -9830,6 +9841,7 @@ vim.lsp.buf_request_all()	lsp.txt	/*vim.lsp.buf_request_all()*
 vim.lsp.buf_request_sync()	lsp.txt	/*vim.lsp.buf_request_sync()*
 vim.lsp.client	lsp.txt	/*vim.lsp.client*
 vim.lsp.client_is_stopped()	lsp.txt	/*vim.lsp.client_is_stopped()*
+vim.lsp.codelens.clear()	lsp.txt	/*vim.lsp.codelens.clear()*
 vim.lsp.codelens.display()	lsp.txt	/*vim.lsp.codelens.display()*
 vim.lsp.codelens.get()	lsp.txt	/*vim.lsp.codelens.get()*
 vim.lsp.codelens.on_codelens()	lsp.txt	/*vim.lsp.codelens.on_codelens()*
