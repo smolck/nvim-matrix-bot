@@ -845,7 +845,9 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'sta'	options.txt	/*'sta'*
 'stal'	options.txt	/*'stal'*
 'startofline'	options.txt	/*'startofline'*
+'statuscolumn'	options.txt	/*'statuscolumn'*
 'statusline'	options.txt	/*'statusline'*
+'stc'	options.txt	/*'stc'*
 'stl'	options.txt	/*'stl'*
 'stmp'	options.txt	/*'stmp'*
 'sts'	options.txt	/*'sts'*
@@ -8321,6 +8323,7 @@ register-variable	eval.txt	/*register-variable*
 registers	change.txt	/*registers*
 rego.vim	syntax.txt	/*rego.vim*
 regular-expression	pattern.txt	/*regular-expression*
+relnum-variable	eval.txt	/*relnum-variable*
 reload	editing.txt	/*reload*
 reltime()	builtin.txt	/*reltime()*
 reltimefloat()	builtin.txt	/*reltimefloat()*
@@ -9514,6 +9517,7 @@ v:profiling	eval.txt	/*v:profiling*
 v:progname	eval.txt	/*v:progname*
 v:progpath	eval.txt	/*v:progpath*
 v:register	eval.txt	/*v:register*
+v:relnum	eval.txt	/*v:relnum*
 v:scrollstart	eval.txt	/*v:scrollstart*
 v:searchforward	eval.txt	/*v:searchforward*
 v:servername	eval.txt	/*v:servername*
@@ -9546,6 +9550,7 @@ v:version	eval.txt	/*v:version*
 v:vim_did_enter	eval.txt	/*v:vim_did_enter*
 v:warningmsg	eval.txt	/*v:warningmsg*
 v:windowid	eval.txt	/*v:windowid*
+v:wrap	eval.txt	/*v:wrap*
 v_!	change.txt	/*v_!*
 v_#-default	pattern.txt	/*v_#-default*
 v_$	visual.txt	/*v_$*
@@ -9723,6 +9728,7 @@ vim.diagnostic.get_prev_pos()	diagnostic.txt	/*vim.diagnostic.get_prev_pos()*
 vim.diagnostic.goto_next()	diagnostic.txt	/*vim.diagnostic.goto_next()*
 vim.diagnostic.goto_prev()	diagnostic.txt	/*vim.diagnostic.goto_prev()*
 vim.diagnostic.hide()	diagnostic.txt	/*vim.diagnostic.hide()*
+vim.diagnostic.is_disabled()	diagnostic.txt	/*vim.diagnostic.is_disabled()*
 vim.diagnostic.match()	diagnostic.txt	/*vim.diagnostic.match()*
 vim.diagnostic.open_float()	diagnostic.txt	/*vim.diagnostic.open_float()*
 vim.diagnostic.reset()	diagnostic.txt	/*vim.diagnostic.reset()*
@@ -10095,6 +10101,7 @@ word-count	editing.txt	/*word-count*
 word-motions	motion.txt	/*word-motions*
 wordcount()	builtin.txt	/*wordcount()*
 wrap-off	intro.txt	/*wrap-off*
+wrap-variable	eval.txt	/*wrap-variable*
 write-compiler-plugin	usr_41.txt	/*write-compiler-plugin*
 write-device	editing.txt	/*write-device*
 write-fail	editing.txt	/*write-fail*
