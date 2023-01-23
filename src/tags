@@ -6167,6 +6167,7 @@ getbufinfo()	builtin.txt	/*getbufinfo()*
 getbufline()	builtin.txt	/*getbufline()*
 getbufoneline()	builtin.txt	/*getbufoneline()*
 getbufvar()	builtin.txt	/*getbufvar()*
+getcellwidths()	builtin.txt	/*getcellwidths()*
 getchangelist()	builtin.txt	/*getchangelist()*
 getchar()	builtin.txt	/*getchar()*
 getcharmod()	builtin.txt	/*getcharmod()*
@@ -9548,9 +9549,9 @@ v:val	eval.txt	/*v:val*
 v:var	eval.txt	/*v:var*
 v:version	eval.txt	/*v:version*
 v:vim_did_enter	eval.txt	/*v:vim_did_enter*
+v:virtnum	eval.txt	/*v:virtnum*
 v:warningmsg	eval.txt	/*v:warningmsg*
 v:windowid	eval.txt	/*v:windowid*
-v:wrap	eval.txt	/*v:wrap*
 v_!	change.txt	/*v_!*
 v_#-default	pattern.txt	/*v_#-default*
 v_$	visual.txt	/*v_$*
@@ -10025,6 +10026,7 @@ vimscript-functions	builtin.txt	/*vimscript-functions*
 vimtutor	usr_01.txt	/*vimtutor*
 virtcol()	builtin.txt	/*virtcol()*
 virtcol2col()	builtin.txt	/*virtcol2col()*
+virtnum-variable	eval.txt	/*virtnum-variable*
 visual-block	visual.txt	/*visual-block*
 visual-change	visual.txt	/*visual-change*
 visual-examples	visual.txt	/*visual-examples*
@@ -10101,7 +10103,6 @@ word-count	editing.txt	/*word-count*
 word-motions	motion.txt	/*word-motions*
 wordcount()	builtin.txt	/*wordcount()*
 wrap-off	intro.txt	/*wrap-off*
-wrap-variable	eval.txt	/*wrap-variable*
 write-compiler-plugin	usr_41.txt	/*write-compiler-plugin*
 write-device	editing.txt	/*write-device*
 write-fail	editing.txt	/*write-fail*
