@@ -4592,6 +4592,7 @@ aff-dic-format	spell.txt	/*aff-dic-format*
 after-directory	options.txt	/*after-directory*
 aleph	options.txt	/*aleph*
 alternate-file	editing.txt	/*alternate-file*
+altfont	syntax.txt	/*altfont*
 and()	builtin.txt	/*and()*
 anonymous-function	eval.txt	/*anonymous-function*
 ant.vim	syntax.txt	/*ant.vim*
@@ -9943,6 +9944,7 @@ vim.schedule_wrap()	lua.txt	/*vim.schedule_wrap()*
 vim.secure.read()	lua.txt	/*vim.secure.read()*
 vim.secure.trust()	lua.txt	/*vim.secure.trust()*
 vim.show_pos()	lua.txt	/*vim.show_pos()*
+vim.spairs()	lua.txt	/*vim.spairs()*
 vim.spell.check()	lua.txt	/*vim.spell.check()*
 vim.split()	lua.txt	/*vim.split()*
 vim.startswith()	lua.txt	/*vim.startswith()*
