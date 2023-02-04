@@ -83,6 +83,21 @@ fn ignorecase_pattern(text: &str) -> String {
     })
 }
 
+// Taken from the main repo
+// https://github.com/neovim/neovim/blob/master/scripts/gen_help_html.lua#L110-L117
+fn encode_url(name: &str) -> String {
+    const KEEP: &str = "()'_.~-";
+    name.chars()
+        .map(|c| {
+            if c.is_ascii_alphanumeric() || KEEP.find(c).is_some() {
+                c.to_string()
+            } else {
+                format!("%{:2>X}", c as u32)
+            }
+        })
+        .collect()
+}
+
 fn generate_search_patterns(name: &str) -> Option<Patterns> {
     let name = if let Some(replacement) = FULL_REPLACEMENTS.get(&name) {
         replacement.to_string()
@@ -220,7 +235,8 @@ impl<'a> Tag<'a> {
 
         format!(
             "https://neovim.io/doc/user/{}.html#{}",
-            file_without_ext, self.name
+            file_without_ext,
+            encode_url(self.name)
         )
     }
 }
@@ -251,5 +267,15 @@ mod test {
         t!("let-&", ":let-&", "eval.txt");
         t!("wildmenu", "'wildmenu'", "options.txt");
         t!("'wildmenu'", "'wildmenu'", "options.txt");
+    }
+
+    #[test]
+    fn encode_works() {
+        assert_eq!(encode_url(":terminal"), "%3Aterminal");
+        assert_eq!(encode_url("/character-classes"), "%2Fcharacter-classes");
+        assert_eq!(encode_url("[["), "%5B%5B");
+        assert_eq!(encode_url("=="), "%3D%3D");
+        assert_eq!(encode_url("s/\\~"), "s%2F%5C~");
+        assert_eq!(encode_url("<CR>"), "%3CCR%3E");
     }
 }
