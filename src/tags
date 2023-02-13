@@ -9230,6 +9230,7 @@ uv.close()	luvref.txt	/*uv.close()*
 uv.cpu_info()	luvref.txt	/*uv.cpu_info()*
 uv.cwd()	luvref.txt	/*uv.cwd()*
 uv.disable_stdio_inheritance()	luvref.txt	/*uv.disable_stdio_inheritance()*
+uv.errno	luvref.txt	/*uv.errno*
 uv.exepath()	luvref.txt	/*uv.exepath()*
 uv.fileno()	luvref.txt	/*uv.fileno()*
 uv.fs_access()	luvref.txt	/*uv.fs_access()*
