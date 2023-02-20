@@ -8,6 +8,7 @@ $HOME-windows	options.txt	/*$HOME-windows*
 $MYGVIMRC	gui.txt	/*$MYGVIMRC*
 $MYVIMRC	starting.txt	/*$MYVIMRC*
 $NVIM	eval.txt	/*$NVIM*
+$NVIM_APPNAME	starting.txt	/*$NVIM_APPNAME*
 $NVIM_LISTEN_ADDRESS	deprecated.txt	/*$NVIM_LISTEN_ADDRESS*
 $NVIM_LOG_FILE	starting.txt	/*$NVIM_LOG_FILE*
 $NVIM_RPLUGIN_MANIFEST	remote_plugin.txt	/*$NVIM_RPLUGIN_MANIFEST*
@@ -4755,12 +4756,6 @@ bars	help.txt	/*bars*
 base-directories	starting.txt	/*base-directories*
 basic.vim	syntax.txt	/*basic.vim*
 beep	options.txt	/*beep*
-beval_bufnr-variable	eval.txt	/*beval_bufnr-variable*
-beval_col-variable	eval.txt	/*beval_col-variable*
-beval_lnum-variable	eval.txt	/*beval_lnum-variable*
-beval_text-variable	eval.txt	/*beval_text-variable*
-beval_winid-variable	eval.txt	/*beval_winid-variable*
-beval_winnr-variable	eval.txt	/*beval_winnr-variable*
 binary-number	eval.txt	/*binary-number*
 bisect	starting.txt	/*bisect*
 bitwise-function	usr_41.txt	/*bitwise-function*
@@ -9455,12 +9450,6 @@ uv_udp_t	luvref.txt	/*uv_udp_t*
 v	visual.txt	/*v*
 v:	eval.txt	/*v:*
 v:argv	eval.txt	/*v:argv*
-v:beval_bufnr	eval.txt	/*v:beval_bufnr*
-v:beval_col	eval.txt	/*v:beval_col*
-v:beval_lnum	eval.txt	/*v:beval_lnum*
-v:beval_text	eval.txt	/*v:beval_text*
-v:beval_winid	eval.txt	/*v:beval_winid*
-v:beval_winnr	eval.txt	/*v:beval_winnr*
 v:char	eval.txt	/*v:char*
 v:charconvert_from	eval.txt	/*v:charconvert_from*
 v:charconvert_to	eval.txt	/*v:charconvert_to*
