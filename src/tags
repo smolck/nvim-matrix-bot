@@ -580,7 +580,7 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'nonumber'	options.txt	/*'nonumber'*
 'noodev'	options.txt	/*'noodev'*
 'noopendevice'	options.txt	/*'noopendevice'*
-'nopaste'	options.txt	/*'nopaste'*
+'nopaste'	deprecated.txt	/*'nopaste'*
 'nopi'	options.txt	/*'nopi'*
 'nopreserveindent'	options.txt	/*'nopreserveindent'*
 'nopreviewwindow'	options.txt	/*'nopreviewwindow'*
@@ -690,8 +690,8 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'packpath'	options.txt	/*'packpath'*
 'para'	options.txt	/*'para'*
 'paragraphs'	options.txt	/*'paragraphs'*
-'paste'	options.txt	/*'paste'*
-'pastetoggle'	options.txt	/*'pastetoggle'*
+'paste'	deprecated.txt	/*'paste'*
+'pastetoggle'	vim_diff.txt	/*'pastetoggle'*
 'patchexpr'	options.txt	/*'patchexpr'*
 'patchmode'	options.txt	/*'patchmode'*
 'path'	options.txt	/*'path'*
@@ -711,7 +711,7 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 'printheader'	vim_diff.txt	/*'printheader'*
 'printmbcharset'	vim_diff.txt	/*'printmbcharset'*
 'prompt'	vim_diff.txt	/*'prompt'*
-'pt'	options.txt	/*'pt'*
+'pt'	vim_diff.txt	/*'pt'*
 'pumblend'	options.txt	/*'pumblend'*
 'pumheight'	options.txt	/*'pumheight'*
 'pumwidth'	options.txt	/*'pumwidth'*
@@ -3783,6 +3783,7 @@ E542	options.txt	/*E542*
 E5422	starting.txt	/*E5422*
 E543	options.txt	/*E543*
 E5430	starting.txt	/*E5430*
+E5431	change.txt	/*E5431*
 E544	options.txt	/*E544*
 E545	options.txt	/*E545*
 E546	options.txt	/*E546*
@@ -4219,6 +4220,7 @@ LspAttach	lsp.txt	/*LspAttach*
 LspDetach	lsp.txt	/*LspDetach*
 LspProgressUpdate	lsp.txt	/*LspProgressUpdate*
 LspRequest	lsp.txt	/*LspRequest*
+LspTokenUpdate	lsp.txt	/*LspTokenUpdate*
 Lua	lua.txt	/*Lua*
 Lua-Reference	luaref.txt	/*Lua-Reference*
 M	motion.txt	/*M*
@@ -6241,6 +6243,7 @@ getqflist-examples	quickfix.txt	/*getqflist-examples*
 getreg()	builtin.txt	/*getreg()*
 getreginfo()	builtin.txt	/*getreginfo()*
 getregtype()	builtin.txt	/*getregtype()*
+getscriptinfo()	builtin.txt	/*getscriptinfo()*
 gettabinfo()	builtin.txt	/*gettabinfo()*
 gettabvar()	builtin.txt	/*gettabvar()*
 gettabwinvar()	builtin.txt	/*gettabwinvar()*
@@ -6421,6 +6424,8 @@ hl-DiffText	syntax.txt	/*hl-DiffText*
 hl-Directory	syntax.txt	/*hl-Directory*
 hl-EndOfBuffer	syntax.txt	/*hl-EndOfBuffer*
 hl-ErrorMsg	syntax.txt	/*hl-ErrorMsg*
+hl-FloatBorder	syntax.txt	/*hl-FloatBorder*
+hl-FloatTitle	syntax.txt	/*hl-FloatTitle*
 hl-FoldColumn	syntax.txt	/*hl-FoldColumn*
 hl-Folded	syntax.txt	/*hl-Folded*
 hl-Ignore	syntax.txt	/*hl-Ignore*
@@ -6512,6 +6517,10 @@ hl-NvimUnaryMinus	eval.txt	/*hl-NvimUnaryMinus*
 hl-NvimUnaryOperator	eval.txt	/*hl-NvimUnaryOperator*
 hl-NvimUnaryPlus	eval.txt	/*hl-NvimUnaryPlus*
 hl-Pmenu	syntax.txt	/*hl-Pmenu*
+hl-PmenuExtra	syntax.txt	/*hl-PmenuExtra*
+hl-PmenuExtraSel	syntax.txt	/*hl-PmenuExtraSel*
+hl-PmenuKind	syntax.txt	/*hl-PmenuKind*
+hl-PmenuKindSel	syntax.txt	/*hl-PmenuKindSel*
 hl-PmenuSbar	syntax.txt	/*hl-PmenuSbar*
 hl-PmenuSel	syntax.txt	/*hl-PmenuSel*
 hl-PmenuThumb	syntax.txt	/*hl-PmenuThumb*
@@ -6922,6 +6931,7 @@ localtime()	builtin.txt	/*localtime()*
 location-list	quickfix.txt	/*location-list*
 location-list-file-window	quickfix.txt	/*location-list-file-window*
 location-list-window	quickfix.txt	/*location-list-window*
+log	starting.txt	/*log*
 log()	builtin.txt	/*log()*
 log10()	builtin.txt	/*log10()*
 log_levels	lua.txt	/*log_levels*
@@ -6954,6 +6964,7 @@ lsp-protocol	lsp.txt	/*lsp-protocol*
 lsp-quickstart	lsp.txt	/*lsp-quickstart*
 lsp-response	lsp.txt	/*lsp-response*
 lsp-rpc	lsp.txt	/*lsp-rpc*
+lsp-semantic-highlight	lsp.txt	/*lsp-semantic-highlight*
 lsp-semantic_tokens	lsp.txt	/*lsp-semantic_tokens*
 lsp-sync	lsp.txt	/*lsp-sync*
 lsp-util	lsp.txt	/*lsp-util*
@@ -7022,6 +7033,7 @@ lua-treesitter-query	treesitter.txt	/*lua-treesitter-query*
 lua-ui	lua.txt	/*lua-ui*
 lua-uri	lua.txt	/*lua-uri*
 lua-variable	eval.txt	/*lua-variable*
+lua-version	lua.txt	/*lua-version*
 lua-vim	lua.txt	/*lua-vim*
 lua-vim-options	lua.txt	/*lua-vim-options*
 lua-vim-set	lua.txt	/*lua-vim-set*
@@ -7488,6 +7500,7 @@ math.tanh()	luaref.txt	/*math.tanh()*
 matlab-indent	indent.txt	/*matlab-indent*
 matlab-indenting	indent.txt	/*matlab-indenting*
 max()	builtin.txt	/*max()*
+maxcol-variable	eval.txt	/*maxcol-variable*
 mbyte-XIM	mbyte.txt	/*mbyte-XIM*
 mbyte-combining	mbyte.txt	/*mbyte-combining*
 mbyte-composing	mbyte.txt	/*mbyte-composing*
@@ -8363,6 +8376,7 @@ regex:match_line()	lua.txt	/*regex:match_line()*
 regex:match_str()	lua.txt	/*regex:match_str()*
 regexp	pattern.txt	/*regexp*
 register	intro.txt	/*register*
+register-functions	usr_41.txt	/*register-functions*
 register-variable	eval.txt	/*register-variable*
 registers	change.txt	/*registers*
 rego.vim	syntax.txt	/*rego.vim*
@@ -8992,6 +9006,7 @@ tcsh-style	cmdline.txt	/*tcsh-style*
 tcsh.vim	syntax.txt	/*tcsh.vim*
 telnet-CTRL-]	tagsrch.txt	/*telnet-CTRL-]*
 temp-file-name	builtin.txt	/*temp-file-name*
+tempdir	change.txt	/*tempdir*
 tempfile	change.txt	/*tempfile*
 template	autocmd.txt	/*template*
 tempname()	builtin.txt	/*tempname()*
@@ -9091,6 +9106,7 @@ treesitter-highlight-conceal	treesitter.txt	/*treesitter-highlight-conceal*
 treesitter-highlight-groups	treesitter.txt	/*treesitter-highlight-groups*
 treesitter-highlight-priority	treesitter.txt	/*treesitter-highlight-priority*
 treesitter-highlight-spell	treesitter.txt	/*treesitter-highlight-spell*
+treesitter-language-injections	treesitter.txt	/*treesitter-language-injections*
 treesitter-node	treesitter.txt	/*treesitter-node*
 treesitter-parsers	treesitter.txt	/*treesitter-parsers*
 treesitter-predicate-any-of?	treesitter.txt	/*treesitter-predicate-any-of?*
@@ -9505,6 +9521,7 @@ v:lc_time	eval.txt	/*v:lc_time*
 v:lnum	eval.txt	/*v:lnum*
 v:lua	eval.txt	/*v:lua*
 v:lua-call	lua.txt	/*v:lua-call*
+v:maxcol	eval.txt	/*v:maxcol*
 v:mouse_col	eval.txt	/*v:mouse_col*
 v:mouse_lnum	eval.txt	/*v:mouse_lnum*
 v:mouse_win	eval.txt	/*v:mouse_win*
@@ -9883,6 +9900,7 @@ vim.lsp.rpc.rpc_response_error()	lsp.txt	/*vim.lsp.rpc.rpc_response_error()*
 vim.lsp.rpc.start()	lsp.txt	/*vim.lsp.rpc.start()*
 vim.lsp.semantic_tokens.force_refresh()	lsp.txt	/*vim.lsp.semantic_tokens.force_refresh()*
 vim.lsp.semantic_tokens.get_at_pos()	lsp.txt	/*vim.lsp.semantic_tokens.get_at_pos()*
+vim.lsp.semantic_tokens.highlight_token()	lsp.txt	/*vim.lsp.semantic_tokens.highlight_token()*
 vim.lsp.semantic_tokens.start()	lsp.txt	/*vim.lsp.semantic_tokens.start()*
 vim.lsp.semantic_tokens.stop()	lsp.txt	/*vim.lsp.semantic_tokens.stop()*
 vim.lsp.set_log_level()	lsp.txt	/*vim.lsp.set_log_level()*
@@ -9926,6 +9944,7 @@ vim.lsp.util.text_document_completion_list_to_complete_items()	lsp.txt	/*vim.lsp
 vim.lsp.util.trim_empty_lines()	lsp.txt	/*vim.lsp.util.trim_empty_lines()*
 vim.lsp.util.try_trim_markdown_code_blocks()	lsp.txt	/*vim.lsp.util.try_trim_markdown_code_blocks()*
 vim.lsp.with()	lsp.txt	/*vim.lsp.with()*
+vim.lua_omnifunc()	lua.txt	/*vim.lua_omnifunc()*
 vim.mpack	lua.txt	/*vim.mpack*
 vim.mpack.decode	lua.txt	/*vim.mpack.decode*
 vim.mpack.encode	lua.txt	/*vim.mpack.encode*
@@ -9942,7 +9961,8 @@ vim.opt_global	lua.txt	/*vim.opt_global*
 vim.opt_local	lua.txt	/*vim.opt_local*
 vim.paste()	lua.txt	/*vim.paste()*
 vim.pesc()	lua.txt	/*vim.pesc()*
-vim.pretty_print()	lua.txt	/*vim.pretty_print()*
+vim.pretty_print()	deprecated.txt	/*vim.pretty_print()*
+vim.print()	lua.txt	/*vim.print()*
 vim.regex()	lua.txt	/*vim.regex()*
 vim.region()	lua.txt	/*vim.region()*
 vim.register_keystroke_callback()	deprecated.txt	/*vim.register_keystroke_callback()*
@@ -9989,6 +10009,7 @@ vim.treesitter.get_node_text()	treesitter.txt	/*vim.treesitter.get_node_text()*
 vim.treesitter.get_parser()	treesitter.txt	/*vim.treesitter.get_parser()*
 vim.treesitter.get_query()	treesitter.txt	/*vim.treesitter.get_query()*
 vim.treesitter.get_query_files()	treesitter.txt	/*vim.treesitter.get_query_files()*
+vim.treesitter.get_range()	treesitter.txt	/*vim.treesitter.get_range()*
 vim.treesitter.get_string_parser()	treesitter.txt	/*vim.treesitter.get_string_parser()*
 vim.treesitter.inspect_language()	treesitter.txt	/*vim.treesitter.inspect_language()*
 vim.treesitter.inspect_tree()	treesitter.txt	/*vim.treesitter.inspect_tree()*
@@ -10020,6 +10041,11 @@ vim.v	lua.txt	/*vim.v*
 vim.val_idx	lua.txt	/*vim.val_idx*
 vim.validate()	lua.txt	/*vim.validate()*
 vim.version	lua.txt	/*vim.version*
+vim.version.cmp()	lua.txt	/*vim.version.cmp()*
+vim.version.eq()	lua.txt	/*vim.version.eq()*
+vim.version.gt()	lua.txt	/*vim.version.gt()*
+vim.version.lt()	lua.txt	/*vim.version.lt()*
+vim.version.parse()	lua.txt	/*vim.version.parse()*
 vim.vim	syntax.txt	/*vim.vim*
 vim.w	lua.txt	/*vim.w*
 vim.wait()	lua.txt	/*vim.wait()*
