@@ -9965,7 +9965,6 @@ vim.pretty_print()	deprecated.txt	/*vim.pretty_print()*
 vim.print()	lua.txt	/*vim.print()*
 vim.regex()	lua.txt	/*vim.regex()*
 vim.region()	lua.txt	/*vim.region()*
-vim.register_keystroke_callback()	deprecated.txt	/*vim.register_keystroke_callback()*
 vim.rpcnotify()	lua.txt	/*vim.rpcnotify()*
 vim.rpcrequest()	lua.txt	/*vim.rpcrequest()*
 vim.schedule()	lua.txt	/*vim.schedule()*
