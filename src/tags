@@ -7971,7 +7971,8 @@ nvim_get_mark()	api.txt	/*nvim_get_mark()*
 nvim_get_mode()	api.txt	/*nvim_get_mode()*
 nvim_get_namespaces()	api.txt	/*nvim_get_namespaces()*
 nvim_get_option()	api.txt	/*nvim_get_option()*
-nvim_get_option_info()	api.txt	/*nvim_get_option_info()*
+nvim_get_option_info()	deprecated.txt	/*nvim_get_option_info()*
+nvim_get_option_info2()	api.txt	/*nvim_get_option_info2()*
 nvim_get_option_value()	api.txt	/*nvim_get_option_value()*
 nvim_get_proc()	api.txt	/*nvim_get_proc()*
 nvim_get_proc_children()	api.txt	/*nvim_get_proc_children()*
@@ -10018,6 +10019,7 @@ vim.treesitter.inspect_tree()	treesitter.txt	/*vim.treesitter.inspect_tree()*
 vim.treesitter.is_ancestor()	treesitter.txt	/*vim.treesitter.is_ancestor()*
 vim.treesitter.is_in_node_range()	treesitter.txt	/*vim.treesitter.is_in_node_range()*
 vim.treesitter.language.add()	treesitter.txt	/*vim.treesitter.language.add()*
+vim.treesitter.language.get_filetypes()	treesitter.txt	/*vim.treesitter.language.get_filetypes()*
 vim.treesitter.language.get_lang()	treesitter.txt	/*vim.treesitter.language.get_lang()*
 vim.treesitter.language.inspect()	treesitter.txt	/*vim.treesitter.language.inspect()*
 vim.treesitter.language.register()	treesitter.txt	/*vim.treesitter.language.register()*
