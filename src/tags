@@ -19,6 +19,7 @@ $XDG_CONFIG_HOME	starting.txt	/*$XDG_CONFIG_HOME*
 $XDG_DATA_HOME	starting.txt	/*$XDG_DATA_HOME*
 $XDG_RUNTIME_DIR	starting.txt	/*$XDG_RUNTIME_DIR*
 $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
+$quote	eval.txt	/*$quote*
 %	motion.txt	/*%*
 %:.	cmdline.txt	/*%:.*
 %:8	cmdline.txt	/*%:8*
@@ -1540,7 +1541,6 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 :Asm	nvim_terminal_emulator.txt	/*:Asm*
 :Break	nvim_terminal_emulator.txt	/*:Break*
 :Cfilter	quickfix.txt	/*:Cfilter*
-:CheckHealth	pi_health.txt	/*:CheckHealth*
 :Clear	nvim_terminal_emulator.txt	/*:Clear*
 :CompilerSet	usr_41.txt	/*:CompilerSet*
 :Continue	nvim_terminal_emulator.txt	/*:Continue*
@@ -1597,7 +1597,6 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 :Until	nvim_terminal_emulator.txt	/*:Until*
 :UpdateRemotePlugins	remote_plugin.txt	/*:UpdateRemotePlugins*
 :Vexplore	pi_netrw.txt	/*:Vexplore*
-:Vimuntar	pi_tar.txt	/*:Vimuntar*
 :X	editing.txt	/*:X*
 :XMLent	insert.txt	/*:XMLent*
 :XMLns	insert.txt	/*:XMLns*
@@ -1670,8 +1669,6 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 :bd	windows.txt	/*:bd*
 :bdel	windows.txt	/*:bdel*
 :bdelete	windows.txt	/*:bdelete*
-:be	options.txt	/*:be*
-:behave	options.txt	/*:behave*
 :bel	windows.txt	/*:bel*
 :belowright	windows.txt	/*:belowright*
 :bf	windows.txt	/*:bf*
@@ -1870,6 +1867,7 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 :debug-name	repeat.txt	/*:debug-name*
 :debugg	repeat.txt	/*:debugg*
 :debuggreedy	repeat.txt	/*:debuggreedy*
+:defer	userfunc.txt	/*:defer*
 :del	change.txt	/*:del*
 :delc	map.txt	/*:delc*
 :delcommand	map.txt	/*:delcommand*
@@ -3119,6 +3117,7 @@ $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
 >where	repeat.txt	/*>where*
 ?	pattern.txt	/*?*
 ?<CR>	pattern.txt	/*?<CR>*
+??	eval.txt	/*??*
 @	repeat.txt	/*@*
 @/	change.txt	/*@\/*
 @:	repeat.txt	/*@:*
@@ -3325,6 +3324,7 @@ E104	digraph.txt	/*E104*
 E105	mbyte.txt	/*E105*
 E107	userfunc.txt	/*E107*
 E108	eval.txt	/*E108*
+E1085	eval.txt	/*E1085*
 E109	eval.txt	/*E109*
 E11	cmdline.txt	/*E11*
 E110	eval.txt	/*E110*
@@ -3338,6 +3338,7 @@ E1114	builtin.txt	/*E1114*
 E112	eval.txt	/*E112*
 E113	eval.txt	/*E113*
 E114	eval.txt	/*E114*
+E1145	eval.txt	/*E1145*
 E115	eval.txt	/*E115*
 E1159	windows.txt	/*E1159*
 E116	eval.txt	/*E116*
@@ -3345,6 +3346,7 @@ E117	userfunc.txt	/*E117*
 E118	eval.txt	/*E118*
 E1188	cmdline.txt	/*E1188*
 E119	eval.txt	/*E119*
+E1192	eval.txt	/*E1192*
 E12	message.txt	/*E12*
 E120	eval.txt	/*E120*
 E1204	pattern.txt	/*E1204*
@@ -3365,6 +3367,7 @@ E125	userfunc.txt	/*E125*
 E126	userfunc.txt	/*E126*
 E127	userfunc.txt	/*E127*
 E1274	cmdline.txt	/*E1274*
+E1278	eval.txt	/*E1278*
 E128	userfunc.txt	/*E128*
 E1280	spell.txt	/*E1280*
 E1281	pattern.txt	/*E1281*
@@ -3372,6 +3375,7 @@ E129	userfunc.txt	/*E129*
 E1290	change.txt	/*E1290*
 E1299	tagsrch.txt	/*E1299*
 E13	message.txt	/*E13*
+E1300	userfunc.txt	/*E1300*
 E1308	builtin.txt	/*E1308*
 E131	userfunc.txt	/*E131*
 E132	userfunc.txt	/*E132*
@@ -5501,6 +5505,8 @@ expr-!=?	eval.txt	/*expr-!=?*
 expr-!~	eval.txt	/*expr-!~*
 expr-!~#	eval.txt	/*expr-!~#*
 expr-!~?	eval.txt	/*expr-!~?*
+expr-$'	eval.txt	/*expr-$'*
+expr-$quote	eval.txt	/*expr-$quote*
 expr-%	eval.txt	/*expr-%*
 expr-&&	eval.txt	/*expr-&&*
 expr-'	eval.txt	/*expr-'*
@@ -5573,6 +5579,8 @@ extmarks	api.txt	/*extmarks*
 f	motion.txt	/*f*
 f-args-example	map.txt	/*f-args-example*
 false-variable	eval.txt	/*false-variable*
+falsy	eval.txt	/*falsy*
+falsy-operator	eval.txt	/*falsy-operator*
 faq	intro.txt	/*faq*
 fasm.vim	syntax.txt	/*fasm.vim*
 fcs_choice-variable	eval.txt	/*fcs_choice-variable*
@@ -6123,8 +6131,6 @@ g:statusline_winid	options.txt	/*g:statusline_winid*
 g:syntax_on	syntax.txt	/*g:syntax_on*
 g:tar_browseoptions	pi_tar.txt	/*g:tar_browseoptions*
 g:tar_cmd	pi_tar.txt	/*g:tar_cmd*
-g:tar_copycmd	pi_tar.txt	/*g:tar_copycmd*
-g:tar_extractcmd	pi_tar.txt	/*g:tar_extractcmd*
 g:tar_nomax	pi_tar.txt	/*g:tar_nomax*
 g:tar_readoptions	pi_tar.txt	/*g:tar_readoptions*
 g:tar_secure	pi_tar.txt	/*g:tar_secure*
@@ -6768,6 +6774,7 @@ interactive-functions	usr_41.txt	/*interactive-functions*
 internal-variables	eval.txt	/*internal-variables*
 internal-wordlist	spell.txt	/*internal-wordlist*
 internet	intro.txt	/*internet*
+interpolated-string	eval.txt	/*interpolated-string*
 interrupt()	builtin.txt	/*interrupt()*
 intro	intro.txt	/*intro*
 intro.txt	intro.txt	/*intro.txt*
@@ -9138,6 +9145,7 @@ true-color	term.txt	/*true-color*
 true-variable	eval.txt	/*true-variable*
 trunc()	builtin.txt	/*trunc()*
 trust	editing.txt	/*trust*
+truthy	eval.txt	/*truthy*
 try-conditionals	eval.txt	/*try-conditionals*
 try-echoerr	eval.txt	/*try-echoerr*
 try-finally	eval.txt	/*try-finally*
@@ -9795,11 +9803,16 @@ vim.g	lua.txt	/*vim.g*
 vim.go	lua.txt	/*vim.go*
 vim.gsplit()	lua.txt	/*vim.gsplit()*
 vim.health	pi_health.txt	/*vim.health*
-vim.health.report_error()	pi_health.txt	/*vim.health.report_error()*
-vim.health.report_info()	pi_health.txt	/*vim.health.report_info()*
-vim.health.report_ok()	pi_health.txt	/*vim.health.report_ok()*
-vim.health.report_start()	pi_health.txt	/*vim.health.report_start()*
-vim.health.report_warn()	pi_health.txt	/*vim.health.report_warn()*
+vim.health.error()	pi_health.txt	/*vim.health.error()*
+vim.health.info()	pi_health.txt	/*vim.health.info()*
+vim.health.ok()	pi_health.txt	/*vim.health.ok()*
+vim.health.report_error()	deprecated.txt	/*vim.health.report_error()*
+vim.health.report_info()	deprecated.txt	/*vim.health.report_info()*
+vim.health.report_ok()	deprecated.txt	/*vim.health.report_ok()*
+vim.health.report_start()	deprecated.txt	/*vim.health.report_start()*
+vim.health.report_warn()	deprecated.txt	/*vim.health.report_warn()*
+vim.health.start()	pi_health.txt	/*vim.health.start()*
+vim.health.warn()	pi_health.txt	/*vim.health.warn()*
 vim.highlight.on_yank()	lua.txt	/*vim.highlight.on_yank()*
 vim.highlight.priorities	lua.txt	/*vim.highlight.priorities*
 vim.highlight.range()	lua.txt	/*vim.highlight.range()*
@@ -9813,6 +9826,7 @@ vim.json.decode	lua.txt	/*vim.json.decode*
 vim.json.encode	lua.txt	/*vim.json.encode*
 vim.keymap.del()	lua.txt	/*vim.keymap.del()*
 vim.keymap.set()	lua.txt	/*vim.keymap.set()*
+vim.list_contains()	lua.txt	/*vim.list_contains()*
 vim.list_extend()	lua.txt	/*vim.list_extend()*
 vim.list_slice()	lua.txt	/*vim.list_slice()*
 vim.loader.disable()	lua.txt	/*vim.loader.disable()*
@@ -9832,6 +9846,7 @@ vim.lsp.buf.document_symbol()	lsp.txt	/*vim.lsp.buf.document_symbol()*
 vim.lsp.buf.execute_command()	lsp.txt	/*vim.lsp.buf.execute_command()*
 vim.lsp.buf.format()	lsp.txt	/*vim.lsp.buf.format()*
 vim.lsp.buf.formatting()	deprecated.txt	/*vim.lsp.buf.formatting()*
+vim.lsp.buf.formatting_sync()	deprecated.txt	/*vim.lsp.buf.formatting_sync()*
 vim.lsp.buf.hover()	lsp.txt	/*vim.lsp.buf.hover()*
 vim.lsp.buf.implementation()	lsp.txt	/*vim.lsp.buf.implementation()*
 vim.lsp.buf.incoming_calls()	lsp.txt	/*vim.lsp.buf.incoming_calls()*
@@ -10004,6 +10019,7 @@ vim.tbl_extend()	lua.txt	/*vim.tbl_extend()*
 vim.tbl_filter()	lua.txt	/*vim.tbl_filter()*
 vim.tbl_flatten()	lua.txt	/*vim.tbl_flatten()*
 vim.tbl_get()	lua.txt	/*vim.tbl_get()*
+vim.tbl_isarray()	lua.txt	/*vim.tbl_isarray()*
 vim.tbl_isempty()	lua.txt	/*vim.tbl_isempty()*
 vim.tbl_islist()	lua.txt	/*vim.tbl_islist()*
 vim.tbl_keys()	lua.txt	/*vim.tbl_keys()*
@@ -10074,7 +10090,7 @@ vim:	options.txt	/*vim:*
 vim_did_enter-variable	eval.txt	/*vim_did_enter-variable*
 vim_diff.txt	vim_diff.txt	/*vim_diff.txt*
 vim_starting	builtin.txt	/*vim_starting*
-vimball-install	usr_05.txt	/*vimball-install*
+vimball	vim_diff.txt	/*vimball*
 vimfiles	options.txt	/*vimfiles*
 vimrc	starting.txt	/*vimrc*
 vimrc-filetype	usr_05.txt	/*vimrc-filetype*
