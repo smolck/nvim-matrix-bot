@@ -2930,6 +2930,7 @@ $quote	eval.txt	/*$quote*
 :wall	editing.txt	/*:wall*
 :wh	eval.txt	/*:wh*
 :while	eval.txt	/*:while*
+:wi	gui.txt	/*:wi*
 :win	gui.txt	/*:win*
 :winc	windows.txt	/*:winc*
 :wincmd	windows.txt	/*:wincmd*
@@ -3383,6 +3384,7 @@ E133	userfunc.txt	/*E133*
 E134	change.txt	/*E134*
 E135	autocmd.txt	/*E135*
 E136	starting.txt	/*E136*
+E1364	recover.txt	/*E1364*
 E137	starting.txt	/*E137*
 E139	message.txt	/*E139*
 E140	message.txt	/*E140*
@@ -4195,6 +4197,27 @@ InsertEnter	autocmd.txt	/*InsertEnter*
 InsertLeave	autocmd.txt	/*InsertLeave*
 InsertLeavePre	autocmd.txt	/*InsertLeavePre*
 Integer	eval.txt	/*Integer*
+Iter:all()	lua.txt	/*Iter:all()*
+Iter:any()	lua.txt	/*Iter:any()*
+Iter:each()	lua.txt	/*Iter:each()*
+Iter:enumerate()	lua.txt	/*Iter:enumerate()*
+Iter:filter()	lua.txt	/*Iter:filter()*
+Iter:find()	lua.txt	/*Iter:find()*
+Iter:fold()	lua.txt	/*Iter:fold()*
+Iter:last()	lua.txt	/*Iter:last()*
+Iter:map()	lua.txt	/*Iter:map()*
+Iter:next()	lua.txt	/*Iter:next()*
+Iter:nextback()	lua.txt	/*Iter:nextback()*
+Iter:nth()	lua.txt	/*Iter:nth()*
+Iter:nthback()	lua.txt	/*Iter:nthback()*
+Iter:peek()	lua.txt	/*Iter:peek()*
+Iter:peekback()	lua.txt	/*Iter:peekback()*
+Iter:rev()	lua.txt	/*Iter:rev()*
+Iter:rfind()	lua.txt	/*Iter:rfind()*
+Iter:skip()	lua.txt	/*Iter:skip()*
+Iter:skipback()	lua.txt	/*Iter:skipback()*
+Iter:slice()	lua.txt	/*Iter:slice()*
+Iter:totable()	lua.txt	/*Iter:totable()*
 J	change.txt	/*J*
 Japanese	mbyte.txt	/*Japanese*
 K	various.txt	/*K*
@@ -6059,8 +6082,6 @@ g:netrw_localmkdir	pi_netrw.txt	/*g:netrw_localmkdir*
 g:netrw_localmkdiropt	pi_netrw.txt	/*g:netrw_localmkdiropt*
 g:netrw_localmovecmd	pi_netrw.txt	/*g:netrw_localmovecmd*
 g:netrw_localmovecmdopt	pi_netrw.txt	/*g:netrw_localmovecmdopt*
-g:netrw_localrmdir	pi_netrw.txt	/*g:netrw_localrmdir*
-g:netrw_localrmdiropt	pi_netrw.txt	/*g:netrw_localrmdiropt*
 g:netrw_maxfilenamelen	pi_netrw.txt	/*g:netrw_maxfilenamelen*
 g:netrw_menu	pi_netrw.txt	/*g:netrw_menu*
 g:netrw_mkdir_cmd	pi_netrw.txt	/*g:netrw_mkdir_cmd*
@@ -7017,6 +7038,7 @@ lua-guide.txt	lua-guide.txt	/*lua-guide.txt*
 lua-highlight	lua.txt	/*lua-highlight*
 lua-inspector	lua.txt	/*lua-inspector*
 lua-intro	lua.txt	/*lua-intro*
+lua-iter	lua.txt	/*lua-iter*
 lua-json	lua.txt	/*lua-json*
 lua-keymap	lua.txt	/*lua-keymap*
 lua-loader	lua.txt	/*lua-loader*
@@ -7840,6 +7862,7 @@ netrw-xfer	pi_netrw.txt	/*netrw-xfer*
 netrw.vim	pi_netrw.txt	/*netrw.vim*
 netrw_filehandler	pi_netrw.txt	/*netrw_filehandler*
 network	pi_netrw.txt	/*network*
+new()	lua.txt	/*new()*
 new-filetype	filetype.txt	/*new-filetype*
 new-filetype-scripts	filetype.txt	/*new-filetype-scripts*
 new-style-testing	testing.txt	/*new-style-testing*
@@ -7852,6 +7875,7 @@ news-changed	news.txt	/*news-changed*
 news-deprecations	news.txt	/*news-deprecations*
 news-removed	news.txt	/*news-removed*
 news.txt	news.txt	/*news.txt*
+next()	lua.txt	/*next()*
 nextnonblank()	builtin.txt	/*nextnonblank()*
 no-type-checking	eval.txt	/*no-type-checking*
 no_mail_maps	filetype.txt	/*no_mail_maps*
@@ -8912,6 +8936,7 @@ swap-exists-choices	usr_11.txt	/*swap-exists-choices*
 swap-file	recover.txt	/*swap-file*
 swapchoice-variable	eval.txt	/*swapchoice-variable*
 swapcommand-variable	eval.txt	/*swapcommand-variable*
+swapfilelist()	builtin.txt	/*swapfilelist()*
 swapinfo()	builtin.txt	/*swapinfo()*
 swapname()	builtin.txt	/*swapname()*
 swapname-variable	eval.txt	/*swapname-variable*
@@ -9792,6 +9817,7 @@ vim.env	lua.txt	/*vim.env*
 vim.filetype.add()	lua.txt	/*vim.filetype.add()*
 vim.filetype.get_option()	lua.txt	/*vim.filetype.get_option()*
 vim.filetype.match()	lua.txt	/*vim.filetype.match()*
+vim.filter()	lua.txt	/*vim.filter()*
 vim.fn	lua.txt	/*vim.fn*
 vim.fs.basename()	lua.txt	/*vim.fs.basename()*
 vim.fs.dir()	lua.txt	/*vim.fs.dir()*
@@ -9821,6 +9847,7 @@ vim.in_fast_event()	lua.txt	/*vim.in_fast_event()*
 vim.inspect()	lua.txt	/*vim.inspect()*
 vim.inspect_pos()	lua.txt	/*vim.inspect_pos()*
 vim.is_callable()	lua.txt	/*vim.is_callable()*
+vim.iter()	lua.txt	/*vim.iter()*
 vim.json	lua.txt	/*vim.json*
 vim.json.decode	lua.txt	/*vim.json.decode*
 vim.json.encode	lua.txt	/*vim.json.encode*
@@ -9976,6 +10003,7 @@ vim.lsp.util.trim_empty_lines()	lsp.txt	/*vim.lsp.util.trim_empty_lines()*
 vim.lsp.util.try_trim_markdown_code_blocks()	lsp.txt	/*vim.lsp.util.try_trim_markdown_code_blocks()*
 vim.lsp.with()	lsp.txt	/*vim.lsp.with()*
 vim.lua_omnifunc()	lua.txt	/*vim.lua_omnifunc()*
+vim.map()	lua.txt	/*vim.map()*
 vim.mpack	lua.txt	/*vim.mpack*
 vim.mpack.decode	lua.txt	/*vim.mpack.decode*
 vim.mpack.encode	lua.txt	/*vim.mpack.encode*
@@ -10025,6 +10053,7 @@ vim.tbl_islist()	lua.txt	/*vim.tbl_islist()*
 vim.tbl_keys()	lua.txt	/*vim.tbl_keys()*
 vim.tbl_map()	lua.txt	/*vim.tbl_map()*
 vim.tbl_values()	lua.txt	/*vim.tbl_values()*
+vim.totable()	lua.txt	/*vim.totable()*
 vim.treesitter.foldexpr()	treesitter.txt	/*vim.treesitter.foldexpr()*
 vim.treesitter.get_captures_at_cursor()	treesitter.txt	/*vim.treesitter.get_captures_at_cursor()*
 vim.treesitter.get_captures_at_pos()	treesitter.txt	/*vim.treesitter.get_captures_at_pos()*
