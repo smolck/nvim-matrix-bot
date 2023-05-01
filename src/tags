@@ -4093,7 +4093,6 @@ E907	eval.txt	/*E907*
 E91	options.txt	/*E91*
 E919	repeat.txt	/*E919*
 E92	message.txt	/*E92*
-E922	builtin.txt	/*E922*
 E923	builtin.txt	/*E923*
 E924	quickfix.txt	/*E924*
 E925	quickfix.txt	/*E925*
@@ -4197,6 +4196,7 @@ InsertEnter	autocmd.txt	/*InsertEnter*
 InsertLeave	autocmd.txt	/*InsertLeave*
 InsertLeavePre	autocmd.txt	/*InsertLeavePre*
 Integer	eval.txt	/*Integer*
+Iter	lua.txt	/*Iter*
 Iter:all()	lua.txt	/*Iter:all()*
 Iter:any()	lua.txt	/*Iter:any()*
 Iter:each()	lua.txt	/*Iter:each()*
@@ -5840,6 +5840,7 @@ ft-python-plugin	filetype.txt	/*ft-python-plugin*
 ft-python-syntax	syntax.txt	/*ft-python-syntax*
 ft-qf-plugin	filetype.txt	/*ft-qf-plugin*
 ft-quake-syntax	syntax.txt	/*ft-quake-syntax*
+ft-query-plugin	filetype.txt	/*ft-query-plugin*
 ft-r-indent	indent.txt	/*ft-r-indent*
 ft-r-syntax	syntax.txt	/*ft-r-syntax*
 ft-readline-syntax	syntax.txt	/*ft-readline-syntax*
@@ -6977,8 +6978,6 @@ lsp-config	lsp.txt	/*lsp-config*
 lsp-core	lsp.txt	/*lsp-core*
 lsp-diagnostic	lsp.txt	/*lsp-diagnostic*
 lsp-events	lsp.txt	/*lsp-events*
-lsp-extension-example	lsp-extension.txt	/*lsp-extension-example*
-lsp-extension.txt	lsp-extension.txt	/*lsp-extension.txt*
 lsp-faq	lsp.txt	/*lsp-faq*
 lsp-handler	lsp.txt	/*lsp-handler*
 lsp-handler-configuration	lsp.txt	/*lsp-handler-configuration*
@@ -7045,6 +7044,7 @@ lua-loader	lua.txt	/*lua-loader*
 lua-loop	lua.txt	/*lua-loop*
 lua-loop-callbacks	lua.txt	/*lua-loop-callbacks*
 lua-loop-threading	lua.txt	/*lua-loop-threading*
+lua-lpeg	lua.txt	/*lua-lpeg*
 lua-luajit	lua.txt	/*lua-luajit*
 lua-mpack	lua.txt	/*lua-mpack*
 lua-options	lua.txt	/*lua-options*
@@ -7862,7 +7862,6 @@ netrw-xfer	pi_netrw.txt	/*netrw-xfer*
 netrw.vim	pi_netrw.txt	/*netrw.vim*
 netrw_filehandler	pi_netrw.txt	/*netrw_filehandler*
 network	pi_netrw.txt	/*network*
-new()	lua.txt	/*new()*
 new-filetype	filetype.txt	/*new-filetype*
 new-filetype-scripts	filetype.txt	/*new-filetype-scripts*
 new-style-testing	testing.txt	/*new-style-testing*
@@ -7875,7 +7874,6 @@ news-changed	news.txt	/*news-changed*
 news-deprecations	news.txt	/*news-deprecations*
 news-removed	news.txt	/*news-removed*
 news.txt	news.txt	/*news.txt*
-next()	lua.txt	/*next()*
 nextnonblank()	builtin.txt	/*nextnonblank()*
 no-type-checking	eval.txt	/*no-type-checking*
 no_mail_maps	filetype.txt	/*no_mail_maps*
@@ -8894,6 +8892,7 @@ string	eval.txt	/*string*
 string()	builtin.txt	/*string()*
 string-functions	usr_41.txt	/*string-functions*
 string-match	builtin.txt	/*string-match*
+string-offset-encoding	eval.txt	/*string-offset-encoding*
 string.byte()	luaref.txt	/*string.byte()*
 string.char()	luaref.txt	/*string.char()*
 string.dump()	luaref.txt	/*string.dump()*
@@ -8917,6 +8916,7 @@ strridx()	builtin.txt	/*strridx()*
 strspn()	builtin.txt	/*strspn()*
 strstr()	builtin.txt	/*strstr()*
 strtrans()	builtin.txt	/*strtrans()*
+strutf16len()	builtin.txt	/*strutf16len()*
 strwidth()	builtin.txt	/*strwidth()*
 sub-menu-priority	gui.txt	/*sub-menu-priority*
 sub-replace-\=	change.txt	/*sub-replace-\\=*
@@ -9287,6 +9287,7 @@ utf-8	mbyte.txt	/*utf-8*
 utf-8-char-arg	mbyte.txt	/*utf-8-char-arg*
 utf-8-in-xwindows	mbyte.txt	/*utf-8-in-xwindows*
 utf-8-typing	mbyte.txt	/*utf-8-typing*
+utf16idx()	builtin.txt	/*utf16idx()*
 utf8	mbyte.txt	/*utf8*
 uv	luvref.txt	/*uv*
 uv.accept()	luvref.txt	/*uv.accept()*
@@ -9817,7 +9818,6 @@ vim.env	lua.txt	/*vim.env*
 vim.filetype.add()	lua.txt	/*vim.filetype.add()*
 vim.filetype.get_option()	lua.txt	/*vim.filetype.get_option()*
 vim.filetype.match()	lua.txt	/*vim.filetype.match()*
-vim.filter()	lua.txt	/*vim.filter()*
 vim.fn	lua.txt	/*vim.fn*
 vim.fs.basename()	lua.txt	/*vim.fs.basename()*
 vim.fs.dir()	lua.txt	/*vim.fs.dir()*
@@ -9847,10 +9847,15 @@ vim.in_fast_event()	lua.txt	/*vim.in_fast_event()*
 vim.inspect()	lua.txt	/*vim.inspect()*
 vim.inspect_pos()	lua.txt	/*vim.inspect_pos()*
 vim.is_callable()	lua.txt	/*vim.is_callable()*
+vim.iter	lua.txt	/*vim.iter*
 vim.iter()	lua.txt	/*vim.iter()*
+vim.iter.filter()	lua.txt	/*vim.iter.filter()*
+vim.iter.map()	lua.txt	/*vim.iter.map()*
+vim.iter.totable()	lua.txt	/*vim.iter.totable()*
 vim.json	lua.txt	/*vim.json*
 vim.json.decode	lua.txt	/*vim.json.decode*
 vim.json.encode	lua.txt	/*vim.json.encode*
+vim.keycode()	lua.txt	/*vim.keycode()*
 vim.keymap.del()	lua.txt	/*vim.keymap.del()*
 vim.keymap.set()	lua.txt	/*vim.keymap.set()*
 vim.list_contains()	lua.txt	/*vim.list_contains()*
@@ -9862,6 +9867,7 @@ vim.loader.find()	lua.txt	/*vim.loader.find()*
 vim.loader.reset()	lua.txt	/*vim.loader.reset()*
 vim.log.levels	lua.txt	/*vim.log.levels*
 vim.loop	lua.txt	/*vim.loop*
+vim.lpeg	lua.txt	/*vim.lpeg*
 vim.lsp.buf.add_workspace_folder()	lsp.txt	/*vim.lsp.buf.add_workspace_folder()*
 vim.lsp.buf.clear_references()	lsp.txt	/*vim.lsp.buf.clear_references()*
 vim.lsp.buf.code_action()	lsp.txt	/*vim.lsp.buf.code_action()*
@@ -10003,7 +10009,6 @@ vim.lsp.util.trim_empty_lines()	lsp.txt	/*vim.lsp.util.trim_empty_lines()*
 vim.lsp.util.try_trim_markdown_code_blocks()	lsp.txt	/*vim.lsp.util.try_trim_markdown_code_blocks()*
 vim.lsp.with()	lsp.txt	/*vim.lsp.with()*
 vim.lua_omnifunc()	lua.txt	/*vim.lua_omnifunc()*
-vim.map()	lua.txt	/*vim.map()*
 vim.mpack	lua.txt	/*vim.mpack*
 vim.mpack.decode	lua.txt	/*vim.mpack.decode*
 vim.mpack.encode	lua.txt	/*vim.mpack.encode*
@@ -10022,6 +10027,7 @@ vim.paste()	lua.txt	/*vim.paste()*
 vim.pesc()	lua.txt	/*vim.pesc()*
 vim.pretty_print()	deprecated.txt	/*vim.pretty_print()*
 vim.print()	lua.txt	/*vim.print()*
+vim.re	lua.txt	/*vim.re*
 vim.regex()	lua.txt	/*vim.regex()*
 vim.region()	lua.txt	/*vim.region()*
 vim.rpcnotify()	lua.txt	/*vim.rpcnotify()*
@@ -10053,7 +10059,6 @@ vim.tbl_islist()	lua.txt	/*vim.tbl_islist()*
 vim.tbl_keys()	lua.txt	/*vim.tbl_keys()*
 vim.tbl_map()	lua.txt	/*vim.tbl_map()*
 vim.tbl_values()	lua.txt	/*vim.tbl_values()*
-vim.totable()	lua.txt	/*vim.totable()*
 vim.treesitter.foldexpr()	treesitter.txt	/*vim.treesitter.foldexpr()*
 vim.treesitter.get_captures_at_cursor()	treesitter.txt	/*vim.treesitter.get_captures_at_cursor()*
 vim.treesitter.get_captures_at_pos()	treesitter.txt	/*vim.treesitter.get_captures_at_pos()*
@@ -10083,8 +10088,10 @@ vim.treesitter.query.add_predicate()	treesitter.txt	/*vim.treesitter.query.add_p
 vim.treesitter.query.get()	treesitter.txt	/*vim.treesitter.query.get()*
 vim.treesitter.query.get_files()	treesitter.txt	/*vim.treesitter.query.get_files()*
 vim.treesitter.query.get_query()	deprecated.txt	/*vim.treesitter.query.get_query()*
+vim.treesitter.query.lint()	treesitter.txt	/*vim.treesitter.query.lint()*
 vim.treesitter.query.list_directives()	treesitter.txt	/*vim.treesitter.query.list_directives()*
 vim.treesitter.query.list_predicates()	treesitter.txt	/*vim.treesitter.query.list_predicates()*
+vim.treesitter.query.omnifunc()	treesitter.txt	/*vim.treesitter.query.omnifunc()*
 vim.treesitter.query.parse()	treesitter.txt	/*vim.treesitter.query.parse()*
 vim.treesitter.query.set()	treesitter.txt	/*vim.treesitter.query.set()*
 vim.treesitter.start()	treesitter.txt	/*vim.treesitter.start()*
