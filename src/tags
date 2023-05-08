@@ -620,6 +620,8 @@ $quote	eval.txt	/*$quote*
 'nosmartindent'	options.txt	/*'nosmartindent'*
 'nosmarttab'	options.txt	/*'nosmarttab'*
 'nosmd'	options.txt	/*'nosmd'*
+'nosmoothscroll'	options.txt	/*'nosmoothscroll'*
+'nosms'	options.txt	/*'nosms'*
 'nosn'	vim_diff.txt	/*'nosn'*
 'nosol'	options.txt	/*'nosol'*
 'nospell'	options.txt	/*'nospell'*
@@ -818,6 +820,8 @@ $quote	eval.txt	/*$quote*
 'smarttab'	options.txt	/*'smarttab'*
 'smc'	options.txt	/*'smc'*
 'smd'	options.txt	/*'smd'*
+'smoothscroll'	options.txt	/*'smoothscroll'*
+'sms'	options.txt	/*'sms'*
 'sn'	vim_diff.txt	/*'sn'*
 'so'	options.txt	/*'so'*
 'softtabstop'	options.txt	/*'softtabstop'*
@@ -3338,6 +3342,7 @@ E1113	builtin.txt	/*E1113*
 E1114	builtin.txt	/*E1114*
 E112	eval.txt	/*E112*
 E113	eval.txt	/*E113*
+E1136	map.txt	/*E1136*
 E114	eval.txt	/*E114*
 E1145	eval.txt	/*E1145*
 E115	eval.txt	/*E115*
@@ -3365,6 +3370,7 @@ E1240	change.txt	/*E1240*
 E1247	cmdline.txt	/*E1247*
 E1249	syntax.txt	/*E1249*
 E125	userfunc.txt	/*E125*
+E1255	map.txt	/*E1255*
 E126	userfunc.txt	/*E126*
 E127	userfunc.txt	/*E127*
 E1274	cmdline.txt	/*E1274*
@@ -3745,6 +3751,7 @@ E505	editing.txt	/*E505*
 E506	editing.txt	/*E506*
 E507	editing.txt	/*E507*
 E508	editing.txt	/*E508*
+E5080	options.txt	/*E5080*
 E509	editing.txt	/*E509*
 E51	pattern.txt	/*E51*
 E510	editing.txt	/*E510*
@@ -3798,7 +3805,6 @@ E547	options.txt	/*E547*
 E548	options.txt	/*E548*
 E549	options.txt	/*E549*
 E55	pattern.txt	/*E55*
-E5520	map.txt	/*E5520*
 E553	quickfix.txt	/*E553*
 E554	pattern.txt	/*E554*
 E555	tagsrch.txt	/*E555*
@@ -6996,7 +7002,6 @@ lsp-response	lsp.txt	/*lsp-response*
 lsp-rpc	lsp.txt	/*lsp-rpc*
 lsp-semantic-highlight	lsp.txt	/*lsp-semantic-highlight*
 lsp-semantic_tokens	lsp.txt	/*lsp-semantic_tokens*
-lsp-sync	lsp.txt	/*lsp-sync*
 lsp-util	lsp.txt	/*lsp-util*
 lsp-vs-treesitter	lsp.txt	/*lsp-vs-treesitter*
 lsp.txt	lsp.txt	/*lsp.txt*
@@ -8699,6 +8704,7 @@ single-repeat	repeat.txt	/*single-repeat*
 sinh()	builtin.txt	/*sinh()*
 skeleton	autocmd.txt	/*skeleton*
 slice	eval.txt	/*slice*
+slice()	builtin.txt	/*slice()*
 slow-fast-terminal	term.txt	/*slow-fast-terminal*
 slow-start	starting.txt	/*slow-start*
 slow-terminal	term.txt	/*slow-terminal*
@@ -9971,7 +9977,6 @@ vim.lsp.set_log_level()	lsp.txt	/*vim.lsp.set_log_level()*
 vim.lsp.start()	lsp.txt	/*vim.lsp.start()*
 vim.lsp.start_client()	lsp.txt	/*vim.lsp.start_client()*
 vim.lsp.stop_client()	lsp.txt	/*vim.lsp.stop_client()*
-vim.lsp.sync.compute_diff()	lsp.txt	/*vim.lsp.sync.compute_diff()*
 vim.lsp.tagfunc()	lsp.txt	/*vim.lsp.tagfunc()*
 vim.lsp.util.apply_text_document_edit()	lsp.txt	/*vim.lsp.util.apply_text_document_edit()*
 vim.lsp.util.apply_text_edits()	lsp.txt	/*vim.lsp.util.apply_text_edits()*
