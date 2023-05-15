@@ -3863,7 +3863,6 @@ E63	pattern.txt	/*E63*
 E64	pattern.txt	/*E64*
 E65	pattern.txt	/*E65*
 E655	builtin.txt	/*E655*
-E659	if_pyth.txt	/*E659*
 E66	syntax.txt	/*E66*
 E661	helphelp.txt	/*E661*
 E662	motion.txt	/*E662*
@@ -7013,6 +7012,7 @@ lua-call-function	lua.txt	/*lua-call-function*
 lua-commands	lua.txt	/*lua-commands*
 lua-compat	lua.txt	/*lua-compat*
 lua-concepts	lua.txt	/*lua-concepts*
+lua-dict	lua.txt	/*lua-dict*
 lua-diff	lua.txt	/*lua-diff*
 lua-eval	lua.txt	/*lua-eval*
 lua-filetype	lua.txt	/*lua-filetype*
@@ -7045,6 +7045,7 @@ lua-intro	lua.txt	/*lua-intro*
 lua-iter	lua.txt	/*lua-iter*
 lua-json	lua.txt	/*lua-json*
 lua-keymap	lua.txt	/*lua-keymap*
+lua-list	lua.txt	/*lua-list*
 lua-loader	lua.txt	/*lua-loader*
 lua-loop	lua.txt	/*lua-loop*
 lua-loop-callbacks	lua.txt	/*lua-loop-callbacks*
@@ -7061,6 +7062,7 @@ lua-secure	lua.txt	/*lua-secure*
 lua-special-tbl	lua.txt	/*lua-special-tbl*
 lua-spell	lua.txt	/*lua-spell*
 lua-stdlib	lua.txt	/*lua-stdlib*
+lua-table	lua.txt	/*lua-table*
 lua-treesitter	treesitter.txt	/*lua-treesitter*
 lua-treesitter-core	treesitter.txt	/*lua-treesitter-core*
 lua-treesitter-highlighter	treesitter.txt	/*lua-treesitter-highlighter*
@@ -9896,7 +9898,6 @@ vim.lsp.buf.range_formatting()	deprecated.txt	/*vim.lsp.buf.range_formatting()*
 vim.lsp.buf.references()	lsp.txt	/*vim.lsp.buf.references()*
 vim.lsp.buf.remove_workspace_folder()	lsp.txt	/*vim.lsp.buf.remove_workspace_folder()*
 vim.lsp.buf.rename()	lsp.txt	/*vim.lsp.buf.rename()*
-vim.lsp.buf.server_ready()	lsp.txt	/*vim.lsp.buf.server_ready()*
 vim.lsp.buf.signature_help()	lsp.txt	/*vim.lsp.buf.signature_help()*
 vim.lsp.buf.type_definition()	lsp.txt	/*vim.lsp.buf.type_definition()*
 vim.lsp.buf.workspace_symbol()	lsp.txt	/*vim.lsp.buf.workspace_symbol()*
