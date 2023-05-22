@@ -6088,6 +6088,7 @@ g:netrw_localmkdir	pi_netrw.txt	/*g:netrw_localmkdir*
 g:netrw_localmkdiropt	pi_netrw.txt	/*g:netrw_localmkdiropt*
 g:netrw_localmovecmd	pi_netrw.txt	/*g:netrw_localmovecmd*
 g:netrw_localmovecmdopt	pi_netrw.txt	/*g:netrw_localmovecmdopt*
+g:netrw_localrmdir	pi_netrw.txt	/*g:netrw_localrmdir*
 g:netrw_maxfilenamelen	pi_netrw.txt	/*g:netrw_maxfilenamelen*
 g:netrw_menu	pi_netrw.txt	/*g:netrw_menu*
 g:netrw_mkdir_cmd	pi_netrw.txt	/*g:netrw_mkdir_cmd*
@@ -7942,7 +7943,7 @@ nvim_buf_get_lines()	api.txt	/*nvim_buf_get_lines()*
 nvim_buf_get_mark()	api.txt	/*nvim_buf_get_mark()*
 nvim_buf_get_name()	api.txt	/*nvim_buf_get_name()*
 nvim_buf_get_offset()	api.txt	/*nvim_buf_get_offset()*
-nvim_buf_get_option()	api.txt	/*nvim_buf_get_option()*
+nvim_buf_get_option()	deprecated.txt	/*nvim_buf_get_option()*
 nvim_buf_get_text()	api.txt	/*nvim_buf_get_text()*
 nvim_buf_get_var()	api.txt	/*nvim_buf_get_var()*
 nvim_buf_is_loaded()	api.txt	/*nvim_buf_is_loaded()*
@@ -7954,7 +7955,7 @@ nvim_buf_set_keymap()	api.txt	/*nvim_buf_set_keymap()*
 nvim_buf_set_lines()	api.txt	/*nvim_buf_set_lines()*
 nvim_buf_set_mark()	api.txt	/*nvim_buf_set_mark()*
 nvim_buf_set_name()	api.txt	/*nvim_buf_set_name()*
-nvim_buf_set_option()	api.txt	/*nvim_buf_set_option()*
+nvim_buf_set_option()	deprecated.txt	/*nvim_buf_set_option()*
 nvim_buf_set_text()	api.txt	/*nvim_buf_set_text()*
 nvim_buf_set_var()	api.txt	/*nvim_buf_set_var()*
 nvim_buf_set_virtual_text()	deprecated.txt	/*nvim_buf_set_virtual_text()*
@@ -8011,7 +8012,7 @@ nvim_get_keymap()	api.txt	/*nvim_get_keymap()*
 nvim_get_mark()	api.txt	/*nvim_get_mark()*
 nvim_get_mode()	api.txt	/*nvim_get_mode()*
 nvim_get_namespaces()	api.txt	/*nvim_get_namespaces()*
-nvim_get_option()	api.txt	/*nvim_get_option()*
+nvim_get_option()	deprecated.txt	/*nvim_get_option()*
 nvim_get_option_info()	deprecated.txt	/*nvim_get_option_info()*
 nvim_get_option_info2()	api.txt	/*nvim_get_option_info2()*
 nvim_get_option_value()	api.txt	/*nvim_get_option_value()*
@@ -8050,7 +8051,7 @@ nvim_set_hl()	api.txt	/*nvim_set_hl()*
 nvim_set_hl_ns()	api.txt	/*nvim_set_hl_ns()*
 nvim_set_hl_ns_fast()	api.txt	/*nvim_set_hl_ns_fast()*
 nvim_set_keymap()	api.txt	/*nvim_set_keymap()*
-nvim_set_option()	api.txt	/*nvim_set_option()*
+nvim_set_option()	deprecated.txt	/*nvim_set_option()*
 nvim_set_option_value()	api.txt	/*nvim_set_option_value()*
 nvim_set_var()	api.txt	/*nvim_set_var()*
 nvim_set_vvar()	api.txt	/*nvim_set_vvar()*
@@ -8080,7 +8081,7 @@ nvim_win_get_config()	api.txt	/*nvim_win_get_config()*
 nvim_win_get_cursor()	api.txt	/*nvim_win_get_cursor()*
 nvim_win_get_height()	api.txt	/*nvim_win_get_height()*
 nvim_win_get_number()	api.txt	/*nvim_win_get_number()*
-nvim_win_get_option()	api.txt	/*nvim_win_get_option()*
+nvim_win_get_option()	deprecated.txt	/*nvim_win_get_option()*
 nvim_win_get_position()	api.txt	/*nvim_win_get_position()*
 nvim_win_get_tabpage()	api.txt	/*nvim_win_get_tabpage()*
 nvim_win_get_var()	api.txt	/*nvim_win_get_var()*
@@ -8092,7 +8093,7 @@ nvim_win_set_config()	api.txt	/*nvim_win_set_config()*
 nvim_win_set_cursor()	api.txt	/*nvim_win_set_cursor()*
 nvim_win_set_height()	api.txt	/*nvim_win_set_height()*
 nvim_win_set_hl_ns()	api.txt	/*nvim_win_set_hl_ns()*
-nvim_win_set_option()	api.txt	/*nvim_win_set_option()*
+nvim_win_set_option()	deprecated.txt	/*nvim_win_set_option()*
 nvim_win_set_var()	api.txt	/*nvim_win_set_var()*
 nvim_win_set_width()	api.txt	/*nvim_win_set_width()*
 o	insert.txt	/*o*
@@ -9162,6 +9163,8 @@ treesitter-parsers	treesitter.txt	/*treesitter-parsers*
 treesitter-predicate-any-of?	treesitter.txt	/*treesitter-predicate-any-of?*
 treesitter-predicate-contains?	treesitter.txt	/*treesitter-predicate-contains?*
 treesitter-predicate-eq?	treesitter.txt	/*treesitter-predicate-eq?*
+treesitter-predicate-has-ancestor?	treesitter.txt	/*treesitter-predicate-has-ancestor?*
+treesitter-predicate-has-parent?	treesitter.txt	/*treesitter-predicate-has-parent?*
 treesitter-predicate-lua-match?	treesitter.txt	/*treesitter-predicate-lua-match?*
 treesitter-predicate-match?	treesitter.txt	/*treesitter-predicate-match?*
 treesitter-predicate-vim-match?	treesitter.txt	/*treesitter-predicate-vim-match?*
@@ -9307,8 +9310,10 @@ uv.cancel()	luvref.txt	/*uv.cancel()*
 uv.chdir()	luvref.txt	/*uv.chdir()*
 uv.check_start()	luvref.txt	/*uv.check_start()*
 uv.check_stop()	luvref.txt	/*uv.check_stop()*
+uv.clock_gettime()	luvref.txt	/*uv.clock_gettime()*
 uv.close()	luvref.txt	/*uv.close()*
 uv.cpu_info()	luvref.txt	/*uv.cpu_info()*
+uv.cpumask_size()	luvref.txt	/*uv.cpumask_size()*
 uv.cwd()	luvref.txt	/*uv.cwd()*
 uv.disable_stdio_inheritance()	luvref.txt	/*uv.disable_stdio_inheritance()*
 uv.errno	luvref.txt	/*uv.errno*
@@ -9357,6 +9362,7 @@ uv.fs_symlink()	luvref.txt	/*uv.fs_symlink()*
 uv.fs_unlink()	luvref.txt	/*uv.fs_unlink()*
 uv.fs_utime()	luvref.txt	/*uv.fs_utime()*
 uv.fs_write()	luvref.txt	/*uv.fs_write()*
+uv.get_available_memory()	luvref.txt	/*uv.get_available_memory()*
 uv.get_constrained_memory()	luvref.txt	/*uv.get_constrained_memory()*
 uv.get_free_memory()	luvref.txt	/*uv.get_free_memory()*
 uv.get_process_title()	luvref.txt	/*uv.get_process_title()*
@@ -9389,6 +9395,7 @@ uv.loop_close()	luvref.txt	/*uv.loop_close()*
 uv.loop_configure()	luvref.txt	/*uv.loop_configure()*
 uv.loop_mode()	luvref.txt	/*uv.loop_mode()*
 uv.metrics_idle_time()	luvref.txt	/*uv.metrics_idle_time()*
+uv.metrics_info()	luvref.txt	/*uv.metrics_info()*
 uv.new_async()	luvref.txt	/*uv.new_async()*
 uv.new_check()	luvref.txt	/*uv.new_check()*
 uv.new_fs_event()	luvref.txt	/*uv.new_fs_event()*
@@ -9472,8 +9479,11 @@ uv.tcp_open()	luvref.txt	/*uv.tcp_open()*
 uv.tcp_simultaneous_accepts()	luvref.txt	/*uv.tcp_simultaneous_accepts()*
 uv.tcp_write_queue_size()	luvref.txt	/*uv.tcp_write_queue_size()*
 uv.thread_equal()	luvref.txt	/*uv.thread_equal()*
+uv.thread_getaffinity()	luvref.txt	/*uv.thread_getaffinity()*
+uv.thread_getcpu()	luvref.txt	/*uv.thread_getcpu()*
 uv.thread_join()	luvref.txt	/*uv.thread_join()*
 uv.thread_self()	luvref.txt	/*uv.thread_self()*
+uv.thread_setaffinity()	luvref.txt	/*uv.thread_setaffinity()*
 uv.timer_again()	luvref.txt	/*uv.timer_again()*
 uv.timer_get_due_in()	luvref.txt	/*uv.timer_get_due_in()*
 uv.timer_get_repeat()	luvref.txt	/*uv.timer_get_repeat()*
@@ -9831,6 +9841,7 @@ vim.fs.basename()	lua.txt	/*vim.fs.basename()*
 vim.fs.dir()	lua.txt	/*vim.fs.dir()*
 vim.fs.dirname()	lua.txt	/*vim.fs.dirname()*
 vim.fs.find()	lua.txt	/*vim.fs.find()*
+vim.fs.joinpath()	lua.txt	/*vim.fs.joinpath()*
 vim.fs.normalize()	lua.txt	/*vim.fs.normalize()*
 vim.fs.parents()	lua.txt	/*vim.fs.parents()*
 vim.g	lua.txt	/*vim.g*
