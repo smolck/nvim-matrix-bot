@@ -9885,7 +9885,7 @@ vim.loader.enable()	lua.txt	/*vim.loader.enable()*
 vim.loader.find()	lua.txt	/*vim.loader.find()*
 vim.loader.reset()	lua.txt	/*vim.loader.reset()*
 vim.log.levels	lua.txt	/*vim.log.levels*
-vim.loop	lua.txt	/*vim.loop*
+vim.loop	deprecated.txt	/*vim.loop*
 vim.lpeg	lua.txt	/*vim.lpeg*
 vim.lsp.buf.add_workspace_folder()	lsp.txt	/*vim.lsp.buf.add_workspace_folder()*
 vim.lsp.buf.clear_references()	lsp.txt	/*vim.lsp.buf.clear_references()*
@@ -10124,6 +10124,7 @@ vim.uri_from_bufnr()	lua.txt	/*vim.uri_from_bufnr()*
 vim.uri_from_fname()	lua.txt	/*vim.uri_from_fname()*
 vim.uri_to_bufnr()	lua.txt	/*vim.uri_to_bufnr()*
 vim.uri_to_fname()	lua.txt	/*vim.uri_to_fname()*
+vim.uv	lua.txt	/*vim.uv*
 vim.v	lua.txt	/*vim.v*
 vim.val_idx	lua.txt	/*vim.val_idx*
 vim.validate()	lua.txt	/*vim.validate()*
