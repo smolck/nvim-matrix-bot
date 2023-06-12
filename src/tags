@@ -3387,6 +3387,7 @@ E1308	builtin.txt	/*E1308*
 E131	userfunc.txt	/*E131*
 E132	userfunc.txt	/*E132*
 E133	userfunc.txt	/*E133*
+E1336	options.txt	/*E1336*
 E134	change.txt	/*E134*
 E135	autocmd.txt	/*E135*
 E136	starting.txt	/*E136*
@@ -4251,7 +4252,7 @@ List	eval.txt	/*List*
 Lists	eval.txt	/*Lists*
 LspAttach	lsp.txt	/*LspAttach*
 LspDetach	lsp.txt	/*LspDetach*
-LspProgressUpdate	lsp.txt	/*LspProgressUpdate*
+LspProgress	lsp.txt	/*LspProgress*
 LspRequest	lsp.txt	/*LspRequest*
 LspTokenUpdate	lsp.txt	/*LspTokenUpdate*
 Lua	lua.txt	/*Lua*
@@ -4354,6 +4355,10 @@ RecordingLeave	autocmd.txt	/*RecordingLeave*
 RemoteReply	autocmd.txt	/*RemoteReply*
 Replace	insert.txt	/*Replace*
 Replace-mode	insert.txt	/*Replace-mode*
+Ringbuf:clear()	lua.txt	/*Ringbuf:clear()*
+Ringbuf:peek()	lua.txt	/*Ringbuf:peek()*
+Ringbuf:pop()	lua.txt	/*Ringbuf:pop()*
+Ringbuf:push()	lua.txt	/*Ringbuf:push()*
 Root	mbyte.txt	/*Root*
 Ruby	if_ruby.txt	/*Ruby*
 Russian	russian.txt	/*Russian*
@@ -7070,7 +7075,6 @@ lua-treesitter-highlighter	treesitter.txt	/*lua-treesitter-highlighter*
 lua-treesitter-language	treesitter.txt	/*lua-treesitter-language*
 lua-treesitter-languagetree	treesitter.txt	/*lua-treesitter-languagetree*
 lua-treesitter-not-predicate	treesitter.txt	/*lua-treesitter-not-predicate*
-lua-treesitter-playground	treesitter.txt	/*lua-treesitter-playground*
 lua-treesitter-query	treesitter.txt	/*lua-treesitter-query*
 lua-ui	lua.txt	/*lua-ui*
 lua-uri	lua.txt	/*lua-uri*
@@ -9988,6 +9992,7 @@ vim.lsp.semantic_tokens.stop()	lsp.txt	/*vim.lsp.semantic_tokens.stop()*
 vim.lsp.set_log_level()	lsp.txt	/*vim.lsp.set_log_level()*
 vim.lsp.start()	lsp.txt	/*vim.lsp.start()*
 vim.lsp.start_client()	lsp.txt	/*vim.lsp.start_client()*
+vim.lsp.status()	lsp.txt	/*vim.lsp.status()*
 vim.lsp.stop_client()	lsp.txt	/*vim.lsp.stop_client()*
 vim.lsp.tagfunc()	lsp.txt	/*vim.lsp.tagfunc()*
 vim.lsp.util.apply_text_document_edit()	lsp.txt	/*vim.lsp.util.apply_text_document_edit()*
@@ -10001,6 +10006,7 @@ vim.lsp.util.convert_signature_help_to_markdown_lines()	lsp.txt	/*vim.lsp.util.c
 vim.lsp.util.diagnostics_to_items()	deprecated.txt	/*vim.lsp.util.diagnostics_to_items()*
 vim.lsp.util.extract_completion_items()	lsp.txt	/*vim.lsp.util.extract_completion_items()*
 vim.lsp.util.get_effective_tabstop()	lsp.txt	/*vim.lsp.util.get_effective_tabstop()*
+vim.lsp.util.get_progress_messages()	deprecated.txt	/*vim.lsp.util.get_progress_messages()*
 vim.lsp.util.jump_to_location()	lsp.txt	/*vim.lsp.util.jump_to_location()*
 vim.lsp.util.locations_to_items()	lsp.txt	/*vim.lsp.util.locations_to_items()*
 vim.lsp.util.lookup_section()	lsp.txt	/*vim.lsp.util.lookup_section()*
@@ -10047,6 +10053,7 @@ vim.print()	lua.txt	/*vim.print()*
 vim.re	lua.txt	/*vim.re*
 vim.regex()	lua.txt	/*vim.regex()*
 vim.region()	lua.txt	/*vim.region()*
+vim.ringbuf()	lua.txt	/*vim.ringbuf()*
 vim.rpcnotify()	lua.txt	/*vim.rpcnotify()*
 vim.rpcrequest()	lua.txt	/*vim.rpcrequest()*
 vim.schedule()	lua.txt	/*vim.schedule()*
@@ -10061,6 +10068,7 @@ vim.startswith()	lua.txt	/*vim.startswith()*
 vim.str_byteindex()	lua.txt	/*vim.str_byteindex()*
 vim.str_utfindex()	lua.txt	/*vim.str_utfindex()*
 vim.stricmp()	lua.txt	/*vim.stricmp()*
+vim.system()	lua.txt	/*vim.system()*
 vim.t	lua.txt	/*vim.t*
 vim.tbl_add_reverse_lookup()	lua.txt	/*vim.tbl_add_reverse_lookup()*
 vim.tbl_contains()	lua.txt	/*vim.tbl_contains()*
@@ -10099,7 +10107,6 @@ vim.treesitter.language.require_language()	deprecated.txt	/*vim.treesitter.langu
 vim.treesitter.language_version	treesitter.txt	/*vim.treesitter.language_version*
 vim.treesitter.minimum_language_version	treesitter.txt	/*vim.treesitter.minimum_language_version*
 vim.treesitter.node_contains()	treesitter.txt	/*vim.treesitter.node_contains()*
-vim.treesitter.playground.inspect_tree()	treesitter.txt	/*vim.treesitter.playground.inspect_tree()*
 vim.treesitter.query.add_directive()	treesitter.txt	/*vim.treesitter.query.add_directive()*
 vim.treesitter.query.add_predicate()	treesitter.txt	/*vim.treesitter.query.add_predicate()*
 vim.treesitter.query.get()	treesitter.txt	/*vim.treesitter.query.get()*
