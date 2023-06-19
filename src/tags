@@ -9805,7 +9805,6 @@ vim.connection_failure_errmsg()	lua.txt	/*vim.connection_failure_errmsg()*
 vim.deep_equal()	lua.txt	/*vim.deep_equal()*
 vim.deepcopy()	lua.txt	/*vim.deepcopy()*
 vim.defaulttable()	lua.txt	/*vim.defaulttable()*
-vim.defer_fn	lua.txt	/*vim.defer_fn*
 vim.defer_fn()	lua.txt	/*vim.defer_fn()*
 vim.deprecate()	lua.txt	/*vim.deprecate()*
 vim.diagnostic	diagnostic.txt	/*vim.diagnostic*
