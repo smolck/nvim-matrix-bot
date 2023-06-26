@@ -3521,12 +3521,6 @@ E276	eval.txt	/*E276*
 E28	syntax.txt	/*E28*
 E282	starting.txt	/*E282*
 E283	motion.txt	/*E283*
-E284	mbyte.txt	/*E284*
-E285	mbyte.txt	/*E285*
-E286	mbyte.txt	/*E286*
-E287	mbyte.txt	/*E287*
-E288	mbyte.txt	/*E288*
-E289	mbyte.txt	/*E289*
 E29	change.txt	/*E29*
 E292	message.txt	/*E292*
 E293	message.txt	/*E293*
@@ -4193,7 +4187,6 @@ GUIFailed	deprecated.txt	/*GUIFailed*
 H	motion.txt	/*H*
 I	insert.txt	/*I*
 ICCF	uganda.txt	/*ICCF*
-IM-server	mbyte.txt	/*IM-server*
 Insert	insert.txt	/*Insert*
 Insert-mode	insert.txt	/*Insert-mode*
 InsertChange	autocmd.txt	/*InsertChange*
@@ -4277,12 +4270,9 @@ Normal-mode	intro.txt	/*Normal-mode*
 Number	eval.txt	/*Number*
 Nvi	intro.txt	/*Nvi*
 O	insert.txt	/*O*
-OffTheSpot	mbyte.txt	/*OffTheSpot*
-OnTheSpot	mbyte.txt	/*OnTheSpot*
 Operator-pending	intro.txt	/*Operator-pending*
 Operator-pending-mode	intro.txt	/*Operator-pending-mode*
 OptionSet	autocmd.txt	/*OptionSet*
-OverTheSpot	mbyte.txt	/*OverTheSpot*
 P	change.txt	/*P*
 PATHEXT	builtin.txt	/*PATHEXT*
 PEP8	filetype.txt	/*PEP8*
@@ -4359,7 +4349,6 @@ Ringbuf:clear()	lua.txt	/*Ringbuf:clear()*
 Ringbuf:peek()	lua.txt	/*Ringbuf:peek()*
 Ringbuf:pop()	lua.txt	/*Ringbuf:pop()*
 Ringbuf:push()	lua.txt	/*Ringbuf:push()*
-Root	mbyte.txt	/*Root*
 Ruby	if_ruby.txt	/*Ruby*
 Russian	russian.txt	/*Russian*
 S	change.txt	/*S*
@@ -4501,7 +4490,6 @@ X1Release	term.txt	/*X1Release*
 X2Drag	term.txt	/*X2Drag*
 X2Mouse	term.txt	/*X2Mouse*
 X2Release	term.txt	/*X2Release*
-XIM	mbyte.txt	/*XIM*
 Y	change.txt	/*Y*
 Y-default	change.txt	/*Y-default*
 ZQ	editing.txt	/*ZQ*
@@ -5118,6 +5106,7 @@ compiler-pyunit	quickfix.txt	/*compiler-pyunit*
 compiler-select	quickfix.txt	/*compiler-select*
 compiler-tex	quickfix.txt	/*compiler-tex*
 compiler-vaxada	ft_ada.txt	/*compiler-vaxada*
+compl-autocomplete	insert.txt	/*compl-autocomplete*
 compl-current	insert.txt	/*compl-current*
 compl-define	insert.txt	/*compl-define*
 compl-dictionary	insert.txt	/*compl-dictionary*
@@ -5158,7 +5147,6 @@ context-dict	repeat.txt	/*context-dict*
 context-stack	repeat.txt	/*context-stack*
 context-types	repeat.txt	/*context-types*
 control	intro.txt	/*control*
-conversion-server	mbyte.txt	/*conversion-server*
 convert-to-HTML	syntax.txt	/*convert-to-HTML*
 convert-to-XHTML	syntax.txt	/*convert-to-XHTML*
 convert-to-XML	syntax.txt	/*convert-to-XML*
@@ -6477,6 +6465,7 @@ hl-LineNrAbove	syntax.txt	/*hl-LineNrAbove*
 hl-LineNrBelow	syntax.txt	/*hl-LineNrBelow*
 hl-LspCodeLens	lsp.txt	/*hl-LspCodeLens*
 hl-LspCodeLensSeparator	lsp.txt	/*hl-LspCodeLensSeparator*
+hl-LspInlayHint	lsp.txt	/*hl-LspInlayHint*
 hl-LspReferenceRead	lsp.txt	/*hl-LspReferenceRead*
 hl-LspReferenceText	lsp.txt	/*hl-LspReferenceText*
 hl-LspReferenceWrite	lsp.txt	/*hl-LspReferenceWrite*
@@ -6987,6 +6976,8 @@ lsp-buf	lsp.txt	/*lsp-buf*
 lsp-codelens	lsp.txt	/*lsp-codelens*
 lsp-config	lsp.txt	/*lsp-config*
 lsp-core	lsp.txt	/*lsp-core*
+lsp-defaults	lsp.txt	/*lsp-defaults*
+lsp-defaults-disable	lsp.txt	/*lsp-defaults-disable*
 lsp-diagnostic	lsp.txt	/*lsp-diagnostic*
 lsp-events	lsp.txt	/*lsp-events*
 lsp-faq	lsp.txt	/*lsp-faq*
@@ -7547,7 +7538,6 @@ matlab-indent	indent.txt	/*matlab-indent*
 matlab-indenting	indent.txt	/*matlab-indenting*
 max()	builtin.txt	/*max()*
 maxcol-variable	eval.txt	/*maxcol-variable*
-mbyte-XIM	mbyte.txt	/*mbyte-XIM*
 mbyte-combining	mbyte.txt	/*mbyte-combining*
 mbyte-composing	mbyte.txt	/*mbyte-composing*
 mbyte-conversion	mbyte.txt	/*mbyte-conversion*
@@ -7630,7 +7620,6 @@ multi-byte	mbyte.txt	/*multi-byte*
 multi-lang	mlang.txt	/*multi-lang*
 multi-repeat	repeat.txt	/*multi-repeat*
 multibyte	mbyte.txt	/*multibyte*
-multibyte-input	mbyte.txt	/*multibyte-input*
 multilang	mlang.txt	/*multilang*
 multilang-menus	mlang.txt	/*multilang-menus*
 multilang-messages	mlang.txt	/*multilang-messages*
@@ -7880,10 +7869,10 @@ new-style-testing	testing.txt	/*new-style-testing*
 news	news.txt	/*news*
 news-0.9	news-0.9.txt	/*news-0.9*
 news-0.9.txt	news-0.9.txt	/*news-0.9.txt*
-news-added	news.txt	/*news-added*
 news-breaking	news.txt	/*news-breaking*
 news-changed	news.txt	/*news-changed*
 news-deprecations	news.txt	/*news-deprecations*
+news-features	news.txt	/*news-features*
 news-removed	news.txt	/*news-removed*
 news.txt	news.txt	/*news.txt*
 nextnonblank()	builtin.txt	/*nextnonblank()*
@@ -8230,7 +8219,6 @@ plugin	usr_05.txt	/*plugin*
 plugin-details	filetype.txt	/*plugin-details*
 plugin-filetype	usr_41.txt	/*plugin-filetype*
 plugin-special	usr_41.txt	/*plugin-special*
-plugin_name.txt	helphelp.txt	/*plugin_name.txt*
 popup-menu	gui.txt	/*popup-menu*
 popupmenu-completion	insert.txt	/*popupmenu-completion*
 popupmenu-keys	insert.txt	/*popupmenu-keys*
@@ -9905,6 +9893,7 @@ vim.lsp.buf.formatting_sync()	deprecated.txt	/*vim.lsp.buf.formatting_sync()*
 vim.lsp.buf.hover()	lsp.txt	/*vim.lsp.buf.hover()*
 vim.lsp.buf.implementation()	lsp.txt	/*vim.lsp.buf.implementation()*
 vim.lsp.buf.incoming_calls()	lsp.txt	/*vim.lsp.buf.incoming_calls()*
+vim.lsp.buf.inlay_hint()	lsp.txt	/*vim.lsp.buf.inlay_hint()*
 vim.lsp.buf.list_workspace_folders()	lsp.txt	/*vim.lsp.buf.list_workspace_folders()*
 vim.lsp.buf.outgoing_calls()	lsp.txt	/*vim.lsp.buf.outgoing_calls()*
 vim.lsp.buf.range_code_action()	deprecated.txt	/*vim.lsp.buf.range_code_action()*
@@ -9912,6 +9901,7 @@ vim.lsp.buf.range_formatting()	deprecated.txt	/*vim.lsp.buf.range_formatting()*
 vim.lsp.buf.references()	lsp.txt	/*vim.lsp.buf.references()*
 vim.lsp.buf.remove_workspace_folder()	lsp.txt	/*vim.lsp.buf.remove_workspace_folder()*
 vim.lsp.buf.rename()	lsp.txt	/*vim.lsp.buf.rename()*
+vim.lsp.buf.server_ready()	deprecated.txt	/*vim.lsp.buf.server_ready()*
 vim.lsp.buf.signature_help()	lsp.txt	/*vim.lsp.buf.signature_help()*
 vim.lsp.buf.type_definition()	lsp.txt	/*vim.lsp.buf.type_definition()*
 vim.lsp.buf.workspace_symbol()	lsp.txt	/*vim.lsp.buf.workspace_symbol()*
@@ -9958,7 +9948,7 @@ vim.lsp.diagnostic.set_underline()	deprecated.txt	/*vim.lsp.diagnostic.set_under
 vim.lsp.diagnostic.set_virtual_text()	deprecated.txt	/*vim.lsp.diagnostic.set_virtual_text()*
 vim.lsp.diagnostic.show_line_diagnostics()	deprecated.txt	/*vim.lsp.diagnostic.show_line_diagnostics()*
 vim.lsp.diagnostic.show_position_diagnostics()	deprecated.txt	/*vim.lsp.diagnostic.show_position_diagnostics()*
-vim.lsp.for_each_buffer_client()	lsp.txt	/*vim.lsp.for_each_buffer_client()*
+vim.lsp.for_each_buffer_client()	deprecated.txt	/*vim.lsp.for_each_buffer_client()*
 vim.lsp.formatexpr()	lsp.txt	/*vim.lsp.formatexpr()*
 vim.lsp.get_active_clients()	lsp.txt	/*vim.lsp.get_active_clients()*
 vim.lsp.get_buffers_by_client_id()	lsp.txt	/*vim.lsp.get_buffers_by_client_id()*
@@ -10254,12 +10244,9 @@ writefile()	builtin.txt	/*writefile()*
 writing	editing.txt	/*writing*
 www	intro.txt	/*www*
 x	change.txt	/*x*
-x-input-method	mbyte.txt	/*x-input-method*
 x11-selection	provider.txt	/*x11-selection*
 xdg	starting.txt	/*xdg*
 xf86conf.vim	syntax.txt	/*xf86conf.vim*
-xim	mbyte.txt	/*xim*
-xim-input-style	mbyte.txt	/*xim-input-style*
 xml-folding	syntax.txt	/*xml-folding*
 xml-omni-datafile	insert.txt	/*xml-omni-datafile*
 xml.vim	syntax.txt	/*xml.vim*
