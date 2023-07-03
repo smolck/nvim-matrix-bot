@@ -4150,6 +4150,7 @@ EXINIT	starting.txt	/*EXINIT*
 Elvis	intro.txt	/*Elvis*
 EncodingChanged	deprecated.txt	/*EncodingChanged*
 Ex	intro.txt	/*Ex*
+Ex-commands	index.txt	/*Ex-commands*
 Ex-mode	intro.txt	/*Ex-mode*
 ExitPre	autocmd.txt	/*ExitPre*
 Exuberant_ctags	tagsrch.txt	/*Exuberant_ctags*
@@ -5485,7 +5486,6 @@ event-variable	eval.txt	/*event-variable*
 eventhandler()	builtin.txt	/*eventhandler()*
 events	autocmd.txt	/*events*
 ex-cmd-index	index.txt	/*ex-cmd-index*
-ex-commands	index.txt	/*ex-commands*
 ex-edit-index	index.txt	/*ex-edit-index*
 ex-flags	cmdline.txt	/*ex-flags*
 ex:	options.txt	/*ex:*
@@ -7517,14 +7517,14 @@ math.exp()	luaref.txt	/*math.exp()*
 math.floor()	luaref.txt	/*math.floor()*
 math.fmod()	luaref.txt	/*math.fmod()*
 math.frexp()	luaref.txt	/*math.frexp()*
-math.huge()	luaref.txt	/*math.huge()*
+math.huge	luaref.txt	/*math.huge*
 math.ldexp()	luaref.txt	/*math.ldexp()*
 math.log()	luaref.txt	/*math.log()*
 math.log10()	luaref.txt	/*math.log10()*
 math.max()	luaref.txt	/*math.max()*
 math.min()	luaref.txt	/*math.min()*
 math.modf()	luaref.txt	/*math.modf()*
-math.pi()	luaref.txt	/*math.pi()*
+math.pi	luaref.txt	/*math.pi*
 math.pow()	luaref.txt	/*math.pow()*
 math.rad()	luaref.txt	/*math.rad()*
 math.random()	luaref.txt	/*math.random()*
@@ -9071,6 +9071,7 @@ termdebug_disasm_window	nvim_terminal_emulator.txt	/*termdebug_disasm_window*
 termdebug_map_K	nvim_terminal_emulator.txt	/*termdebug_map_K*
 termdebug_popup	nvim_terminal_emulator.txt	/*termdebug_popup*
 termdebug_shortcuts	nvim_terminal_emulator.txt	/*termdebug_shortcuts*
+termdebug_signs	nvim_terminal_emulator.txt	/*termdebug_signs*
 termdebug_use_prompt	nvim_terminal_emulator.txt	/*termdebug_use_prompt*
 termdebug_wide	nvim_terminal_emulator.txt	/*termdebug_wide*
 terminal	nvim_terminal_emulator.txt	/*terminal*
@@ -9141,8 +9142,11 @@ tooltips	gui.txt	/*tooltips*
 toupper()	builtin.txt	/*toupper()*
 tr()	builtin.txt	/*tr()*
 treesitter	treesitter.txt	/*treesitter*
+treesitter-directive-gsub!	treesitter.txt	/*treesitter-directive-gsub!*
+treesitter-directive-inject-language!	treesitter.txt	/*treesitter-directive-inject-language!*
 treesitter-directive-offset!	treesitter.txt	/*treesitter-directive-offset!*
 treesitter-directive-set!	treesitter.txt	/*treesitter-directive-set!*
+treesitter-directive-trim!	treesitter.txt	/*treesitter-directive-trim!*
 treesitter-directives	treesitter.txt	/*treesitter-directives*
 treesitter-highlight	treesitter.txt	/*treesitter-highlight*
 treesitter-highlight-conceal	treesitter.txt	/*treesitter-highlight-conceal*
@@ -9893,7 +9897,6 @@ vim.lsp.buf.formatting_sync()	deprecated.txt	/*vim.lsp.buf.formatting_sync()*
 vim.lsp.buf.hover()	lsp.txt	/*vim.lsp.buf.hover()*
 vim.lsp.buf.implementation()	lsp.txt	/*vim.lsp.buf.implementation()*
 vim.lsp.buf.incoming_calls()	lsp.txt	/*vim.lsp.buf.incoming_calls()*
-vim.lsp.buf.inlay_hint()	lsp.txt	/*vim.lsp.buf.inlay_hint()*
 vim.lsp.buf.list_workspace_folders()	lsp.txt	/*vim.lsp.buf.list_workspace_folders()*
 vim.lsp.buf.outgoing_calls()	lsp.txt	/*vim.lsp.buf.outgoing_calls()*
 vim.lsp.buf.range_code_action()	deprecated.txt	/*vim.lsp.buf.range_code_action()*
@@ -9957,6 +9960,7 @@ vim.lsp.get_log_path()	lsp.txt	/*vim.lsp.get_log_path()*
 vim.lsp.handlers	lsp.txt	/*vim.lsp.handlers*
 vim.lsp.handlers.hover()	lsp.txt	/*vim.lsp.handlers.hover()*
 vim.lsp.handlers.signature_help()	lsp.txt	/*vim.lsp.handlers.signature_help()*
+vim.lsp.inlay_hint()	lsp.txt	/*vim.lsp.inlay_hint()*
 vim.lsp.log.get_filename()	lsp.txt	/*vim.lsp.log.get_filename()*
 vim.lsp.log.get_level()	lsp.txt	/*vim.lsp.log.get_level()*
 vim.lsp.log.set_format_func()	lsp.txt	/*vim.lsp.log.set_format_func()*
