@@ -150,6 +150,7 @@ $quote	eval.txt	/*$quote*
 'complete'	options.txt	/*'complete'*
 'completefunc'	options.txt	/*'completefunc'*
 'completeopt'	options.txt	/*'completeopt'*
+'completepopup'	vim_diff.txt	/*'completepopup'*
 'completeslash'	options.txt	/*'completeslash'*
 'concealcursor'	options.txt	/*'concealcursor'*
 'conceallevel'	options.txt	/*'conceallevel'*
@@ -706,6 +707,7 @@ $quote	eval.txt	/*$quote*
 'pp'	options.txt	/*'pp'*
 'preserveindent'	options.txt	/*'preserveindent'*
 'previewheight'	options.txt	/*'previewheight'*
+'previewpopup'	vim_diff.txt	/*'previewpopup'*
 'previewwindow'	options.txt	/*'previewwindow'*
 'printdevice'	vim_diff.txt	/*'printdevice'*
 'printencoding'	vim_diff.txt	/*'printencoding'*
@@ -6339,6 +6341,7 @@ gvimrc	gui.txt	/*gvimrc*
 gw	change.txt	/*gw*
 gwgw	change.txt	/*gwgw*
 gww	change.txt	/*gww*
+gx	various.txt	/*gx*
 gzip	pi_gzip.txt	/*gzip*
 gzip-autocmd	pi_gzip.txt	/*gzip-autocmd*
 gzip-example	autocmd.txt	/*gzip-example*
@@ -7079,8 +7082,8 @@ lua-vim-variables	lua.txt	/*lua-vim-variables*
 lua-vimscript	lua.txt	/*lua-vimscript*
 lua.txt	lua.txt	/*lua.txt*
 lua.vim	syntax.txt	/*lua.vim*
-luaL_Buffer()	luaref.txt	/*luaL_Buffer()*
-luaL_Reg()	luaref.txt	/*luaL_Reg()*
+luaL_Buffer	luaref.txt	/*luaL_Buffer*
+luaL_Reg	luaref.txt	/*luaL_Reg*
 luaL_addchar()	luaref.txt	/*luaL_addchar()*
 luaL_addlstring()	luaref.txt	/*luaL_addlstring()*
 luaL_addsize()	luaref.txt	/*luaL_addsize()*
@@ -7127,15 +7130,15 @@ luaL_typename()	luaref.txt	/*luaL_typename()*
 luaL_typerror()	luaref.txt	/*luaL_typerror()*
 luaL_unref()	luaref.txt	/*luaL_unref()*
 luaL_where()	luaref.txt	/*luaL_where()*
-lua_Alloc()	luaref.txt	/*lua_Alloc()*
-lua_CFunction()	luaref.txt	/*lua_CFunction()*
-lua_Debug()	luaref.txt	/*lua_Debug()*
-lua_Hook()	luaref.txt	/*lua_Hook()*
-lua_Integer()	luaref.txt	/*lua_Integer()*
-lua_Number()	luaref.txt	/*lua_Number()*
-lua_Reader()	luaref.txt	/*lua_Reader()*
-lua_State()	luaref.txt	/*lua_State()*
-lua_Writer()	luaref.txt	/*lua_Writer()*
+lua_Alloc	luaref.txt	/*lua_Alloc*
+lua_CFunction	luaref.txt	/*lua_CFunction*
+lua_Debug	luaref.txt	/*lua_Debug*
+lua_Hook	luaref.txt	/*lua_Hook*
+lua_Integer	luaref.txt	/*lua_Integer*
+lua_Number	luaref.txt	/*lua_Number*
+lua_Reader	luaref.txt	/*lua_Reader*
+lua_State	luaref.txt	/*lua_State*
+lua_Writer	luaref.txt	/*lua_Writer*
 lua_atpanic()	luaref.txt	/*lua_atpanic()*
 lua_call()	luaref.txt	/*lua_call()*
 lua_checkstack()	luaref.txt	/*lua_checkstack()*
@@ -7232,8 +7235,8 @@ luaeval()	lua.txt	/*luaeval()*
 luaref	luaref.txt	/*luaref*
 luaref-API	luaref.txt	/*luaref-API*
 luaref-Lib	luaref.txt	/*luaref-Lib*
-luaref-_G()	luaref.txt	/*luaref-_G()*
-luaref-_VERSION()	luaref.txt	/*luaref-_VERSION()*
+luaref-_G	luaref.txt	/*luaref-_G*
+luaref-_VERSION	luaref.txt	/*luaref-_VERSION*
 luaref-and	luaref.txt	/*luaref-and*
 luaref-apiCClosures	luaref.txt	/*luaref-apiCClosures*
 luaref-apiDebug	luaref.txt	/*luaref-apiDebug*
@@ -9722,6 +9725,7 @@ v_gn	visual.txt	/*v_gn*
 v_gq	change.txt	/*v_gq*
 v_gv	visual.txt	/*v_gv*
 v_gw	change.txt	/*v_gw*
+v_gx	various.txt	/*v_gx*
 v_i	motion.txt	/*v_i*
 v_i'	motion.txt	/*v_i'*
 v_i(	motion.txt	/*v_i(*
@@ -10117,6 +10121,7 @@ vim.trim()	lua.txt	/*vim.trim()*
 vim.type_idx	lua.txt	/*vim.type_idx*
 vim.types	lua.txt	/*vim.types*
 vim.ui.input()	lua.txt	/*vim.ui.input()*
+vim.ui.open()	lua.txt	/*vim.ui.open()*
 vim.ui.select()	lua.txt	/*vim.ui.select()*
 vim.ui_attach()	lua.txt	/*vim.ui_attach()*
 vim.ui_detach()	lua.txt	/*vim.ui_detach()*
