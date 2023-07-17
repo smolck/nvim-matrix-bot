@@ -3069,6 +3069,7 @@ $quote	eval.txt	/*$quote*
 <ScrollWheelRight>	index.txt	/*<ScrollWheelRight>*
 <ScrollWheelUp>	index.txt	/*<ScrollWheelUp>*
 <Space>	motion.txt	/*<Space>*
+<T-	intro.txt	/*<T-*
 <Tab>	motion.txt	/*<Tab>*
 <Undo>	undo.txt	/*<Undo>*
 <Up>	motion.txt	/*<Up>*
@@ -5458,6 +5459,7 @@ end-of-file	pattern.txt	/*end-of-file*
 environ()	builtin.txt	/*environ()*
 eol-and-eof	editing.txt	/*eol-and-eof*
 erlang.vim	syntax.txt	/*erlang.vim*
+err_teapot()	vim_diff.txt	/*err_teapot()*
 errmsg-variable	eval.txt	/*errmsg-variable*
 error-file-format	quickfix.txt	/*error-file-format*
 error-messages	message.txt	/*error-messages*
@@ -8092,6 +8094,7 @@ nvim_win_set_hl_ns()	api.txt	/*nvim_win_set_hl_ns()*
 nvim_win_set_option()	deprecated.txt	/*nvim_win_set_option()*
 nvim_win_set_var()	api.txt	/*nvim_win_set_var()*
 nvim_win_set_width()	api.txt	/*nvim_win_set_width()*
+nvim_win_text_height()	api.txt	/*nvim_win_text_height()*
 o	insert.txt	/*o*
 o_CTRL-V	motion.txt	/*o_CTRL-V*
 o_V	motion.txt	/*o_V*
