@@ -3143,6 +3143,8 @@ B	motion.txt	/*B*
 Blob	eval.txt	/*Blob*
 Blobs	eval.txt	/*Blobs*
 Boolean	eval.txt	/*Boolean*
+Bram	intro.txt	/*Bram*
+Bram-Moolenaar	intro.txt	/*Bram-Moolenaar*
 BufAdd	autocmd.txt	/*BufAdd*
 BufCreate	deprecated.txt	/*BufCreate*
 BufDelete	autocmd.txt	/*BufDelete*
@@ -4260,6 +4262,7 @@ Mac-format-write	editing.txt	/*Mac-format-write*
 Mark	motion.txt	/*Mark*
 MenuPopup	autocmd.txt	/*MenuPopup*
 ModeChanged	autocmd.txt	/*ModeChanged*
+Moolenaar	intro.txt	/*Moolenaar*
 Myspell	spell.txt	/*Myspell*
 N	pattern.txt	/*N*
 N%	motion.txt	/*N%*
@@ -4386,7 +4389,6 @@ TOhtml-progress-color	syntax.txt	/*TOhtml-progress-color*
 TOhtml-uncopyable-text	syntax.txt	/*TOhtml-uncopyable-text*
 TOhtml-wrap-text	syntax.txt	/*TOhtml-wrap-text*
 TRUE	eval.txt	/*TRUE*
-TSHighlighter:destroy()	treesitter.txt	/*TSHighlighter:destroy()*
 TSNode	treesitter.txt	/*TSNode*
 TSNode:child()	treesitter.txt	/*TSNode:child()*
 TSNode:child_count()	treesitter.txt	/*TSNode:child_count()*
@@ -4817,6 +4819,7 @@ book	intro.txt	/*book*
 bookmark	usr_03.txt	/*bookmark*
 boolean	options.txt	/*boolean*
 bracketed-paste-mode	provider.txt	/*bracketed-paste-mode*
+brammool	intro.txt	/*brammool*
 break-finally	eval.txt	/*break-finally*
 browse()	builtin.txt	/*browse()*
 browsedir()	builtin.txt	/*browsedir()*
@@ -7162,7 +7165,6 @@ lua-then	luaref.txt	/*lua-then*
 lua-thread	luaref.txt	/*lua-thread*
 lua-treesitter	treesitter.txt	/*lua-treesitter*
 lua-treesitter-core	treesitter.txt	/*lua-treesitter-core*
-lua-treesitter-highlighter	treesitter.txt	/*lua-treesitter-highlighter*
 lua-treesitter-language	treesitter.txt	/*lua-treesitter-language*
 lua-treesitter-languagetree	treesitter.txt	/*lua-treesitter-languagetree*
 lua-treesitter-not-predicate	treesitter.txt	/*lua-treesitter-not-predicate*
@@ -9055,7 +9057,7 @@ termresponse-variable	eval.txt	/*termresponse-variable*
 ternary	eval.txt	/*ternary*
 test-functions	usr_41.txt	/*test-functions*
 test-functions-details	testing.txt	/*test-functions-details*
-test_garbagecollect_now()	testing.txt	/*test_garbagecollect_now()*
+test_garbagecollect_now()	builtin.txt	/*test_garbagecollect_now()*
 testing	testing.txt	/*testing*
 testing-support	testing.txt	/*testing-support*
 testing-variable	eval.txt	/*testing-variable*
@@ -9110,7 +9112,6 @@ toupper()	builtin.txt	/*toupper()*
 tr()	builtin.txt	/*tr()*
 treesitter	treesitter.txt	/*treesitter*
 treesitter-directive-gsub!	treesitter.txt	/*treesitter-directive-gsub!*
-treesitter-directive-inject-language!	treesitter.txt	/*treesitter-directive-inject-language!*
 treesitter-directive-offset!	treesitter.txt	/*treesitter-directive-offset!*
 treesitter-directive-set!	treesitter.txt	/*treesitter-directive-set!*
 treesitter-directive-trim!	treesitter.txt	/*treesitter-directive-trim!*
