@@ -3400,6 +3400,12 @@ E1364	recover.txt	/*E1364*
 E137	starting.txt	/*E137*
 E139	message.txt	/*E139*
 E140	message.txt	/*E140*
+E1400	builtin.txt	/*E1400*
+E1401	builtin.txt	/*E1401*
+E1402	builtin.txt	/*E1402*
+E1403	builtin.txt	/*E1403*
+E1404	builtin.txt	/*E1404*
+E1405	builtin.txt	/*E1405*
 E141	message.txt	/*E141*
 E142	message.txt	/*E142*
 E143	autocmd.txt	/*E143*
@@ -4361,6 +4367,8 @@ S	change.txt	/*S*
 SHELL	starting.txt	/*SHELL*
 SQLGetType	ft_sql.txt	/*SQLGetType*
 SQLSetType	ft_sql.txt	/*SQLSetType*
+SafeState	autocmd.txt	/*SafeState*
+SafeStateAgain	vim_diff.txt	/*SafeStateAgain*
 SearchWrapped	autocmd.txt	/*SearchWrapped*
 Select	visual.txt	/*Select*
 Select-mode	visual.txt	/*Select-mode*
@@ -6213,6 +6221,7 @@ g<LeftMouse>	tagsrch.txt	/*g<LeftMouse>*
 g<RightMouse>	tagsrch.txt	/*g<RightMouse>*
 g<Tab>	tabpage.txt	/*g<Tab>*
 g<Up>	motion.txt	/*g<Up>*
+g<kEnd>	motion.txt	/*g<kEnd>*
 g?	change.txt	/*g?*
 g??	change.txt	/*g??*
 g?g?	change.txt	/*g?g?*
@@ -7437,6 +7446,7 @@ mapmode-s	map.txt	/*mapmode-s*
 mapmode-t	map.txt	/*mapmode-t*
 mapmode-v	map.txt	/*mapmode-v*
 mapmode-x	map.txt	/*mapmode-x*
+mapnew()	builtin.txt	/*mapnew()*
 mapping	map.txt	/*mapping*
 mapping-functions	usr_41.txt	/*mapping-functions*
 mapset()	builtin.txt	/*mapset()*
@@ -8197,6 +8207,7 @@ prevnonblank()	builtin.txt	/*prevnonblank()*
 primary-selection	provider.txt	/*primary-selection*
 print()	luaref.txt	/*print()*
 printf()	builtin.txt	/*printf()*
+printf-$	builtin.txt	/*printf-$*
 printf-%	builtin.txt	/*printf-%*
 printf-B	builtin.txt	/*printf-B*
 printf-E	builtin.txt	/*printf-E*
@@ -8837,6 +8848,7 @@ starting.txt	starting.txt	/*starting.txt*
 startup	starting.txt	/*startup*
 startup-options	starting.txt	/*startup-options*
 startup-terminal	term.txt	/*startup-terminal*
+state()	builtin.txt	/*state()*
 static-tag	tagsrch.txt	/*static-tag*
 status-line	windows.txt	/*status-line*
 statusmsg-variable	eval.txt	/*statusmsg-variable*
