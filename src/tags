@@ -1552,9 +1552,11 @@ $quote	eval.txt	/*$quote*
 :Continue	nvim_terminal_emulator.txt	/*:Continue*
 :DiffOrig	diff.txt	/*:DiffOrig*
 :DoMatchParen	pi_paren.txt	/*:DoMatchParen*
+:Down	nvim_terminal_emulator.txt	/*:Down*
 :Evaluate	nvim_terminal_emulator.txt	/*:Evaluate*
 :Explore	pi_netrw.txt	/*:Explore*
 :Finish	nvim_terminal_emulator.txt	/*:Finish*
+:Frame	nvim_terminal_emulator.txt	/*:Frame*
 :Gdb	nvim_terminal_emulator.txt	/*:Gdb*
 :GnatFind	ft_ada.txt	/*:GnatFind*
 :GnatPretty	ft_ada.txt	/*:GnatPretty*
@@ -1580,6 +1582,7 @@ $quote	eval.txt	/*$quote*
 :Nwrite	pi_netrw.txt	/*:Nwrite*
 :Over	nvim_terminal_emulator.txt	/*:Over*
 :Pexplore	pi_netrw.txt	/*:Pexplore*
+:PreviewQuery	treesitter.txt	/*:PreviewQuery*
 :Program	nvim_terminal_emulator.txt	/*:Program*
 :Rexplore	pi_netrw.txt	/*:Rexplore*
 :Run	nvim_terminal_emulator.txt	/*:Run*
@@ -1601,7 +1604,9 @@ $quote	eval.txt	/*$quote*
 :Texplore	pi_netrw.txt	/*:Texplore*
 :Tutor	pi_tutor.txt	/*:Tutor*
 :Until	nvim_terminal_emulator.txt	/*:Until*
+:Up	nvim_terminal_emulator.txt	/*:Up*
 :UpdateRemotePlugins	remote_plugin.txt	/*:UpdateRemotePlugins*
+:Var	nvim_terminal_emulator.txt	/*:Var*
 :Vexplore	pi_netrw.txt	/*:Vexplore*
 :X	editing.txt	/*:X*
 :XMLent	insert.txt	/*:XMLent*
@@ -6486,6 +6491,7 @@ hl-Directory	syntax.txt	/*hl-Directory*
 hl-EndOfBuffer	syntax.txt	/*hl-EndOfBuffer*
 hl-ErrorMsg	syntax.txt	/*hl-ErrorMsg*
 hl-FloatBorder	syntax.txt	/*hl-FloatBorder*
+hl-FloatFooter	syntax.txt	/*hl-FloatFooter*
 hl-FloatTitle	syntax.txt	/*hl-FloatTitle*
 hl-FoldColumn	syntax.txt	/*hl-FoldColumn*
 hl-Folded	syntax.txt	/*hl-Folded*
@@ -8695,6 +8701,8 @@ spec_chglog_format	pi_spec.txt	/*spec_chglog_format*
 spec_chglog_prepend	pi_spec.txt	/*spec_chglog_prepend*
 spec_chglog_release_info	pi_spec.txt	/*spec_chglog_release_info*
 special-buffers	windows.txt	/*special-buffers*
+special-local-buffer-option	options.txt	/*special-local-buffer-option*
+special-local-window-option	options.txt	/*special-local-window-option*
 speed-up	tips.txt	/*speed-up*
 spell	spell.txt	/*spell*
 spell-ACCENT	spell.txt	/*spell-ACCENT*
@@ -9043,16 +9051,20 @@ termdebug-communication	nvim_terminal_emulator.txt	/*termdebug-communication*
 termdebug-customizing	nvim_terminal_emulator.txt	/*termdebug-customizing*
 termdebug-events	nvim_terminal_emulator.txt	/*termdebug-events*
 termdebug-example	nvim_terminal_emulator.txt	/*termdebug-example*
+termdebug-frames	nvim_terminal_emulator.txt	/*termdebug-frames*
 termdebug-prompt	nvim_terminal_emulator.txt	/*termdebug-prompt*
 termdebug-starting	nvim_terminal_emulator.txt	/*termdebug-starting*
 termdebug-stepping	nvim_terminal_emulator.txt	/*termdebug-stepping*
 termdebug-variables	nvim_terminal_emulator.txt	/*termdebug-variables*
 termdebug_disasm_window	nvim_terminal_emulator.txt	/*termdebug_disasm_window*
 termdebug_map_K	nvim_terminal_emulator.txt	/*termdebug_map_K*
+termdebug_map_minus	nvim_terminal_emulator.txt	/*termdebug_map_minus*
+termdebug_map_plus	nvim_terminal_emulator.txt	/*termdebug_map_plus*
 termdebug_popup	nvim_terminal_emulator.txt	/*termdebug_popup*
 termdebug_shortcuts	nvim_terminal_emulator.txt	/*termdebug_shortcuts*
 termdebug_signs	nvim_terminal_emulator.txt	/*termdebug_signs*
 termdebug_use_prompt	nvim_terminal_emulator.txt	/*termdebug_use_prompt*
+termdebug_variables_window	nvim_terminal_emulator.txt	/*termdebug_variables_window*
 termdebug_wide	nvim_terminal_emulator.txt	/*termdebug_wide*
 terminal	nvim_terminal_emulator.txt	/*terminal*
 terminal-config	nvim_terminal_emulator.txt	/*terminal-config*
@@ -9406,8 +9418,10 @@ uv.os_uname()	luvref.txt	/*uv.os_uname()*
 uv.os_unsetenv()	luvref.txt	/*uv.os_unsetenv()*
 uv.pipe()	luvref.txt	/*uv.pipe()*
 uv.pipe_bind()	luvref.txt	/*uv.pipe_bind()*
+uv.pipe_bind2()	luvref.txt	/*uv.pipe_bind2()*
 uv.pipe_chmod()	luvref.txt	/*uv.pipe_chmod()*
 uv.pipe_connect()	luvref.txt	/*uv.pipe_connect()*
+uv.pipe_connect2()	luvref.txt	/*uv.pipe_connect2()*
 uv.pipe_getpeername()	luvref.txt	/*uv.pipe_getpeername()*
 uv.pipe_getsockname()	luvref.txt	/*uv.pipe_getsockname()*
 uv.pipe_open()	luvref.txt	/*uv.pipe_open()*
@@ -10100,6 +10114,7 @@ vim.treesitter.language.require_language()	deprecated.txt	/*vim.treesitter.langu
 vim.treesitter.language_version	treesitter.txt	/*vim.treesitter.language_version*
 vim.treesitter.minimum_language_version	treesitter.txt	/*vim.treesitter.minimum_language_version*
 vim.treesitter.node_contains()	treesitter.txt	/*vim.treesitter.node_contains()*
+vim.treesitter.preview_query()	treesitter.txt	/*vim.treesitter.preview_query()*
 vim.treesitter.query.add_directive()	treesitter.txt	/*vim.treesitter.query.add_directive()*
 vim.treesitter.query.add_predicate()	treesitter.txt	/*vim.treesitter.query.add_predicate()*
 vim.treesitter.query.get()	treesitter.txt	/*vim.treesitter.query.get()*
