@@ -6162,6 +6162,7 @@ g:no_man_maps	filetype.txt	/*g:no_man_maps*
 g:no_plugin_maps	filetype.txt	/*g:no_plugin_maps*
 g:node_host_prog	provider.txt	/*g:node_host_prog*
 g:perl_host_prog	provider.txt	/*g:perl_host_prog*
+g:plugin_exec	filetype.txt	/*g:plugin_exec*
 g:python3_host_prog	provider.txt	/*g:python3_host_prog*
 g:ruby_host_prog	provider.txt	/*g:ruby_host_prog*
 g:rust_bang_comment_leader	ft_rust.txt	/*g:rust_bang_comment_leader*
@@ -8198,6 +8199,7 @@ plugin	usr_05.txt	/*plugin*
 plugin-details	filetype.txt	/*plugin-details*
 plugin-filetype	usr_41.txt	/*plugin-filetype*
 plugin-special	usr_41.txt	/*plugin-special*
+plugin_exec	filetype.txt	/*plugin_exec*
 popup-menu	gui.txt	/*popup-menu*
 popupmenu-completion	insert.txt	/*popupmenu-completion*
 popupmenu-keys	insert.txt	/*popupmenu-keys*
