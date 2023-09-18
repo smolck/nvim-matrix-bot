@@ -190,11 +190,12 @@ impl MatrixClient {
                             let content = event.get("content")?.as_object().unwrap();
 
                             // Use formatted_body if available
-                            let (mut body, escape_reply) = if let Some(body) = content.get("formatted_body") {
-                                (body.as_str().unwrap(), true)
-                            } else {
-                                (content.get("body")?.as_str().unwrap(), false)
-                            };
+                            let (mut body, escape_reply) =
+                                if let Some(body) = content.get("formatted_body") {
+                                    (body.as_str().unwrap(), true)
+                                } else {
+                                    (content.get("body")?.as_str().unwrap(), false)
+                                };
 
                             // Don't search in the message the user is replying to so we don't
                             // duplicate messages if the message being replied to had a
@@ -203,7 +204,11 @@ impl MatrixClient {
                                 // TODO(smolck): This feels like it could be broken pretty
                                 // easily. But hopefully not? Since stuff like this *should* get
                                 // escaped if it was typed by the user . . . I think. Maybe.
-                                body = body.split("</mx_reply>").collect::<Vec<_>>().get(1).unwrap_or(&body);
+                                body = body
+                                    .split("</mx_reply>")
+                                    .collect::<Vec<_>>()
+                                    .get(1)
+                                    .unwrap_or(&body);
                             }
 
                             if event_type == "m.room.message" {
