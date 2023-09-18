@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install pre-reqs for building nvim
         run: sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
 
       - name: Check out neovim repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: neovim/neovim
           path: './neovim'
