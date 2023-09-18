@@ -38,7 +38,7 @@ impl CommandParser {
             let command = caps.get(1)?.as_str();
             let args: Option<Vec<&str>> = caps.get(3).map(|args| {
                 args.as_str()
-                    .split(" ")
+                    .split(' ')
                     .filter(|str| !str.is_empty())
                     .collect()
             });
@@ -52,7 +52,7 @@ impl CommandParser {
                     docs.sort_unstable();
                     docs.dedup();
 
-                    if docs.len() > 0 {
+                    if !docs.is_empty() {
                         Some(Help { docs })
                     } else {
                         None
@@ -63,19 +63,15 @@ impl CommandParser {
                     Some(Sandwich { to: args[0] })
                 }
                 x => {
-                    if let Some(url) = self.url_commands_json.get(x) {
-                        Some(Url {
+                    self.url_commands_json.get(x).map(|url| Url {
                             url: url.as_str().unwrap(),
                         })
-                    } else {
-                        None
-                    }
                 }
             }
-        } else if self.backticked_help_regex.is_match(&string).unwrap() {
+        } else if self.backticked_help_regex.is_match(string).unwrap() {
             let mut docs = self
                 .backticked_help_regex
-                .captures_iter(&string)
+                .captures_iter(string)
                 .map(|caps| {
                     let caps = caps.as_ref().unwrap();
                     caps.get(1).unwrap().as_str()
@@ -87,10 +83,10 @@ impl CommandParser {
             docs.dedup();
 
             Some(Command::Help { docs })
-        } else if self.codeblock_help_regex.is_match(&string).unwrap() {
+        } else if self.codeblock_help_regex.is_match(string).unwrap() {
             let mut docs = self
                 .codeblock_help_regex
-                .captures_iter(&string)
+                .captures_iter(string)
                 .map(|caps| {
                     let caps = caps.as_ref().unwrap();
                     caps.get(1).unwrap().as_str()
