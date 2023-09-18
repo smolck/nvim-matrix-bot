@@ -62,11 +62,9 @@ impl CommandParser {
                     let args = args?;
                     Some(Sandwich { to: args[0] })
                 }
-                x => {
-                    self.url_commands_json.get(x).map(|url| Url {
-                            url: url.as_str().unwrap(),
-                        })
-                }
+                x => self.url_commands_json.get(x).map(|url| Url {
+                    url: url.as_str().unwrap(),
+                }),
             }
         } else if self.backticked_help_regex.is_match(string).unwrap() {
             let mut docs = self
