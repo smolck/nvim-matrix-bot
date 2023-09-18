@@ -1,4 +1,4 @@
-use lua_patterns::{LuaPattern, errors::PatternError as LuaPatternError};
+use lua_patterns::{errors::PatternError as LuaPatternError, LuaPattern};
 use std::collections::HashMap;
 
 struct Replacement {
@@ -195,10 +195,9 @@ pub fn help<'a>(thing: &str) -> Option<Tag<'a>> {
         return None;
     };
 
-    if let Some(m) =
-        find_in_tagfile_and_score(include_str!("tags"), patterns)
-            .into_iter()
-            .min_by_key(|m| m.score)
+    if let Some(m) = find_in_tagfile_and_score(include_str!("tags"), patterns)
+        .into_iter()
+        .min_by_key(|m| m.score)
     {
         Some(m.tag)
     } else {

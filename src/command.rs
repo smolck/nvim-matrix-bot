@@ -11,7 +11,7 @@ pub struct CommandParser {
     command_regex: Regex,
     backticked_help_regex: Regex,
     codeblock_help_regex: Regex, // For when we're parsing a formatted_body, and instead of
-                                 // backticks we get something like <code>:help blah</code>
+    // backticks we get something like <code>:help blah</code>
     url_commands_json: serde_json::Value,
 }
 
@@ -24,7 +24,10 @@ impl CommandParser {
             url_commands_json: json,
             command_regex: Regex::new(r"^!(\w+)( *)(.*)").unwrap(),
             backticked_help_regex: Regex::new(r"(?:`:(?:help|h|he|hel) (((?!`).)*)`)").unwrap(),
-            codeblock_help_regex: Regex::new(r"(?:<code>:(?:help|h|he|hel) (((?!(<\/code>)).)*)<\/code>)").unwrap()
+            codeblock_help_regex: Regex::new(
+                r"(?:<code>:(?:help|h|he|hel) (((?!(<\/code>)).)*)<\/code>)",
+            )
+            .unwrap(),
         }
     }
 
