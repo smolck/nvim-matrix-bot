@@ -90,7 +90,7 @@ fn generate_search_patterns(name: &str) -> Option<Patterns> {
         let mut name = name.to_string();
         for r in REPLACEMENTS.iter() {
             let patt = if r.should_escape_pattern {
-                let Ok(escaped) = escape_pattern(&r.pattern) else {
+                let Ok(escaped) = escape_pattern(r.pattern) else {
                     continue;
                 };
                 escaped
@@ -119,7 +119,7 @@ fn generate_search_patterns(name: &str) -> Option<Patterns> {
     })
 }
 
-fn find_in_tagfile_and_score<'a>(tagfile: &'a str, patterns: Patterns) -> Vec<Match<'a>> {
+fn find_in_tagfile_and_score(tagfile: &str, patterns: Patterns) -> Vec<Match<'_>> {
     let mut escaped = LuaPattern::new(&patterns.escaped);
     let mut icase = LuaPattern::new(&patterns.icase);
     let mut wildcard = LuaPattern::new(&patterns.wildcard);

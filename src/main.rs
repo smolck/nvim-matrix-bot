@@ -1,4 +1,5 @@
 #![feature(try_blocks)]
+#![allow(clippy::result_large_err)]
 
 mod command;
 mod help;
@@ -147,7 +148,7 @@ impl MatrixClient {
                     self.send_message(true, &body, room_id).unwrap();
                 }
 
-                if not_found.len() > 0 {
+                if !not_found.is_empty() {
                     let not_found_body = format!(
                         "No help found for:\n{}",
                         not_found
@@ -164,7 +165,7 @@ impl MatrixClient {
                     .unwrap();
             }
             Url { url } => {
-                self.send_message(true, &url, room_id).unwrap();
+                self.send_message(true, url, room_id).unwrap();
             }
         }
     }
@@ -207,7 +208,7 @@ impl MatrixClient {
                             }
 
                             if event_type == "m.room.message" {
-                                if let Some(cmd) = self.command_parser.parse(&body) {
+                                if let Some(cmd) = self.command_parser.parse(body) {
                                     self.handle_cmd(cmd, room_id);
                                 }
                             }
