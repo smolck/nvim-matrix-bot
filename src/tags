@@ -15,7 +15,10 @@ $NVIM_RPLUGIN_MANIFEST	remote_plugin.txt	/*$NVIM_RPLUGIN_MANIFEST*
 $TERM	term.txt	/*$TERM*
 $VIM	starting.txt	/*$VIM*
 $VIMRUNTIME	starting.txt	/*$VIMRUNTIME*
+$XDG_CACHE_HOME	starting.txt	/*$XDG_CACHE_HOME*
+$XDG_CONFIG_DIRS	starting.txt	/*$XDG_CONFIG_DIRS*
 $XDG_CONFIG_HOME	starting.txt	/*$XDG_CONFIG_HOME*
+$XDG_DATA_DIRS	starting.txt	/*$XDG_DATA_DIRS*
 $XDG_DATA_HOME	starting.txt	/*$XDG_DATA_HOME*
 $XDG_RUNTIME_DIR	starting.txt	/*$XDG_RUNTIME_DIR*
 $XDG_STATE_HOME	starting.txt	/*$XDG_STATE_HOME*
@@ -1566,7 +1569,6 @@ $quote	eval.txt	/*$quote*
 :DiffOrig	diff.txt	/*:DiffOrig*
 :DoMatchParen	pi_paren.txt	/*:DoMatchParen*
 :Down	nvim_terminal_emulator.txt	/*:Down*
-:EditQuery	treesitter.txt	/*:EditQuery*
 :Evaluate	nvim_terminal_emulator.txt	/*:Evaluate*
 :Explore	pi_netrw.txt	/*:Explore*
 :Finish	nvim_terminal_emulator.txt	/*:Finish*
@@ -7085,8 +7087,8 @@ lsp-util	lsp.txt	/*lsp-util*
 lsp-vs-treesitter	lsp.txt	/*lsp-vs-treesitter*
 lsp.txt	lsp.txt	/*lsp.txt*
 lua	lua.txt	/*lua*
+lua-#	luaref.txt	/*lua-#*
 lua-API	luaref.txt	/*lua-API*
-lua-Lib	luaref.txt	/*lua-Lib*
 lua-and	luaref.txt	/*lua-and*
 lua-apiDebug	luaref.txt	/*lua-apiDebug*
 lua-apiError	luaref.txt	/*lua-apiError*
@@ -7162,6 +7164,7 @@ lua-intro	lua.txt	/*lua-intro*
 lua-language	luaref.txt	/*lua-language*
 lua-length	luaref.txt	/*lua-length*
 lua-lexical	luaref.txt	/*lua-lexical*
+lua-lib	luaref.txt	/*lua-lib*
 lua-lib-core	luaref.txt	/*lua-lib-core*
 lua-lib-coroutine	luaref.txt	/*lua-lib-coroutine*
 lua-lib-debug	luaref.txt	/*lua-lib-debug*
@@ -8108,6 +8111,7 @@ nvim_win_text_height()	api.txt	/*nvim_win_text_height()*
 o	insert.txt	/*o*
 o_CTRL-V	motion.txt	/*o_CTRL-V*
 o_V	motion.txt	/*o_V*
+o_object-select	motion.txt	/*o_object-select*
 o_v	motion.txt	/*o_v*
 object-motions	motion.txt	/*object-motions*
 object-select	motion.txt	/*object-select*
@@ -8685,7 +8689,7 @@ shm-T	options.txt	/*shm-T*
 shm-W	options.txt	/*shm-W*
 shm-a	options.txt	/*shm-a*
 shm-c	options.txt	/*shm-c*
-shm-f	options.txt	/*shm-f*
+shm-f	vim_diff.txt	/*shm-f*
 shm-i	options.txt	/*shm-i*
 shm-l	options.txt	/*shm-l*
 shm-m	options.txt	/*shm-m*
@@ -9778,6 +9782,7 @@ v_iw	motion.txt	/*v_iw*
 v_i{	motion.txt	/*v_i{*
 v_i}	motion.txt	/*v_i}*
 v_o	visual.txt	/*v_o*
+v_object-select	motion.txt	/*v_object-select*
 v_p	change.txt	/*v_p*
 v_r	change.txt	/*v_r*
 v_s	change.txt	/*v_s*
@@ -10068,7 +10073,7 @@ vim.lsp.util.show_document()	lsp.txt	/*vim.lsp.util.show_document()*
 vim.lsp.util.stylize_markdown()	lsp.txt	/*vim.lsp.util.stylize_markdown()*
 vim.lsp.util.symbols_to_items()	lsp.txt	/*vim.lsp.util.symbols_to_items()*
 vim.lsp.util.text_document_completion_list_to_complete_items()	lsp.txt	/*vim.lsp.util.text_document_completion_list_to_complete_items()*
-vim.lsp.util.trim_empty_lines()	lsp.txt	/*vim.lsp.util.trim_empty_lines()*
+vim.lsp.util.trim_empty_lines()	deprecated.txt	/*vim.lsp.util.trim_empty_lines()*
 vim.lsp.util.try_trim_markdown_code_blocks()	lsp.txt	/*vim.lsp.util.try_trim_markdown_code_blocks()*
 vim.lsp.with()	lsp.txt	/*vim.lsp.with()*
 vim.lua_omnifunc()	lua.txt	/*vim.lua_omnifunc()*
