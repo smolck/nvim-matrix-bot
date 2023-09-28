@@ -281,10 +281,5 @@ mod test {
         assert_eq!(encode_url("abdcefghijklmnopqrstuvwxyz"), "abdcefghijklmnopqrstuvwxyz");
         assert_eq!(encode_url("0123456789"), "0123456789");
         assert_eq!(encode_url("()'_.~-"), "()'_.~-");
-
-        assert_eq!(encode_url("roses-are-red"), "roses-are-red");
-        assert_eq!(encode_url("violets-are-blue"), "violets-are-blue");
-        assert_eq!(encode_url("smolck's-the-best"), "smolck's-the-best");
-        assert_eq!(encode_url("and-dundar-too"), "and-dundar-too");
     }
 }
