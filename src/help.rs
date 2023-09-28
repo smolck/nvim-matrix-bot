@@ -86,10 +86,10 @@ fn ignorecase_pattern(text: &str) -> String {
 // Taken from the main repo
 // https://github.com/neovim/neovim/blob/master/scripts/gen_help_html.lua#L110-L117
 fn encode_url(name: &str) -> String {
-    const KEEP: &str = "()'_.~-";
+    const NO_ESCAPE: &str = "()'_.~-";
     name.chars()
         .map(|c| {
-            if c.is_ascii_alphanumeric() || KEEP.find(c).is_some() {
+            if c.is_ascii_alphanumeric() || NO_ESCAPE.find(c).is_some() {
                 c.to_string()
             } else {
                 format!("%{:2>X}", c as u32)
@@ -277,5 +277,14 @@ mod test {
         assert_eq!(encode_url("=="), "%3D%3D");
         assert_eq!(encode_url("s/\\~"), "s%2F%5C~");
         assert_eq!(encode_url("<CR>"), "%3CCR%3E");
+
+        assert_eq!(encode_url("abdcefghijklmnopqrstuvwxyz"), "abdcefghijklmnopqrstuvwxyz");
+        assert_eq!(encode_url("0123456789"), "0123456789");
+        assert_eq!(encode_url("()'_.~-"), "()'_.~-");
+
+        assert_eq!(encode_url("roses-are-red"), "roses-are-red");
+        assert_eq!(encode_url("violets-are-blue"), "violets-are-blue");
+        assert_eq!(encode_url("smolck's-the-best"), "smolck's-the-best");
+        assert_eq!(encode_url("and-dundar-too"), "and-dundar-too");
     }
 }
