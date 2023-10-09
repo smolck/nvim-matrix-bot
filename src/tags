@@ -3442,7 +3442,7 @@ E1503	builtin.txt	/*E1503*
 E1504	builtin.txt	/*E1504*
 E1505	builtin.txt	/*E1505*
 E1506	editing.txt	/*E1506*
-E1507	editing.txt	/*E1507*
+E1507	builtin.txt	/*E1507*
 E1508	editing.txt	/*E1508*
 E1509	editing.txt	/*E1509*
 E151	helphelp.txt	/*E151*
@@ -3937,6 +3937,7 @@ E702	builtin.txt	/*E702*
 E703	eval.txt	/*E703*
 E704	eval.txt	/*E704*
 E705	eval.txt	/*E705*
+E706	builtin.txt	/*E706*
 E707	eval.txt	/*E707*
 E708	eval.txt	/*E708*
 E709	eval.txt	/*E709*
@@ -4516,6 +4517,7 @@ W16	message.txt	/*W16*
 W17	arabic.txt	/*W17*
 W19	autocmd.txt	/*W19*
 W22	userfunc.txt	/*W22*
+W325	recover.txt	/*W325*
 WORD	motion.txt	/*WORD*
 WinClosed	autocmd.txt	/*WinClosed*
 WinEnter	autocmd.txt	/*WinEnter*
@@ -4781,6 +4783,7 @@ attr-list	syntax.txt	/*attr-list*
 auto-format	change.txt	/*auto-format*
 auto-setting	options.txt	/*auto-setting*
 autocmd	autocmd.txt	/*autocmd*
+autocmd!	autocmd.txt	/*autocmd!*
 autocmd-<>	tips.txt	/*autocmd-<>*
 autocmd-buffer-local	autocmd.txt	/*autocmd-buffer-local*
 autocmd-buflocal	autocmd.txt	/*autocmd-buflocal*
