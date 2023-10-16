@@ -1995,6 +1995,8 @@ $quote	eval.txt	/*$quote*
 :exu	helphelp.txt	/*:exu*
 :exusage	helphelp.txt	/*:exusage*
 :f	editing.txt	/*:f*
+:fc	windows.txt	/*:fc*
+:fclose	windows.txt	/*:fclose*
 :fi	editing.txt	/*:fi*
 :file	editing.txt	/*:file*
 :file_f	editing.txt	/*:file_f*
