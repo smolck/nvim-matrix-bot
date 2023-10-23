@@ -8746,6 +8746,11 @@ slice()	builtin.txt	/*slice()*
 slow-fast-terminal	term.txt	/*slow-fast-terminal*
 slow-start	starting.txt	/*slow-start*
 slow-terminal	term.txt	/*slow-terminal*
+snippet.active()	lua.txt	/*snippet.active()*
+snippet.exit()	lua.txt	/*snippet.exit()*
+snippet.expand()	lua.txt	/*snippet.expand()*
+snippet.jump()	lua.txt	/*snippet.jump()*
+snippet.jumpable()	lua.txt	/*snippet.jumpable()*
 sockconnect()	builtin.txt	/*sockconnect()*
 sort()	builtin.txt	/*sort()*
 sorting	change.txt	/*sorting*
@@ -10061,7 +10066,7 @@ vim.lsp.util.character_offset()	lsp.txt	/*vim.lsp.util.character_offset()*
 vim.lsp.util.convert_input_to_markdown_lines()	lsp.txt	/*vim.lsp.util.convert_input_to_markdown_lines()*
 vim.lsp.util.convert_signature_help_to_markdown_lines()	lsp.txt	/*vim.lsp.util.convert_signature_help_to_markdown_lines()*
 vim.lsp.util.diagnostics_to_items()	deprecated.txt	/*vim.lsp.util.diagnostics_to_items()*
-vim.lsp.util.extract_completion_items()	lsp.txt	/*vim.lsp.util.extract_completion_items()*
+vim.lsp.util.extract_completion_items()	deprecated.txt	/*vim.lsp.util.extract_completion_items()*
 vim.lsp.util.get_effective_tabstop()	lsp.txt	/*vim.lsp.util.get_effective_tabstop()*
 vim.lsp.util.get_progress_messages()	deprecated.txt	/*vim.lsp.util.get_progress_messages()*
 vim.lsp.util.jump_to_location()	lsp.txt	/*vim.lsp.util.jump_to_location()*
@@ -10075,7 +10080,7 @@ vim.lsp.util.make_range_params()	lsp.txt	/*vim.lsp.util.make_range_params()*
 vim.lsp.util.make_text_document_params()	lsp.txt	/*vim.lsp.util.make_text_document_params()*
 vim.lsp.util.make_workspace_params()	lsp.txt	/*vim.lsp.util.make_workspace_params()*
 vim.lsp.util.open_floating_preview()	lsp.txt	/*vim.lsp.util.open_floating_preview()*
-vim.lsp.util.parse_snippet()	lsp.txt	/*vim.lsp.util.parse_snippet()*
+vim.lsp.util.parse_snippet()	deprecated.txt	/*vim.lsp.util.parse_snippet()*
 vim.lsp.util.preview_location()	lsp.txt	/*vim.lsp.util.preview_location()*
 vim.lsp.util.rename()	lsp.txt	/*vim.lsp.util.rename()*
 vim.lsp.util.set_lines()	deprecated.txt	/*vim.lsp.util.set_lines()*
@@ -10084,7 +10089,7 @@ vim.lsp.util.set_qflist()	deprecated.txt	/*vim.lsp.util.set_qflist()*
 vim.lsp.util.show_document()	lsp.txt	/*vim.lsp.util.show_document()*
 vim.lsp.util.stylize_markdown()	lsp.txt	/*vim.lsp.util.stylize_markdown()*
 vim.lsp.util.symbols_to_items()	lsp.txt	/*vim.lsp.util.symbols_to_items()*
-vim.lsp.util.text_document_completion_list_to_complete_items()	lsp.txt	/*vim.lsp.util.text_document_completion_list_to_complete_items()*
+vim.lsp.util.text_document_completion_list_to_complete_items()	deprecated.txt	/*vim.lsp.util.text_document_completion_list_to_complete_items()*
 vim.lsp.util.trim_empty_lines()	deprecated.txt	/*vim.lsp.util.trim_empty_lines()*
 vim.lsp.util.try_trim_markdown_code_blocks()	deprecated.txt	/*vim.lsp.util.try_trim_markdown_code_blocks()*
 vim.lsp.with()	lsp.txt	/*vim.lsp.with()*
@@ -10120,6 +10125,7 @@ vim.secure	lua.txt	/*vim.secure*
 vim.secure.read()	lua.txt	/*vim.secure.read()*
 vim.secure.trust()	lua.txt	/*vim.secure.trust()*
 vim.show_pos()	lua.txt	/*vim.show_pos()*
+vim.snippet	lua.txt	/*vim.snippet*
 vim.spairs()	lua.txt	/*vim.spairs()*
 vim.spell	lua.txt	/*vim.spell*
 vim.spell.check()	lua.txt	/*vim.spell.check()*
