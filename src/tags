@@ -9848,6 +9848,9 @@ vim-variable	eval.txt	/*vim-variable*
 vim.NIL	lua.txt	/*vim.NIL*
 vim.api	lua.txt	/*vim.api*
 vim.b	lua.txt	/*vim.b*
+vim.base64	lua.txt	/*vim.base64*
+vim.base64.decode()	lua.txt	/*vim.base64.decode()*
+vim.base64.encode()	lua.txt	/*vim.base64.encode()*
 vim.bo	lua.txt	/*vim.bo*
 vim.builtin	lua.txt	/*vim.builtin*
 vim.call()	lua.txt	/*vim.call()*
