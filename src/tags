@@ -3406,6 +3406,7 @@ E1255	map.txt	/*E1255*
 E126	userfunc.txt	/*E126*
 E127	userfunc.txt	/*E127*
 E1274	cmdline.txt	/*E1274*
+E1276	builtin.txt	/*E1276*
 E1278	eval.txt	/*E1278*
 E128	userfunc.txt	/*E128*
 E1280	spell.txt	/*E1280*
@@ -4679,6 +4680,7 @@ a]	motion.txt	/*a]*
 a`	motion.txt	/*a`*
 ab	motion.txt	/*ab*
 abandon	editing.txt	/*abandon*
+abbreviation	map.txt	/*abbreviation*
 abbreviations	map.txt	/*abbreviations*
 abel.vim	syntax.txt	/*abel.vim*
 abs()	builtin.txt	/*abs()*
@@ -5116,6 +5118,7 @@ client-server-name	remote.txt	/*client-server-name*
 clientserver	remote.txt	/*clientserver*
 clientserver-missing	remote.txt	/*clientserver-missing*
 clipboard	provider.txt	/*clipboard*
+clipboard-osc52	provider.txt	/*clipboard-osc52*
 clipboard-tool	provider.txt	/*clipboard-tool*
 clipboard-unnamed	options.txt	/*clipboard-unnamed*
 clipboard-unnamedplus	options.txt	/*clipboard-unnamedplus*
@@ -5453,6 +5456,7 @@ dis	motion.txt	/*dis*
 disable-menus	gui.txt	/*disable-menus*
 disable-mouse	vim_diff.txt	/*disable-mouse*
 discard	editing.txt	/*discard*
+dist#vim	eval.txt	/*dist#vim*
 distribute-script	usr_41.txt	/*distribute-script*
 distribution	intro.txt	/*distribution*
 diw	motion.txt	/*diw*
@@ -6062,6 +6066,7 @@ g:gnat.Project_File	ft_ada.txt	/*g:gnat.Project_File*
 g:gnat.Set_Project_File()	ft_ada.txt	/*g:gnat.Set_Project_File()*
 g:gnat.Tags()	ft_ada.txt	/*g:gnat.Tags()*
 g:gnat.Tags_Command	ft_ada.txt	/*g:gnat.Tags_Command*
+g:gzip_exec	pi_gzip.txt	/*g:gzip_exec*
 g:html_charset_override	syntax.txt	/*g:html_charset_override*
 g:html_diff_one_file	syntax.txt	/*g:html_diff_one_file*
 g:html_dynamic_folds	syntax.txt	/*g:html_dynamic_folds*
@@ -6263,6 +6268,7 @@ g:vimsyn_minlines	syntax.txt	/*g:vimsyn_minlines*
 g:vimsyn_noerror	syntax.txt	/*g:vimsyn_noerror*
 g:yaml_schema	syntax.txt	/*g:yaml_schema*
 g:zipPlugin_ext	pi_zip.txt	/*g:zipPlugin_ext*
+g:zip_exec	pi_zip.txt	/*g:zip_exec*
 g:zip_extractcmd	pi_zip.txt	/*g:zip_extractcmd*
 g:zip_nomax	pi_zip.txt	/*g:zip_nomax*
 g:zip_shq	pi_zip.txt	/*g:zip_shq*
@@ -7084,6 +7090,7 @@ lsp-handlers	lsp.txt	/*lsp-handlers*
 lsp-highlight	lsp.txt	/*lsp-highlight*
 lsp-highlight-codelens	lsp.txt	/*lsp-highlight-codelens*
 lsp-highlight-signature	lsp.txt	/*lsp-highlight-signature*
+lsp-inlay_hint	lsp.txt	/*lsp-inlay_hint*
 lsp-log	lsp.txt	/*lsp-log*
 lsp-method	lsp.txt	/*lsp-method*
 lsp-notification	lsp.txt	/*lsp-notification*
@@ -7494,6 +7501,7 @@ maparg()	builtin.txt	/*maparg()*
 mapcheck()	builtin.txt	/*mapcheck()*
 maple.vim	syntax.txt	/*maple.vim*
 mapleader	map.txt	/*mapleader*
+maplist()	builtin.txt	/*maplist()*
 maplocalleader	map.txt	/*maplocalleader*
 mapmode-c	map.txt	/*mapmode-c*
 mapmode-i	map.txt	/*mapmode-i*
@@ -7508,6 +7516,7 @@ mapmode-v	map.txt	/*mapmode-v*
 mapmode-x	map.txt	/*mapmode-x*
 mapnew()	builtin.txt	/*mapnew()*
 mapping	map.txt	/*mapping*
+mapping-dict	builtin.txt	/*mapping-dict*
 mapping-functions	usr_41.txt	/*mapping-functions*
 mapset()	builtin.txt	/*mapset()*
 mark	motion.txt	/*mark*
@@ -8093,6 +8102,7 @@ nvim_ui_pum_set_bounds()	api.txt	/*nvim_ui_pum_set_bounds()*
 nvim_ui_pum_set_height()	api.txt	/*nvim_ui_pum_set_height()*
 nvim_ui_set_focus()	api.txt	/*nvim_ui_set_focus()*
 nvim_ui_set_option()	api.txt	/*nvim_ui_set_option()*
+nvim_ui_term_event()	api.txt	/*nvim_ui_term_event()*
 nvim_ui_try_resize()	api.txt	/*nvim_ui_try_resize()*
 nvim_ui_try_resize_grid()	api.txt	/*nvim_ui_try_resize_grid()*
 nvim_unsubscribe()	api.txt	/*nvim_unsubscribe()*
@@ -9112,6 +9122,7 @@ termdebug-customizing	nvim_terminal_emulator.txt	/*termdebug-customizing*
 termdebug-events	nvim_terminal_emulator.txt	/*termdebug-events*
 termdebug-example	nvim_terminal_emulator.txt	/*termdebug-example*
 termdebug-frames	nvim_terminal_emulator.txt	/*termdebug-frames*
+termdebug-mappings	nvim_terminal_emulator.txt	/*termdebug-mappings*
 termdebug-prompt	nvim_terminal_emulator.txt	/*termdebug-prompt*
 termdebug-starting	nvim_terminal_emulator.txt	/*termdebug-starting*
 termdebug-stepping	nvim_terminal_emulator.txt	/*termdebug-stepping*
@@ -9841,6 +9852,7 @@ vim-modes	intro.txt	/*vim-modes*
 vim-modes-intro	intro.txt	/*vim-modes-intro*
 vim-raku	ft_raku.txt	/*vim-raku*
 vim-script-intro	usr_41.txt	/*vim-script-intro*
+vim-script-library	eval.txt	/*vim-script-library*
 vim-tutor-create	pi_tutor.txt	/*vim-tutor-create*
 vim-tutor-mode	pi_tutor.txt	/*vim-tutor-mode*
 vim-tutor-usage	pi_tutor.txt	/*vim-tutor-usage*
@@ -10031,7 +10043,9 @@ vim.lsp.get_log_path()	lsp.txt	/*vim.lsp.get_log_path()*
 vim.lsp.handlers	lsp.txt	/*vim.lsp.handlers*
 vim.lsp.handlers.hover()	lsp.txt	/*vim.lsp.handlers.hover()*
 vim.lsp.handlers.signature_help()	lsp.txt	/*vim.lsp.handlers.signature_help()*
-vim.lsp.inlay_hint()	lsp.txt	/*vim.lsp.inlay_hint()*
+vim.lsp.inlay_hint.enable()	lsp.txt	/*vim.lsp.inlay_hint.enable()*
+vim.lsp.inlay_hint.get()	lsp.txt	/*vim.lsp.inlay_hint.get()*
+vim.lsp.inlay_hint.is_enabled()	lsp.txt	/*vim.lsp.inlay_hint.is_enabled()*
 vim.lsp.log.get_filename()	lsp.txt	/*vim.lsp.log.get_filename()*
 vim.lsp.log.get_level()	lsp.txt	/*vim.lsp.log.get_level()*
 vim.lsp.log.set_format_func()	lsp.txt	/*vim.lsp.log.set_format_func()*
