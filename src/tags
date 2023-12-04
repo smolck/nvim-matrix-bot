@@ -647,6 +647,7 @@ $quote	eval.txt	/*$quote*
 'notbs'	options.txt	/*'notbs'*
 'notermbidi'	options.txt	/*'notermbidi'*
 'notermguicolors'	options.txt	/*'notermguicolors'*
+'notermsync'	options.txt	/*'notermsync'*
 'noterse'	vim_diff.txt	/*'noterse'*
 'notf'	vim_diff.txt	/*'notf'*
 'notgc'	options.txt	/*'notgc'*
@@ -902,6 +903,7 @@ $quote	eval.txt	/*$quote*
 'termencoding'	vim_diff.txt	/*'termencoding'*
 'termguicolors'	options.txt	/*'termguicolors'*
 'termpastefilter'	options.txt	/*'termpastefilter'*
+'termsync'	options.txt	/*'termsync'*
 'terse'	vim_diff.txt	/*'terse'*
 'textwidth'	options.txt	/*'textwidth'*
 'tf'	vim_diff.txt	/*'tf'*
@@ -3449,6 +3451,7 @@ E1507	builtin.txt	/*E1507*
 E1508	editing.txt	/*E1508*
 E1509	editing.txt	/*E1509*
 E151	helphelp.txt	/*E151*
+E1510	change.txt	/*E1510*
 E152	helphelp.txt	/*E152*
 E153	helphelp.txt	/*E153*
 E154	helphelp.txt	/*E154*
@@ -4431,6 +4434,7 @@ TOhtml-uncopyable-text	syntax.txt	/*TOhtml-uncopyable-text*
 TOhtml-wrap-text	syntax.txt	/*TOhtml-wrap-text*
 TRUE	eval.txt	/*TRUE*
 TSNode	treesitter.txt	/*TSNode*
+TSNode:byte_length()	treesitter.txt	/*TSNode:byte_length()*
 TSNode:child()	treesitter.txt	/*TSNode:child()*
 TSNode:child_count()	treesitter.txt	/*TSNode:child_count()*
 TSNode:descendant_for_range()	treesitter.txt	/*TSNode:descendant_for_range()*
@@ -5396,8 +5400,10 @@ dev-style-format	dev_style.txt	/*dev-style-format*
 dev-style-header	dev_style.txt	/*dev-style-header*
 dev-style-naming	dev_style.txt	/*dev-style-naming*
 dev-style-scope	dev_style.txt	/*dev-style-scope*
+dev-theme	dev_theme.txt	/*dev-theme*
 dev-ui	develop.txt	/*dev-ui*
 dev_style.txt	dev_style.txt	/*dev_style.txt*
+dev_theme.txt	dev_theme.txt	/*dev_theme.txt*
 develop-spell	spell.txt	/*develop-spell*
 develop-spell-suggestions	spell.txt	/*develop-spell-suggestions*
 develop.txt	develop.txt	/*develop.txt*
@@ -7039,6 +7045,7 @@ list-concatenation	eval.txt	/*list-concatenation*
 list-functions	usr_41.txt	/*list-functions*
 list-identity	eval.txt	/*list-identity*
 list-index	eval.txt	/*list-index*
+list-iterator	lua.txt	/*list-iterator*
 list-modification	eval.txt	/*list-modification*
 list-repeat	windows.txt	/*list-repeat*
 list2blob()	builtin.txt	/*list2blob()*
@@ -7907,6 +7914,7 @@ news	news.txt	/*news*
 news-0.9	news-0.9.txt	/*news-0.9*
 news-0.9.txt	news-0.9.txt	/*news-0.9.txt*
 news-breaking	news.txt	/*news-breaking*
+news-breaking-dev	news.txt	/*news-breaking-dev*
 news-changed	news.txt	/*news-changed*
 news-deprecations	news.txt	/*news-deprecations*
 news-features	news.txt	/*news-features*
@@ -7949,6 +7957,7 @@ nvim__id_array()	api.txt	/*nvim__id_array()*
 nvim__id_dictionary()	api.txt	/*nvim__id_dictionary()*
 nvim__id_float()	api.txt	/*nvim__id_float()*
 nvim__inspect_cell()	api.txt	/*nvim__inspect_cell()*
+nvim__invalidate_glyph_cache()	api.txt	/*nvim__invalidate_glyph_cache()*
 nvim__stats()	api.txt	/*nvim__stats()*
 nvim_buf_add_highlight()	api.txt	/*nvim_buf_add_highlight()*
 nvim_buf_attach()	api.txt	/*nvim_buf_attach()*
@@ -8756,11 +8765,6 @@ slice()	builtin.txt	/*slice()*
 slow-fast-terminal	term.txt	/*slow-fast-terminal*
 slow-start	starting.txt	/*slow-start*
 slow-terminal	term.txt	/*slow-terminal*
-snippet.active()	lua.txt	/*snippet.active()*
-snippet.exit()	lua.txt	/*snippet.exit()*
-snippet.expand()	lua.txt	/*snippet.expand()*
-snippet.jump()	lua.txt	/*snippet.jump()*
-snippet.jumpable()	lua.txt	/*snippet.jumpable()*
 sockconnect()	builtin.txt	/*sockconnect()*
 sort()	builtin.txt	/*sort()*
 sorting	change.txt	/*sorting*
@@ -9114,6 +9118,7 @@ tempname()	builtin.txt	/*tempname()*
 term-dependent-settings	term.txt	/*term-dependent-settings*
 term-list	syntax.txt	/*term-list*
 term.txt	term.txt	/*term.txt*
+term_background	deprecated.txt	/*term_background*
 termcap	vim_diff.txt	/*termcap*
 termcap-options	vim_diff.txt	/*termcap-options*
 termdebug-commands	nvim_terminal_emulator.txt	/*termdebug-commands*
@@ -10143,6 +10148,11 @@ vim.secure.read()	lua.txt	/*vim.secure.read()*
 vim.secure.trust()	lua.txt	/*vim.secure.trust()*
 vim.show_pos()	lua.txt	/*vim.show_pos()*
 vim.snippet	lua.txt	/*vim.snippet*
+vim.snippet.active()	lua.txt	/*vim.snippet.active()*
+vim.snippet.exit()	lua.txt	/*vim.snippet.exit()*
+vim.snippet.expand()	lua.txt	/*vim.snippet.expand()*
+vim.snippet.jump()	lua.txt	/*vim.snippet.jump()*
+vim.snippet.jumpable()	lua.txt	/*vim.snippet.jumpable()*
 vim.spairs()	lua.txt	/*vim.spairs()*
 vim.spell	lua.txt	/*vim.spell*
 vim.spell.check()	lua.txt	/*vim.spell.check()*
@@ -10170,6 +10180,9 @@ vim.tbl_islist()	lua.txt	/*vim.tbl_islist()*
 vim.tbl_keys()	lua.txt	/*vim.tbl_keys()*
 vim.tbl_map()	lua.txt	/*vim.tbl_map()*
 vim.tbl_values()	lua.txt	/*vim.tbl_values()*
+vim.text	lua.txt	/*vim.text*
+vim.text.hexdecode()	lua.txt	/*vim.text.hexdecode()*
+vim.text.hexencode()	lua.txt	/*vim.text.hexencode()*
 vim.treesitter.foldexpr()	treesitter.txt	/*vim.treesitter.foldexpr()*
 vim.treesitter.foldtext()	treesitter.txt	/*vim.treesitter.foldtext()*
 vim.treesitter.get_captures_at_cursor()	treesitter.txt	/*vim.treesitter.get_captures_at_cursor()*
