@@ -4249,6 +4249,7 @@ Iter:enumerate()	lua.txt	/*Iter:enumerate()*
 Iter:filter()	lua.txt	/*Iter:filter()*
 Iter:find()	lua.txt	/*Iter:find()*
 Iter:fold()	lua.txt	/*Iter:fold()*
+Iter:join()	lua.txt	/*Iter:join()*
 Iter:last()	lua.txt	/*Iter:last()*
 Iter:map()	lua.txt	/*Iter:map()*
 Iter:next()	lua.txt	/*Iter:next()*
