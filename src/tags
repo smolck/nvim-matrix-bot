@@ -4847,6 +4847,7 @@ b:yaml_schema	syntax.txt	/*b:yaml_schema*
 baan-folding	syntax.txt	/*baan-folding*
 baan-syntax	syntax.txt	/*baan-syntax*
 baan.vim	syntax.txt	/*baan.vim*
+backers.txt	backers.txt	/*backers.txt*
 backslash	intro.txt	/*backslash*
 backspace	intro.txt	/*backspace*
 backtick-expansion	editing.txt	/*backtick-expansion*
@@ -5275,7 +5276,6 @@ cpo-l	options.txt	/*cpo-l*
 cpo-m	options.txt	/*cpo-m*
 cpo-n	options.txt	/*cpo-n*
 cpo-o	options.txt	/*cpo-o*
-cpo-p	options.txt	/*cpo-p*
 cpo-q	options.txt	/*cpo-q*
 cpo-r	options.txt	/*cpo-r*
 cpo-s	options.txt	/*cpo-s*
@@ -5946,6 +5946,7 @@ ft-rego-syntax	syntax.txt	/*ft-rego-syntax*
 ft-rexx-syntax	syntax.txt	/*ft-rexx-syntax*
 ft-rmd-plugin	filetype.txt	/*ft-rmd-plugin*
 ft-rmd-syntax	syntax.txt	/*ft-rmd-syntax*
+ft-rnoweb-plugin	filetype.txt	/*ft-rnoweb-plugin*
 ft-rrst-plugin	filetype.txt	/*ft-rrst-plugin*
 ft-rrst-syntax	syntax.txt	/*ft-rrst-syntax*
 ft-rst-plugin	filetype.txt	/*ft-rst-plugin*
@@ -9747,6 +9748,7 @@ v_<Del>	change.txt	/*v_<Del>*
 v_<Esc>	visual.txt	/*v_<Esc>*
 v_=	change.txt	/*v_=*
 v_>	change.txt	/*v_>*
+v_@-default	repeat.txt	/*v_@-default*
 v_ALT	visual.txt	/*v_ALT*
 v_C	change.txt	/*v_C*
 v_CTRL-A	change.txt	/*v_CTRL-A*
@@ -9767,6 +9769,7 @@ v_K	various.txt	/*v_K*
 v_META	visual.txt	/*v_META*
 v_O	visual.txt	/*v_O*
 v_P	change.txt	/*v_P*
+v_Q-default	repeat.txt	/*v_Q-default*
 v_R	change.txt	/*v_R*
 v_S	change.txt	/*v_S*
 v_U	change.txt	/*v_U*
