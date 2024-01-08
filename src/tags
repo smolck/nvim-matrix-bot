@@ -5858,6 +5858,7 @@ ft-cynlib-syntax	syntax.txt	/*ft-cynlib-syntax*
 ft-dart-syntax	syntax.txt	/*ft-dart-syntax*
 ft-dash-syntax	syntax.txt	/*ft-dash-syntax*
 ft-desktop-syntax	syntax.txt	/*ft-desktop-syntax*
+ft-diff-syntax	syntax.txt	/*ft-diff-syntax*
 ft-dircolors-syntax	syntax.txt	/*ft-dircolors-syntax*
 ft-docbk-syntax	syntax.txt	/*ft-docbk-syntax*
 ft-docbksgml-syntax	syntax.txt	/*ft-docbksgml-syntax*
@@ -7244,12 +7245,13 @@ lua-or	luaref.txt	/*lua-or*
 lua-package-path	lua.txt	/*lua-package-path*
 lua-pattern	luaref.txt	/*lua-pattern*
 lua-patternitem	luaref.txt	/*lua-patternitem*
-lua-patterns	lua.txt	/*lua-patterns*
+lua-patterns	luaref.txt	/*lua-patterns*
 lua-precedence	luaref.txt	/*lua-precedence*
 lua-pseudoindex	luaref.txt	/*lua-pseudoindex*
 lua-ref-bibliography	luaref.txt	/*lua-ref-bibliography*
 lua-ref-copyright	luaref.txt	/*lua-ref-copyright*
 lua-ref-doc	luaref.txt	/*lua-ref-doc*
+lua-regex	lua.txt	/*lua-regex*
 lua-registry	luaref.txt	/*lua-registry*
 lua-relational	luaref.txt	/*lua-relational*
 lua-repeat	luaref.txt	/*lua-repeat*
@@ -9910,6 +9912,7 @@ vim.defer_fn()	lua.txt	/*vim.defer_fn()*
 vim.deprecate()	lua.txt	/*vim.deprecate()*
 vim.diagnostic	diagnostic.txt	/*vim.diagnostic*
 vim.diagnostic.config()	diagnostic.txt	/*vim.diagnostic.config()*
+vim.diagnostic.count()	diagnostic.txt	/*vim.diagnostic.count()*
 vim.diagnostic.disable()	diagnostic.txt	/*vim.diagnostic.disable()*
 vim.diagnostic.enable()	diagnostic.txt	/*vim.diagnostic.enable()*
 vim.diagnostic.fromqflist()	diagnostic.txt	/*vim.diagnostic.fromqflist()*
@@ -9952,6 +9955,8 @@ vim.fs.joinpath()	lua.txt	/*vim.fs.joinpath()*
 vim.fs.normalize()	lua.txt	/*vim.fs.normalize()*
 vim.fs.parents()	lua.txt	/*vim.fs.parents()*
 vim.g	lua.txt	/*vim.g*
+vim.glob	lua.txt	/*vim.glob*
+vim.glob.to_lpeg()	lua.txt	/*vim.glob.to_lpeg()*
 vim.go	lua.txt	/*vim.go*
 vim.gsplit()	lua.txt	/*vim.gsplit()*
 vim.health	pi_health.txt	/*vim.health*
@@ -10094,6 +10099,7 @@ vim.lsp.protocol.Methods	lsp.txt	/*vim.lsp.protocol.Methods*
 vim.lsp.protocol.make_client_capabilities()	lsp.txt	/*vim.lsp.protocol.make_client_capabilities()*
 vim.lsp.protocol.resolve_capabilities()	lsp.txt	/*vim.lsp.protocol.resolve_capabilities()*
 vim.lsp.rpc.connect()	lsp.txt	/*vim.lsp.rpc.connect()*
+vim.lsp.rpc.domain_socket_connect()	lsp.txt	/*vim.lsp.rpc.domain_socket_connect()*
 vim.lsp.rpc.format_rpc_error()	lsp.txt	/*vim.lsp.rpc.format_rpc_error()*
 vim.lsp.rpc.notify()	lsp.txt	/*vim.lsp.rpc.notify()*
 vim.lsp.rpc.request()	lsp.txt	/*vim.lsp.rpc.request()*
