@@ -3453,6 +3453,8 @@ E1508	editing.txt	/*E1508*
 E1509	editing.txt	/*E1509*
 E151	helphelp.txt	/*E151*
 E1510	change.txt	/*E1510*
+E1511	options.txt	/*E1511*
+E1512	options.txt	/*E1512*
 E152	helphelp.txt	/*E152*
 E153	helphelp.txt	/*E153*
 E154	helphelp.txt	/*E154*
@@ -4249,6 +4251,7 @@ Iter:each()	lua.txt	/*Iter:each()*
 Iter:enumerate()	lua.txt	/*Iter:enumerate()*
 Iter:filter()	lua.txt	/*Iter:filter()*
 Iter:find()	lua.txt	/*Iter:find()*
+Iter:flatten()	lua.txt	/*Iter:flatten()*
 Iter:fold()	lua.txt	/*Iter:fold()*
 Iter:join()	lua.txt	/*Iter:join()*
 Iter:last()	lua.txt	/*Iter:last()*
@@ -4339,6 +4342,7 @@ PHP_removeCRwhenUnix	indent.txt	/*PHP_removeCRwhenUnix*
 PHP_vintage_case_default_indent	indent.txt	/*PHP_vintage_case_default_indent*
 Partial	eval.txt	/*Partial*
 Pattern	pattern.txt	/*Pattern*
+Pattern:match()	lua.txt	/*Pattern:match()*
 Python	if_pyth.txt	/*Python*
 Q	repeat.txt	/*Q*
 Q_ab	quickref.txt	/*Q_ab*
@@ -4480,6 +4484,7 @@ TermClose	autocmd.txt	/*TermClose*
 TermEnter	autocmd.txt	/*TermEnter*
 TermLeave	autocmd.txt	/*TermLeave*
 TermOpen	autocmd.txt	/*TermOpen*
+TermRequest	autocmd.txt	/*TermRequest*
 TermResponse	autocmd.txt	/*TermResponse*
 TermdebugStartPost	nvim_terminal_emulator.txt	/*TermdebugStartPost*
 TermdebugStartPre	nvim_terminal_emulator.txt	/*TermdebugStartPre*
@@ -5806,6 +5811,7 @@ foldtextresult()	builtin.txt	/*foldtextresult()*
 for	luaref.txt	/*for*
 for-in	luaref.txt	/*for-in*
 forced-motion	motion.txt	/*forced-motion*
+foreach()	builtin.txt	/*foreach()*
 form.vim	syntax.txt	/*form.vim*
 format-bullet-list	tips.txt	/*format-bullet-list*
 format-comments	change.txt	/*format-comments*
@@ -5858,7 +5864,6 @@ ft-cynlib-syntax	syntax.txt	/*ft-cynlib-syntax*
 ft-dart-syntax	syntax.txt	/*ft-dart-syntax*
 ft-dash-syntax	syntax.txt	/*ft-dash-syntax*
 ft-desktop-syntax	syntax.txt	/*ft-desktop-syntax*
-ft-diff-syntax	syntax.txt	/*ft-diff-syntax*
 ft-dircolors-syntax	syntax.txt	/*ft-dircolors-syntax*
 ft-docbk-syntax	syntax.txt	/*ft-docbk-syntax*
 ft-docbksgml-syntax	syntax.txt	/*ft-docbksgml-syntax*
@@ -5911,6 +5916,7 @@ ft-masm-syntax	syntax.txt	/*ft-masm-syntax*
 ft-mathematica-syntax	syntax.txt	/*ft-mathematica-syntax*
 ft-matlab-indent	indent.txt	/*ft-matlab-indent*
 ft-mma-syntax	syntax.txt	/*ft-mma-syntax*
+ft-modula2-syntax	syntax.txt	/*ft-modula2-syntax*
 ft-moo-syntax	syntax.txt	/*ft-moo-syntax*
 ft-msql-syntax	syntax.txt	/*ft-msql-syntax*
 ft-n1ql-syntax	syntax.txt	/*ft-n1ql-syntax*
@@ -6186,7 +6192,6 @@ g:netrw_localmkdir	pi_netrw.txt	/*g:netrw_localmkdir*
 g:netrw_localmkdiropt	pi_netrw.txt	/*g:netrw_localmkdiropt*
 g:netrw_localmovecmd	pi_netrw.txt	/*g:netrw_localmovecmd*
 g:netrw_localmovecmdopt	pi_netrw.txt	/*g:netrw_localmovecmdopt*
-g:netrw_localrmdir	pi_netrw.txt	/*g:netrw_localrmdir*
 g:netrw_maxfilenamelen	pi_netrw.txt	/*g:netrw_maxfilenamelen*
 g:netrw_menu	pi_netrw.txt	/*g:netrw_menu*
 g:netrw_mkdir_cmd	pi_netrw.txt	/*g:netrw_mkdir_cmd*
@@ -7562,6 +7567,7 @@ match-parens	tips.txt	/*match-parens*
 matchadd()	builtin.txt	/*matchadd()*
 matchaddpos()	builtin.txt	/*matchaddpos()*
 matcharg()	builtin.txt	/*matcharg()*
+matchbufline()	builtin.txt	/*matchbufline()*
 matchdelete()	builtin.txt	/*matchdelete()*
 matchend()	builtin.txt	/*matchend()*
 matchfuzzy()	builtin.txt	/*matchfuzzy()*
@@ -7569,6 +7575,7 @@ matchfuzzypos()	builtin.txt	/*matchfuzzypos()*
 matchlist()	builtin.txt	/*matchlist()*
 matchparen	pi_paren.txt	/*matchparen*
 matchstr()	builtin.txt	/*matchstr()*
+matchstrlist()	builtin.txt	/*matchstrlist()*
 matchstrpos()	builtin.txt	/*matchstrpos()*
 math.abs()	luaref.txt	/*math.abs()*
 math.acos()	luaref.txt	/*math.acos()*
@@ -7643,6 +7650,14 @@ mode-switching	intro.txt	/*mode-switching*
 modeline	options.txt	/*modeline*
 modeline-local	options.txt	/*modeline-local*
 modeline-version	options.txt	/*modeline-version*
+modula2.vim	syntax.txt	/*modula2.vim*
+modula2_iso_allow_lowline	syntax.txt	/*modula2_iso_allow_lowline*
+modula2_iso_disallow_octals	syntax.txt	/*modula2_iso_disallow_octals*
+modula2_iso_disallow_synonyms	syntax.txt	/*modula2_iso_disallow_synonyms*
+modula2_pim_allow_lowline	syntax.txt	/*modula2_pim_allow_lowline*
+modula2_pim_disallow_octals	syntax.txt	/*modula2_pim_disallow_octals*
+modula2_pim_disallow_synonyms	syntax.txt	/*modula2_pim_disallow_synonyms*
+modula2_r10_allow_lowline	syntax.txt	/*modula2_r10_allow_lowline*
 module()	luaref.txt	/*module()*
 moo.vim	syntax.txt	/*moo.vim*
 more-prompt	message.txt	/*more-prompt*
@@ -9184,6 +9199,7 @@ terminal-status	nvim_terminal_emulator.txt	/*terminal-status*
 terminal_emulator.txt	nvim_terminal_emulator.txt	/*terminal_emulator.txt*
 terminfo	term.txt	/*terminfo*
 termopen()	builtin.txt	/*termopen()*
+termrequest-variable	vvars.txt	/*termrequest-variable*
 termresponse-variable	vvars.txt	/*termresponse-variable*
 ternary	eval.txt	/*ternary*
 test-functions	usr_41.txt	/*test-functions*
@@ -9728,6 +9744,7 @@ v:t_func	vvars.txt	/*v:t_func*
 v:t_list	vvars.txt	/*v:t_list*
 v:t_number	vvars.txt	/*v:t_number*
 v:t_string	vvars.txt	/*v:t_string*
+v:termrequest	vvars.txt	/*v:termrequest*
 v:termresponse	vvars.txt	/*v:termresponse*
 v:testing	vvars.txt	/*v:testing*
 v:this_session	vvars.txt	/*v:this_session*
@@ -10003,6 +10020,27 @@ vim.loader.reset()	lua.txt	/*vim.loader.reset()*
 vim.log.levels	lua.txt	/*vim.log.levels*
 vim.loop	deprecated.txt	/*vim.loop*
 vim.lpeg	lua.txt	/*vim.lpeg*
+vim.lpeg()	lua.txt	/*vim.lpeg()*
+vim.lpeg.B()	lua.txt	/*vim.lpeg.B()*
+vim.lpeg.C()	lua.txt	/*vim.lpeg.C()*
+vim.lpeg.Carg()	lua.txt	/*vim.lpeg.Carg()*
+vim.lpeg.Cb()	lua.txt	/*vim.lpeg.Cb()*
+vim.lpeg.Cc()	lua.txt	/*vim.lpeg.Cc()*
+vim.lpeg.Cf()	lua.txt	/*vim.lpeg.Cf()*
+vim.lpeg.Cg()	lua.txt	/*vim.lpeg.Cg()*
+vim.lpeg.Cmt()	lua.txt	/*vim.lpeg.Cmt()*
+vim.lpeg.Cp()	lua.txt	/*vim.lpeg.Cp()*
+vim.lpeg.Cs()	lua.txt	/*vim.lpeg.Cs()*
+vim.lpeg.Ct()	lua.txt	/*vim.lpeg.Ct()*
+vim.lpeg.P()	lua.txt	/*vim.lpeg.P()*
+vim.lpeg.Pattern	lua.txt	/*vim.lpeg.Pattern*
+vim.lpeg.R()	lua.txt	/*vim.lpeg.R()*
+vim.lpeg.S()	lua.txt	/*vim.lpeg.S()*
+vim.lpeg.V()	lua.txt	/*vim.lpeg.V()*
+vim.lpeg.match()	lua.txt	/*vim.lpeg.match()*
+vim.lpeg.setmaxstack()	lua.txt	/*vim.lpeg.setmaxstack()*
+vim.lpeg.type()	lua.txt	/*vim.lpeg.type()*
+vim.lpeg.version()	lua.txt	/*vim.lpeg.version()*
 vim.lsp.buf.add_workspace_folder()	lsp.txt	/*vim.lsp.buf.add_workspace_folder()*
 vim.lsp.buf.clear_references()	lsp.txt	/*vim.lsp.buf.clear_references()*
 vim.lsp.buf.code_action()	lsp.txt	/*vim.lsp.buf.code_action()*
@@ -10130,7 +10168,7 @@ vim.lsp.util.get_effective_tabstop()	lsp.txt	/*vim.lsp.util.get_effective_tabsto
 vim.lsp.util.get_progress_messages()	deprecated.txt	/*vim.lsp.util.get_progress_messages()*
 vim.lsp.util.jump_to_location()	lsp.txt	/*vim.lsp.util.jump_to_location()*
 vim.lsp.util.locations_to_items()	lsp.txt	/*vim.lsp.util.locations_to_items()*
-vim.lsp.util.lookup_section()	lsp.txt	/*vim.lsp.util.lookup_section()*
+vim.lsp.util.lookup_section()	deprecated.txt	/*vim.lsp.util.lookup_section()*
 vim.lsp.util.make_floating_popup_options()	lsp.txt	/*vim.lsp.util.make_floating_popup_options()*
 vim.lsp.util.make_formatting_params()	lsp.txt	/*vim.lsp.util.make_formatting_params()*
 vim.lsp.util.make_given_range_params()	lsp.txt	/*vim.lsp.util.make_given_range_params()*
@@ -10172,6 +10210,10 @@ vim.pesc()	lua.txt	/*vim.pesc()*
 vim.pretty_print()	deprecated.txt	/*vim.pretty_print()*
 vim.print()	lua.txt	/*vim.print()*
 vim.re	lua.txt	/*vim.re*
+vim.re.compile()	lua.txt	/*vim.re.compile()*
+vim.re.find()	lua.txt	/*vim.re.find()*
+vim.re.gsub()	lua.txt	/*vim.re.gsub()*
+vim.re.match()	lua.txt	/*vim.re.match()*
 vim.regex	lua.txt	/*vim.regex*
 vim.regex()	lua.txt	/*vim.regex()*
 vim.region()	lua.txt	/*vim.region()*
@@ -10282,8 +10324,10 @@ vim.version	lua.txt	/*vim.version*
 vim.version()	lua.txt	/*vim.version()*
 vim.version.cmp()	lua.txt	/*vim.version.cmp()*
 vim.version.eq()	lua.txt	/*vim.version.eq()*
+vim.version.ge()	lua.txt	/*vim.version.ge()*
 vim.version.gt()	lua.txt	/*vim.version.gt()*
 vim.version.last()	lua.txt	/*vim.version.last()*
+vim.version.le()	lua.txt	/*vim.version.le()*
 vim.version.lt()	lua.txt	/*vim.version.lt()*
 vim.version.parse()	lua.txt	/*vim.version.parse()*
 vim.version.range()	lua.txt	/*vim.version.range()*
