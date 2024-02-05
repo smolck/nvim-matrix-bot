@@ -2287,6 +2287,7 @@ $quote	eval.txt	/*$quote*
 :map-arguments	map.txt	/*:map-arguments*
 :map-buffer	map.txt	/*:map-buffer*
 :map-cmd	map.txt	/*:map-cmd*
+:map-cmd-key	map.txt	/*:map-cmd-key*
 :map-commands	map.txt	/*:map-commands*
 :map-expression	map.txt	/*:map-expression*
 :map-local	map.txt	/*:map-local*
@@ -2299,6 +2300,7 @@ $quote	eval.txt	/*$quote*
 :map-special	deprecated.txt	/*:map-special*
 :map-special-chars	map.txt	/*:map-special-chars*
 :map-special-keys	map.txt	/*:map-special-keys*
+:map-super-keys	map.txt	/*:map-super-keys*
 :map-undo	map.txt	/*:map-undo*
 :map-unique	map.txt	/*:map-unique*
 :map-verbose	map.txt	/*:map-verbose*
@@ -5017,6 +5019,8 @@ c_ansi_typedefs	syntax.txt	/*c_ansi_typedefs*
 c_comment_strings	syntax.txt	/*c_comment_strings*
 c_curly_error	syntax.txt	/*c_curly_error*
 c_digraph	cmdline.txt	/*c_digraph*
+c_function_pointers	syntax.txt	/*c_function_pointers*
+c_functions	syntax.txt	/*c_functions*
 c_gnu	syntax.txt	/*c_gnu*
 c_no_ansi	syntax.txt	/*c_no_ansi*
 c_no_bracket_error	syntax.txt	/*c_no_bracket_error*
@@ -8145,6 +8149,7 @@ nvim_tabpage_get_win()	api.txt	/*nvim_tabpage_get_win()*
 nvim_tabpage_is_valid()	api.txt	/*nvim_tabpage_is_valid()*
 nvim_tabpage_list_wins()	api.txt	/*nvim_tabpage_list_wins()*
 nvim_tabpage_set_var()	api.txt	/*nvim_tabpage_set_var()*
+nvim_tabpage_set_win()	api.txt	/*nvim_tabpage_set_win()*
 nvim_ui_attach()	api.txt	/*nvim_ui_attach()*
 nvim_ui_detach()	api.txt	/*nvim_ui_detach()*
 nvim_ui_pum_set_bounds()	api.txt	/*nvim_ui_pum_set_bounds()*
@@ -10263,7 +10268,6 @@ vim.text	lua.txt	/*vim.text*
 vim.text.hexdecode()	lua.txt	/*vim.text.hexdecode()*
 vim.text.hexencode()	lua.txt	/*vim.text.hexencode()*
 vim.treesitter.foldexpr()	treesitter.txt	/*vim.treesitter.foldexpr()*
-vim.treesitter.foldtext()	treesitter.txt	/*vim.treesitter.foldtext()*
 vim.treesitter.get_captures_at_cursor()	treesitter.txt	/*vim.treesitter.get_captures_at_cursor()*
 vim.treesitter.get_captures_at_pos()	treesitter.txt	/*vim.treesitter.get_captures_at_pos()*
 vim.treesitter.get_node()	treesitter.txt	/*vim.treesitter.get_node()*
