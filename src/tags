@@ -4868,6 +4868,7 @@ binary-number	eval.txt	/*binary-number*
 bisect	starting.txt	/*bisect*
 bitwise-function	usr_41.txt	/*bitwise-function*
 blob	eval.txt	/*blob*
+blob-concatenation	eval.txt	/*blob-concatenation*
 blob-functions	usr_41.txt	/*blob-functions*
 blob-identity	eval.txt	/*blob-identity*
 blob-index	eval.txt	/*blob-index*
