@@ -5843,6 +5843,7 @@ ft-ada-syntax	ft_ada.txt	/*ft-ada-syntax*
 ft-ada-variables	ft_ada.txt	/*ft-ada-variables*
 ft-ant-syntax	syntax.txt	/*ft-ant-syntax*
 ft-apache-syntax	syntax.txt	/*ft-apache-syntax*
+ft-asciidoc-plugin	filetype.txt	/*ft-asciidoc-plugin*
 ft-asm-syntax	syntax.txt	/*ft-asm-syntax*
 ft-asm68k-syntax	syntax.txt	/*ft-asm68k-syntax*
 ft-asmh8300-syntax	syntax.txt	/*ft-asmh8300-syntax*
@@ -7281,6 +7282,8 @@ lua-tailcall	luaref.txt	/*lua-tailcall*
 lua-then	luaref.txt	/*lua-then*
 lua-thread	luaref.txt	/*lua-thread*
 lua-treesitter	treesitter.txt	/*lua-treesitter*
+lua-treesitter-all-predicate	treesitter.txt	/*lua-treesitter-all-predicate*
+lua-treesitter-any-predicate	treesitter.txt	/*lua-treesitter-any-predicate*
 lua-treesitter-core	treesitter.txt	/*lua-treesitter-core*
 lua-treesitter-language	treesitter.txt	/*lua-treesitter-language*
 lua-treesitter-languagetree	treesitter.txt	/*lua-treesitter-languagetree*
@@ -9277,7 +9280,12 @@ treesitter-highlight-spell	treesitter.txt	/*treesitter-highlight-spell*
 treesitter-language-injections	treesitter.txt	/*treesitter-language-injections*
 treesitter-node	treesitter.txt	/*treesitter-node*
 treesitter-parsers	treesitter.txt	/*treesitter-parsers*
+treesitter-predicate-any-contains?	treesitter.txt	/*treesitter-predicate-any-contains?*
+treesitter-predicate-any-eq?	treesitter.txt	/*treesitter-predicate-any-eq?*
+treesitter-predicate-any-lua-match?	treesitter.txt	/*treesitter-predicate-any-lua-match?*
+treesitter-predicate-any-match?	treesitter.txt	/*treesitter-predicate-any-match?*
 treesitter-predicate-any-of?	treesitter.txt	/*treesitter-predicate-any-of?*
+treesitter-predicate-any-vim-match?	treesitter.txt	/*treesitter-predicate-any-vim-match?*
 treesitter-predicate-contains?	treesitter.txt	/*treesitter-predicate-contains?*
 treesitter-predicate-eq?	treesitter.txt	/*treesitter-predicate-eq?*
 treesitter-predicate-has-ancestor?	treesitter.txt	/*treesitter-predicate-has-ancestor?*
