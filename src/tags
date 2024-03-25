@@ -5828,6 +5828,7 @@ freebasic_space_errors	syntax.txt	/*freebasic_space_errors*
 freebasic_type_suffixes	syntax.txt	/*freebasic_type_suffixes*
 friendship	intro.txt	/*friendship*
 frombook	usr_01.txt	/*frombook*
+fswatch-limitations	lua.txt	/*fswatch-limitations*
 ft-abel-syntax	syntax.txt	/*ft-abel-syntax*
 ft-ada-commands	ft_ada.txt	/*ft-ada-commands*
 ft-ada-constants	ft_ada.txt	/*ft-ada-constants*
