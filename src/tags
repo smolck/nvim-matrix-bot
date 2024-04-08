@@ -4426,6 +4426,7 @@ Select-mode-mapping	visual.txt	/*Select-mode-mapping*
 Session	starting.txt	/*Session*
 SessionLoad-variable	starting.txt	/*SessionLoad-variable*
 SessionLoadPost	autocmd.txt	/*SessionLoadPost*
+SessionWritePost	autocmd.txt	/*SessionWritePost*
 ShellCmdPost	autocmd.txt	/*ShellCmdPost*
 ShellFilterPost	autocmd.txt	/*ShellFilterPost*
 SigUSR1	vim_diff.txt	/*SigUSR1*
@@ -5003,7 +5004,6 @@ c_CTRL-\_CTRL-N	intro.txt	/*c_CTRL-\\_CTRL-N*
 c_CTRL-\_e	cmdline.txt	/*c_CTRL-\\_e*
 c_CTRL-]	cmdline.txt	/*c_CTRL-]*
 c_CTRL-^	cmdline.txt	/*c_CTRL-^*
-c_CTRL-_	cmdline.txt	/*c_CTRL-_*
 c_Del	cmdline.txt	/*c_Del*
 c_Down	cmdline.txt	/*c_Down*
 c_End	cmdline.txt	/*c_End*
@@ -5172,6 +5172,7 @@ command-attributes	map.txt	/*command-attributes*
 command-line-functions	usr_41.txt	/*command-line-functions*
 command-line-window	cmdline.txt	/*command-line-window*
 command-mode	intro.txt	/*command-mode*
+commenting	various.txt	/*commenting*
 compiler-compaqada	ft_ada.txt	/*compiler-compaqada*
 compiler-decada	ft_ada.txt	/*compiler-decada*
 compiler-dotnet	quickfix.txt	/*compiler-dotnet*
@@ -6326,6 +6327,10 @@ g`	motion.txt	/*g`*
 g`a	motion.txt	/*g`a*
 ga	various.txt	/*ga*
 garbagecollect()	builtin.txt	/*garbagecollect()*
+gc	various.txt	/*gc*
+gc-default	various.txt	/*gc-default*
+gcc	various.txt	/*gcc*
+gcc-default	various.txt	/*gcc-default*
 gd	pattern.txt	/*gd*
 gdb	debug.txt	/*gdb*
 gdb-version	nvim_terminal_emulator.txt	/*gdb-version*
@@ -8167,6 +8172,8 @@ nvim_win_text_height()	api.txt	/*nvim_win_text_height()*
 o	insert.txt	/*o*
 o_CTRL-V	motion.txt	/*o_CTRL-V*
 o_V	motion.txt	/*o_V*
+o_gc	various.txt	/*o_gc*
+o_gc-default	various.txt	/*o_gc-default*
 o_object-select	motion.txt	/*o_object-select*
 o_v	motion.txt	/*o_v*
 object-motions	motion.txt	/*object-motions*
@@ -9832,6 +9839,8 @@ v_g_CTRL-A	change.txt	/*v_g_CTRL-A*
 v_g_CTRL-G	editing.txt	/*v_g_CTRL-G*
 v_g_CTRL-X	change.txt	/*v_g_CTRL-X*
 v_g_CTRL-]	tagsrch.txt	/*v_g_CTRL-]*
+v_gc	various.txt	/*v_gc*
+v_gc-default	various.txt	/*v_gc-default*
 v_gf	editing.txt	/*v_gf*
 v_gn	visual.txt	/*v_gn*
 v_gq	change.txt	/*v_gq*
