@@ -4794,6 +4794,7 @@ assert_notequal()	builtin.txt	/*assert_notequal()*
 assert_notmatch()	builtin.txt	/*assert_notmatch()*
 assert_report()	builtin.txt	/*assert_report()*
 assert_true()	builtin.txt	/*assert_true()*
+astro.vim	syntax.txt	/*astro.vim*
 at	motion.txt	/*at*
 atan()	builtin.txt	/*atan()*
 atan2()	builtin.txt	/*atan2()*
@@ -5179,6 +5180,7 @@ compiler-dotnet	quickfix.txt	/*compiler-dotnet*
 compiler-gcc	quickfix.txt	/*compiler-gcc*
 compiler-gnat	ft_ada.txt	/*compiler-gnat*
 compiler-hpada	ft_ada.txt	/*compiler-hpada*
+compiler-pandoc	quickfix.txt	/*compiler-pandoc*
 compiler-perl	quickfix.txt	/*compiler-perl*
 compiler-pyunit	quickfix.txt	/*compiler-pyunit*
 compiler-select	quickfix.txt	/*compiler-select*
@@ -5848,6 +5850,7 @@ ft-asm68k-syntax	syntax.txt	/*ft-asm68k-syntax*
 ft-asmh8300-syntax	syntax.txt	/*ft-asmh8300-syntax*
 ft-aspperl-syntax	syntax.txt	/*ft-aspperl-syntax*
 ft-aspvbs-syntax	syntax.txt	/*ft-aspvbs-syntax*
+ft-astro-syntax	syntax.txt	/*ft-astro-syntax*
 ft-awk-plugin	filetype.txt	/*ft-awk-plugin*
 ft-bash-syntax	syntax.txt	/*ft-bash-syntax*
 ft-basic-syntax	syntax.txt	/*ft-basic-syntax*
@@ -5899,6 +5902,7 @@ ft-html-syntax	syntax.txt	/*ft-html-syntax*
 ft-htmlos-syntax	syntax.txt	/*ft-htmlos-syntax*
 ft-ia64-syntax	syntax.txt	/*ft-ia64-syntax*
 ft-inform-syntax	syntax.txt	/*ft-inform-syntax*
+ft-java-plugin	filetype.txt	/*ft-java-plugin*
 ft-java-syntax	syntax.txt	/*ft-java-syntax*
 ft-javascript-omni	insert.txt	/*ft-javascript-omni*
 ft-json-syntax	syntax.txt	/*ft-json-syntax*
@@ -5929,6 +5933,7 @@ ft-nasm-syntax	syntax.txt	/*ft-nasm-syntax*
 ft-ncf-syntax	syntax.txt	/*ft-ncf-syntax*
 ft-nroff-syntax	syntax.txt	/*ft-nroff-syntax*
 ft-ocaml-syntax	syntax.txt	/*ft-ocaml-syntax*
+ft-pandoc-syntax	syntax.txt	/*ft-pandoc-syntax*
 ft-papp-syntax	syntax.txt	/*ft-papp-syntax*
 ft-pascal-syntax	syntax.txt	/*ft-pascal-syntax*
 ft-pdf-plugin	filetype.txt	/*ft-pdf-plugin*
@@ -8438,6 +8443,7 @@ quickfix-error-lists	quickfix.txt	/*quickfix-error-lists*
 quickfix-functions	usr_41.txt	/*quickfix-functions*
 quickfix-gcc	quickfix.txt	/*quickfix-gcc*
 quickfix-index	quickfix.txt	/*quickfix-index*
+quickfix-pandoc	quickfix.txt	/*quickfix-pandoc*
 quickfix-parse	quickfix.txt	/*quickfix-parse*
 quickfix-perl	quickfix.txt	/*quickfix-perl*
 quickfix-size	quickfix.txt	/*quickfix-size*
@@ -9942,7 +9948,7 @@ vim.diagnostic.Opts.Underline	diagnostic.txt	/*vim.diagnostic.Opts.Underline*
 vim.diagnostic.Opts.VirtualText	diagnostic.txt	/*vim.diagnostic.Opts.VirtualText*
 vim.diagnostic.config()	diagnostic.txt	/*vim.diagnostic.config()*
 vim.diagnostic.count()	diagnostic.txt	/*vim.diagnostic.count()*
-vim.diagnostic.disable()	diagnostic.txt	/*vim.diagnostic.disable()*
+vim.diagnostic.disable()	deprecated.txt	/*vim.diagnostic.disable()*
 vim.diagnostic.enable()	diagnostic.txt	/*vim.diagnostic.enable()*
 vim.diagnostic.fromqflist()	diagnostic.txt	/*vim.diagnostic.fromqflist()*
 vim.diagnostic.get()	diagnostic.txt	/*vim.diagnostic.get()*
@@ -9955,7 +9961,8 @@ vim.diagnostic.get_prev_pos()	diagnostic.txt	/*vim.diagnostic.get_prev_pos()*
 vim.diagnostic.goto_next()	diagnostic.txt	/*vim.diagnostic.goto_next()*
 vim.diagnostic.goto_prev()	diagnostic.txt	/*vim.diagnostic.goto_prev()*
 vim.diagnostic.hide()	diagnostic.txt	/*vim.diagnostic.hide()*
-vim.diagnostic.is_disabled()	diagnostic.txt	/*vim.diagnostic.is_disabled()*
+vim.diagnostic.is_disabled()	deprecated.txt	/*vim.diagnostic.is_disabled()*
+vim.diagnostic.is_enabled()	diagnostic.txt	/*vim.diagnostic.is_enabled()*
 vim.diagnostic.match()	diagnostic.txt	/*vim.diagnostic.match()*
 vim.diagnostic.open_float()	diagnostic.txt	/*vim.diagnostic.open_float()*
 vim.diagnostic.reset()	diagnostic.txt	/*vim.diagnostic.reset()*
@@ -10009,11 +10016,10 @@ vim.inspect()	lua.txt	/*vim.inspect()*
 vim.inspect_pos()	lua.txt	/*vim.inspect_pos()*
 vim.inspector	lua.txt	/*vim.inspector*
 vim.is_callable()	lua.txt	/*vim.is_callable()*
+vim.isarray()	lua.txt	/*vim.isarray()*
+vim.islist()	lua.txt	/*vim.islist()*
 vim.iter	lua.txt	/*vim.iter*
 vim.iter()	lua.txt	/*vim.iter()*
-vim.iter.filter()	lua.txt	/*vim.iter.filter()*
-vim.iter.map()	lua.txt	/*vim.iter.map()*
-vim.iter.totable()	lua.txt	/*vim.iter.totable()*
 vim.json	lua.txt	/*vim.json*
 vim.json.decode()	lua.txt	/*vim.json.decode()*
 vim.json.encode()	lua.txt	/*vim.json.encode()*
@@ -10083,6 +10089,8 @@ vim.lsp.buf.remove_workspace_folder()	lsp.txt	/*vim.lsp.buf.remove_workspace_fol
 vim.lsp.buf.rename()	lsp.txt	/*vim.lsp.buf.rename()*
 vim.lsp.buf.server_ready()	deprecated.txt	/*vim.lsp.buf.server_ready()*
 vim.lsp.buf.signature_help()	lsp.txt	/*vim.lsp.buf.signature_help()*
+vim.lsp.buf.subtypes()	lsp.txt	/*vim.lsp.buf.subtypes()*
+vim.lsp.buf.supertypes()	lsp.txt	/*vim.lsp.buf.supertypes()*
 vim.lsp.buf.type_definition()	lsp.txt	/*vim.lsp.buf.type_definition()*
 vim.lsp.buf.workspace_symbol()	lsp.txt	/*vim.lsp.buf.workspace_symbol()*
 vim.lsp.buf_attach_client()	lsp.txt	/*vim.lsp.buf_attach_client()*
@@ -10155,7 +10163,6 @@ vim.lsp.protocol.make_client_capabilities()	lsp.txt	/*vim.lsp.protocol.make_clie
 vim.lsp.protocol.resolve_capabilities()	lsp.txt	/*vim.lsp.protocol.resolve_capabilities()*
 vim.lsp.rpc.PublicClient	lsp.txt	/*vim.lsp.rpc.PublicClient*
 vim.lsp.rpc.connect()	lsp.txt	/*vim.lsp.rpc.connect()*
-vim.lsp.rpc.domain_socket_connect()	lsp.txt	/*vim.lsp.rpc.domain_socket_connect()*
 vim.lsp.rpc.format_rpc_error()	lsp.txt	/*vim.lsp.rpc.format_rpc_error()*
 vim.lsp.rpc.notify()	lsp.txt	/*vim.lsp.rpc.notify()*
 vim.lsp.rpc.request()	lsp.txt	/*vim.lsp.rpc.request()*
@@ -10270,11 +10277,9 @@ vim.tbl_count()	lua.txt	/*vim.tbl_count()*
 vim.tbl_deep_extend()	lua.txt	/*vim.tbl_deep_extend()*
 vim.tbl_extend()	lua.txt	/*vim.tbl_extend()*
 vim.tbl_filter()	lua.txt	/*vim.tbl_filter()*
-vim.tbl_flatten()	lua.txt	/*vim.tbl_flatten()*
 vim.tbl_get()	lua.txt	/*vim.tbl_get()*
-vim.tbl_isarray()	lua.txt	/*vim.tbl_isarray()*
 vim.tbl_isempty()	lua.txt	/*vim.tbl_isempty()*
-vim.tbl_islist()	lua.txt	/*vim.tbl_islist()*
+vim.tbl_islist()	deprecated.txt	/*vim.tbl_islist()*
 vim.tbl_keys()	lua.txt	/*vim.tbl_keys()*
 vim.tbl_map()	lua.txt	/*vim.tbl_map()*
 vim.tbl_values()	lua.txt	/*vim.tbl_values()*
