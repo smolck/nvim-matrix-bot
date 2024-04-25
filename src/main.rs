@@ -234,6 +234,8 @@ impl MatrixClient {
 }
 
 fn main() -> Result<(), ureq::Error> {
+    dotenv::dotenv().ok();
+
     let user = std::env::var("MATRIX_USERNAME")
         .expect("Please set the environment variable MATRIX_USERNAME");
 
