@@ -6,23 +6,26 @@ mod help;
 
 use serde_json::Value as Json;
 
-const HOMESERVER: &str = "https://matrix.org";
+const DEFAULT_HOMESERVER: &str = "https://matrix.org";
 
 struct MatrixClient {
     pub access_token: Option<String>,
     pub command_parser: command::CommandParser,
+    pub homeserver: String,
 }
 
 impl MatrixClient {
-    fn new() -> Self {
+    fn new(homeserver: String) -> Self {
         Self {
             access_token: None,
+
+            homeserver,
             command_parser: command::CommandParser::new(),
         }
     }
 
     fn login(&mut self, user: &str, password: &str) -> Result<(), ureq::Error> {
-        let response: String = ureq::post(&format!("{}/_matrix/client/r0/login", HOMESERVER))
+        let response: String = ureq::post(&format!("{}/_matrix/client/r0/login", self.homeserver))
             // TODO(smolck): These headers necessary?
             .set("Accept", "application/json")
             .set("Content-Type", "application/json")
@@ -74,7 +77,7 @@ impl MatrixClient {
         // TODO(smolck): Maybe deal with response or use it or something?
         let _response: String = ureq::post(&format!(
             "{}/_matrix/client/r0/rooms/{}/send/m.room.message",
-            HOMESERVER, room_id
+            self.homeserver, room_id
         ))
         .set("Accept", "application/json")
         .set("Content-Type", "application/json")
@@ -94,7 +97,7 @@ impl MatrixClient {
         next_batch: Option<&str>,
         filter: Option<&str>,
     ) -> Result<String, ureq::Error> {
-        let mut req = ureq::get(&format!("{}/_matrix/client/r0/sync", HOMESERVER))
+        let mut req = ureq::get(&format!("{}/_matrix/client/r0/sync", self.homeserver))
             .set("Accept", "application/json")
             .set("Content-Type", "application/json")
             .set("Charset", "utf-8")
@@ -240,7 +243,17 @@ fn main() -> Result<(), ureq::Error> {
     let password = std::env::var("MATRIX_PASSWORD")
         .expect("Please set the environment variable MATRIX_PASSWORD");
 
-    let mut client = MatrixClient::new();
+    let homeserver = {
+        match std::env::var("MATRIX_HOMESERVER") {
+            Err(_) => {
+                println!("defaulting to https://matrix.org for homeserver");
+                String::from(DEFAULT_HOMESERVER)
+            }
+            Ok(homeserver) => homeserver,
+        }
+    };
+
+    let mut client = MatrixClient::new(homeserver);
     client.login(&user, &password)?;
     client.sync()?;
 

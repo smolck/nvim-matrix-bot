@@ -277,7 +277,10 @@ mod test {
         assert_eq!(encode_url("s/\\~"), "s%2F%5C~");
         assert_eq!(encode_url("<CR>"), "%3CCR%3E");
 
-        assert_eq!(encode_url("abdcefghijklmnopqrstuvwxyz"), "abdcefghijklmnopqrstuvwxyz");
+        assert_eq!(
+            encode_url("abdcefghijklmnopqrstuvwxyz"),
+            "abdcefghijklmnopqrstuvwxyz"
+        );
         assert_eq!(encode_url("0123456789"), "0123456789");
         assert_eq!(encode_url("()'_.~-"), "()'_.~-");
     }
