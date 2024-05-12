@@ -119,6 +119,7 @@ impl Gif {
             .set("Accept", "application/json")
             .set("Content-Type", "application/json")
             .set("Charset", "utf-8")
+            // TODO(smolck): I hope this sanitizes this cuz it's user input lol
             .query("q", query)
             .query("key", api_key)
             .query("limit", "1")
