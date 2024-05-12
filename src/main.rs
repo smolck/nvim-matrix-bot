@@ -1,4 +1,4 @@
-#![feature(try_blocks, iterator_try_collect)]
+#![feature(try_blocks)]
 #![allow(clippy::result_large_err)]
 
 mod command;
