@@ -5,6 +5,7 @@ pub enum Command<'a> {
     Help { docs: Vec<&'a str> },
     Sandwich { to: &'a str },
     Url { url: &'a str },
+    Gif { search: String },
 }
 
 pub struct CommandParser {
@@ -61,6 +62,12 @@ impl CommandParser {
                 "sandwich" => {
                     let args = args?;
                     Some(Sandwich { to: args[0] })
+                }
+                "gif" => {
+                    let args = args?;
+                    Some(Gif {
+                        search: args.join(" "),
+                    })
                 }
                 x => self.url_commands_json.get(x).map(|url| Url {
                     url: url.as_str().unwrap(),
