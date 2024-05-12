@@ -6,13 +6,13 @@ mod gif;
 mod help;
 
 use serde_json::Value as Json;
-use std::borrow::Borrow;
 
 const DEFAULT_HOMESERVER: &str = "https://matrix.org";
 
 #[derive(serde::Deserialize)]
 struct MxcUriCreateResponse {
     content_uri: String,
+    #[allow(unused)]
     unused_expires_at: i64,
 }
 
