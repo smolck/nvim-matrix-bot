@@ -94,7 +94,6 @@ impl MatrixClient {
         .send(gif_bytes_reader)
         .unwrap();
 
-        // https://media1.tenor.com/m/tj3ltZKxO94AAAAC/cops-police.gif
         let json = serde_json::json!({
             "msgtype": "m.image",
             "info": {
