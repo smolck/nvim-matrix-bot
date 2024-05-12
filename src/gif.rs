@@ -1,3 +1,5 @@
+#![allow(unused)] // just cuz we have JSON deserialized stuff that we don't all use
+                  // TODO(smolcK): we could do something about that idk, I like having the types
 use serde::Deserialize;
 use std::collections::HashMap;
 
