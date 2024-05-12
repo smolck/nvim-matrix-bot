@@ -2,30 +2,45 @@
 #![allow(clippy::result_large_err)]
 
 mod command;
+mod gif;
 mod help;
 
 use serde_json::Value as Json;
 
 const DEFAULT_HOMESERVER: &str = "https://matrix.org";
 
+#[derive(serde::Deserialize)]
+struct MxcUriCreateResponse {
+    content_uri: String,
+    #[allow(unused)]
+    unused_expires_at: i64,
+}
+
 struct MatrixClient {
     pub access_token: Option<String>,
     pub command_parser: command::CommandParser,
     pub homeserver: String,
+    pub agent: ureq::Agent,
+    /// If this is None, then gifs won't be supported
+    pub tenor_api_key: Option<String>,
 }
 
 impl MatrixClient {
-    fn new(homeserver: String) -> Self {
+    fn new(homeserver: String, tenor_api_key: Option<String>) -> Self {
         Self {
             access_token: None,
-
+            // set timeouts?
+            agent: ureq::AgentBuilder::new().build(),
             homeserver,
             command_parser: command::CommandParser::new(),
+            tenor_api_key,
         }
     }
 
     fn login(&mut self, user: &str, password: &str) -> Result<(), ureq::Error> {
-        let response: String = ureq::post(&format!("{}/_matrix/client/r0/login", self.homeserver))
+        let response: String = self
+            .agent
+            .post(&format!("{}/_matrix/client/r0/login", self.homeserver))
             // TODO(smolck): These headers necessary?
             .set("Accept", "application/json")
             .set("Content-Type", "application/json")
@@ -42,6 +57,77 @@ impl MatrixClient {
 
         let json = serde_json::from_str::<Json>(&response).unwrap();
         self.access_token = Some(json["access_token"].as_str().unwrap().to_string());
+
+        Ok(())
+    }
+
+    fn send_gif_if_key_else_do_nothing(
+        &self,
+        search_query: &str,
+        room_id: &str,
+    ) -> Result<(), ureq::Error> {
+        let Some(key) = &self.tenor_api_key else {
+            return Ok(());
+        };
+
+        let gif = gif::Gif::search(&self.agent, key, search_query);
+        let gif_bytes_reader = self.agent.get(&gif.url).call().unwrap().into_reader();
+
+        let mxc_uri = self
+            .agent
+            .post(&format!("{}/_matrix/media/v1/create", self.homeserver,))
+            .set("Accept", "application/json")
+            .set("Charset", "utf-8")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .call()
+            .unwrap();
+        let mxc_uri = serde_json::from_str::<MxcUriCreateResponse>(&mxc_uri.into_string().unwrap())
+            .unwrap()
+            .content_uri;
+
+        // TODO(smolck): Umm . . . absolutely not lmao
+        let mxc_uri_parts: Vec<&str> = mxc_uri.split("mxc://").collect();
+        let parts = mxc_uri_parts[1].split('/').collect::<Vec<&str>>();
+        let server_name = parts[0];
+        let media_id = parts[1];
+
+        // Upload gif to mxc uri
+        self.agent
+            .put(&format!(
+                "{}/_matrix/media/v3/upload/{}/{}",
+                self.homeserver, server_name, media_id,
+            ))
+            .query("filename", "nvim-bot-gif.gif")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .set("Content-Type", "application/octet-stream")
+            .send(gif_bytes_reader)
+            .unwrap();
+
+        let json = serde_json::json!({
+            "msgtype": "m.image",
+            "info": {
+                "mimetype": "image/gif",
+                "size": gif.size,
+                "h": gif.height,
+                "w": gif.width,
+            },
+            "url": mxc_uri,
+            "body": "nvim-bot-gif.gif",
+        })
+        .to_string();
+
+        let _response = self
+            .agent
+            .post(&format!(
+                "{}/_matrix/client/r0/rooms/{}/send/m.room.message",
+                self.homeserver, room_id
+            ))
+            .set("Accept", "application/json")
+            .set("Content-Type", "application/json")
+            .set("Charset", "utf-8")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .send_string(&json)?
+            .into_string()?;
 
         Ok(())
     }
@@ -75,19 +161,18 @@ impl MatrixClient {
         };
 
         // TODO(smolck): Maybe deal with response or use it or something?
-        let _response: String = ureq::post(&format!(
-            "{}/_matrix/client/r0/rooms/{}/send/m.room.message",
-            self.homeserver, room_id
-        ))
-        .set("Accept", "application/json")
-        .set("Content-Type", "application/json")
-        .set("Charset", "utf-8")
-        .query("access_token", self.access_token.as_ref().unwrap())
-        // .set("Authorization", &format!("Bearer {}", self.access_token.as_ref().unwrap()))
-        .send_string(&json)?
-        .into_string()?;
-
-        // let json = serde_json::from_str::<Json>(&response).unwrap();
+        let _response: String = self
+            .agent
+            .post(&format!(
+                "{}/_matrix/client/r0/rooms/{}/send/m.room.message",
+                self.homeserver, room_id
+            ))
+            .set("Accept", "application/json")
+            .set("Content-Type", "application/json")
+            .set("Charset", "utf-8")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .send_string(&json)?
+            .into_string()?;
 
         Ok(())
     }
@@ -97,7 +182,9 @@ impl MatrixClient {
         next_batch: Option<&str>,
         filter: Option<&str>,
     ) -> Result<String, ureq::Error> {
-        let mut req = ureq::get(&format!("{}/_matrix/client/r0/sync", self.homeserver))
+        let mut req = self
+            .agent
+            .get(&format!("{}/_matrix/client/r0/sync", self.homeserver))
             .set("Accept", "application/json")
             .set("Content-Type", "application/json")
             .set("Charset", "utf-8")
@@ -169,6 +256,10 @@ impl MatrixClient {
             }
             Url { url } => {
                 self.send_message(true, url, room_id).unwrap();
+            }
+            Gif { search } => {
+                self.send_gif_if_key_else_do_nothing(&search, room_id)
+                    .unwrap();
             }
         }
     }
@@ -253,7 +344,17 @@ fn main() -> Result<(), ureq::Error> {
         }
     };
 
-    let mut client = MatrixClient::new(homeserver);
+    let tenor_api_key = {
+        match std::env::var("TENOR_API_KEY") {
+            Err(_) => {
+                println!("running without tenor gif functionality");
+                None
+            }
+            Ok(key) => Some(key),
+        }
+    };
+
+    let mut client = MatrixClient::new(homeserver, tenor_api_key);
     client.login(&user, &password)?;
     client.sync()?;
 
