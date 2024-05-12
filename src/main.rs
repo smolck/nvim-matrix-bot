@@ -109,6 +109,7 @@ impl MatrixClient {
                 "mimetype": "image/gif",
                 "size": gif.size,
                 "h": gif.height,
+                "w": gif.width,
             },
             "url": mxc_uri,
             "body": "nvim-bot-gif.gif",
