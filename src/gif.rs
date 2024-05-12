@@ -112,15 +112,16 @@ pub struct Gif {
 
 impl Gif {
     pub fn search(agent: &ureq::Agent, api_key: &str, query: &str) -> Self {
-        let response = agent.get("https://tenor.googleapis.com/v2/search")
-        .set("Accept", "application/json")
-        .set("Content-Type", "application/json")
-        .set("Charset", "utf-8")
-        .query("q", query)
-        .query("key", api_key)
-        .query("limit", "1")
-        .call()
-        .unwrap();
+        let response = agent
+            .get("https://tenor.googleapis.com/v2/search")
+            .set("Accept", "application/json")
+            .set("Content-Type", "application/json")
+            .set("Charset", "utf-8")
+            .query("q", query)
+            .query("key", api_key)
+            .query("limit", "1")
+            .call()
+            .unwrap();
 
         let response: Response = serde_json::de::from_reader(&mut response.into_reader()).unwrap();
         let gif_info = &response.results[0].media_formats[&ContentFormat::TinyGif];

@@ -7,8 +7,8 @@ mod help;
 
 use std::process::exit;
 
-use std::borrow::Borrow;
 use serde_json::Value as Json;
+use std::borrow::Borrow;
 
 const DEFAULT_HOMESERVER: &str = "https://matrix.org";
 
@@ -40,7 +40,9 @@ impl MatrixClient {
     }
 
     fn login(&mut self, user: &str, password: &str) -> Result<(), ureq::Error> {
-        let response: String = self.agent.post(&format!("{}/_matrix/client/r0/login", self.homeserver))
+        let response: String = self
+            .agent
+            .post(&format!("{}/_matrix/client/r0/login", self.homeserver))
             // TODO(smolck): These headers necessary?
             .set("Accept", "application/json")
             .set("Content-Type", "application/json")
@@ -61,13 +63,21 @@ impl MatrixClient {
         Ok(())
     }
 
-    fn send_gif_if_key_else_do_nothing(&self, search_query: &str, room_id: &str) -> Result<(), ureq::Error> {
-        let Some(key) = &self.tenor_api_key else { return Ok(()); };
+    fn send_gif_if_key_else_do_nothing(
+        &self,
+        search_query: &str,
+        room_id: &str,
+    ) -> Result<(), ureq::Error> {
+        let Some(key) = &self.tenor_api_key else {
+            return Ok(());
+        };
 
         let gif = gif::Gif::search(&self.agent, key, search_query);
         let gif_bytes_reader = self.agent.get(&gif.url).call().unwrap().into_reader();
 
-        let mxc_uri = self.agent.post(&format!("{}/_matrix/media/v1/create", self.homeserver,))
+        let mxc_uri = self
+            .agent
+            .post(&format!("{}/_matrix/media/v1/create", self.homeserver,))
             .set("Accept", "application/json")
             .set("Charset", "utf-8")
             .query("access_token", self.access_token.as_ref().unwrap())
@@ -84,15 +94,16 @@ impl MatrixClient {
         let media_id = parts[1];
 
         // Upload gif to mxc uri
-        self.agent.put(&format!(
-            "{}/_matrix/media/v3/upload/{}/{}",
-            self.homeserver, server_name, media_id,
-        ))
-        .query("filename", "nvim-bot-gif.gif")
-        .query("access_token", self.access_token.as_ref().unwrap())
-        .set("Content-Type", "application/octet-stream")
-        .send(gif_bytes_reader)
-        .unwrap();
+        self.agent
+            .put(&format!(
+                "{}/_matrix/media/v3/upload/{}/{}",
+                self.homeserver, server_name, media_id,
+            ))
+            .query("filename", "nvim-bot-gif.gif")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .set("Content-Type", "application/octet-stream")
+            .send(gif_bytes_reader)
+            .unwrap();
 
         let json = serde_json::json!({
             "msgtype": "m.image",
@@ -106,16 +117,18 @@ impl MatrixClient {
         })
         .to_string();
 
-        let _response = self.agent.post(&format!(
-            "{}/_matrix/client/r0/rooms/{}/send/m.room.message",
-            self.homeserver, room_id
-        ))
-        .set("Accept", "application/json")
-        .set("Content-Type", "application/json")
-        .set("Charset", "utf-8")
-        .query("access_token", self.access_token.as_ref().unwrap())
-        .send_string(&json)?
-        .into_string()?;
+        let _response = self
+            .agent
+            .post(&format!(
+                "{}/_matrix/client/r0/rooms/{}/send/m.room.message",
+                self.homeserver, room_id
+            ))
+            .set("Accept", "application/json")
+            .set("Content-Type", "application/json")
+            .set("Charset", "utf-8")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .send_string(&json)?
+            .into_string()?;
 
         Ok(())
     }
@@ -149,16 +162,18 @@ impl MatrixClient {
         };
 
         // TODO(smolck): Maybe deal with response or use it or something?
-        let _response: String = self.agent.post(&format!(
-            "{}/_matrix/client/r0/rooms/{}/send/m.room.message",
-            self.homeserver, room_id
-        ))
-        .set("Accept", "application/json")
-        .set("Content-Type", "application/json")
-        .set("Charset", "utf-8")
-        .query("access_token", self.access_token.as_ref().unwrap())
-        .send_string(&json)?
-        .into_string()?;
+        let _response: String = self
+            .agent
+            .post(&format!(
+                "{}/_matrix/client/r0/rooms/{}/send/m.room.message",
+                self.homeserver, room_id
+            ))
+            .set("Accept", "application/json")
+            .set("Content-Type", "application/json")
+            .set("Charset", "utf-8")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .send_string(&json)?
+            .into_string()?;
 
         Ok(())
     }
@@ -168,7 +183,9 @@ impl MatrixClient {
         next_batch: Option<&str>,
         filter: Option<&str>,
     ) -> Result<String, ureq::Error> {
-        let mut req = self.agent.get(&format!("{}/_matrix/client/r0/sync", self.homeserver))
+        let mut req = self
+            .agent
+            .get(&format!("{}/_matrix/client/r0/sync", self.homeserver))
             .set("Accept", "application/json")
             .set("Content-Type", "application/json")
             .set("Charset", "utf-8")
@@ -242,7 +259,8 @@ impl MatrixClient {
                 self.send_message(true, url, room_id).unwrap();
             }
             Gif { search } => {
-                self.send_gif_if_key_else_do_nothing(&search, room_id).unwrap();
+                self.send_gif_if_key_else_do_nothing(&search, room_id)
+                    .unwrap();
             }
         }
     }
@@ -305,7 +323,6 @@ impl MatrixClient {
         let mut next_batch: Option<String> = None;
         loop {
             next_batch = Some(self.sync_once(next_batch.as_deref(), None)?);
-
             std::thread::sleep(std::time::Duration::from_millis(1000));
         }
     }
@@ -334,7 +351,7 @@ fn main() -> Result<(), ureq::Error> {
                 println!("running without tenor gif functionality");
                 None
             }
-            Ok(key) => Some(key)
+            Ok(key) => Some(key),
         }
     };
 
