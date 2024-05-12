@@ -5,8 +5,6 @@ mod command;
 mod gif;
 mod help;
 
-use std::process::exit;
-
 use serde_json::Value as Json;
 use std::borrow::Borrow;
 
