@@ -70,7 +70,7 @@ impl MatrixClient {
             return Ok(());
         };
 
-        let gif = gif::Gif::search(&self.agent, key, search_query);
+        let gif = gif::Gif::search(&self.agent, key, search_query)?;
         let gif_bytes_reader = self.agent.get(&gif.url).call().unwrap().into_reader();
 
         let mxc_uri = self
@@ -258,8 +258,9 @@ impl MatrixClient {
                 self.send_message(true, url, room_id).unwrap();
             }
             Gif { search } => {
-                self.send_gif_if_key_else_do_nothing(&search, room_id)
-                    .unwrap();
+                if let Err(err) = self.send_gif_if_key_else_do_nothing(&search, room_id) {
+                    eprintln!("Error sending gif! {}", err);
+                }
             }
         }
     }
