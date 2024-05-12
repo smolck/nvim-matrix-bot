@@ -206,10 +206,7 @@ fn find_in_tagfile_and_score(tagfile: &str, patterns: Patterns) -> Vec<Match<'_>
 }
 
 pub fn help<'a>(thing: &str) -> Option<Tag<'a>> {
-    let Some(patterns) = generate_search_patterns(thing) else {
-        return None;
-    };
-
+    let patterns = generate_search_patterns(thing)?;
     if let Some(m) = find_in_tagfile_and_score(include_str!("tags"), patterns)
         .into_iter()
         .min_by_key(|m| m.score)
