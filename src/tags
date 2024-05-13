@@ -5302,9 +5302,7 @@ cpp.vim	syntax.txt	/*cpp.vim*
 crash-recovery	recover.txt	/*crash-recovery*
 creating-menus	gui.txt	/*creating-menus*
 credits	intro.txt	/*credits*
-crn	lsp.txt	/*crn*
 crontab	options.txt	/*crontab*
-crr	lsp.txt	/*crr*
 cscope	vim_diff.txt	/*cscope*
 cscope_connection()	vim_diff.txt	/*cscope_connection()*
 csh.vim	syntax.txt	/*csh.vim*
@@ -5413,6 +5411,7 @@ dev-name-api	develop.txt	/*dev-name-api*
 dev-name-common	develop.txt	/*dev-name-common*
 dev-name-events	develop.txt	/*dev-name-events*
 dev-naming	develop.txt	/*dev-naming*
+dev-patterns	develop.txt	/*dev-patterns*
 dev-provider	develop.txt	/*dev-provider*
 dev-style	dev_style.txt	/*dev-style*
 dev-style-comments	dev_style.txt	/*dev-style-comments*
@@ -6225,7 +6224,6 @@ g:netrw_use_errorwindow	pi_netrw.txt	/*g:netrw_use_errorwindow*
 g:netrw_use_noswf	pi_netrw.txt	/*g:netrw_use_noswf*
 g:netrw_use_nt_rcp	pi_netrw.txt	/*g:netrw_use_nt_rcp*
 g:netrw_usetab	pi_netrw.txt	/*g:netrw_usetab*
-g:netrw_win95ftp	pi_netrw.txt	/*g:netrw_win95ftp*
 g:netrw_winsize	pi_netrw.txt	/*g:netrw_winsize*
 g:netrw_wiw	pi_netrw.txt	/*g:netrw_wiw*
 g:netrw_xstrlen	pi_netrw.txt	/*g:netrw_xstrlen*
@@ -6816,7 +6814,6 @@ i_CTRL-R_=	insert.txt	/*i_CTRL-R_=*
 i_CTRL-R_CTRL-O	insert.txt	/*i_CTRL-R_CTRL-O*
 i_CTRL-R_CTRL-P	insert.txt	/*i_CTRL-R_CTRL-P*
 i_CTRL-R_CTRL-R	insert.txt	/*i_CTRL-R_CTRL-R*
-i_CTRL-S	lsp.txt	/*i_CTRL-S*
 i_CTRL-SHIFT-Q	insert.txt	/*i_CTRL-SHIFT-Q*
 i_CTRL-SHIFT-V	insert.txt	/*i_CTRL-SHIFT-V*
 i_CTRL-T	insert.txt	/*i_CTRL-T*
@@ -7746,11 +7743,11 @@ netrw-D	pi_netrw.txt	/*netrw-D*
 netrw-I	pi_netrw.txt	/*netrw-I*
 netrw-O	pi_netrw.txt	/*netrw-O*
 netrw-P	pi_netrw.txt	/*netrw-P*
+netrw-P17	pi_netrw.txt	/*netrw-P17*
 netrw-P18	pi_netrw.txt	/*netrw-P18*
 netrw-P19	pi_netrw.txt	/*netrw-P19*
 netrw-P20	pi_netrw.txt	/*netrw-P20*
 netrw-P21	pi_netrw.txt	/*netrw-P21*
-netrw-P22	pi_netrw.txt	/*netrw-P22*
 netrw-R	pi_netrw.txt	/*netrw-R*
 netrw-S	pi_netrw.txt	/*netrw-S*
 netrw-Tb	pi_netrw.txt	/*netrw-Tb*
@@ -7879,7 +7876,6 @@ netrw-p13	pi_netrw.txt	/*netrw-p13*
 netrw-p14	pi_netrw.txt	/*netrw-p14*
 netrw-p15	pi_netrw.txt	/*netrw-p15*
 netrw-p16	pi_netrw.txt	/*netrw-p16*
-netrw-p17	pi_netrw.txt	/*netrw-p17*
 netrw-p2	pi_netrw.txt	/*netrw-p2*
 netrw-p3	pi_netrw.txt	/*netrw-p3*
 netrw-p4	pi_netrw.txt	/*netrw-p4*
@@ -8007,6 +8003,9 @@ nvim__inspect_cell()	api.txt	/*nvim__inspect_cell()*
 nvim__invalidate_glyph_cache()	api.txt	/*nvim__invalidate_glyph_cache()*
 nvim__redraw()	api.txt	/*nvim__redraw()*
 nvim__stats()	api.txt	/*nvim__stats()*
+nvim__win_add_ns()	api.txt	/*nvim__win_add_ns()*
+nvim__win_del_ns()	api.txt	/*nvim__win_del_ns()*
+nvim__win_get_ns()	api.txt	/*nvim__win_get_ns()*
 nvim_buf_add_highlight()	api.txt	/*nvim_buf_add_highlight()*
 nvim_buf_attach()	api.txt	/*nvim_buf_attach()*
 nvim_buf_call()	api.txt	/*nvim_buf_call()*
@@ -8164,7 +8163,6 @@ nvim_ui_term_event()	api.txt	/*nvim_ui_term_event()*
 nvim_ui_try_resize()	api.txt	/*nvim_ui_try_resize()*
 nvim_ui_try_resize_grid()	api.txt	/*nvim_ui_try_resize_grid()*
 nvim_unsubscribe()	api.txt	/*nvim_unsubscribe()*
-nvim_win_add_ns()	api.txt	/*nvim_win_add_ns()*
 nvim_win_call()	api.txt	/*nvim_win_call()*
 nvim_win_close()	api.txt	/*nvim_win_close()*
 nvim_win_del_var()	api.txt	/*nvim_win_del_var()*
@@ -8172,7 +8170,6 @@ nvim_win_get_buf()	api.txt	/*nvim_win_get_buf()*
 nvim_win_get_config()	api.txt	/*nvim_win_get_config()*
 nvim_win_get_cursor()	api.txt	/*nvim_win_get_cursor()*
 nvim_win_get_height()	api.txt	/*nvim_win_get_height()*
-nvim_win_get_ns()	api.txt	/*nvim_win_get_ns()*
 nvim_win_get_number()	api.txt	/*nvim_win_get_number()*
 nvim_win_get_option()	deprecated.txt	/*nvim_win_get_option()*
 nvim_win_get_position()	api.txt	/*nvim_win_get_position()*
@@ -8181,7 +8178,6 @@ nvim_win_get_var()	api.txt	/*nvim_win_get_var()*
 nvim_win_get_width()	api.txt	/*nvim_win_get_width()*
 nvim_win_hide()	api.txt	/*nvim_win_hide()*
 nvim_win_is_valid()	api.txt	/*nvim_win_is_valid()*
-nvim_win_remove_ns()	api.txt	/*nvim_win_remove_ns()*
 nvim_win_set_buf()	api.txt	/*nvim_win_set_buf()*
 nvim_win_set_config()	api.txt	/*nvim_win_set_config()*
 nvim_win_set_cursor()	api.txt	/*nvim_win_set_cursor()*
@@ -9802,8 +9798,6 @@ v_CTRL-G	visual.txt	/*v_CTRL-G*
 v_CTRL-H	change.txt	/*v_CTRL-H*
 v_CTRL-O	visual.txt	/*v_CTRL-O*
 v_CTRL-R	visual.txt	/*v_CTRL-R*
-v_CTRL-R_CTRL-R	lsp.txt	/*v_CTRL-R_CTRL-R*
-v_CTRL-R_r	lsp.txt	/*v_CTRL-R_r*
 v_CTRL-V	visual.txt	/*v_CTRL-V*
 v_CTRL-X	change.txt	/*v_CTRL-X*
 v_CTRL-Z	starting.txt	/*v_CTRL-Z*
@@ -10277,9 +10271,9 @@ vim.show_pos()	lua.txt	/*vim.show_pos()*
 vim.snippet	lua.txt	/*vim.snippet*
 vim.snippet.ActiveFilter	lua.txt	/*vim.snippet.ActiveFilter*
 vim.snippet.active()	lua.txt	/*vim.snippet.active()*
-vim.snippet.exit()	lua.txt	/*vim.snippet.exit()*
 vim.snippet.expand()	lua.txt	/*vim.snippet.expand()*
 vim.snippet.jump()	lua.txt	/*vim.snippet.jump()*
+vim.snippet.stop()	lua.txt	/*vim.snippet.stop()*
 vim.spairs()	lua.txt	/*vim.spairs()*
 vim.spell	lua.txt	/*vim.spell*
 vim.spell.check()	lua.txt	/*vim.spell.check()*
