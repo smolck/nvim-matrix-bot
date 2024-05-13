@@ -239,9 +239,10 @@ impl MatrixClient {
                     .join("\n");
 
                 if !body.is_empty() {
-                    self.send_message(true, &body, room_id).unwrap_or_else(|err| {
-                        eprintln!("Error sending message for {cmd:?} cmd: {err}");
-                    });
+                    self.send_message(true, &body, room_id)
+                        .unwrap_or_else(|err| {
+                            eprintln!("Error sending message for {cmd:?} cmd: {err}");
+                        });
                 }
 
                 if !not_found.is_empty() {
@@ -253,9 +254,10 @@ impl MatrixClient {
                             .collect::<Vec<String>>()
                             .join("\n")
                     );
-                    self.send_message(true, &not_found_body, room_id).unwrap_or_else(|err| {
-                        eprintln!("Error sending message for {cmd:?} cmd: {err}");
-                    });
+                    self.send_message(true, &not_found_body, room_id)
+                        .unwrap_or_else(|err| {
+                            eprintln!("Error sending message for {cmd:?} cmd: {err}");
+                        });
                 }
             }
             Sandwich { to } => {
