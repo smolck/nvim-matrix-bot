@@ -66,6 +66,42 @@ impl MatrixClient {
         Ok(())
     }
 
+    fn upload_data_to_matrix<R>(&self, reader: R) -> Result<String, ureq::Error>
+    where
+        R: std::io::Read + Send,
+    {
+        let mxc_uri = self
+            .agent
+            .post(&format!("{}/_matrix/media/v1/create", self.homeserver,))
+            .set("Accept", "application/json")
+            .set("Charset", "utf-8")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .call()?;
+
+        let mxc_uri = serde_json::from_str::<MxcUriCreateResponse>(&mxc_uri.into_string().unwrap())
+            .unwrap()
+            .content_uri;
+
+        // TODO(smolck): Umm . . . absolutely not lmao
+        let mxc_uri_parts: Vec<&str> = mxc_uri.split("mxc://").collect();
+        let parts = mxc_uri_parts[1].split('/').collect::<Vec<&str>>();
+        let server_name = parts[0];
+        let media_id = parts[1];
+
+        // Upload data to the URI
+        self.agent
+            .put(&format!(
+                "{}/_matrix/media/v3/upload/{}/{}",
+                self.homeserver, server_name, media_id,
+            ))
+            .query("filename", "nvim-bot-gif.gif")
+            .query("access_token", self.access_token.as_ref().unwrap())
+            .set("Content-Type", "application/octet-stream")
+            .send(reader)?;
+
+        Ok(mxc_uri)
+    }
+
     fn send_gif_if_key_else_do_nothing(
         &self,
         search_query: &str,
@@ -78,34 +114,10 @@ impl MatrixClient {
         let gif = gif::Gif::search(&self.agent, key, search_query)?;
         let gif_bytes_reader = self.agent.get(&gif.url).call()?.into_reader();
 
-        let mxc_uri = self
-            .agent
-            .post(&format!("{}/_matrix/media/v1/create", self.homeserver,))
-            .set("Accept", "application/json")
-            .set("Charset", "utf-8")
-            .query("access_token", self.access_token.as_ref().unwrap())
-            .call()
-            .unwrap();
-        let mxc_uri = serde_json::from_str::<MxcUriCreateResponse>(&mxc_uri.into_string().unwrap())
-            .unwrap()
-            .content_uri;
+        let gif_uri = self.upload_data_to_matrix(gif_bytes_reader)?;
 
-        // TODO(smolck): Umm . . . absolutely not lmao
-        let mxc_uri_parts: Vec<&str> = mxc_uri.split("mxc://").collect();
-        let parts = mxc_uri_parts[1].split('/').collect::<Vec<&str>>();
-        let server_name = parts[0];
-        let media_id = parts[1];
-
-        // Upload gif to mxc uri
-        self.agent
-            .put(&format!(
-                "{}/_matrix/media/v3/upload/{}/{}",
-                self.homeserver, server_name, media_id,
-            ))
-            .query("filename", "nvim-bot-gif.gif")
-            .query("access_token", self.access_token.as_ref().unwrap())
-            .set("Content-Type", "application/octet-stream")
-            .send(gif_bytes_reader)?;
+        let gif_preview_reader = self.agent.get(&gif.preview_url).call()?.into_reader();
+        let gif_preview_uri = self.upload_data_to_matrix(gif_preview_reader)?;
 
         let json = serde_json::json!({
             "msgtype": "m.image",
@@ -114,8 +126,15 @@ impl MatrixClient {
                 "size": gif.size,
                 "h": gif.height,
                 "w": gif.width,
+                "thumbnail_info": {
+                    "h": gif.preview_height,
+                    "w": gif.preview_width,
+                    "mimetype": "image/png",
+                    "size": gif.preview_size,
+                },
+                "thumbnail_url": gif_preview_uri,
             },
-            "url": mxc_uri,
+            "url": gif_uri,
             "body": "nvim-bot-gif.gif",
         })
         .to_string();

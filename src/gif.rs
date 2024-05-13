@@ -110,6 +110,10 @@ pub struct Gif {
     pub width: i32,
     pub size: i32,
     pub url: String,
+    pub preview_url: String,
+    pub preview_height: i32,
+    pub preview_width: i32,
+    pub preview_size: i32,
 }
 
 impl Gif {
@@ -128,12 +132,18 @@ impl Gif {
         let response: Response = serde_json::de::from_reader(&mut response.into_reader()).unwrap();
         let gif_info = &response.results[0].media_formats[&ContentFormat::TinyGif];
         let [width, height] = gif_info.dims;
+        let preview_info = &response.results[0].media_formats[&ContentFormat::TinyGifPreview];
+        let [preview_width, preview_height] = preview_info.dims;
 
         Ok(Self {
             width,
             height,
             size: gif_info.size,
             url: gif_info.url.clone(),
+            preview_height,
+            preview_width,
+            preview_url: preview_info.url.clone(),
+            preview_size: preview_info.size,
         })
     }
 }
