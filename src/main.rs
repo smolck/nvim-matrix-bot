@@ -2,8 +2,11 @@
 #![allow(clippy::result_large_err)]
 
 mod command;
+mod config;
 mod gif;
 mod help;
+
+use std::path::Path;
 
 use serde_json::Value as Json;
 
@@ -17,16 +20,17 @@ struct MxcUriCreateResponse {
 }
 
 struct MatrixClient {
-    pub access_token: Option<String>,
-    pub command_parser: command::CommandParser,
-    pub homeserver: String,
-    pub agent: ureq::Agent,
+    access_token: Option<String>,
+    command_parser: command::CommandParser,
+    homeserver: String,
+    agent: ureq::Agent,
     /// If this is None, then gifs won't be supported
-    pub tenor_api_key: Option<String>,
+    tenor_api_key: Option<String>,
+    config: config::Config,
 }
 
 impl MatrixClient {
-    fn new(homeserver: String, tenor_api_key: Option<String>) -> Self {
+    fn new(homeserver: String, tenor_api_key: Option<String>, config: config::Config) -> Self {
         Self {
             access_token: None,
             // set timeouts?
@@ -34,6 +38,7 @@ impl MatrixClient {
             homeserver,
             command_parser: command::CommandParser::new(),
             tenor_api_key,
+            config,
         }
     }
 
@@ -251,14 +256,31 @@ impl MatrixClient {
                 }
             }
             Sandwich { to } => {
-                self.send_message(true, &format!("here's a sandwich, {}: 🥪", to), room_id)
-                    .unwrap();
+                if let Some(Err(err)) = self.config.rooms.get(room_id).and_then(|config| {
+                    if config.sandwich {
+                        Some(self.send_message(
+                            true,
+                            &format!("here's a sandwich, {}: 🥪", to),
+                            room_id,
+                        ))
+                    } else {
+                        None
+                    }
+                }) {
+                    eprintln!("Error sending sandwich! {}", err);
+                }
             }
             Url { url } => {
                 self.send_message(true, url, room_id).unwrap();
             }
             Gif { search } => {
-                if let Err(err) = self.send_gif_if_key_else_do_nothing(&search, room_id) {
+                if let Some(Err(err)) = self.config.rooms.get(room_id).and_then(|config| {
+                    if config.gifs {
+                        Some(self.send_gif_if_key_else_do_nothing(&search, room_id))
+                    } else {
+                        None
+                    }
+                }) {
                     eprintln!("Error sending gif! {}", err);
                 }
             }
@@ -329,6 +351,16 @@ impl MatrixClient {
 }
 
 fn main() -> Result<(), ureq::Error> {
+    let config = {
+        if Path::exists(Path::new("./config.json")) {
+            // read config from file
+            config::Config::from_file("./config.json").unwrap()
+        } else {
+            println!("no config file, using defaults");
+            config::Config::default()
+        }
+    };
+
     let user = std::env::var("MATRIX_USERNAME")
         .expect("Please set the environment variable MATRIX_USERNAME");
 
@@ -355,7 +387,7 @@ fn main() -> Result<(), ureq::Error> {
         }
     };
 
-    let mut client = MatrixClient::new(homeserver, tenor_api_key);
+    let mut client = MatrixClient::new(homeserver, tenor_api_key, config);
     client.login(&user, &password)?;
     client.sync()?;
 
