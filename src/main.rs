@@ -76,7 +76,7 @@ impl MatrixClient {
         };
 
         let gif = gif::Gif::search(&self.agent, key, search_query)?;
-        let gif_bytes_reader = self.agent.get(&gif.url).call().unwrap().into_reader();
+        let gif_bytes_reader = self.agent.get(&gif.url).call()?.into_reader();
 
         let mxc_uri = self
             .agent
@@ -105,8 +105,7 @@ impl MatrixClient {
             .query("filename", "nvim-bot-gif.gif")
             .query("access_token", self.access_token.as_ref().unwrap())
             .set("Content-Type", "application/octet-stream")
-            .send(gif_bytes_reader)
-            .unwrap();
+            .send(gif_bytes_reader)?;
 
         let json = serde_json::json!({
             "msgtype": "m.image",
@@ -215,7 +214,7 @@ impl MatrixClient {
     fn handle_cmd(&self, cmd: command::Command, room_id: &str) {
         use command::Command::*;
         match cmd {
-            Help { docs } => {
+            Help { ref docs } => {
                 let mut tags = vec![];
                 let mut not_found = vec![];
                 for doc in docs {
@@ -240,7 +239,9 @@ impl MatrixClient {
                     .join("\n");
 
                 if !body.is_empty() {
-                    self.send_message(true, &body, room_id).unwrap();
+                    self.send_message(true, &body, room_id).unwrap_or_else(|err| {
+                        eprintln!("Error sending message for {cmd:?} cmd: {err}");
+                    });
                 }
 
                 if !not_found.is_empty() {
@@ -252,7 +253,9 @@ impl MatrixClient {
                             .collect::<Vec<String>>()
                             .join("\n")
                     );
-                    self.send_message(true, &not_found_body, room_id).unwrap();
+                    self.send_message(true, &not_found_body, room_id).unwrap_or_else(|err| {
+                        eprintln!("Error sending message for {cmd:?} cmd: {err}");
+                    });
                 }
             }
             Sandwich { to } => {
@@ -271,7 +274,9 @@ impl MatrixClient {
                 }
             }
             Url { url } => {
-                self.send_message(true, url, room_id).unwrap();
+                self.send_message(true, url, room_id).unwrap_or_else(|err| {
+                    eprintln!("Error sending URL {url}: {err}");
+                });
             }
             Gif { search } => {
                 if let Some(Err(err)) = self.config.rooms.get(room_id).and_then(|config| {
@@ -344,7 +349,13 @@ impl MatrixClient {
     fn sync(&self) -> Result<(), ureq::Error> {
         let mut next_batch: Option<String> = None;
         loop {
-            next_batch = Some(self.sync_once(next_batch.as_deref(), None)?);
+            match self.sync_once(next_batch.as_deref(), None) {
+                Ok(new_batch) => {
+                    next_batch = Some(new_batch);
+                }
+                // TODO(smolck): I don't think we need to crash on this
+                Err(err) => eprintln!("Error syncing! {}", err),
+            }
             std::thread::sleep(std::time::Duration::from_millis(1000));
         }
     }
