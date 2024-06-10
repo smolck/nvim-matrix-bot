@@ -1805,8 +1805,8 @@ $quote	eval.txt	/*$quote*
 :changes	motion.txt	/*:changes*
 :chd	editing.txt	/*:chd*
 :chdir	editing.txt	/*:chdir*
-:che	pi_health.txt	/*:che*
-:checkhealth	pi_health.txt	/*:checkhealth*
+:che	health.txt	/*:che*
+:checkhealth	health.txt	/*:checkhealth*
 :checkp	tagsrch.txt	/*:checkp*
 :checkpath	tagsrch.txt	/*:checkpath*
 :checkt	editing.txt	/*:checkt*
@@ -3792,7 +3792,7 @@ E5002	vim_diff.txt	/*E5002*
 E5003	options.txt	/*E5003*
 E5004	builtin.txt	/*E5004*
 E5005	builtin.txt	/*E5005*
-E5009	pi_health.txt	/*E5009*
+E5009	health.txt	/*E5009*
 E501	intro.txt	/*E501*
 E502	editing.txt	/*E502*
 E503	editing.txt	/*E503*
@@ -4446,6 +4446,7 @@ TRUE	eval.txt	/*TRUE*
 TSNode	treesitter.txt	/*TSNode*
 TSNode:byte_length()	treesitter.txt	/*TSNode:byte_length()*
 TSNode:child()	treesitter.txt	/*TSNode:child()*
+TSNode:child_containing_descendant()	treesitter.txt	/*TSNode:child_containing_descendant()*
 TSNode:child_count()	treesitter.txt	/*TSNode:child_count()*
 TSNode:descendant_for_range()	treesitter.txt	/*TSNode:descendant_for_range()*
 TSNode:end_()	treesitter.txt	/*TSNode:end_()*
@@ -4586,6 +4587,7 @@ ZZ	editing.txt	/*ZZ*
 [<MiddleMouse>	change.txt	/*[<MiddleMouse>*
 [==]	pattern.txt	/*[==]*
 [D	tagsrch.txt	/*[D*
+[D-default	tagsrch.txt	/*[D-default*
 [I	tagsrch.txt	/*[I*
 [M	motion.txt	/*[M*
 [P	change.txt	/*[P*
@@ -4605,6 +4607,7 @@ ZZ	editing.txt	/*ZZ*
 [p	change.txt	/*[p*
 [pattern]	pattern.txt	/*[pattern]*
 [quotex]	intro.txt	/*[quotex]*
+[r	spell.txt	/*[r*
 [range]	cmdline.txt	/*[range]*
 [s	spell.txt	/*[s*
 [star	motion.txt	/*[star*
@@ -4618,6 +4621,7 @@ ZZ	editing.txt	/*ZZ*
 ]/	motion.txt	/*]\/*
 ]<MiddleMouse>	change.txt	/*]<MiddleMouse>*
 ]D	tagsrch.txt	/*]D*
+]D-default	tagsrch.txt	/*]D-default*
 ]I	tagsrch.txt	/*]I*
 ]M	motion.txt	/*]M*
 ]P	change.txt	/*]P*
@@ -4634,6 +4638,7 @@ ZZ	editing.txt	/*ZZ*
 ]i	tagsrch.txt	/*]i*
 ]m	motion.txt	/*]m*
 ]p	change.txt	/*]p*
+]r	spell.txt	/*]r*
 ]s	spell.txt	/*]s*
 ]star	motion.txt	/*]star*
 ]z	fold.txt	/*]z*
@@ -5391,6 +5396,7 @@ deletebufline()	builtin.txt	/*deletebufline()*
 deleting	change.txt	/*deleting*
 deprecated	deprecated.txt	/*deprecated*
 deprecated-0.10	deprecated.txt	/*deprecated-0.10*
+deprecated-0.11	deprecated.txt	/*deprecated-0.11*
 deprecated-0.9	deprecated.txt	/*deprecated-0.9*
 deprecated.txt	deprecated.txt	/*deprecated.txt*
 design-documented	develop.txt	/*design-documented*
@@ -5403,11 +5409,12 @@ desktop.vim	syntax.txt	/*desktop.vim*
 dev	develop.txt	/*dev*
 dev-api	develop.txt	/*dev-api*
 dev-api-client	develop.txt	/*dev-api-client*
+dev-api-name	develop.txt	/*dev-api-name*
+dev-api-patterns	develop.txt	/*dev-api-patterns*
 dev-doc	develop.txt	/*dev-doc*
 dev-guidelines	develop.txt	/*dev-guidelines*
 dev-lua	develop.txt	/*dev-lua*
 dev-lua-doc	develop.txt	/*dev-lua-doc*
-dev-name-api	develop.txt	/*dev-name-api*
 dev-name-common	develop.txt	/*dev-name-common*
 dev-name-events	develop.txt	/*dev-name-events*
 dev-naming	develop.txt	/*dev-naming*
@@ -5539,6 +5546,7 @@ editorconfig.indent_style	editorconfig.txt	/*editorconfig.indent_style*
 editorconfig.insert_final_newline	editorconfig.txt	/*editorconfig.insert_final_newline*
 editorconfig.max_line_length	editorconfig.txt	/*editorconfig.max_line_length*
 editorconfig.root	editorconfig.txt	/*editorconfig.root*
+editorconfig.spelling_language	editorconfig.txt	/*editorconfig.spelling_language*
 editorconfig.tab_width	editorconfig.txt	/*editorconfig.tab_width*
 editorconfig.trim_trailing_whitespace	editorconfig.txt	/*editorconfig.trim_trailing_whitespace*
 editorconfig.txt	editorconfig.txt	/*editorconfig.txt*
@@ -5853,6 +5861,7 @@ ft-ada-syntax	ft_ada.txt	/*ft-ada-syntax*
 ft-ada-variables	ft_ada.txt	/*ft-ada-variables*
 ft-ant-syntax	syntax.txt	/*ft-ant-syntax*
 ft-apache-syntax	syntax.txt	/*ft-apache-syntax*
+ft-arduino-plugin	filetype.txt	/*ft-arduino-plugin*
 ft-asciidoc-plugin	filetype.txt	/*ft-asciidoc-plugin*
 ft-asm-syntax	syntax.txt	/*ft-asm-syntax*
 ft-asm68k-syntax	syntax.txt	/*ft-asm68k-syntax*
@@ -5904,6 +5913,7 @@ ft-gitcommit-plugin	filetype.txt	/*ft-gitcommit-plugin*
 ft-gprof-plugin	filetype.txt	/*ft-gprof-plugin*
 ft-groff-syntax	syntax.txt	/*ft-groff-syntax*
 ft-gsp-syntax	syntax.txt	/*ft-gsp-syntax*
+ft-hare	filetype.txt	/*ft-hare*
 ft-haskell-syntax	syntax.txt	/*ft-haskell-syntax*
 ft-html-indent	indent.txt	/*ft-html-indent*
 ft-html-omni	insert.txt	/*ft-html-omni*
@@ -5968,6 +5978,7 @@ ft-quake-syntax	syntax.txt	/*ft-quake-syntax*
 ft-query-plugin	filetype.txt	/*ft-query-plugin*
 ft-r-indent	indent.txt	/*ft-r-indent*
 ft-r-syntax	syntax.txt	/*ft-r-syntax*
+ft-rasi-syntax	syntax.txt	/*ft-rasi-syntax*
 ft-readline-syntax	syntax.txt	/*ft-readline-syntax*
 ft-rego-syntax	syntax.txt	/*ft-rego-syntax*
 ft-rexx-syntax	syntax.txt	/*ft-rexx-syntax*
@@ -6002,6 +6013,8 @@ ft-termcap-syntax	syntax.txt	/*ft-termcap-syntax*
 ft-tex-plugin	filetype.txt	/*ft-tex-plugin*
 ft-tex-syntax	syntax.txt	/*ft-tex-syntax*
 ft-tf-syntax	syntax.txt	/*ft-tf-syntax*
+ft-typescript-syntax	syntax.txt	/*ft-typescript-syntax*
+ft-typescriptreact-syntax	syntax.txt	/*ft-typescriptreact-syntax*
 ft-vb-syntax	syntax.txt	/*ft-vb-syntax*
 ft-verilog-indent	indent.txt	/*ft-verilog-indent*
 ft-vhdl-indent	indent.txt	/*ft-vhdl-indent*
@@ -6015,9 +6028,11 @@ ft-xml-syntax	syntax.txt	/*ft-xml-syntax*
 ft-xpm-syntax	syntax.txt	/*ft-xpm-syntax*
 ft-yaml-indent	indent.txt	/*ft-yaml-indent*
 ft-yaml-syntax	syntax.txt	/*ft-yaml-syntax*
+ft-zig-plugin	filetype.txt	/*ft-zig-plugin*
 ft-zimbu-plugin	filetype.txt	/*ft-zimbu-plugin*
 ft-zsh-syntax	syntax.txt	/*ft-zsh-syntax*
 ft_ada.txt	ft_ada.txt	/*ft_ada.txt*
+ft_hare.txt	ft_hare.txt	/*ft_hare.txt*
 ft_ps1.txt	ft_ps1.txt	/*ft_ps1.txt*
 ft_raku.txt	ft_raku.txt	/*ft_raku.txt*
 ft_rust.txt	ft_rust.txt	/*ft_rust.txt*
@@ -6107,6 +6122,7 @@ g:decada.Unit_Name()	ft_ada.txt	/*g:decada.Unit_Name()*
 g:did_load_filetypes	filetype.txt	/*g:did_load_filetypes*
 g:editorconfig	editorconfig.txt	/*g:editorconfig*
 g:filetype_csh	syntax.txt	/*g:filetype_csh*
+g:filetype_haredoc	ft_hare.txt	/*g:filetype_haredoc*
 g:filetype_r	syntax.txt	/*g:filetype_r*
 g:ft_man_folding_enable	filetype.txt	/*g:ft_man_folding_enable*
 g:ftplugin_rust_source_path	ft_rust.txt	/*g:ftplugin_rust_source_path*
@@ -6123,6 +6139,9 @@ g:gnat.Set_Project_File()	ft_ada.txt	/*g:gnat.Set_Project_File()*
 g:gnat.Tags()	ft_ada.txt	/*g:gnat.Tags()*
 g:gnat.Tags_Command	ft_ada.txt	/*g:gnat.Tags_Command*
 g:gzip_exec	pi_gzip.txt	/*g:gzip_exec*
+g:hare_recommended_style	ft_hare.txt	/*g:hare_recommended_style*
+g:hare_space_error	ft_hare.txt	/*g:hare_space_error*
+g:haredoc_search_depth	ft_hare.txt	/*g:haredoc_search_depth*
 g:loaded_node_provider	provider.txt	/*g:loaded_node_provider*
 g:loaded_perl_provider	provider.txt	/*g:loaded_perl_provider*
 g:loaded_python3_provider	provider.txt	/*g:loaded_python3_provider*
@@ -6285,6 +6304,7 @@ g:tex_stylish	syntax.txt	/*g:tex_stylish*
 g:tex_subscripts	syntax.txt	/*g:tex_subscripts*
 g:tex_superscripts	syntax.txt	/*g:tex_superscripts*
 g:tex_verbspell	syntax.txt	/*g:tex_verbspell*
+g:typescript_host_keyword	syntax.txt	/*g:typescript_host_keyword*
 g:var	eval.txt	/*g:var*
 g:vim_indent_cont	indent.txt	/*g:vim_indent_cont*
 g:vimsyn_embed	syntax.txt	/*g:vimsyn_embed*
@@ -6293,6 +6313,8 @@ g:vimsyn_maxlines	syntax.txt	/*g:vimsyn_maxlines*
 g:vimsyn_minlines	syntax.txt	/*g:vimsyn_minlines*
 g:vimsyn_noerror	syntax.txt	/*g:vimsyn_noerror*
 g:yaml_schema	syntax.txt	/*g:yaml_schema*
+g:zig_recommended_style	filetype.txt	/*g:zig_recommended_style*
+g:zig_std_dir	filetype.txt	/*g:zig_std_dir*
 g:zipPlugin_ext	pi_zip.txt	/*g:zipPlugin_ext*
 g:zip_exec	pi_zip.txt	/*g:zip_exec*
 g:zip_extractcmd	pi_zip.txt	/*g:zip_extractcmd*
@@ -6394,6 +6416,7 @@ getreg()	builtin.txt	/*getreg()*
 getreginfo()	builtin.txt	/*getreginfo()*
 getregion()	builtin.txt	/*getregion()*
 getregion-notes	builtin.txt	/*getregion-notes*
+getregionpos()	builtin.txt	/*getregionpos()*
 getregtype()	builtin.txt	/*getregtype()*
 getscriptinfo()	builtin.txt	/*getscriptinfo()*
 gettabinfo()	builtin.txt	/*gettabinfo()*
@@ -6433,11 +6456,14 @@ gqgq	change.txt	/*gqgq*
 gqq	change.txt	/*gqq*
 gr	change.txt	/*gr*
 gr-default	change.txt	/*gr-default*
+gra	lsp.txt	/*gra*
 greek	options.txt	/*greek*
 grep	quickfix.txt	/*grep*
+grn	lsp.txt	/*grn*
 groff.vim	syntax.txt	/*groff.vim*
 gross-national-happiness	intro.txt	/*gross-national-happiness*
 group-name	syntax.txt	/*group-name*
+grr	lsp.txt	/*grr*
 gs	various.txt	/*gs*
 gsp.vim	syntax.txt	/*gsp.vim*
 gstar	pattern.txt	/*gstar*
@@ -6474,6 +6500,10 @@ g~g~	change.txt	/*g~g~*
 g~~	change.txt	/*g~~*
 h	motion.txt	/*h*
 hardcopy	vim_diff.txt	/*hardcopy*
+hare	ft_hare.txt	/*hare*
+hare-intro	ft_hare.txt	/*hare-intro*
+hare-plugin	ft_hare.txt	/*hare-plugin*
+hare-settings	ft_hare.txt	/*hare-settings*
 has()	builtin.txt	/*has()*
 has-patch	builtin.txt	/*has-patch*
 has-python	if_pyth.txt	/*has-python*
@@ -6482,15 +6512,15 @@ has_key()	builtin.txt	/*has_key()*
 haskell.vim	syntax.txt	/*haskell.vim*
 haslocaldir()	builtin.txt	/*haslocaldir()*
 hasmapto()	builtin.txt	/*hasmapto()*
-health	pi_health.txt	/*health*
+health	health.txt	/*health*
 health#report_error	deprecated.txt	/*health#report_error*
 health#report_info	deprecated.txt	/*health#report_info*
 health#report_ok	deprecated.txt	/*health#report_ok*
 health#report_start	deprecated.txt	/*health#report_start*
 health#report_warn	deprecated.txt	/*health#report_warn*
-health-commands	pi_health.txt	/*health-commands*
-health-dev	pi_health.txt	/*health-dev*
-health-functions	pi_health.txt	/*health-functions*
+health-commands	health.txt	/*health-commands*
+health-dev	health.txt	/*health-dev*
+health.txt	health.txt	/*health.txt*
 hebrew	hebrew.txt	/*hebrew*
 hebrew.txt	hebrew.txt	/*hebrew.txt*
 help	helphelp.txt	/*help*
@@ -6814,6 +6844,7 @@ i_CTRL-R_=	insert.txt	/*i_CTRL-R_=*
 i_CTRL-R_CTRL-O	insert.txt	/*i_CTRL-R_CTRL-O*
 i_CTRL-R_CTRL-P	insert.txt	/*i_CTRL-R_CTRL-P*
 i_CTRL-R_CTRL-R	insert.txt	/*i_CTRL-R_CTRL-R*
+i_CTRL-S	lsp.txt	/*i_CTRL-S*
 i_CTRL-SHIFT-Q	insert.txt	/*i_CTRL-SHIFT-Q*
 i_CTRL-SHIFT-V	insert.txt	/*i_CTRL-SHIFT-V*
 i_CTRL-T	insert.txt	/*i_CTRL-T*
@@ -7113,6 +7144,7 @@ lsp-api	lsp.txt	/*lsp-api*
 lsp-buf	lsp.txt	/*lsp-buf*
 lsp-client	lsp.txt	/*lsp-client*
 lsp-codelens	lsp.txt	/*lsp-codelens*
+lsp-completion	lsp.txt	/*lsp-completion*
 lsp-config	lsp.txt	/*lsp-config*
 lsp-core	lsp.txt	/*lsp-core*
 lsp-defaults	lsp.txt	/*lsp-defaults*
@@ -7253,6 +7285,7 @@ lua-pattern	luaref.txt	/*lua-pattern*
 lua-patternitem	luaref.txt	/*lua-patternitem*
 lua-patterns	luaref.txt	/*lua-patterns*
 lua-precedence	luaref.txt	/*lua-precedence*
+lua-profile	lua.txt	/*lua-profile*
 lua-pseudoindex	luaref.txt	/*lua-pseudoindex*
 lua-ref-bibliography	luaref.txt	/*lua-ref-bibliography*
 lua-ref-copyright	luaref.txt	/*lua-ref-copyright*
@@ -7953,8 +7986,10 @@ new-filetype	filetype.txt	/*new-filetype*
 new-filetype-scripts	filetype.txt	/*new-filetype-scripts*
 new-style-testing	testing.txt	/*new-style-testing*
 news	news.txt	/*news*
+news-0.10	news-0.10.txt	/*news-0.10*
 news-0.9	news-0.9.txt	/*news-0.9*
 news-0.9.txt	news-0.9.txt	/*news-0.9.txt*
+news-10.txt	news-0.10.txt	/*news-10.txt*
 news-breaking	news.txt	/*news-breaking*
 news-breaking-dev	news.txt	/*news-breaking-dev*
 news-changed	news.txt	/*news-changed*
@@ -7968,6 +8003,7 @@ no-type-checking	eval.txt	/*no-type-checking*
 no_mail_maps	filetype.txt	/*no_mail_maps*
 no_plugin_maps	filetype.txt	/*no_plugin_maps*
 nocombine	syntax.txt	/*nocombine*
+node-client	develop.txt	/*node-client*
 non-greedy	pattern.txt	/*non-greedy*
 non-zero-arg	eval.txt	/*non-zero-arg*
 normal-index	index.txt	/*normal-index*
@@ -8001,11 +8037,10 @@ nvim__id_dictionary()	api.txt	/*nvim__id_dictionary()*
 nvim__id_float()	api.txt	/*nvim__id_float()*
 nvim__inspect_cell()	api.txt	/*nvim__inspect_cell()*
 nvim__invalidate_glyph_cache()	api.txt	/*nvim__invalidate_glyph_cache()*
+nvim__ns_get()	api.txt	/*nvim__ns_get()*
+nvim__ns_set()	api.txt	/*nvim__ns_set()*
 nvim__redraw()	api.txt	/*nvim__redraw()*
 nvim__stats()	api.txt	/*nvim__stats()*
-nvim__win_add_ns()	api.txt	/*nvim__win_add_ns()*
-nvim__win_del_ns()	api.txt	/*nvim__win_del_ns()*
-nvim__win_get_ns()	api.txt	/*nvim__win_get_ns()*
 nvim_buf_add_highlight()	api.txt	/*nvim_buf_add_highlight()*
 nvim_buf_attach()	api.txt	/*nvim_buf_attach()*
 nvim_buf_call()	api.txt	/*nvim_buf_call()*
@@ -8144,7 +8179,6 @@ nvim_set_option_value()	api.txt	/*nvim_set_option_value()*
 nvim_set_var()	api.txt	/*nvim_set_var()*
 nvim_set_vvar()	api.txt	/*nvim_set_vvar()*
 nvim_strwidth()	api.txt	/*nvim_strwidth()*
-nvim_subscribe()	api.txt	/*nvim_subscribe()*
 nvim_tabpage_del_var()	api.txt	/*nvim_tabpage_del_var()*
 nvim_tabpage_get_number()	api.txt	/*nvim_tabpage_get_number()*
 nvim_tabpage_get_var()	api.txt	/*nvim_tabpage_get_var()*
@@ -8162,7 +8196,6 @@ nvim_ui_set_option()	api.txt	/*nvim_ui_set_option()*
 nvim_ui_term_event()	api.txt	/*nvim_ui_term_event()*
 nvim_ui_try_resize()	api.txt	/*nvim_ui_try_resize()*
 nvim_ui_try_resize_grid()	api.txt	/*nvim_ui_try_resize_grid()*
-nvim_unsubscribe()	api.txt	/*nvim_unsubscribe()*
 nvim_win_call()	api.txt	/*nvim_win_call()*
 nvim_win_close()	api.txt	/*nvim_win_close()*
 nvim_win_del_var()	api.txt	/*nvim_win_del_var()*
@@ -8314,7 +8347,6 @@ php.vim	syntax.txt	/*php.vim*
 php3.vim	syntax.txt	/*php3.vim*
 phtml.vim	syntax.txt	/*phtml.vim*
 pi_gzip.txt	pi_gzip.txt	/*pi_gzip.txt*
-pi_health.txt	pi_health.txt	/*pi_health.txt*
 pi_msgpack.txt	pi_msgpack.txt	/*pi_msgpack.txt*
 pi_netrw.txt	pi_netrw.txt	/*pi_netrw.txt*
 pi_paren.txt	pi_paren.txt	/*pi_paren.txt*
@@ -8504,6 +8536,7 @@ r.vim	syntax.txt	/*r.vim*
 raku-unicode	ft_raku.txt	/*raku-unicode*
 rand()	builtin.txt	/*rand()*
 range()	builtin.txt	/*range()*
+rasi.vim	syntax.txt	/*rasi.vim*
 rawequal()	luaref.txt	/*rawequal()*
 rawget()	luaref.txt	/*rawget()*
 rawset()	luaref.txt	/*rawset()*
@@ -9329,6 +9362,8 @@ tutor	usr_01.txt	/*tutor*
 two-engines	pattern.txt	/*two-engines*
 type()	builtin.txt	/*type()*
 type-mistakes	tips.txt	/*type-mistakes*
+typescript.vim	syntax.txt	/*typescript.vim*
+typescriptreact.vim	syntax.txt	/*typescriptreact.vim*
 u	undo.txt	/*u*
 uganda	uganda.txt	/*uganda*
 uganda.txt	uganda.txt	/*uganda.txt*
@@ -9955,10 +9990,11 @@ vim.defer_fn()	lua.txt	/*vim.defer_fn()*
 vim.deprecate()	lua.txt	/*vim.deprecate()*
 vim.diagnostic	diagnostic.txt	/*vim.diagnostic*
 vim.diagnostic.GetOpts	diagnostic.txt	/*vim.diagnostic.GetOpts*
-vim.diagnostic.GotoOpts	diagnostic.txt	/*vim.diagnostic.GotoOpts*
+vim.diagnostic.JumpOpts	diagnostic.txt	/*vim.diagnostic.JumpOpts*
 vim.diagnostic.NS	diagnostic.txt	/*vim.diagnostic.NS*
 vim.diagnostic.Opts	diagnostic.txt	/*vim.diagnostic.Opts*
 vim.diagnostic.Opts.Float	diagnostic.txt	/*vim.diagnostic.Opts.Float*
+vim.diagnostic.Opts.Jump	diagnostic.txt	/*vim.diagnostic.Opts.Jump*
 vim.diagnostic.Opts.Signs	diagnostic.txt	/*vim.diagnostic.Opts.Signs*
 vim.diagnostic.Opts.Underline	diagnostic.txt	/*vim.diagnostic.Opts.Underline*
 vim.diagnostic.Opts.VirtualText	diagnostic.txt	/*vim.diagnostic.Opts.VirtualText*
@@ -9971,14 +10007,15 @@ vim.diagnostic.get()	diagnostic.txt	/*vim.diagnostic.get()*
 vim.diagnostic.get_namespace()	diagnostic.txt	/*vim.diagnostic.get_namespace()*
 vim.diagnostic.get_namespaces()	diagnostic.txt	/*vim.diagnostic.get_namespaces()*
 vim.diagnostic.get_next()	diagnostic.txt	/*vim.diagnostic.get_next()*
-vim.diagnostic.get_next_pos()	diagnostic.txt	/*vim.diagnostic.get_next_pos()*
+vim.diagnostic.get_next_pos()	deprecated.txt	/*vim.diagnostic.get_next_pos()*
 vim.diagnostic.get_prev()	diagnostic.txt	/*vim.diagnostic.get_prev()*
-vim.diagnostic.get_prev_pos()	diagnostic.txt	/*vim.diagnostic.get_prev_pos()*
-vim.diagnostic.goto_next()	diagnostic.txt	/*vim.diagnostic.goto_next()*
-vim.diagnostic.goto_prev()	diagnostic.txt	/*vim.diagnostic.goto_prev()*
+vim.diagnostic.get_prev_pos()	deprecated.txt	/*vim.diagnostic.get_prev_pos()*
+vim.diagnostic.goto_next()	deprecated.txt	/*vim.diagnostic.goto_next()*
+vim.diagnostic.goto_prev()	deprecated.txt	/*vim.diagnostic.goto_prev()*
 vim.diagnostic.hide()	diagnostic.txt	/*vim.diagnostic.hide()*
 vim.diagnostic.is_disabled()	deprecated.txt	/*vim.diagnostic.is_disabled()*
 vim.diagnostic.is_enabled()	diagnostic.txt	/*vim.diagnostic.is_enabled()*
+vim.diagnostic.jump()	diagnostic.txt	/*vim.diagnostic.jump()*
 vim.diagnostic.match()	diagnostic.txt	/*vim.diagnostic.match()*
 vim.diagnostic.open_float()	diagnostic.txt	/*vim.diagnostic.open_float()*
 vim.diagnostic.reset()	diagnostic.txt	/*vim.diagnostic.reset()*
@@ -10012,17 +10049,17 @@ vim.glob	lua.txt	/*vim.glob*
 vim.glob.to_lpeg()	lua.txt	/*vim.glob.to_lpeg()*
 vim.go	lua.txt	/*vim.go*
 vim.gsplit()	lua.txt	/*vim.gsplit()*
-vim.health	pi_health.txt	/*vim.health*
-vim.health.error()	pi_health.txt	/*vim.health.error()*
-vim.health.info()	pi_health.txt	/*vim.health.info()*
-vim.health.ok()	pi_health.txt	/*vim.health.ok()*
+vim.health	health.txt	/*vim.health*
+vim.health.error()	health.txt	/*vim.health.error()*
+vim.health.info()	health.txt	/*vim.health.info()*
+vim.health.ok()	health.txt	/*vim.health.ok()*
 vim.health.report_error()	deprecated.txt	/*vim.health.report_error()*
 vim.health.report_info()	deprecated.txt	/*vim.health.report_info()*
 vim.health.report_ok()	deprecated.txt	/*vim.health.report_ok()*
 vim.health.report_start()	deprecated.txt	/*vim.health.report_start()*
 vim.health.report_warn()	deprecated.txt	/*vim.health.report_warn()*
-vim.health.start()	pi_health.txt	/*vim.health.start()*
-vim.health.warn()	pi_health.txt	/*vim.health.warn()*
+vim.health.start()	health.txt	/*vim.health.start()*
+vim.health.warn()	health.txt	/*vim.health.warn()*
 vim.highlight	lua.txt	/*vim.highlight*
 vim.highlight.on_yank()	lua.txt	/*vim.highlight.on_yank()*
 vim.highlight.priorities	lua.txt	/*vim.highlight.priorities*
@@ -10125,6 +10162,9 @@ vim.lsp.codelens.refresh()	lsp.txt	/*vim.lsp.codelens.refresh()*
 vim.lsp.codelens.run()	lsp.txt	/*vim.lsp.codelens.run()*
 vim.lsp.codelens.save()	lsp.txt	/*vim.lsp.codelens.save()*
 vim.lsp.commands	lsp.txt	/*vim.lsp.commands*
+vim.lsp.completion.BufferOpts	lsp.txt	/*vim.lsp.completion.BufferOpts*
+vim.lsp.completion.enable()	lsp.txt	/*vim.lsp.completion.enable()*
+vim.lsp.completion.trigger()	lsp.txt	/*vim.lsp.completion.trigger()*
 vim.lsp.diagnostic.clear()	deprecated.txt	/*vim.lsp.diagnostic.clear()*
 vim.lsp.diagnostic.disable()	deprecated.txt	/*vim.lsp.diagnostic.disable()*
 vim.lsp.diagnostic.display()	deprecated.txt	/*vim.lsp.diagnostic.display()*
@@ -10258,7 +10298,6 @@ vim.re.match()	lua.txt	/*vim.re.match()*
 vim.re.updatelocale()	lua.txt	/*vim.re.updatelocale()*
 vim.regex	lua.txt	/*vim.regex*
 vim.regex()	lua.txt	/*vim.regex()*
-vim.region()	lua.txt	/*vim.region()*
 vim.ringbuf()	lua.txt	/*vim.ringbuf()*
 vim.rpcnotify()	lua.txt	/*vim.rpcnotify()*
 vim.rpcrequest()	lua.txt	/*vim.rpcrequest()*
