@@ -3348,6 +3348,7 @@ CursorHold-example	windows.txt	/*CursorHold-example*
 CursorHoldI	autocmd.txt	/*CursorHoldI*
 CursorIM	syntax.txt	/*CursorIM*
 CursorMoved	autocmd.txt	/*CursorMoved*
+CursorMovedC	autocmd.txt	/*CursorMovedC*
 CursorMovedI	autocmd.txt	/*CursorMovedI*
 D	change.txt	/*D*
 DOS-format	editing.txt	/*DOS-format*
@@ -5189,6 +5190,7 @@ compiler-dotnet	quickfix.txt	/*compiler-dotnet*
 compiler-gcc	quickfix.txt	/*compiler-gcc*
 compiler-gnat	ft_ada.txt	/*compiler-gnat*
 compiler-hpada	ft_ada.txt	/*compiler-hpada*
+compiler-javac	quickfix.txt	/*compiler-javac*
 compiler-pandoc	quickfix.txt	/*compiler-pandoc*
 compiler-perl	quickfix.txt	/*compiler-perl*
 compiler-pyunit	quickfix.txt	/*compiler-pyunit*
@@ -6307,6 +6309,7 @@ g:tex_verbspell	syntax.txt	/*g:tex_verbspell*
 g:typescript_host_keyword	syntax.txt	/*g:typescript_host_keyword*
 g:var	eval.txt	/*g:var*
 g:vim_indent_cont	indent.txt	/*g:vim_indent_cont*
+g:vimsyn_comment_strings	syntax.txt	/*g:vimsyn_comment_strings*
 g:vimsyn_embed	syntax.txt	/*g:vimsyn_embed*
 g:vimsyn_folding	syntax.txt	/*g:vimsyn_folding*
 g:vimsyn_maxlines	syntax.txt	/*g:vimsyn_maxlines*
@@ -6709,6 +6712,8 @@ hl-PmenuExtra	syntax.txt	/*hl-PmenuExtra*
 hl-PmenuExtraSel	syntax.txt	/*hl-PmenuExtraSel*
 hl-PmenuKind	syntax.txt	/*hl-PmenuKind*
 hl-PmenuKindSel	syntax.txt	/*hl-PmenuKindSel*
+hl-PmenuMatch	syntax.txt	/*hl-PmenuMatch*
+hl-PmenuMatchSel	syntax.txt	/*hl-PmenuMatchSel*
 hl-PmenuSbar	syntax.txt	/*hl-PmenuSbar*
 hl-PmenuSel	syntax.txt	/*hl-PmenuSel*
 hl-PmenuThumb	syntax.txt	/*hl-PmenuThumb*
@@ -6725,8 +6730,8 @@ hl-SpellLocal	syntax.txt	/*hl-SpellLocal*
 hl-SpellRare	syntax.txt	/*hl-SpellRare*
 hl-StatusLine	syntax.txt	/*hl-StatusLine*
 hl-StatusLineNC	syntax.txt	/*hl-StatusLineNC*
-hl-StatusLineTerm	vim_diff.txt	/*hl-StatusLineTerm*
-hl-StatusLineTermNC	vim_diff.txt	/*hl-StatusLineTermNC*
+hl-StatusLineTerm	syntax.txt	/*hl-StatusLineTerm*
+hl-StatusLineTermNC	syntax.txt	/*hl-StatusLineTermNC*
 hl-Substitute	syntax.txt	/*hl-Substitute*
 hl-TabLine	syntax.txt	/*hl-TabLine*
 hl-TabLineFill	syntax.txt	/*hl-TabLineFill*
@@ -8004,6 +8009,8 @@ no_mail_maps	filetype.txt	/*no_mail_maps*
 no_plugin_maps	filetype.txt	/*no_plugin_maps*
 nocombine	syntax.txt	/*nocombine*
 node-client	develop.txt	/*node-client*
+nohlsearch-auto	pattern.txt	/*nohlsearch-auto*
+nohlsearch-install	usr_05.txt	/*nohlsearch-install*
 non-greedy	pattern.txt	/*non-greedy*
 non-zero-arg	eval.txt	/*non-zero-arg*
 normal-index	index.txt	/*normal-index*
@@ -9240,6 +9247,7 @@ terminal-emulator	nvim_terminal_emulator.txt	/*terminal-emulator*
 terminal-events	nvim_terminal_emulator.txt	/*terminal-events*
 terminal-input	nvim_terminal_emulator.txt	/*terminal-input*
 terminal-mode-index	index.txt	/*terminal-mode-index*
+terminal-osc52	nvim_terminal_emulator.txt	/*terminal-osc52*
 terminal-osc7	nvim_terminal_emulator.txt	/*terminal-osc7*
 terminal-start	nvim_terminal_emulator.txt	/*terminal-start*
 terminal-status	nvim_terminal_emulator.txt	/*terminal-status*
@@ -9967,6 +9975,7 @@ vim-modes-intro	intro.txt	/*vim-modes-intro*
 vim-raku	ft_raku.txt	/*vim-raku*
 vim-script-intro	usr_41.txt	/*vim-script-intro*
 vim-script-library	eval.txt	/*vim-script-library*
+vim-shebang	various.txt	/*vim-shebang*
 vim-tutor-create	pi_tutor.txt	/*vim-tutor-create*
 vim-tutor-mode	pi_tutor.txt	/*vim-tutor-mode*
 vim-tutor-usage	pi_tutor.txt	/*vim-tutor-usage*
