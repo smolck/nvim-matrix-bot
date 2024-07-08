@@ -3087,10 +3087,14 @@ $quote	eval.txt	/*$quote*
 <RightMouse>	visual.txt	/*<RightMouse>*
 <RightRelease>	term.txt	/*<RightRelease>*
 <S-	intro.txt	/*<S-*
+<S-CR>	scroll.txt	/*<S-CR>*
 <S-Down>	scroll.txt	/*<S-Down>*
 <S-F1>	intro.txt	/*<S-F1>*
 <S-Left>	motion.txt	/*<S-Left>*
 <S-LeftMouse>	term.txt	/*<S-LeftMouse>*
+<S-Minus>	scroll.txt	/*<S-Minus>*
+<S-NL>	scroll.txt	/*<S-NL>*
+<S-Plus>	scroll.txt	/*<S-Plus>*
 <S-Right>	motion.txt	/*<S-Right>*
 <S-RightMouse>	term.txt	/*<S-RightMouse>*
 <S-ScrollWheelDown>	index.txt	/*<S-ScrollWheelDown>*
@@ -4417,6 +4421,8 @@ Ruby	if_ruby.txt	/*Ruby*
 Russian	russian.txt	/*Russian*
 S	change.txt	/*S*
 SHELL	starting.txt	/*SHELL*
+SHIFT-+	scroll.txt	/*SHIFT-+*
+SHIFT-MINUS	scroll.txt	/*SHIFT-MINUS*
 SQLGetType	ft_sql.txt	/*SQLGetType*
 SQLSetType	ft_sql.txt	/*SQLSetType*
 SafeState	autocmd.txt	/*SafeState*
@@ -5850,7 +5856,6 @@ freebasic_space_errors	syntax.txt	/*freebasic_space_errors*
 freebasic_type_suffixes	syntax.txt	/*freebasic_type_suffixes*
 friendship	intro.txt	/*friendship*
 frombook	usr_01.txt	/*frombook*
-fswatch-limitations	lua.txt	/*fswatch-limitations*
 ft-abel-syntax	syntax.txt	/*ft-abel-syntax*
 ft-ada-commands	ft_ada.txt	/*ft-ada-commands*
 ft-ada-constants	ft_ada.txt	/*ft-ada-constants*
@@ -5887,6 +5892,7 @@ ft-coldfusion-syntax	syntax.txt	/*ft-coldfusion-syntax*
 ft-cpp-syntax	syntax.txt	/*ft-cpp-syntax*
 ft-csh-syntax	syntax.txt	/*ft-csh-syntax*
 ft-css-omni	insert.txt	/*ft-css-omni*
+ft-csv-syntax	syntax.txt	/*ft-csv-syntax*
 ft-cweb-syntax	syntax.txt	/*ft-cweb-syntax*
 ft-cynlib-syntax	syntax.txt	/*ft-cynlib-syntax*
 ft-dart-syntax	syntax.txt	/*ft-dart-syntax*
@@ -6125,6 +6131,7 @@ g:did_load_filetypes	filetype.txt	/*g:did_load_filetypes*
 g:editorconfig	editorconfig.txt	/*g:editorconfig*
 g:filetype_csh	syntax.txt	/*g:filetype_csh*
 g:filetype_haredoc	ft_hare.txt	/*g:filetype_haredoc*
+g:filetype_md	syntax.txt	/*g:filetype_md*
 g:filetype_r	syntax.txt	/*g:filetype_r*
 g:ft_man_folding_enable	filetype.txt	/*g:ft_man_folding_enable*
 g:ftplugin_rust_source_path	ft_rust.txt	/*g:ftplugin_rust_source_path*
@@ -6930,6 +6937,7 @@ informix	ft_sql.txt	/*informix*
 init.lua	starting.txt	/*init.lua*
 init.vim	starting.txt	/*init.vim*
 initialization	starting.txt	/*initialization*
+inotify-limitations	lua.txt	/*inotify-limitations*
 input()	builtin.txt	/*input()*
 input()-highlight	builtin.txt	/*input()-highlight*
 inputdialog()	deprecated.txt	/*inputdialog()*
