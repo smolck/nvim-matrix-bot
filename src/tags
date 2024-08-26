@@ -881,6 +881,7 @@ $quote	eval.txt	/*$quote*
 'syn'	options.txt	/*'syn'*
 'synmaxcol'	options.txt	/*'synmaxcol'*
 'syntax'	options.txt	/*'syntax'*
+'tabclose'	options.txt	/*'tabclose'*
 'tabline'	options.txt	/*'tabline'*
 'tabpagemax'	options.txt	/*'tabpagemax'*
 'tabstop'	options.txt	/*'tabstop'*
@@ -899,6 +900,7 @@ $quote	eval.txt	/*$quote*
 'tbis'	vim_diff.txt	/*'tbis'*
 'tbs'	options.txt	/*'tbs'*
 'tc'	options.txt	/*'tc'*
+'tcl'	options.txt	/*'tcl'*
 'tenc'	vim_diff.txt	/*'tenc'*
 'term'	vim_diff.txt	/*'term'*
 'termbidi'	options.txt	/*'termbidi'*
@@ -3387,14 +3389,20 @@ E1111	builtin.txt	/*E1111*
 E1112	builtin.txt	/*E1112*
 E1113	builtin.txt	/*E1113*
 E1114	builtin.txt	/*E1114*
+E1115	builtin.txt	/*E1115*
+E1116	builtin.txt	/*E1116*
 E112	eval.txt	/*E112*
+E1122	eval.txt	/*E1122*
 E113	eval.txt	/*E113*
 E1136	map.txt	/*E1136*
 E114	eval.txt	/*E114*
+E1142	builtin.txt	/*E1142*
 E1145	eval.txt	/*E1145*
 E115	eval.txt	/*E115*
+E1156	editing.txt	/*E1156*
 E1159	windows.txt	/*E1159*
 E116	eval.txt	/*E116*
+E1169	eval.txt	/*E1169*
 E117	userfunc.txt	/*E117*
 E118	eval.txt	/*E118*
 E1188	cmdline.txt	/*E1188*
@@ -4302,6 +4310,7 @@ LanguageTree:is_valid()	treesitter.txt	/*LanguageTree:is_valid()*
 LanguageTree:lang()	treesitter.txt	/*LanguageTree:lang()*
 LanguageTree:language_for_range()	treesitter.txt	/*LanguageTree:language_for_range()*
 LanguageTree:named_node_for_range()	treesitter.txt	/*LanguageTree:named_node_for_range()*
+LanguageTree:node_for_range()	treesitter.txt	/*LanguageTree:node_for_range()*
 LanguageTree:parse()	treesitter.txt	/*LanguageTree:parse()*
 LanguageTree:register_cbs()	treesitter.txt	/*LanguageTree:register_cbs()*
 LanguageTree:source()	treesitter.txt	/*LanguageTree:source()*
@@ -4332,6 +4341,7 @@ N<Del>	various.txt	/*N<Del>*
 NFA	pattern.txt	/*NFA*
 NL-used-for-Nul	pattern.txt	/*NL-used-for-Nul*
 NetUserPass()	pi_netrw.txt	/*NetUserPass()*
+NoDefaultCurrentDirectoryInExePath	builtin.txt	/*NoDefaultCurrentDirectoryInExePath*
 Normal	intro.txt	/*Normal*
 Normal-mode	intro.txt	/*Normal-mode*
 Number	eval.txt	/*Number*
@@ -4810,6 +4820,7 @@ assert_notmatch()	builtin.txt	/*assert_notmatch()*
 assert_report()	builtin.txt	/*assert_report()*
 assert_true()	builtin.txt	/*assert_true()*
 astro.vim	syntax.txt	/*astro.vim*
+asy.vim	syntax.txt	/*asy.vim*
 at	motion.txt	/*at*
 atan()	builtin.txt	/*atan()*
 atan2()	builtin.txt	/*atan2()*
@@ -5202,6 +5213,7 @@ compiler-perl	quickfix.txt	/*compiler-perl*
 compiler-pyunit	quickfix.txt	/*compiler-pyunit*
 compiler-select	quickfix.txt	/*compiler-select*
 compiler-tex	quickfix.txt	/*compiler-tex*
+compiler-typst	quickfix.txt	/*compiler-typst*
 compiler-vaxada	ft_ada.txt	/*compiler-vaxada*
 compl-autocomplete	insert.txt	/*compl-autocomplete*
 compl-current	insert.txt	/*compl-current*
@@ -5443,6 +5455,7 @@ dev-ui	develop.txt	/*dev-ui*
 dev-vimpatch	dev_vimpatch.txt	/*dev-vimpatch*
 dev-vimpatch-code-differences	dev_vimpatch.txt	/*dev-vimpatch-code-differences*
 dev-vimpatch-documentation	dev_vimpatch.txt	/*dev-vimpatch-documentation*
+dev-vimpatch-filetype	dev_vimpatch.txt	/*dev-vimpatch-filetype*
 dev-vimpatch-list-management	dev_vimpatch.txt	/*dev-vimpatch-list-management*
 dev-vimpatch-not-applicable	dev_vimpatch.txt	/*dev-vimpatch-not-applicable*
 dev-vimpatch-pull-requests	dev_vimpatch.txt	/*dev-vimpatch-pull-requests*
@@ -5693,6 +5706,7 @@ expr-lambda	eval.txt	/*expr-lambda*
 expr-nesting	eval.txt	/*expr-nesting*
 expr-number	eval.txt	/*expr-number*
 expr-option	eval.txt	/*expr-option*
+expr-option-function	options.txt	/*expr-option-function*
 expr-quote	eval.txt	/*expr-quote*
 expr-register	eval.txt	/*expr-register*
 expr-star	eval.txt	/*expr-star*
@@ -5751,6 +5765,7 @@ file:seek()	luaref.txt	/*file:seek()*
 file:setvbuf()	luaref.txt	/*file:setvbuf()*
 file:write()	luaref.txt	/*file:write()*
 file_readable()	deprecated.txt	/*file_readable()*
+filecopy()	builtin.txt	/*filecopy()*
 filename-backslash	cmdline.txt	/*filename-backslash*
 filename-modifiers	cmdline.txt	/*filename-modifiers*
 filereadable()	builtin.txt	/*filereadable()*
@@ -5876,6 +5891,7 @@ ft-asmh8300-syntax	syntax.txt	/*ft-asmh8300-syntax*
 ft-aspperl-syntax	syntax.txt	/*ft-aspperl-syntax*
 ft-aspvbs-syntax	syntax.txt	/*ft-aspvbs-syntax*
 ft-astro-syntax	syntax.txt	/*ft-astro-syntax*
+ft-asy-syntax	syntax.txt	/*ft-asy-syntax*
 ft-awk-plugin	filetype.txt	/*ft-awk-plugin*
 ft-bash-syntax	syntax.txt	/*ft-bash-syntax*
 ft-basic-syntax	syntax.txt	/*ft-basic-syntax*
@@ -5917,7 +5933,9 @@ ft-fortran-syntax	syntax.txt	/*ft-fortran-syntax*
 ft-freebasic-plugin	filetype.txt	/*ft-freebasic-plugin*
 ft-freebasic-syntax	syntax.txt	/*ft-freebasic-syntax*
 ft-fvwm-syntax	syntax.txt	/*ft-fvwm-syntax*
+ft-gdscript-plugin	filetype.txt	/*ft-gdscript-plugin*
 ft-gitcommit-plugin	filetype.txt	/*ft-gitcommit-plugin*
+ft-go-plugin	filetype.txt	/*ft-go-plugin*
 ft-gprof-plugin	filetype.txt	/*ft-gprof-plugin*
 ft-groff-syntax	syntax.txt	/*ft-groff-syntax*
 ft-gsp-syntax	syntax.txt	/*ft-gsp-syntax*
@@ -5952,6 +5970,7 @@ ft-markdown-syntax	syntax.txt	/*ft-markdown-syntax*
 ft-masm-syntax	syntax.txt	/*ft-masm-syntax*
 ft-mathematica-syntax	syntax.txt	/*ft-mathematica-syntax*
 ft-matlab-indent	indent.txt	/*ft-matlab-indent*
+ft-mediawiki-syntax	syntax.txt	/*ft-mediawiki-syntax*
 ft-mma-syntax	syntax.txt	/*ft-mma-syntax*
 ft-modula2-syntax	syntax.txt	/*ft-modula2-syntax*
 ft-moo-syntax	syntax.txt	/*ft-moo-syntax*
@@ -6023,6 +6042,8 @@ ft-tex-syntax	syntax.txt	/*ft-tex-syntax*
 ft-tf-syntax	syntax.txt	/*ft-tf-syntax*
 ft-typescript-syntax	syntax.txt	/*ft-typescript-syntax*
 ft-typescriptreact-syntax	syntax.txt	/*ft-typescriptreact-syntax*
+ft-typst-plugin	filetype.txt	/*ft-typst-plugin*
+ft-typst-syntax	syntax.txt	/*ft-typst-syntax*
 ft-vb-syntax	syntax.txt	/*ft-vb-syntax*
 ft-verilog-indent	indent.txt	/*ft-verilog-indent*
 ft-vhdl-indent	indent.txt	/*ft-vhdl-indent*
@@ -6156,6 +6177,9 @@ g:loaded_perl_provider	provider.txt	/*g:loaded_perl_provider*
 g:loaded_python3_provider	provider.txt	/*g:loaded_python3_provider*
 g:loaded_ruby_provider	provider.txt	/*g:loaded_ruby_provider*
 g:man_hardwrap	filetype.txt	/*g:man_hardwrap*
+g:markdown_fenced_languages	syntax.txt	/*g:markdown_fenced_languages*
+g:markdown_minlines	syntax.txt	/*g:markdown_minlines*
+g:markdown_syntax_conceal	syntax.txt	/*g:markdown_syntax_conceal*
 g:netrw_altfile	pi_netrw.txt	/*g:netrw_altfile*
 g:netrw_alto	pi_netrw.txt	/*g:netrw_alto*
 g:netrw_altv	pi_netrw.txt	/*g:netrw_altv*
@@ -6314,8 +6338,13 @@ g:tex_subscripts	syntax.txt	/*g:tex_subscripts*
 g:tex_superscripts	syntax.txt	/*g:tex_superscripts*
 g:tex_verbspell	syntax.txt	/*g:tex_verbspell*
 g:typescript_host_keyword	syntax.txt	/*g:typescript_host_keyword*
+g:typst_cmd	quickfix.txt	/*g:typst_cmd*
+g:typst_conceal	filetype.txt	/*g:typst_conceal*
+g:typst_embedded_languages	syntax.txt	/*g:typst_embedded_languages*
 g:var	eval.txt	/*g:var*
 g:vim_indent_cont	indent.txt	/*g:vim_indent_cont*
+g:vim_json_conceal	syntax.txt	/*g:vim_json_conceal*
+g:vim_json_warnings	syntax.txt	/*g:vim_json_warnings*
 g:vimsyn_comment_strings	syntax.txt	/*g:vimsyn_comment_strings*
 g:vimsyn_embed	syntax.txt	/*g:vimsyn_embed*
 g:vimsyn_folding	syntax.txt	/*g:vimsyn_folding*
@@ -6382,6 +6411,10 @@ gdb	debug.txt	/*gdb*
 gdb-version	nvim_terminal_emulator.txt	/*gdb-version*
 ge	motion.txt	/*ge*
 get()	builtin.txt	/*get()*
+get()-blob	builtin.txt	/*get()-blob*
+get()-dict	builtin.txt	/*get()-dict*
+get()-func	builtin.txt	/*get()-func*
+get()-list	builtin.txt	/*get()-list*
 get-ms-debuggers	debug.txt	/*get-ms-debuggers*
 getbufinfo()	builtin.txt	/*getbufinfo()*
 getbufline()	builtin.txt	/*getbufline()*
@@ -6989,6 +7022,7 @@ ip	motion.txt	/*ip*
 ipairs()	luaref.txt	/*ipairs()*
 iquote	motion.txt	/*iquote*
 is	motion.txt	/*is*
+isabsolutepath()	builtin.txt	/*isabsolutepath()*
 isdirectory()	builtin.txt	/*isdirectory()*
 isinf()	builtin.txt	/*isinf()*
 islocked()	builtin.txt	/*islocked()*
