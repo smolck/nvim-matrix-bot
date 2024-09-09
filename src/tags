@@ -4924,6 +4924,7 @@ bufexists()	builtin.txt	/*bufexists()*
 buffer-functions	usr_41.txt	/*buffer-functions*
 buffer-hidden	windows.txt	/*buffer-hidden*
 buffer-list	windows.txt	/*buffer-list*
+buffer-reuse	windows.txt	/*buffer-reuse*
 buffer-variable	eval.txt	/*buffer-variable*
 buffer-write	editing.txt	/*buffer-write*
 buffer_exists()	deprecated.txt	/*buffer_exists()*
@@ -9369,6 +9370,7 @@ treesitter-highlight-spell	treesitter.txt	/*treesitter-highlight-spell*
 treesitter-language-injections	treesitter.txt	/*treesitter-language-injections*
 treesitter-node	treesitter.txt	/*treesitter-node*
 treesitter-parsers	treesitter.txt	/*treesitter-parsers*
+treesitter-parsers-wasm	treesitter.txt	/*treesitter-parsers-wasm*
 treesitter-predicate-any-contains?	treesitter.txt	/*treesitter-predicate-any-contains?*
 treesitter-predicate-any-eq?	treesitter.txt	/*treesitter-predicate-any-eq?*
 treesitter-predicate-any-lua-match?	treesitter.txt	/*treesitter-predicate-any-lua-match?*
@@ -10220,6 +10222,7 @@ vim.lsp.diagnostic.clear()	deprecated.txt	/*vim.lsp.diagnostic.clear()*
 vim.lsp.diagnostic.disable()	deprecated.txt	/*vim.lsp.diagnostic.disable()*
 vim.lsp.diagnostic.display()	deprecated.txt	/*vim.lsp.diagnostic.display()*
 vim.lsp.diagnostic.enable()	deprecated.txt	/*vim.lsp.diagnostic.enable()*
+vim.lsp.diagnostic.from()	lsp.txt	/*vim.lsp.diagnostic.from()*
 vim.lsp.diagnostic.get()	deprecated.txt	/*vim.lsp.diagnostic.get()*
 vim.lsp.diagnostic.get_all()	deprecated.txt	/*vim.lsp.diagnostic.get_all()*
 vim.lsp.diagnostic.get_count()	deprecated.txt	/*vim.lsp.diagnostic.get_count()*
