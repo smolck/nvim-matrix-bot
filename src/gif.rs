@@ -74,6 +74,9 @@ enum ContentFormat {
     #[serde(rename = "nanowebmpreview")]
     NanoWebmPreview,
 
+    #[serde(rename = "webp")]
+    Webp,
+
     #[serde(rename = "webp_transparent")]
     WebpTransparent,
     #[serde(rename = "webppreview_transparent")]
