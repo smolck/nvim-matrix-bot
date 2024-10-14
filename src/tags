@@ -4463,8 +4463,9 @@ TRUE	eval.txt	/*TRUE*
 TSNode	treesitter.txt	/*TSNode*
 TSNode:byte_length()	treesitter.txt	/*TSNode:byte_length()*
 TSNode:child()	treesitter.txt	/*TSNode:child()*
-TSNode:child_containing_descendant()	treesitter.txt	/*TSNode:child_containing_descendant()*
+TSNode:child_containing_descendant()	deprecated.txt	/*TSNode:child_containing_descendant()*
 TSNode:child_count()	treesitter.txt	/*TSNode:child_count()*
+TSNode:child_with_descendant()	treesitter.txt	/*TSNode:child_with_descendant()*
 TSNode:descendant_for_range()	treesitter.txt	/*TSNode:descendant_for_range()*
 TSNode:end_()	treesitter.txt	/*TSNode:end_()*
 TSNode:equal()	treesitter.txt	/*TSNode:equal()*
@@ -4890,6 +4891,7 @@ b:clojure_syntax_keywords	syntax.txt	/*b:clojure_syntax_keywords*
 b:clojure_syntax_without_core_keywords	syntax.txt	/*b:clojure_syntax_without_core_keywords*
 b:current_syntax-variable	syntax.txt	/*b:current_syntax-variable*
 b:editorconfig	editorconfig.txt	/*b:editorconfig*
+b:lf_shell_syntax	syntax.txt	/*b:lf_shell_syntax*
 b:man_default_sects	filetype.txt	/*b:man_default_sects*
 b:netrw_lastfile	pi_netrw.txt	/*b:netrw_lastfile*
 b:rust_cargo_avoid_whole_workspace	ft_rust.txt	/*b:rust_cargo_avoid_whole_workspace*
@@ -5229,6 +5231,7 @@ command-line-window	cmdline.txt	/*command-line-window*
 command-mode	intro.txt	/*command-mode*
 commenting	various.txt	/*commenting*
 compiler-compaqada	ft_ada.txt	/*compiler-compaqada*
+compiler-cppcheck	quickfix.txt	/*compiler-cppcheck*
 compiler-decada	ft_ada.txt	/*compiler-decada*
 compiler-dotnet	quickfix.txt	/*compiler-dotnet*
 compiler-gcc	quickfix.txt	/*compiler-gcc*
@@ -5460,6 +5463,7 @@ dev-api	develop.txt	/*dev-api*
 dev-api-client	develop.txt	/*dev-api-client*
 dev-api-name	develop.txt	/*dev-api-name*
 dev-api-patterns	develop.txt	/*dev-api-patterns*
+dev-arch	dev_arch.txt	/*dev-arch*
 dev-doc	develop.txt	/*dev-doc*
 dev-error-patterns	develop.txt	/*dev-error-patterns*
 dev-guidelines	develop.txt	/*dev-guidelines*
@@ -5491,6 +5495,7 @@ dev-vimpatch-not-applicable	dev_vimpatch.txt	/*dev-vimpatch-not-applicable*
 dev-vimpatch-pull-requests	dev_vimpatch.txt	/*dev-vimpatch-pull-requests*
 dev-vimpatch-quickstart	dev_vimpatch.txt	/*dev-vimpatch-quickstart*
 dev-vimpatch-version.c	dev_vimpatch.txt	/*dev-vimpatch-version.c*
+dev_arch.txt	dev_arch.txt	/*dev_arch.txt*
 dev_style.txt	dev_style.txt	/*dev_style.txt*
 dev_theme.txt	dev_theme.txt	/*dev_theme.txt*
 dev_tools.txt	dev_tools.txt	/*dev_tools.txt*
@@ -5854,6 +5859,7 @@ fo-t	change.txt	/*fo-t*
 fo-table	change.txt	/*fo-table*
 fo-v	change.txt	/*fo-v*
 fo-w	change.txt	/*fo-w*
+focusable	windows.txt	/*focusable*
 fold-behavior	fold.txt	/*fold-behavior*
 fold-colors	fold.txt	/*fold-colors*
 fold-commands	fold.txt	/*fold-commands*
@@ -5985,6 +5991,7 @@ ft-json-syntax	syntax.txt	/*ft-json-syntax*
 ft-ksh-syntax	syntax.txt	/*ft-ksh-syntax*
 ft-lace-syntax	syntax.txt	/*ft-lace-syntax*
 ft-lex-syntax	syntax.txt	/*ft-lex-syntax*
+ft-lf-syntax	syntax.txt	/*ft-lf-syntax*
 ft-lifelines-syntax	syntax.txt	/*ft-lifelines-syntax*
 ft-lisp-syntax	syntax.txt	/*ft-lisp-syntax*
 ft-lite-syntax	syntax.txt	/*ft-lite-syntax*
@@ -6202,6 +6209,7 @@ g:gzip_exec	pi_gzip.txt	/*g:gzip_exec*
 g:hare_recommended_style	ft_hare.txt	/*g:hare_recommended_style*
 g:hare_space_error	ft_hare.txt	/*g:hare_space_error*
 g:haredoc_search_depth	ft_hare.txt	/*g:haredoc_search_depth*
+g:lf_shell_syntax	syntax.txt	/*g:lf_shell_syntax*
 g:loaded_node_provider	provider.txt	/*g:loaded_node_provider*
 g:loaded_perl_provider	provider.txt	/*g:loaded_perl_provider*
 g:loaded_python3_provider	provider.txt	/*g:loaded_python3_provider*
@@ -6457,6 +6465,7 @@ getcharmod()	builtin.txt	/*getcharmod()*
 getcharpos()	builtin.txt	/*getcharpos()*
 getcharsearch()	builtin.txt	/*getcharsearch()*
 getcharstr()	builtin.txt	/*getcharstr()*
+getcmdcomplpat()	builtin.txt	/*getcmdcomplpat()*
 getcmdcompltype()	builtin.txt	/*getcmdcompltype()*
 getcmdline()	builtin.txt	/*getcmdline()*
 getcmdpos()	builtin.txt	/*getcmdpos()*
@@ -6533,6 +6542,7 @@ gr-default	change.txt	/*gr-default*
 gra	lsp.txt	/*gra*
 greek	options.txt	/*greek*
 grep	quickfix.txt	/*grep*
+gri	lsp.txt	/*gri*
 grn	lsp.txt	/*grn*
 groff.vim	syntax.txt	/*groff.vim*
 gross-national-happiness	intro.txt	/*gross-national-happiness*
@@ -7162,6 +7172,7 @@ left-right-motions	motion.txt	/*left-right-motions*
 len()	builtin.txt	/*len()*
 less	various.txt	/*less*
 lex.vim	syntax.txt	/*lex.vim*
+lf.vim	syntax.txt	/*lf.vim*
 lhaskell.vim	syntax.txt	/*lhaskell.vim*
 libcall()	builtin.txt	/*libcall()*
 libcallnr()	builtin.txt	/*libcallnr()*
@@ -7837,6 +7848,7 @@ namespace	api.txt	/*namespace*
 nasm.vim	syntax.txt	/*nasm.vim*
 navigation	motion.txt	/*navigation*
 ncf.vim	syntax.txt	/*ncf.vim*
+neovim	nvim.txt	/*neovim*
 netreadfixup	pi_netrw.txt	/*netreadfixup*
 netrw	pi_netrw.txt	/*netrw*
 netrw-%	pi_netrw.txt	/*netrw-%*
@@ -8326,6 +8338,7 @@ on_stderr	channel.txt	/*on_stderr*
 on_stdin	channel.txt	/*on_stdin*
 on_stdout	channel.txt	/*on_stdout*
 online-help	helphelp.txt	/*online-help*
+opacity	syntax.txt	/*opacity*
 opening-window	windows.txt	/*opening-window*
 operator	motion.txt	/*operator*
 operator-doubled	motion.txt	/*operator-doubled*
@@ -8567,6 +8580,7 @@ quickfix-ID	quickfix.txt	/*quickfix-ID*
 quickfix-buffer	quickfix.txt	/*quickfix-buffer*
 quickfix-changedtick	quickfix.txt	/*quickfix-changedtick*
 quickfix-context	quickfix.txt	/*quickfix-context*
+quickfix-cppcheck	quickfix.txt	/*quickfix-cppcheck*
 quickfix-directory-stack	quickfix.txt	/*quickfix-directory-stack*
 quickfix-error-lists	quickfix.txt	/*quickfix-error-lists*
 quickfix-functions	usr_41.txt	/*quickfix-functions*
@@ -8695,7 +8709,7 @@ rpc	api.txt	/*rpc*
 rpc-connecting	api.txt	/*rpc-connecting*
 rpcnotify()	builtin.txt	/*rpcnotify()*
 rpcrequest()	builtin.txt	/*rpcrequest()*
-rpcstart()	builtin.txt	/*rpcstart()*
+rpcstart()	deprecated.txt	/*rpcstart()*
 rpcstop()	deprecated.txt	/*rpcstop()*
 rrst.vim	syntax.txt	/*rrst.vim*
 rst.vim	syntax.txt	/*rst.vim*
