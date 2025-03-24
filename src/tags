@@ -994,6 +994,7 @@ $quote	eval.txt	/*$quote*
 'winbar'	options.txt	/*'winbar'*
 'winbl'	options.txt	/*'winbl'*
 'winblend'	options.txt	/*'winblend'*
+'winborder'	options.txt	/*'winborder'*
 'window'	options.txt	/*'window'*
 'winfixbuf'	options.txt	/*'winfixbuf'*
 'winfixheight'	options.txt	/*'winfixheight'*
@@ -1579,6 +1580,7 @@ $quote	eval.txt	/*$quote*
 :N	editing.txt	/*:N*
 :Next	editing.txt	/*:Next*
 :NoMatchParen	pi_paren.txt	/*:NoMatchParen*
+:Open	lua.txt	/*:Open*
 :Over	terminal.txt	/*:Over*
 :Program	terminal.txt	/*:Program*
 :Run	terminal.txt	/*:Run*
@@ -4460,6 +4462,7 @@ TSNode:missing()	treesitter.txt	/*TSNode:missing()*
 TSNode:named()	treesitter.txt	/*TSNode:named()*
 TSNode:named_child()	treesitter.txt	/*TSNode:named_child()*
 TSNode:named_child_count()	treesitter.txt	/*TSNode:named_child_count()*
+TSNode:named_children()	treesitter.txt	/*TSNode:named_children()*
 TSNode:named_descendant_for_range()	treesitter.txt	/*TSNode:named_descendant_for_range()*
 TSNode:next_named_sibling()	treesitter.txt	/*TSNode:next_named_sibling()*
 TSNode:next_sibling()	treesitter.txt	/*TSNode:next_sibling()*
@@ -4473,6 +4476,9 @@ TSNode:symbol()	treesitter.txt	/*TSNode:symbol()*
 TSNode:tree()	treesitter.txt	/*TSNode:tree()*
 TSNode:type()	treesitter.txt	/*TSNode:type()*
 TSQL	ft_sql.txt	/*TSQL*
+TSQuery	treesitter.txt	/*TSQuery*
+TSQuery:disable_capture()	treesitter.txt	/*TSQuery:disable_capture()*
+TSQuery:disable_pattern()	treesitter.txt	/*TSQuery:disable_pattern()*
 TSTree	treesitter.txt	/*TSTree*
 TSTree:copy()	treesitter.txt	/*TSTree:copy()*
 TSTree:root()	treesitter.txt	/*TSTree:root()*
@@ -5248,6 +5254,7 @@ compiler-ruff	quickfix.txt	/*compiler-ruff*
 compiler-select	quickfix.txt	/*compiler-select*
 compiler-spotbugs	quickfix.txt	/*compiler-spotbugs*
 compiler-tex	quickfix.txt	/*compiler-tex*
+compiler-tsc	quickfix.txt	/*compiler-tsc*
 compiler-typst	quickfix.txt	/*compiler-typst*
 compiler-vaxada	ft_ada.txt	/*compiler-vaxada*
 compl-autocomplete	insert.txt	/*compl-autocomplete*
@@ -5364,6 +5371,7 @@ creating-menus	gui.txt	/*creating-menus*
 credits	credits.txt	/*credits*
 credits.txt	credits.txt	/*credits.txt*
 crontab	options.txt	/*crontab*
+cs.vim	syntax.txt	/*cs.vim*
 cscope	vim_diff.txt	/*cscope*
 cscope_connection()	vim_diff.txt	/*cscope_connection()*
 csh.vim	syntax.txt	/*csh.vim*
@@ -5952,6 +5960,7 @@ ft-clojure-syntax	syntax.txt	/*ft-clojure-syntax*
 ft-cobol-syntax	syntax.txt	/*ft-cobol-syntax*
 ft-coldfusion-syntax	syntax.txt	/*ft-coldfusion-syntax*
 ft-cpp-syntax	syntax.txt	/*ft-cpp-syntax*
+ft-cs-syntax	syntax.txt	/*ft-cs-syntax*
 ft-csh-syntax	syntax.txt	/*ft-csh-syntax*
 ft-css-omni	insert.txt	/*ft-css-omni*
 ft-csv-syntax	syntax.txt	/*ft-csv-syntax*
@@ -5981,6 +5990,7 @@ ft-freebasic-syntax	syntax.txt	/*ft-freebasic-syntax*
 ft-fvwm-syntax	syntax.txt	/*ft-fvwm-syntax*
 ft-gdscript-plugin	filetype.txt	/*ft-gdscript-plugin*
 ft-gitcommit-plugin	filetype.txt	/*ft-gitcommit-plugin*
+ft-gitrebase-plugin	filetype.txt	/*ft-gitrebase-plugin*
 ft-go-plugin	filetype.txt	/*ft-go-plugin*
 ft-gprof-plugin	filetype.txt	/*ft-gprof-plugin*
 ft-groff-syntax	syntax.txt	/*ft-groff-syntax*
@@ -6009,6 +6019,8 @@ ft-lifelines-syntax	syntax.txt	/*ft-lifelines-syntax*
 ft-lisp-syntax	syntax.txt	/*ft-lisp-syntax*
 ft-lite-syntax	syntax.txt	/*ft-lite-syntax*
 ft-lpc-syntax	syntax.txt	/*ft-lpc-syntax*
+ft-lua-omni	insert.txt	/*ft-lua-omni*
+ft-lua-plugin	filetype.txt	/*ft-lua-plugin*
 ft-lua-syntax	syntax.txt	/*ft-lua-syntax*
 ft-mail-plugin	filetype.txt	/*ft-mail-plugin*
 ft-mail.vim	syntax.txt	/*ft-mail.vim*
@@ -6044,6 +6056,7 @@ ft-php-syntax	syntax.txt	/*ft-php-syntax*
 ft-php3-syntax	syntax.txt	/*ft-php3-syntax*
 ft-phtml-syntax	syntax.txt	/*ft-phtml-syntax*
 ft-plaintex-syntax	syntax.txt	/*ft-plaintex-syntax*
+ft-plsql-plugin	filetype.txt	/*ft-plsql-plugin*
 ft-posix-syntax	syntax.txt	/*ft-posix-syntax*
 ft-postscr-syntax	syntax.txt	/*ft-postscr-syntax*
 ft-ppwiz-syntax	syntax.txt	/*ft-ppwiz-syntax*
@@ -6226,6 +6239,8 @@ g:loaded_node_provider	provider.txt	/*g:loaded_node_provider*
 g:loaded_perl_provider	provider.txt	/*g:loaded_perl_provider*
 g:loaded_python3_provider	provider.txt	/*g:loaded_python3_provider*
 g:loaded_ruby_provider	provider.txt	/*g:loaded_ruby_provider*
+g:lua_subversion	filetype.txt	/*g:lua_subversion*
+g:lua_version	filetype.txt	/*g:lua_version*
 g:man_hardwrap	filetype.txt	/*g:man_hardwrap*
 g:markdown_fenced_languages	syntax.txt	/*g:markdown_fenced_languages*
 g:markdown_minlines	syntax.txt	/*g:markdown_minlines*
@@ -6567,7 +6582,6 @@ history-functions	usr_41.txt	/*history-functions*
 hit-enter	message.txt	/*hit-enter*
 hit-enter-prompt	message.txt	/*hit-enter-prompt*
 hit-return	message.txt	/*hit-return*
-hitest.vim	syntax.txt	/*hitest.vim*
 hjkl	usr_02.txt	/*hjkl*
 hl-ColorColumn	syntax.txt	/*hl-ColorColumn*
 hl-ComplMatchIns	syntax.txt	/*hl-ComplMatchIns*
@@ -7166,12 +7180,14 @@ lsp-defaults-disable	lsp.txt	/*lsp-defaults-disable*
 lsp-diagnostic	lsp.txt	/*lsp-diagnostic*
 lsp-events	lsp.txt	/*lsp-events*
 lsp-faq	lsp.txt	/*lsp-faq*
+lsp-format	lsp.txt	/*lsp-format*
 lsp-handler	lsp.txt	/*lsp-handler*
 lsp-handler-resolution	lsp.txt	/*lsp-handler-resolution*
 lsp-highlight	lsp.txt	/*lsp-highlight*
 lsp-highlight-codelens	lsp.txt	/*lsp-highlight-codelens*
 lsp-highlight-signature	lsp.txt	/*lsp-highlight-signature*
 lsp-inlay_hint	lsp.txt	/*lsp-inlay_hint*
+lsp-lint	lsp.txt	/*lsp-lint*
 lsp-log	lsp.txt	/*lsp-log*
 lsp-method	lsp.txt	/*lsp-method*
 lsp-notification	lsp.txt	/*lsp-notification*
@@ -7723,6 +7739,7 @@ more-prompt	message.txt	/*more-prompt*
 more-variables	eval.txt	/*more-variables*
 motion-count-multiplied	motion.txt	/*motion-count-multiplied*
 motion.txt	motion.txt	/*motion.txt*
+mouse-hover	options.txt	/*mouse-hover*
 mouse-mode-table	gui.txt	/*mouse-mode-table*
 mouse-overview	gui.txt	/*mouse-overview*
 mouse-swap-buttons	gui.txt	/*mouse-swap-buttons*
@@ -8034,6 +8051,7 @@ octal-number	eval.txt	/*octal-number*
 oldfiles-variable	vvars.txt	/*oldfiles-variable*
 omap-info	map.txt	/*omap-info*
 omni-sql-completion	ft_sql.txt	/*omni-sql-completion*
+omnicompletion	insert.txt	/*omnicompletion*
 on_data	channel.txt	/*on_data*
 on_exit	job_control.txt	/*on_exit*
 on_stderr	channel.txt	/*on_stderr*
@@ -8083,7 +8101,7 @@ package-justify	usr_25.txt	/*package-justify*
 package-nohlsearch	usr_05.txt	/*package-nohlsearch*
 package-termdebug	terminal.txt	/*package-termdebug*
 package.cpath	luaref.txt	/*package.cpath*
-package.loaded()	luaref.txt	/*package.loaded()*
+package.loaded	luaref.txt	/*package.loaded*
 package.loadlib()	luaref.txt	/*package.loadlib()*
 package.path	luaref.txt	/*package.path*
 package.preload()	luaref.txt	/*package.preload()*
@@ -8201,6 +8219,7 @@ profiling-variable	vvars.txt	/*profiling-variable*
 progname-variable	vvars.txt	/*progname-variable*
 progpath-variable	vvars.txt	/*progpath-variable*
 progress.vim	syntax.txt	/*progress.vim*
+project-config	options.txt	/*project-config*
 prompt-buffer	channel.txt	/*prompt-buffer*
 prompt_getprompt()	builtin.txt	/*prompt_getprompt()*
 prompt_setcallback()	builtin.txt	/*prompt_setcallback()*
@@ -8594,6 +8613,8 @@ shada-read-write	starting.txt	/*shada-read-write*
 shada-s	options.txt	/*shada-s*
 shada-write	starting.txt	/*shada-write*
 shell-powershell	options.txt	/*shell-powershell*
+shell-prompt	terminal.txt	/*shell-prompt*
+shell-prompt-signs	terminal.txt	/*shell-prompt-signs*
 shell-unquoting	options.txt	/*shell-unquoting*
 shell_error-variable	vvars.txt	/*shell_error-variable*
 shellescape()	builtin.txt	/*shellescape()*
@@ -8946,10 +8967,12 @@ t_string-variable	vvars.txt	/*t_string-variable*
 t_vb	vim_diff.txt	/*t_vb*
 t_xx	vim_diff.txt	/*t_xx*
 tab	intro.txt	/*tab*
+tab-ID	tabpage.txt	/*tab-ID*
 tab-page	tabpage.txt	/*tab-page*
 tab-page-commands	tabpage.txt	/*tab-page-commands*
 tab-page-intro	tabpage.txt	/*tab-page-intro*
 tab-page-other	tabpage.txt	/*tab-page-other*
+tabid	tabpage.txt	/*tabid*
 table.concat()	luaref.txt	/*table.concat()*
 table.foreach()	luaref.txt	/*table.foreach()*
 table.foreachi()	luaref.txt	/*table.foreachi()*
@@ -8963,6 +8986,7 @@ tabpage	tabpage.txt	/*tabpage*
 tabpage-variable	eval.txt	/*tabpage-variable*
 tabpage.txt	tabpage.txt	/*tabpage.txt*
 tabpagebuflist()	builtin.txt	/*tabpagebuflist()*
+tabpageid	tabpage.txt	/*tabpageid*
 tabpagenr()	builtin.txt	/*tabpagenr()*
 tabpagewinnr()	builtin.txt	/*tabpagewinnr()*
 tag	tagsrch.txt	/*tag*
@@ -9043,12 +9067,15 @@ terminal-emulator	terminal.txt	/*terminal-emulator*
 terminal-events	terminal.txt	/*terminal-events*
 terminal-input	terminal.txt	/*terminal-input*
 terminal-mode-index	index.txt	/*terminal-mode-index*
+terminal-osc133	terminal.txt	/*terminal-osc133*
 terminal-osc52	terminal.txt	/*terminal-osc52*
 terminal-osc7	terminal.txt	/*terminal-osc7*
 terminal-scrollback-pager	api.txt	/*terminal-scrollback-pager*
 terminal-start	terminal.txt	/*terminal-start*
 terminal-status	terminal.txt	/*terminal-status*
 terminal.txt	terminal.txt	/*terminal.txt*
+terminal_[[	terminal.txt	/*terminal_[[*
+terminal_]]	terminal.txt	/*terminal_]]*
 terminfo	tui.txt	/*terminfo*
 termopen()	deprecated.txt	/*termopen()*
 termrequest-variable	vvars.txt	/*termrequest-variable*
@@ -9118,6 +9145,7 @@ treesitter-directive-set!	treesitter.txt	/*treesitter-directive-set!*
 treesitter-directive-trim!	treesitter.txt	/*treesitter-directive-trim!*
 treesitter-directives	treesitter.txt	/*treesitter-directives*
 treesitter-highlight	treesitter.txt	/*treesitter-highlight*
+treesitter-highlight-commentstring	treesitter.txt	/*treesitter-highlight-commentstring*
 treesitter-highlight-conceal	treesitter.txt	/*treesitter-highlight-conceal*
 treesitter-highlight-groups	treesitter.txt	/*treesitter-highlight-groups*
 treesitter-highlight-priority	treesitter.txt	/*treesitter-highlight-priority*
@@ -10007,9 +10035,8 @@ vim.lsp.codelens.refresh()	lsp.txt	/*vim.lsp.codelens.refresh()*
 vim.lsp.codelens.run()	lsp.txt	/*vim.lsp.codelens.run()*
 vim.lsp.codelens.save()	lsp.txt	/*vim.lsp.codelens.save()*
 vim.lsp.commands	lsp.txt	/*vim.lsp.commands*
-vim.lsp.completion.BufferOpts	lsp.txt	/*vim.lsp.completion.BufferOpts*
 vim.lsp.completion.enable()	lsp.txt	/*vim.lsp.completion.enable()*
-vim.lsp.completion.trigger()	lsp.txt	/*vim.lsp.completion.trigger()*
+vim.lsp.completion.get()	lsp.txt	/*vim.lsp.completion.get()*
 vim.lsp.config()	lsp.txt	/*vim.lsp.config()*
 vim.lsp.diagnostic.clear()	deprecated.txt	/*vim.lsp.diagnostic.clear()*
 vim.lsp.diagnostic.disable()	deprecated.txt	/*vim.lsp.diagnostic.disable()*
@@ -10192,7 +10219,9 @@ vim.tbl_values()	lua.txt	/*vim.tbl_values()*
 vim.text	lua.txt	/*vim.text*
 vim.text.hexdecode()	lua.txt	/*vim.text.hexdecode()*
 vim.text.hexencode()	lua.txt	/*vim.text.hexencode()*
+vim.text.indent()	lua.txt	/*vim.text.indent()*
 vim.tohtml	lua.txt	/*vim.tohtml*
+vim.treesitter.Query	treesitter.txt	/*vim.treesitter.Query*
 vim.treesitter.add_directive()	deprecated.txt	/*vim.treesitter.add_directive()*
 vim.treesitter.add_predicate()	deprecated.txt	/*vim.treesitter.add_predicate()*
 vim.treesitter.foldexpr()	treesitter.txt	/*vim.treesitter.foldexpr()*
@@ -10374,6 +10403,7 @@ word	motion.txt	/*word*
 word-count	editing.txt	/*word-count*
 word-motions	motion.txt	/*word-motions*
 wordcount()	builtin.txt	/*wordcount()*
+workspace-config	options.txt	/*workspace-config*
 wrap-off	intro.txt	/*wrap-off*
 write-compiler-plugin	usr_41.txt	/*write-compiler-plugin*
 write-device	editing.txt	/*write-device*
