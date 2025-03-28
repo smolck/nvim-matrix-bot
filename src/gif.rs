@@ -3,6 +3,51 @@
 use serde::Deserialize;
 use std::collections::HashMap;
 
+#[derive(Debug)]
+pub enum GiphySearchError {
+    NoGifs,
+    UreqError(ureq::Error),
+}
+
+#[derive(Debug, Deserialize)]
+struct GiphyMeta {
+    status: i32,
+    msg: String,
+    response_id: String,
+}
+
+#[derive(Debug, Deserialize)]
+struct GiphyResponse {
+    data: Vec<GiphyResponseData>,
+    meta: GiphyMeta,
+}
+
+#[derive(Debug, Deserialize)]
+struct GiphyImageData {
+    height: String,
+    width: String,
+    size: String,
+    url: String,
+}
+
+#[derive(Debug, Deserialize)]
+struct GiphyImages {
+    original: GiphyImageData,
+    preview_gif: GiphyImageData,
+    #[serde(rename = "480w_still")]
+    foureightyw_still: GiphyImageData,
+}
+
+#[derive(Debug, Deserialize)]
+struct GiphyResponseData {
+    #[serde(rename = "type")]
+    t: String,
+    images: GiphyImages,
+    url: String,
+    source: String,
+    title: String,
+}
+
 #[derive(Deserialize)]
 struct Response {
     next: String,
@@ -117,6 +162,7 @@ pub struct Gif {
     pub preview_height: i32,
     pub preview_width: i32,
     pub preview_size: i32,
+    pub preview_mimetype: String,
 }
 
 impl Gif {
@@ -147,6 +193,53 @@ impl Gif {
             preview_width,
             preview_url: preview_info.url.clone(),
             preview_size: preview_info.size,
+            preview_mimetype: "image/png".to_owned(),
+        })
+    }
+
+    pub fn search_giphy(
+        agent: &ureq::Agent,
+        api_key: &str,
+        query: &str,
+    ) -> Result<Self, GiphySearchError> {
+        let response = agent
+            .get("https://api.giphy.com/v1/gifs/search")
+            .set("Accept", "application/json")
+            .set("Content-Type", "application/json")
+            .set("Charset", "utf-8")
+            .query("api_key", api_key)
+            .query("q", query)
+            .query("limit", "10")
+            .call();
+
+        let Ok(response) = response else {
+            let Err(response) = response else {
+                unreachable!()
+            };
+            return Err(GiphySearchError::UreqError(response));
+        };
+
+        let response: GiphyResponse = serde_json::de::from_reader(&mut response.into_reader())
+            .expect("Couldnt deserialize giphy response for some reason");
+        if response.data.len() == 0 {
+            return Err(GiphySearchError::NoGifs);
+        }
+
+        let idx = 0; // TODO(smolck): Randomly choose of the 10 we get
+        let gif = &response.data[idx];
+        let og = &gif.images.original;
+        let preview = &gif.images.foureightyw_still;
+
+        Ok(Self {
+            width: og.width.parse().unwrap(),
+            height: og.height.parse().unwrap(),
+            size: og.size.parse().unwrap(),
+            url: og.url.to_owned(),
+            preview_url: preview.url.to_owned(),
+            preview_height: preview.height.parse().unwrap(),
+            preview_width: preview.width.parse().unwrap(),
+            preview_size: preview.size.parse().unwrap(),
+            preview_mimetype: "image/jpeg".to_owned(),
         })
     }
 }

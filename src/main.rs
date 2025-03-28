@@ -24,13 +24,22 @@ struct MatrixClient {
     command_parser: command::CommandParser,
     homeserver: String,
     agent: ureq::Agent,
+
     /// If this is None, then gifs won't be supported
     tenor_api_key: Option<String>,
+    /// If this is None, giphy won't be supported
+    giphy_api_key: Option<String>,
+
     config: config::Config,
 }
 
 impl MatrixClient {
-    fn new(homeserver: String, tenor_api_key: Option<String>, config: config::Config) -> Self {
+    fn new(
+        homeserver: String,
+        tenor_api_key: Option<String>,
+        giphy_api_key: Option<String>,
+        config: config::Config,
+    ) -> Self {
         Self {
             access_token: None,
             // set timeouts?
@@ -38,6 +47,7 @@ impl MatrixClient {
             homeserver,
             command_parser: command::CommandParser::new(),
             tenor_api_key,
+            giphy_api_key,
             config,
         }
     }
@@ -105,13 +115,44 @@ impl MatrixClient {
     fn send_gif_if_key_else_do_nothing(
         &self,
         search_query: &str,
+        giphy: bool,
         room_id: &str,
     ) -> Result<(), ureq::Error> {
-        let Some(key) = &self.tenor_api_key else {
+        // This is kinda jank lmao
+        let Some(gif) = (if giphy {
+            let Some(key) = &self.giphy_api_key else {
+                println!(
+                    "Not searching '{}' with giphy because no api key",
+                    search_query
+                );
+                return Ok(());
+            };
+
+            let result = gif::Gif::search_giphy(&self.agent, key, search_query);
+            if result.is_err() {
+                None
+            } else {
+                Some(result.unwrap())
+            }
+        } else {
+            let Some(key) = &self.tenor_api_key else {
+                println!(
+                    "Not searching '{}' with tenor because no api key",
+                    search_query
+                );
+
+                return Ok(());
+            };
+            Some(gif::Gif::search(&self.agent, key, search_query)?)
+        }) else {
+            _ = self.send_message(
+                false,
+                &format!("No gifs found for '{}'", search_query),
+                room_id,
+            );
             return Ok(());
         };
 
-        let gif = gif::Gif::search(&self.agent, key, search_query)?;
         let gif_bytes_reader = self.agent.get(&gif.url).call()?.into_reader();
 
         let gif_uri = self.upload_data_to_matrix(gif_bytes_reader)?;
@@ -129,7 +170,7 @@ impl MatrixClient {
                 "thumbnail_info": {
                     "h": gif.preview_height,
                     "w": gif.preview_width,
-                    "mimetype": "image/png",
+                    "mimetype": gif.preview_mimetype,
                     "size": gif.preview_size,
                 },
                 "thumbnail_url": gif_preview_uri,
@@ -299,10 +340,10 @@ impl MatrixClient {
                     eprintln!("Error sending URL {url}: {err}");
                 });
             }
-            Gif { search } => {
+            Gif { search, giphy } => {
                 if let Some(Err(err)) = self.config.rooms.get(room_id).and_then(|config| {
                     if config.gifs {
-                        Some(self.send_gif_if_key_else_do_nothing(&search, room_id))
+                        Some(self.send_gif_if_key_else_do_nothing(&search, giphy, room_id))
                     } else {
                         None
                     }
@@ -419,7 +460,17 @@ fn main() -> Result<(), ureq::Error> {
         }
     };
 
-    let mut client = MatrixClient::new(homeserver, tenor_api_key, config);
+    let giphy_api_key = {
+        match std::env::var("GIPHY_API_KEY") {
+            Err(_) => {
+                println!("running without giphy gif functionality");
+                None
+            }
+            Ok(key) => Some(key),
+        }
+    };
+
+    let mut client = MatrixClient::new(homeserver, tenor_api_key, giphy_api_key, config);
     client.login(&user, &password)?;
     client.sync()?;
 
