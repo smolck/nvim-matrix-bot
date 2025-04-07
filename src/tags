@@ -119,6 +119,7 @@ $quote	eval.txt	/*$quote*
 'cdpath'	options.txt	/*'cdpath'*
 'cedit'	options.txt	/*'cedit'*
 'cf'	options.txt	/*'cf'*
+'cfc'	options.txt	/*'cfc'*
 'cfu'	options.txt	/*'cfu'*
 'ch'	options.txt	/*'ch'*
 'channel'	options.txt	/*'channel'*
@@ -153,6 +154,7 @@ $quote	eval.txt	/*$quote*
 'compatible'	vim_diff.txt	/*'compatible'*
 'complete'	options.txt	/*'complete'*
 'completefunc'	options.txt	/*'completefunc'*
+'completefuzzycollect'	options.txt	/*'completefuzzycollect'*
 'completeitemalign'	options.txt	/*'completeitemalign'*
 'completeopt'	options.txt	/*'completeopt'*
 'completepopup'	vim_diff.txt	/*'completepopup'*
@@ -698,6 +700,7 @@ $quote	eval.txt	/*$quote*
 'ph'	options.txt	/*'ph'*
 'pi'	options.txt	/*'pi'*
 'pm'	options.txt	/*'pm'*
+'pmw'	options.txt	/*'pmw'*
 'pp'	options.txt	/*'pp'*
 'preserveindent'	options.txt	/*'preserveindent'*
 'previewheight'	options.txt	/*'previewheight'*
@@ -713,6 +716,7 @@ $quote	eval.txt	/*$quote*
 'pt'	vim_diff.txt	/*'pt'*
 'pumblend'	options.txt	/*'pumblend'*
 'pumheight'	options.txt	/*'pumheight'*
+'pummaxwidth'	options.txt	/*'pummaxwidth'*
 'pumwidth'	options.txt	/*'pumwidth'*
 'pvh'	options.txt	/*'pvh'*
 'pvw'	options.txt	/*'pvw'*
@@ -2083,6 +2087,8 @@ $quote	eval.txt	/*$quote*
 :inoremenu	gui.txt	/*:inoremenu*
 :insert	insert.txt	/*:insert*
 :intro	starting.txt	/*:intro*
+:ip	change.txt	/*:ip*
+:iput	change.txt	/*:iput*
 :is	tagsrch.txt	/*:is*
 :isearch	tagsrch.txt	/*:isearch*
 :isp	tagsrch.txt	/*:isp*
@@ -3464,6 +3470,7 @@ E1514	options.txt	/*E1514*
 E152	helphelp.txt	/*E152*
 E153	helphelp.txt	/*E153*
 E154	helphelp.txt	/*E154*
+E1541	vi_diff.txt	/*E1541*
 E155	sign.txt	/*E155*
 E156	sign.txt	/*E156*
 E157	sign.txt	/*E157*
@@ -4446,7 +4453,6 @@ TRUE	eval.txt	/*TRUE*
 TSNode	treesitter.txt	/*TSNode*
 TSNode:byte_length()	treesitter.txt	/*TSNode:byte_length()*
 TSNode:child()	treesitter.txt	/*TSNode:child()*
-TSNode:child_containing_descendant()	news.txt	/*TSNode:child_containing_descendant()*
 TSNode:child_count()	treesitter.txt	/*TSNode:child_count()*
 TSNode:child_with_descendant()	treesitter.txt	/*TSNode:child_with_descendant()*
 TSNode:descendant_for_range()	treesitter.txt	/*TSNode:descendant_for_range()*
@@ -5460,6 +5466,7 @@ deleting	change.txt	/*deleting*
 deprecated	deprecated.txt	/*deprecated*
 deprecated-0.10	deprecated.txt	/*deprecated-0.10*
 deprecated-0.11	deprecated.txt	/*deprecated-0.11*
+deprecated-0.12	deprecated.txt	/*deprecated-0.12*
 deprecated-0.9	deprecated.txt	/*deprecated-0.9*
 deprecated.txt	deprecated.txt	/*deprecated.txt*
 design-documented	develop.txt	/*design-documented*
@@ -6625,6 +6632,7 @@ hl-DiffAdd	syntax.txt	/*hl-DiffAdd*
 hl-DiffChange	syntax.txt	/*hl-DiffChange*
 hl-DiffDelete	syntax.txt	/*hl-DiffDelete*
 hl-DiffText	syntax.txt	/*hl-DiffText*
+hl-DiffTextAdd	syntax.txt	/*hl-DiffTextAdd*
 hl-Directory	syntax.txt	/*hl-Directory*
 hl-EndOfBuffer	syntax.txt	/*hl-EndOfBuffer*
 hl-ErrorMsg	syntax.txt	/*hl-ErrorMsg*
@@ -7169,6 +7177,7 @@ lpc.vim	syntax.txt	/*lpc.vim*
 lsp	lsp.txt	/*lsp*
 lsp-api	lsp.txt	/*lsp-api*
 lsp-attach	lsp.txt	/*lsp-attach*
+lsp-autocompletion	lsp.txt	/*lsp-autocompletion*
 lsp-buf	lsp.txt	/*lsp-buf*
 lsp-client	lsp.txt	/*lsp-client*
 lsp-codelens	lsp.txt	/*lsp-codelens*
@@ -7320,7 +7329,6 @@ lua-numconstant	luaref.txt	/*lua-numconstant*
 lua-openlibs	luaref.txt	/*lua-openlibs*
 lua-options	lua.txt	/*lua-options*
 lua-or	luaref.txt	/*lua-or*
-lua-package-path	lua.txt	/*lua-package-path*
 lua-pattern	luaref.txt	/*lua-pattern*
 lua-patternitem	luaref.txt	/*lua-patternitem*
 lua-patterns	luaref.txt	/*lua-patterns*
@@ -7802,9 +7810,11 @@ new-filetype-scripts	filetype.txt	/*new-filetype-scripts*
 new-style-testing	testing.txt	/*new-style-testing*
 news	news.txt	/*news*
 news-0.10	news-0.10.txt	/*news-0.10*
+news-0.10.txt	news-0.10.txt	/*news-0.10.txt*
+news-0.11	news-0.11.txt	/*news-0.11*
+news-0.11.txt	news-0.11.txt	/*news-0.11.txt*
 news-0.9	news-0.9.txt	/*news-0.9*
 news-0.9.txt	news-0.9.txt	/*news-0.9.txt*
-news-10.txt	news-0.10.txt	/*news-10.txt*
 news-breaking	news.txt	/*news-breaking*
 news-breaking-dev	news.txt	/*news-breaking-dev*
 news-changed	news.txt	/*news-changed*
@@ -10026,7 +10036,7 @@ vim.lsp.buf_is_attached()	lsp.txt	/*vim.lsp.buf_is_attached()*
 vim.lsp.buf_notify()	lsp.txt	/*vim.lsp.buf_notify()*
 vim.lsp.buf_request_all()	lsp.txt	/*vim.lsp.buf_request_all()*
 vim.lsp.buf_request_sync()	lsp.txt	/*vim.lsp.buf_request_sync()*
-vim.lsp.client_is_stopped()	lsp.txt	/*vim.lsp.client_is_stopped()*
+vim.lsp.client_is_stopped()	deprecated.txt	/*vim.lsp.client_is_stopped()*
 vim.lsp.codelens.clear()	lsp.txt	/*vim.lsp.codelens.clear()*
 vim.lsp.codelens.display()	lsp.txt	/*vim.lsp.codelens.display()*
 vim.lsp.codelens.get()	lsp.txt	/*vim.lsp.codelens.get()*
@@ -10142,7 +10152,7 @@ vim.lsp.util.set_lines()	deprecated.txt	/*vim.lsp.util.set_lines()*
 vim.lsp.util.set_loclist()	deprecated.txt	/*vim.lsp.util.set_loclist()*
 vim.lsp.util.set_qflist()	deprecated.txt	/*vim.lsp.util.set_qflist()*
 vim.lsp.util.show_document()	lsp.txt	/*vim.lsp.util.show_document()*
-vim.lsp.util.stylize_markdown()	lsp.txt	/*vim.lsp.util.stylize_markdown()*
+vim.lsp.util.stylize_markdown()	deprecated.txt	/*vim.lsp.util.stylize_markdown()*
 vim.lsp.util.symbols_to_items()	lsp.txt	/*vim.lsp.util.symbols_to_items()*
 vim.lsp.util.text_document_completion_list_to_complete_items()	deprecated.txt	/*vim.lsp.util.text_document_completion_list_to_complete_items()*
 vim.lsp.util.trim_empty_lines()	deprecated.txt	/*vim.lsp.util.trim_empty_lines()*
