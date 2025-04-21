@@ -6002,6 +6002,7 @@ ft-fvwm-syntax	syntax.txt	/*ft-fvwm-syntax*
 ft-gdscript-plugin	filetype.txt	/*ft-gdscript-plugin*
 ft-gitcommit-plugin	filetype.txt	/*ft-gitcommit-plugin*
 ft-gitrebase-plugin	filetype.txt	/*ft-gitrebase-plugin*
+ft-gleam-plugin	filetype.txt	/*ft-gleam-plugin*
 ft-go-plugin	filetype.txt	/*ft-go-plugin*
 ft-gprof-plugin	filetype.txt	/*ft-gprof-plugin*
 ft-groff-syntax	syntax.txt	/*ft-groff-syntax*
@@ -6044,6 +6045,7 @@ ft-markdown-syntax	syntax.txt	/*ft-markdown-syntax*
 ft-masm-syntax	syntax.txt	/*ft-masm-syntax*
 ft-mathematica-syntax	syntax.txt	/*ft-mathematica-syntax*
 ft-matlab-indent	indent.txt	/*ft-matlab-indent*
+ft-mbsync-syntax	syntax.txt	/*ft-mbsync-syntax*
 ft-mediawiki-syntax	syntax.txt	/*ft-mediawiki-syntax*
 ft-mma-syntax	syntax.txt	/*ft-mma-syntax*
 ft-modula2-syntax	syntax.txt	/*ft-modula2-syntax*
@@ -7699,6 +7701,7 @@ matlab-indent	indent.txt	/*matlab-indent*
 matlab-indenting	indent.txt	/*matlab-indenting*
 max()	builtin.txt	/*max()*
 maxcol-variable	vvars.txt	/*maxcol-variable*
+mbsync.vim	syntax.txt	/*mbsync.vim*
 mbyte-combining	mbyte.txt	/*mbyte-combining*
 mbyte-composing	mbyte.txt	/*mbyte-composing*
 mbyte-conversion	mbyte.txt	/*mbyte-conversion*
