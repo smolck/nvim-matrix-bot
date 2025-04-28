@@ -3332,6 +3332,7 @@ Cmdline-mode	cmdline.txt	/*Cmdline-mode*
 CmdlineChanged	autocmd.txt	/*CmdlineChanged*
 CmdlineEnter	autocmd.txt	/*CmdlineEnter*
 CmdlineLeave	autocmd.txt	/*CmdlineLeave*
+CmdlineLeavePre	autocmd.txt	/*CmdlineLeavePre*
 CmdwinEnter	autocmd.txt	/*CmdwinEnter*
 CmdwinLeave	autocmd.txt	/*CmdwinLeave*
 ColorScheme	autocmd.txt	/*ColorScheme*
@@ -5215,6 +5216,7 @@ clojure-indent	indent.txt	/*clojure-indent*
 closure	eval.txt	/*closure*
 cmdarg-variable	vvars.txt	/*cmdarg-variable*
 cmdbang-variable	vvars.txt	/*cmdbang-variable*
+cmdcomplete_info()	builtin.txt	/*cmdcomplete_info()*
 cmdline	cmdline.txt	/*cmdline*
 cmdline-char	cmdline.txt	/*cmdline-char*
 cmdline-completion	cmdline.txt	/*cmdline-completion*
@@ -5638,6 +5640,7 @@ efm-ignore	quickfix.txt	/*efm-ignore*
 eiffel.vim	syntax.txt	/*eiffel.vim*
 elixir.vim	syntax.txt	/*elixir.vim*
 emacs-keys	tips.txt	/*emacs-keys*
+emoji	mbyte.txt	/*emoji*
 empty()	builtin.txt	/*empty()*
 encoding-names	mbyte.txt	/*encoding-names*
 encoding-values	mbyte.txt	/*encoding-values*
@@ -6136,6 +6139,7 @@ ft-xml-omni	insert.txt	/*ft-xml-omni*
 ft-xml-syntax	syntax.txt	/*ft-xml-syntax*
 ft-xpm-syntax	syntax.txt	/*ft-xpm-syntax*
 ft-yaml-indent	indent.txt	/*ft-yaml-indent*
+ft-yaml-plugin	filetype.txt	/*ft-yaml-plugin*
 ft-yaml-syntax	syntax.txt	/*ft-yaml-syntax*
 ft-zig-plugin	filetype.txt	/*ft-zig-plugin*
 ft-zimbu-plugin	filetype.txt	/*ft-zimbu-plugin*
@@ -7194,6 +7198,7 @@ lsp-core	lsp.txt	/*lsp-core*
 lsp-defaults	lsp.txt	/*lsp-defaults*
 lsp-defaults-disable	lsp.txt	/*lsp-defaults-disable*
 lsp-diagnostic	lsp.txt	/*lsp-diagnostic*
+lsp-document_color	lsp.txt	/*lsp-document_color*
 lsp-events	lsp.txt	/*lsp-events*
 lsp-faq	lsp.txt	/*lsp-faq*
 lsp-format	lsp.txt	/*lsp-format*
@@ -7210,6 +7215,7 @@ lsp-notification	lsp.txt	/*lsp-notification*
 lsp-protocol	lsp.txt	/*lsp-protocol*
 lsp-quickstart	lsp.txt	/*lsp-quickstart*
 lsp-response	lsp.txt	/*lsp-response*
+lsp-root_dir()	lsp.txt	/*lsp-root_dir()*
 lsp-rpc	lsp.txt	/*lsp-rpc*
 lsp-semantic-highlight	lsp.txt	/*lsp-semantic-highlight*
 lsp-semantic_tokens	lsp.txt	/*lsp-semantic_tokens*
@@ -7330,6 +7336,7 @@ lua-module-load	lua.txt	/*lua-module-load*
 lua-modules	luaref.txt	/*lua-modules*
 lua-names	luaref.txt	/*lua-names*
 lua-nil	luaref.txt	/*lua-nil*
+lua-nongreedy	luaref.txt	/*lua-nongreedy*
 lua-not	luaref.txt	/*lua-not*
 lua-number	luaref.txt	/*lua-number*
 lua-numconstant	luaref.txt	/*lua-numconstant*
@@ -7338,7 +7345,6 @@ lua-options	lua.txt	/*lua-options*
 lua-or	luaref.txt	/*lua-or*
 lua-pattern	luaref.txt	/*lua-pattern*
 lua-patternitem	luaref.txt	/*lua-patternitem*
-lua-patterns	luaref.txt	/*lua-patterns*
 lua-precedence	luaref.txt	/*lua-precedence*
 lua-profile	lua.txt	/*lua-profile*
 lua-pseudoindex	luaref.txt	/*lua-pseudoindex*
@@ -8863,6 +8869,8 @@ startup-options	starting.txt	/*startup-options*
 startup-terminal	tui.txt	/*startup-terminal*
 startup-tui	tui.txt	/*startup-tui*
 state()	builtin.txt	/*state()*
+state-isolation	starting.txt	/*state-isolation*
+stateless	starting.txt	/*stateless*
 static-tag	tagsrch.txt	/*static-tag*
 status-line	windows.txt	/*status-line*
 statusmsg-variable	vvars.txt	/*statusmsg-variable*
@@ -10086,6 +10094,8 @@ vim.lsp.diagnostic.set_underline()	deprecated.txt	/*vim.lsp.diagnostic.set_under
 vim.lsp.diagnostic.set_virtual_text()	deprecated.txt	/*vim.lsp.diagnostic.set_virtual_text()*
 vim.lsp.diagnostic.show_line_diagnostics()	deprecated.txt	/*vim.lsp.diagnostic.show_line_diagnostics()*
 vim.lsp.diagnostic.show_position_diagnostics()	deprecated.txt	/*vim.lsp.diagnostic.show_position_diagnostics()*
+vim.lsp.document_color.enable()	lsp.txt	/*vim.lsp.document_color.enable()*
+vim.lsp.document_color.is_enabled()	lsp.txt	/*vim.lsp.document_color.is_enabled()*
 vim.lsp.enable()	lsp.txt	/*vim.lsp.enable()*
 vim.lsp.foldclose()	lsp.txt	/*vim.lsp.foldclose()*
 vim.lsp.foldexpr()	lsp.txt	/*vim.lsp.foldexpr()*
