@@ -357,6 +357,8 @@ $quote	eval.txt	/*$quote*
 'infercase'	options.txt	/*'infercase'*
 'insertmode'	vim_diff.txt	/*'insertmode'*
 'is'	options.txt	/*'is'*
+'ise'	options.txt	/*'ise'*
+'isexpand'	options.txt	/*'isexpand'*
 'isf'	options.txt	/*'isf'*
 'isfname'	options.txt	/*'isfname'*
 'isi'	options.txt	/*'isi'*
@@ -5280,6 +5282,7 @@ compl-keyword	insert.txt	/*compl-keyword*
 compl-omni	insert.txt	/*compl-omni*
 compl-omni-filetypes	insert.txt	/*compl-omni-filetypes*
 compl-spelling	insert.txt	/*compl-spelling*
+compl-states	insert.txt	/*compl-states*
 compl-stop	insert.txt	/*compl-stop*
 compl-tag	insert.txt	/*compl-tag*
 compl-thesaurus	insert.txt	/*compl-thesaurus*
@@ -5297,6 +5300,7 @@ complete_add()	builtin.txt	/*complete_add()*
 complete_check()	builtin.txt	/*complete_check()*
 complete_info()	builtin.txt	/*complete_info()*
 complete_info_mode	builtin.txt	/*complete_info_mode*
+complete_match()	builtin.txt	/*complete_match()*
 completed_item-variable	vvars.txt	/*completed_item-variable*
 completion-functions	usr_41.txt	/*completion-functions*
 complex-change	change.txt	/*complex-change*
@@ -6015,6 +6019,7 @@ ft-haskell-syntax	syntax.txt	/*ft-haskell-syntax*
 ft-help-omni	helphelp.txt	/*ft-help-omni*
 ft-html-indent	indent.txt	/*ft-html-indent*
 ft-html-omni	insert.txt	/*ft-html-omni*
+ft-html-plugin	filetype.txt	/*ft-html-plugin*
 ft-html-syntax	syntax.txt	/*ft-html-syntax*
 ft-htmlos-syntax	syntax.txt	/*ft-htmlos-syntax*
 ft-ia64-syntax	syntax.txt	/*ft-ia64-syntax*
@@ -6633,6 +6638,11 @@ hl-DiagnosticUnderlineInfo	diagnostic.txt	/*hl-DiagnosticUnderlineInfo*
 hl-DiagnosticUnderlineOk	diagnostic.txt	/*hl-DiagnosticUnderlineOk*
 hl-DiagnosticUnderlineWarn	diagnostic.txt	/*hl-DiagnosticUnderlineWarn*
 hl-DiagnosticUnnecessary	diagnostic.txt	/*hl-DiagnosticUnnecessary*
+hl-DiagnosticVirtualLinesError	diagnostic.txt	/*hl-DiagnosticVirtualLinesError*
+hl-DiagnosticVirtualLinesHint	diagnostic.txt	/*hl-DiagnosticVirtualLinesHint*
+hl-DiagnosticVirtualLinesInfo	diagnostic.txt	/*hl-DiagnosticVirtualLinesInfo*
+hl-DiagnosticVirtualLinesOk	diagnostic.txt	/*hl-DiagnosticVirtualLinesOk*
+hl-DiagnosticVirtualLinesWarn	diagnostic.txt	/*hl-DiagnosticVirtualLinesWarn*
 hl-DiagnosticVirtualTextError	diagnostic.txt	/*hl-DiagnosticVirtualTextError*
 hl-DiagnosticVirtualTextHint	diagnostic.txt	/*hl-DiagnosticVirtualTextHint*
 hl-DiagnosticVirtualTextInfo	diagnostic.txt	/*hl-DiagnosticVirtualTextInfo*
@@ -6767,6 +6777,8 @@ hl-StatusLine	syntax.txt	/*hl-StatusLine*
 hl-StatusLineNC	syntax.txt	/*hl-StatusLineNC*
 hl-StatusLineTerm	syntax.txt	/*hl-StatusLineTerm*
 hl-StatusLineTermNC	syntax.txt	/*hl-StatusLineTermNC*
+hl-StderrMsg	syntax.txt	/*hl-StderrMsg*
+hl-StdoutMsg	syntax.txt	/*hl-StdoutMsg*
 hl-Substitute	syntax.txt	/*hl-Substitute*
 hl-TabLine	syntax.txt	/*hl-TabLine*
 hl-TabLineFill	syntax.txt	/*hl-TabLineFill*
@@ -7059,7 +7071,6 @@ js_encode()	vim_diff.txt	/*js_encode()*
 json.vim	syntax.txt	/*json.vim*
 json_decode()	builtin.txt	/*json_decode()*
 json_encode()	builtin.txt	/*json_encode()*
-jtags	tagsrch.txt	/*jtags*
 jump-motions	motion.txt	/*jump-motions*
 jumplist	motion.txt	/*jumplist*
 jumplist-stack	motion.txt	/*jumplist-stack*
@@ -9866,6 +9877,7 @@ vim-variable	eval.txt	/*vim-variable*
 vim.Diagnostic	diagnostic.txt	/*vim.Diagnostic*
 vim.NIL	lua.txt	/*vim.NIL*
 vim.Ringbuf	lua.txt	/*vim.Ringbuf*
+vim._extui	lua.txt	/*vim._extui*
 vim.api	lua.txt	/*vim.api*
 vim.b	lua.txt	/*vim.b*
 vim.base64	lua.txt	/*vim.base64*
@@ -10112,6 +10124,7 @@ vim.lsp.handlers.signature_help()	deprecated.txt	/*vim.lsp.handlers.signature_he
 vim.lsp.inlay_hint.enable()	lsp.txt	/*vim.lsp.inlay_hint.enable()*
 vim.lsp.inlay_hint.get()	lsp.txt	/*vim.lsp.inlay_hint.get()*
 vim.lsp.inlay_hint.is_enabled()	lsp.txt	/*vim.lsp.inlay_hint.is_enabled()*
+vim.lsp.is_enabled()	lsp.txt	/*vim.lsp.is_enabled()*
 vim.lsp.log.get_filename()	lsp.txt	/*vim.lsp.log.get_filename()*
 vim.lsp.log.get_level()	lsp.txt	/*vim.lsp.log.get_level()*
 vim.lsp.log.set_format_func()	lsp.txt	/*vim.lsp.log.set_format_func()*
