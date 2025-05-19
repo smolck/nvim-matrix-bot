@@ -5544,6 +5544,7 @@ diagnostic-handlers	diagnostic.txt	/*diagnostic-handlers*
 diagnostic-handlers-example	diagnostic.txt	/*diagnostic-handlers-example*
 diagnostic-highlights	diagnostic.txt	/*diagnostic-highlights*
 diagnostic-loclist-example	diagnostic.txt	/*diagnostic-loclist-example*
+diagnostic-on-jump-example	diagnostic.txt	/*diagnostic-on-jump-example*
 diagnostic-quickstart	diagnostic.txt	/*diagnostic-quickstart*
 diagnostic-severity	diagnostic.txt	/*diagnostic-severity*
 diagnostic-signs	diagnostic.txt	/*diagnostic-signs*
@@ -9457,6 +9458,7 @@ uv.new_idle()	luvref.txt	/*uv.new_idle()*
 uv.new_pipe()	luvref.txt	/*uv.new_pipe()*
 uv.new_poll()	luvref.txt	/*uv.new_poll()*
 uv.new_prepare()	luvref.txt	/*uv.new_prepare()*
+uv.new_sem()	luvref.txt	/*uv.new_sem()*
 uv.new_signal()	luvref.txt	/*uv.new_signal()*
 uv.new_socket_poll()	luvref.txt	/*uv.new_socket_poll()*
 uv.new_tcp()	luvref.txt	/*uv.new_tcp()*
@@ -9508,6 +9510,9 @@ uv.ref()	luvref.txt	/*uv.ref()*
 uv.req_get_type()	luvref.txt	/*uv.req_get_type()*
 uv.resident_set_memory()	luvref.txt	/*uv.resident_set_memory()*
 uv.run()	luvref.txt	/*uv.run()*
+uv.sem_post()	luvref.txt	/*uv.sem_post()*
+uv.sem_trywait()	luvref.txt	/*uv.sem_trywait()*
+uv.sem_wait()	luvref.txt	/*uv.sem_wait()*
 uv.send_buffer_size()	luvref.txt	/*uv.send_buffer_size()*
 uv.set_process_title()	luvref.txt	/*uv.set_process_title()*
 uv.setgid()	luvref.txt	/*uv.setgid()*
