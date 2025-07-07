@@ -110,6 +110,7 @@ $quote	vimeval.txt	/*$quote*
 'bufhidden'	options.txt	/*'bufhidden'*
 'buflisted'	options.txt	/*'buflisted'*
 'buftype'	options.txt	/*'buftype'*
+'busy'	options.txt	/*'busy'*
 'casemap'	options.txt	/*'casemap'*
 'cb'	options.txt	/*'cb'*
 'cc'	options.txt	/*'cc'*
@@ -1267,6 +1268,7 @@ $quote	vimeval.txt	/*$quote*
 /\{-	pattern.txt	/*\/\\{-*
 /\~	pattern.txt	/*\/\\~*
 /^	pattern.txt	/*\/^*
+/_<Tab>	cmdline.txt	/*\/_<Tab>*
 /_CTRL-G	cmdline.txt	/*\/_CTRL-G*
 /_CTRL-L	cmdline.txt	/*\/_CTRL-L*
 /_CTRL-T	cmdline.txt	/*\/_CTRL-T*
@@ -2672,6 +2674,9 @@ $quote	vimeval.txt	/*$quote*
 :so	repeat.txt	/*:so*
 :sor	change.txt	/*:sor*
 :sort	change.txt	/*:sort*
+:sort-l	change.txt	/*:sort-l*
+:sort-u	change.txt	/*:sort-u*
+:sort-uniq	change.txt	/*:sort-uniq*
 :source	repeat.txt	/*:source*
 :source!	repeat.txt	/*:source!*
 :source_crnl	repeat.txt	/*:source_crnl*
@@ -2893,6 +2898,8 @@ $quote	vimeval.txt	/*$quote*
 :undolist	undo.txt	/*:undolist*
 :unh	windows.txt	/*:unh*
 :unhide	windows.txt	/*:unhide*
+:uni	change.txt	/*:uni*
+:uniq	change.txt	/*:uniq*
 :unl	vimeval.txt	/*:unl*
 :unlet	vimeval.txt	/*:unlet*
 :unlet-$	vimeval.txt	/*:unlet-$*
@@ -4361,6 +4368,8 @@ PHP_outdentSLComments	indent.txt	/*PHP_outdentSLComments*
 PHP_outdentphpescape	indent.txt	/*PHP_outdentphpescape*
 PHP_removeCRwhenUnix	indent.txt	/*PHP_removeCRwhenUnix*
 PHP_vintage_case_default_indent	indent.txt	/*PHP_vintage_case_default_indent*
+PackChanged	lua.txt	/*PackChanged*
+PackChangedPre	lua.txt	/*PackChangedPre*
 Partial	vimeval.txt	/*Partial*
 Pattern	pattern.txt	/*Pattern*
 Pattern:match()	lua.txt	/*Pattern:match()*
@@ -4534,6 +4543,7 @@ User	autocmd.txt	/*User*
 UserGettingBored	autocmd.txt	/*UserGettingBored*
 V	visual.txt	/*V*
 VIMINIT	starting.txt	/*VIMINIT*
+VersionRange:has()	lua.txt	/*VersionRange:has()*
 Vi	credits.txt	/*Vi*
 View	starting.txt	/*View*
 Vim9script	vim_diff.txt	/*Vim9script*
@@ -5385,6 +5395,7 @@ cpo-u	options.txt	/*cpo-u*
 cpo-v	options.txt	/*cpo-v*
 cpo-x	options.txt	/*cpo-x*
 cpo-y	options.txt	/*cpo-y*
+cpo-~	options.txt	/*cpo-~*
 cpp.vim	syntax.txt	/*cpp.vim*
 crash-recovery	recover.txt	/*crash-recovery*
 creating-menus	gui.txt	/*creating-menus*
@@ -5464,6 +5475,7 @@ debug.traceback()	luaref.txt	/*debug.traceback()*
 debug.txt	debug.txt	/*debug.txt*
 debugbreak()	vimfn.txt	/*debugbreak()*
 decada_members	ft_ada.txt	/*decada_members*
+deduplicating	change.txt	/*deduplicating*
 deepcopy()	vimfn.txt	/*deepcopy()*
 default-autocmds	vim_diff.txt	/*default-autocmds*
 default-mappings	vim_diff.txt	/*default-mappings*
@@ -6435,6 +6447,7 @@ getcmdscreenpos()	vimfn.txt	/*getcmdscreenpos()*
 getcmdtype()	vimfn.txt	/*getcmdtype()*
 getcmdwintype()	vimfn.txt	/*getcmdwintype()*
 getcompletion()	vimfn.txt	/*getcompletion()*
+getcompletiontype()	vimfn.txt	/*getcompletiontype()*
 getcurpos()	vimfn.txt	/*getcurpos()*
 getcursorcharpos()	vimfn.txt	/*getcursorcharpos()*
 getcwd()	vimfn.txt	/*getcwd()*
@@ -6509,6 +6522,7 @@ groff.vim	syntax.txt	/*groff.vim*
 gross-national-happiness	credits.txt	/*gross-national-happiness*
 group-name	syntax.txt	/*group-name*
 grr	lsp.txt	/*grr*
+grt	lsp.txt	/*grt*
 gs	various.txt	/*gs*
 gsp.vim	syntax.txt	/*gsp.vim*
 gstar	pattern.txt	/*gstar*
@@ -8269,6 +8283,7 @@ progpath-variable	vvars.txt	/*progpath-variable*
 progress.vim	syntax.txt	/*progress.vim*
 project-config	options.txt	/*project-config*
 prompt-buffer	channel.txt	/*prompt-buffer*
+prompt_getinput()	vimfn.txt	/*prompt_getinput()*
 prompt_getprompt()	vimfn.txt	/*prompt_getprompt()*
 prompt_setcallback()	vimfn.txt	/*prompt_setcallback()*
 prompt_setinterrupt()	vimfn.txt	/*prompt_setinterrupt()*
@@ -8580,6 +8595,7 @@ search()	vimfn.txt	/*search()*
 search()-sub-match	vimfn.txt	/*search()-sub-match*
 search-commands	pattern.txt	/*search-commands*
 search-offset	pattern.txt	/*search-offset*
+search-options	pattern.txt	/*search-options*
 search-pattern	pattern.txt	/*search-pattern*
 search-range	pattern.txt	/*search-range*
 searchcount()	vimfn.txt	/*searchcount()*
@@ -9309,6 +9325,7 @@ undotree()	vimfn.txt	/*undotree()*
 unicode	mbyte.txt	/*unicode*
 uninstall	intro.txt	/*uninstall*
 uniq()	vimfn.txt	/*uniq()*
+unique	change.txt	/*unique*
 unlisted-buffer	windows.txt	/*unlisted-buffer*
 unpack()	luaref.txt	/*unpack()*
 up-down-motions	motion.txt	/*up-down-motions*
@@ -9896,6 +9913,7 @@ vim.Diagnostic	diagnostic.txt	/*vim.Diagnostic*
 vim.Diagnostic.Set	diagnostic.txt	/*vim.Diagnostic.Set*
 vim.NIL	lua.txt	/*vim.NIL*
 vim.Ringbuf	lua.txt	/*vim.Ringbuf*
+vim.VersionRange	lua.txt	/*vim.VersionRange*
 vim._extui	lua.txt	/*vim._extui*
 vim.api	lua.txt	/*vim.api*
 vim.b	lua.txt	/*vim.b*
@@ -10226,6 +10244,13 @@ vim.opt:prepend()	lua.txt	/*vim.opt:prepend()*
 vim.opt:remove()	lua.txt	/*vim.opt:remove()*
 vim.opt_global	lua.txt	/*vim.opt_global*
 vim.opt_local	lua.txt	/*vim.opt_local*
+vim.pack	lua.txt	/*vim.pack*
+vim.pack-directory	lua.txt	/*vim.pack-directory*
+vim.pack.Spec	lua.txt	/*vim.pack.Spec*
+vim.pack.add()	lua.txt	/*vim.pack.add()*
+vim.pack.del()	lua.txt	/*vim.pack.del()*
+vim.pack.get()	lua.txt	/*vim.pack.get()*
+vim.pack.update()	lua.txt	/*vim.pack.update()*
 vim.paste()	lua.txt	/*vim.paste()*
 vim.pesc()	lua.txt	/*vim.pesc()*
 vim.pretty_print()	deprecated.txt	/*vim.pretty_print()*
@@ -10361,6 +10386,7 @@ vim.version.cmp()	lua.txt	/*vim.version.cmp()*
 vim.version.eq()	lua.txt	/*vim.version.eq()*
 vim.version.ge()	lua.txt	/*vim.version.ge()*
 vim.version.gt()	lua.txt	/*vim.version.gt()*
+vim.version.intersect()	lua.txt	/*vim.version.intersect()*
 vim.version.last()	lua.txt	/*vim.version.last()*
 vim.version.le()	lua.txt	/*vim.version.le()*
 vim.version.lt()	lua.txt	/*vim.version.lt()*
