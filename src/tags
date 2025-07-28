@@ -5242,6 +5242,7 @@ cmdarg-variable	vvars.txt	/*cmdarg-variable*
 cmdbang-variable	vvars.txt	/*cmdbang-variable*
 cmdcomplete_info()	vimfn.txt	/*cmdcomplete_info()*
 cmdline	cmdline.txt	/*cmdline*
+cmdline-autocompletion	vimfn.txt	/*cmdline-autocompletion*
 cmdline-char	cmdline.txt	/*cmdline-char*
 cmdline-completion	cmdline.txt	/*cmdline-completion*
 cmdline-editing	cmdline.txt	/*cmdline-editing*
@@ -10471,6 +10472,7 @@ whitespace	pattern.txt	/*whitespace*
 wildcard	editing.txt	/*wildcard*
 wildcards	editing.txt	/*wildcards*
 wildmenumode()	vimfn.txt	/*wildmenumode()*
+wildtrigger()	vimfn.txt	/*wildtrigger()*
 win-scrolled-resized	windows.txt	/*win-scrolled-resized*
 win32-hidden-menus	gui.txt	/*win32-hidden-menus*
 win32yank	provider.txt	/*win32yank*
