@@ -51,6 +51,7 @@ $quote	vimeval.txt	/*$quote*
 ']	motion.txt	/*']*
 '^	motion.txt	/*'^*
 'a	motion.txt	/*'a*
+'ac'	options.txt	/*'ac'*
 'acd'	options.txt	/*'acd'*
 'ai'	options.txt	/*'ai'*
 'al'	vim_diff.txt	/*'al'*
@@ -65,6 +66,7 @@ $quote	vimeval.txt	/*$quote*
 'ari'	options.txt	/*'ari'*
 'arshape'	options.txt	/*'arshape'*
 'autochdir'	options.txt	/*'autochdir'*
+'autocomplete'	options.txt	/*'autocomplete'*
 'autoindent'	options.txt	/*'autoindent'*
 'autoread'	options.txt	/*'autoread'*
 'autowrite'	options.txt	/*'autowrite'*
@@ -466,6 +468,7 @@ $quote	vimeval.txt	/*$quote*
 'msc'	options.txt	/*'msc'*
 'msm'	options.txt	/*'msm'*
 'nf'	options.txt	/*'nf'*
+'noac'	options.txt	/*'noac'*
 'noacd'	options.txt	/*'noacd'*
 'noai'	options.txt	/*'noai'*
 'noallowrevins'	options.txt	/*'noallowrevins'*
@@ -476,6 +479,7 @@ $quote	vimeval.txt	/*$quote*
 'noari'	options.txt	/*'noari'*
 'noarshape'	options.txt	/*'noarshape'*
 'noautochdir'	options.txt	/*'noautochdir'*
+'noautocomplete'	options.txt	/*'noautocomplete'*
 'noautoindent'	options.txt	/*'noautoindent'*
 'noautoread'	options.txt	/*'noautoread'*
 'noautowrite'	options.txt	/*'noautowrite'*
@@ -4860,7 +4864,6 @@ asm.vim	syntax.txt	/*asm.vim*
 asm68k	syntax.txt	/*asm68k*
 asmh8300.vim	syntax.txt	/*asmh8300.vim*
 assert()	luaref.txt	/*assert()*
-assert-functions-details	testing.txt	/*assert-functions-details*
 assert-return	vvars.txt	/*assert-return*
 assert_beeps()	vimfn.txt	/*assert_beeps()*
 assert_equal()	vimfn.txt	/*assert_equal()*
@@ -5294,7 +5297,6 @@ compiler-tex	quickfix.txt	/*compiler-tex*
 compiler-tsc	quickfix.txt	/*compiler-tsc*
 compiler-typst	quickfix.txt	/*compiler-typst*
 compiler-vaxada	ft_ada.txt	/*compiler-vaxada*
-compl-autocomplete	insert.txt	/*compl-autocomplete*
 compl-current	insert.txt	/*compl-current*
 compl-define	insert.txt	/*compl-define*
 compl-dictionary	insert.txt	/*compl-dictionary*
@@ -5338,6 +5340,7 @@ context	repeat.txt	/*context*
 context-dict	repeat.txt	/*context-dict*
 context-stack	repeat.txt	/*context-stack*
 context-types	repeat.txt	/*context-types*
+continuation	develop.txt	/*continuation*
 control	intro.txt	/*control*
 convert-to-HTML	syntax.txt	/*convert-to-HTML*
 copy()	vimfn.txt	/*copy()*
@@ -7019,6 +7022,7 @@ inputlist()	vimfn.txt	/*inputlist()*
 inputrestore()	vimfn.txt	/*inputrestore()*
 inputsave()	vimfn.txt	/*inputsave()*
 inputsecret()	vimfn.txt	/*inputsecret()*
+ins-autocompletion	insert.txt	/*ins-autocompletion*
 ins-completion	insert.txt	/*ins-completion*
 ins-completion-menu	insert.txt	/*ins-completion-menu*
 ins-expandtab	insert.txt	/*ins-expandtab*
@@ -7210,7 +7214,6 @@ literal-string	vimeval.txt	/*literal-string*
 lnum-variable	vvars.txt	/*lnum-variable*
 load()	luaref.txt	/*load()*
 load-plugins	starting.txt	/*load-plugins*
-load-vim-script	repeat.txt	/*load-vim-script*
 loadfile()	luaref.txt	/*loadfile()*
 loadstring()	luaref.txt	/*loadstring()*
 local-additions	help.txt	/*local-additions*
@@ -7241,6 +7244,7 @@ lsp-client	lsp.txt	/*lsp-client*
 lsp-codelens	lsp.txt	/*lsp-codelens*
 lsp-completion	lsp.txt	/*lsp-completion*
 lsp-config	lsp.txt	/*lsp-config*
+lsp-config-merge	lsp.txt	/*lsp-config-merge*
 lsp-core	lsp.txt	/*lsp-core*
 lsp-defaults	lsp.txt	/*lsp-defaults*
 lsp-defaults-disable	lsp.txt	/*lsp-defaults-disable*
@@ -7259,6 +7263,7 @@ lsp-linked_editing_range	lsp.txt	/*lsp-linked_editing_range*
 lsp-lint	lsp.txt	/*lsp-lint*
 lsp-log	lsp.txt	/*lsp-log*
 lsp-method	lsp.txt	/*lsp-method*
+lsp-new-config	lsp.txt	/*lsp-new-config*
 lsp-notification	lsp.txt	/*lsp-notification*
 lsp-protocol	lsp.txt	/*lsp-protocol*
 lsp-quickstart	lsp.txt	/*lsp-quickstart*
@@ -7407,6 +7412,7 @@ lua-relational	luaref.txt	/*lua-relational*
 lua-repeat	luaref.txt	/*lua-repeat*
 lua-result-or-message	lua.txt	/*lua-result-or-message*
 lua-return	luaref.txt	/*lua-return*
+lua-script-location	lua.txt	/*lua-script-location*
 lua-shebang	starting.txt	/*lua-shebang*
 lua-special-tbl	lua.txt	/*lua-special-tbl*
 lua-stack	luaref.txt	/*lua-stack*
@@ -7872,7 +7878,6 @@ neomutt.vim	syntax.txt	/*neomutt.vim*
 neovim	nvim.txt	/*neovim*
 new-filetype	filetype.txt	/*new-filetype*
 new-filetype-scripts	filetype.txt	/*new-filetype-scripts*
-new-style-testing	testing.txt	/*new-style-testing*
 news	news.txt	/*news*
 news-0.10	news-0.10.txt	/*news-0.10*
 news-0.10.txt	news-0.10.txt	/*news-0.10.txt*
@@ -8585,7 +8590,6 @@ screencol()	vimfn.txt	/*screencol()*
 screenpos()	vimfn.txt	/*screenpos()*
 screenrow()	vimfn.txt	/*screenrow()*
 screenstring()	vimfn.txt	/*screenstring()*
-script	usr_41.txt	/*script*
 script-here	if_pyth.txt	/*script-here*
 script-local	map.txt	/*script-local*
 script-variable	vimeval.txt	/*script-variable*
@@ -9164,12 +9168,8 @@ termrequest-variable	vvars.txt	/*termrequest-variable*
 termresponse-variable	vvars.txt	/*termresponse-variable*
 ternary	vimeval.txt	/*ternary*
 test-functions	usr_41.txt	/*test-functions*
-test-functions-details	testing.txt	/*test-functions-details*
 test_garbagecollect_now()	vimfn.txt	/*test_garbagecollect_now()*
-testing	testing.txt	/*testing*
-testing-support	testing.txt	/*testing-support*
 testing-variable	vvars.txt	/*testing-variable*
-testing.txt	testing.txt	/*testing.txt*
 tex-cchar	syntax.txt	/*tex-cchar*
 tex-cole	syntax.txt	/*tex-cole*
 tex-conceal	syntax.txt	/*tex-conceal*
@@ -9918,8 +9918,6 @@ vim-function	vimeval.txt	/*vim-function*
 vim-modes	intro.txt	/*vim-modes*
 vim-modes-intro	intro.txt	/*vim-modes-intro*
 vim-raku	ft_raku.txt	/*vim-raku*
-vim-script-intro	usr_41.txt	/*vim-script-intro*
-vim-script-library	vimeval.txt	/*vim-script-library*
 vim-shebang	various.txt	/*vim-shebang*
 vim-tutor-create	pi_tutor.txt	/*vim-tutor-create*
 vim-tutor-mode	pi_tutor.txt	/*vim-tutor-mode*
@@ -9984,6 +9982,7 @@ vim.diagnostic.setloclist()	diagnostic.txt	/*vim.diagnostic.setloclist()*
 vim.diagnostic.setqflist()	diagnostic.txt	/*vim.diagnostic.setqflist()*
 vim.diagnostic.severity	diagnostic.txt	/*vim.diagnostic.severity*
 vim.diagnostic.show()	diagnostic.txt	/*vim.diagnostic.show()*
+vim.diagnostic.status()	diagnostic.txt	/*vim.diagnostic.status()*
 vim.diagnostic.toqflist()	diagnostic.txt	/*vim.diagnostic.toqflist()*
 vim.diff()	deprecated.txt	/*vim.diff()*
 vim.empty_dict()	lua.txt	/*vim.empty_dict()*
@@ -10045,6 +10044,8 @@ vim.keycode()	lua.txt	/*vim.keycode()*
 vim.keymap	lua.txt	/*vim.keymap*
 vim.keymap.del()	lua.txt	/*vim.keymap.del()*
 vim.keymap.set()	lua.txt	/*vim.keymap.set()*
+vim.list.bisect()	lua.txt	/*vim.list.bisect()*
+vim.list.unique()	lua.txt	/*vim.list.unique()*
 vim.list_contains()	lua.txt	/*vim.list_contains()*
 vim.list_extend()	lua.txt	/*vim.list_extend()*
 vim.list_slice()	lua.txt	/*vim.list_slice()*
@@ -10436,6 +10437,8 @@ vimrc_example.vim	usr_05.txt	/*vimrc_example.vim*
 vimscript	vimeval.txt	/*vimscript*
 vimscript-functions	vimfn.txt	/*vimscript-functions*
 vimscript-functions-details	vimfn.txt	/*vimscript-functions-details*
+vimscript-intro	usr_41.txt	/*vimscript-intro*
+vimscript-library	vimeval.txt	/*vimscript-library*
 vimtutor	usr_01.txt	/*vimtutor*
 virtcol()	vimfn.txt	/*virtcol()*
 virtcol2col()	vimfn.txt	/*virtcol2col()*
