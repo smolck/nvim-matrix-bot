@@ -1867,6 +1867,7 @@ $quote	vimeval.txt	/*$quote*
 :con	vimeval.txt	/*:con*
 :conf	editing.txt	/*:conf*
 :confirm	editing.txt	/*:confirm*
+:connect	gui.txt	/*:connect*
 :cons	vimeval.txt	/*:cons*
 :const	vimeval.txt	/*:const*
 :continue	vimeval.txt	/*:continue*
@@ -4383,6 +4384,8 @@ PackChangedPre	pack.txt	/*PackChangedPre*
 Partial	vimeval.txt	/*Partial*
 Pattern	pattern.txt	/*Pattern*
 Pattern:match()	lua.txt	/*Pattern:match()*
+Pos:lsp()	lua.txt	/*Pos:lsp()*
+Pos:to_lsp()	lua.txt	/*Pos:to_lsp()*
 Python	if_pyth.txt	/*Python*
 Q	repeat.txt	/*Q*
 Q_ab	quickref.txt	/*Q_ab*
@@ -4435,6 +4438,10 @@ Quickfix	quickfix.txt	/*Quickfix*
 QuitPre	autocmd.txt	/*QuitPre*
 R	change.txt	/*R*
 RPC	api.txt	/*RPC*
+Range:has()	lua.txt	/*Range:has()*
+Range:intersect()	lua.txt	/*Range:intersect()*
+Range:lsp()	lua.txt	/*Range:lsp()*
+Range:to_lsp()	lua.txt	/*Range:to_lsp()*
 RecordingEnter	autocmd.txt	/*RecordingEnter*
 RecordingLeave	autocmd.txt	/*RecordingLeave*
 RemoteReply	autocmd.txt	/*RemoteReply*
@@ -5519,6 +5526,7 @@ desktop.vim	syntax.txt	/*desktop.vim*
 dev	develop.txt	/*dev*
 dev-api	develop.txt	/*dev-api*
 dev-api-client	develop.txt	/*dev-api-client*
+dev-api-fast	dev_arch.txt	/*dev-api-fast*
 dev-api-name	develop.txt	/*dev-api-name*
 dev-api-patterns	develop.txt	/*dev-api-patterns*
 dev-arch	dev_arch.txt	/*dev-arch*
@@ -9927,6 +9935,8 @@ vim-variable	vimeval.txt	/*vim-variable*
 vim.Diagnostic	diagnostic.txt	/*vim.Diagnostic*
 vim.Diagnostic.Set	diagnostic.txt	/*vim.Diagnostic.Set*
 vim.NIL	lua.txt	/*vim.NIL*
+vim.Pos	lua.txt	/*vim.Pos*
+vim.Range	lua.txt	/*vim.Range*
 vim.Ringbuf	lua.txt	/*vim.Ringbuf*
 vim.SystemCompleted	lua.txt	/*vim.SystemCompleted*
 vim.SystemObj	lua.txt	/*vim.SystemObj*
@@ -10177,7 +10187,7 @@ vim.lsp.get_active_clients()	deprecated.txt	/*vim.lsp.get_active_clients()*
 vim.lsp.get_buffers_by_client_id()	lsp.txt	/*vim.lsp.get_buffers_by_client_id()*
 vim.lsp.get_client_by_id()	lsp.txt	/*vim.lsp.get_client_by_id()*
 vim.lsp.get_clients()	lsp.txt	/*vim.lsp.get_clients()*
-vim.lsp.get_log_path()	lsp.txt	/*vim.lsp.get_log_path()*
+vim.lsp.get_log_path()	deprecated.txt	/*vim.lsp.get_log_path()*
 vim.lsp.handlers	lsp.txt	/*vim.lsp.handlers*
 vim.lsp.handlers.signature_help()	deprecated.txt	/*vim.lsp.handlers.signature_help()*
 vim.lsp.inlay_hint.enable()	lsp.txt	/*vim.lsp.inlay_hint.enable()*
@@ -10210,7 +10220,7 @@ vim.lsp.semantic_tokens.highlight_token()	lsp.txt	/*vim.lsp.semantic_tokens.high
 vim.lsp.semantic_tokens.is_enabled()	lsp.txt	/*vim.lsp.semantic_tokens.is_enabled()*
 vim.lsp.semantic_tokens.start()	deprecated.txt	/*vim.lsp.semantic_tokens.start()*
 vim.lsp.semantic_tokens.stop()	deprecated.txt	/*vim.lsp.semantic_tokens.stop()*
-vim.lsp.set_log_level()	lsp.txt	/*vim.lsp.set_log_level()*
+vim.lsp.set_log_level()	deprecated.txt	/*vim.lsp.set_log_level()*
 vim.lsp.start()	lsp.txt	/*vim.lsp.start()*
 vim.lsp.status()	lsp.txt	/*vim.lsp.status()*
 vim.lsp.stop_client()	lsp.txt	/*vim.lsp.stop_client()*
@@ -10278,8 +10288,10 @@ vim.pack.get()	pack.txt	/*vim.pack.get()*
 vim.pack.update()	pack.txt	/*vim.pack.update()*
 vim.paste()	lua.txt	/*vim.paste()*
 vim.pesc()	lua.txt	/*vim.pesc()*
+vim.pos	lua.txt	/*vim.pos*
 vim.pretty_print()	deprecated.txt	/*vim.pretty_print()*
 vim.print()	lua.txt	/*vim.print()*
+vim.range	lua.txt	/*vim.range*
 vim.re	lua.txt	/*vim.re*
 vim.re.compile()	lua.txt	/*vim.re.compile()*
 vim.re.find()	lua.txt	/*vim.re.find()*
