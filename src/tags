@@ -53,6 +53,8 @@ $quote	vimeval.txt	/*$quote*
 'a	motion.txt	/*'a*
 'ac'	options.txt	/*'ac'*
 'acd'	options.txt	/*'acd'*
+'acl'	options.txt	/*'acl'*
+'act'	options.txt	/*'act'*
 'ai'	options.txt	/*'ai'*
 'al'	vim_diff.txt	/*'al'*
 'aleph'	vim_diff.txt	/*'aleph'*
@@ -67,6 +69,8 @@ $quote	vimeval.txt	/*$quote*
 'arshape'	options.txt	/*'arshape'*
 'autochdir'	options.txt	/*'autochdir'*
 'autocomplete'	options.txt	/*'autocomplete'*
+'autocompletedelay'	options.txt	/*'autocompletedelay'*
+'autocompletetimeout'	options.txt	/*'autocompletetimeout'*
 'autoindent'	options.txt	/*'autoindent'*
 'autoread'	options.txt	/*'autoread'*
 'autowrite'	options.txt	/*'autowrite'*
@@ -165,6 +169,7 @@ $quote	vimeval.txt	/*$quote*
 'completeopt'	options.txt	/*'completeopt'*
 'completepopup'	vim_diff.txt	/*'completepopup'*
 'completeslash'	options.txt	/*'completeslash'*
+'completetimeout'	options.txt	/*'completetimeout'*
 'concealcursor'	options.txt	/*'concealcursor'*
 'conceallevel'	options.txt	/*'conceallevel'*
 'confirm'	options.txt	/*'confirm'*
@@ -177,6 +182,7 @@ $quote	vimeval.txt	/*$quote*
 'crb'	options.txt	/*'crb'*
 'cryptmethod'	vim_diff.txt	/*'cryptmethod'*
 'csl'	options.txt	/*'csl'*
+'cto'	options.txt	/*'cto'*
 'cuc'	options.txt	/*'cuc'*
 'cul'	options.txt	/*'cul'*
 'culopt'	options.txt	/*'culopt'*
@@ -4384,7 +4390,11 @@ PackChangedPre	pack.txt	/*PackChangedPre*
 Partial	vimeval.txt	/*Partial*
 Pattern	pattern.txt	/*Pattern*
 Pattern:match()	lua.txt	/*Pattern:match()*
+Pos:cursor()	lua.txt	/*Pos:cursor()*
+Pos:extmark()	lua.txt	/*Pos:extmark()*
 Pos:lsp()	lua.txt	/*Pos:lsp()*
+Pos:to_cursor()	lua.txt	/*Pos:to_cursor()*
+Pos:to_extmark()	lua.txt	/*Pos:to_extmark()*
 Pos:to_lsp()	lua.txt	/*Pos:to_lsp()*
 Python	if_pyth.txt	/*Python*
 Q	repeat.txt	/*Q*
@@ -5143,6 +5153,7 @@ c_space_errors	syntax.txt	/*c_space_errors*
 c_syntax_for_h	syntax.txt	/*c_syntax_for_h*
 c_wildchar	cmdline.txt	/*c_wildchar*
 call()	vimfn.txt	/*call()*
+cangjie.vim	syntax.txt	/*cangjie.vim*
 carriage-return	intro.txt	/*carriage-return*
 case	change.txt	/*case*
 catch-all	vimeval.txt	/*catch-all*
@@ -6010,6 +6021,7 @@ ft-bash-syntax	syntax.txt	/*ft-bash-syntax*
 ft-basic-syntax	syntax.txt	/*ft-basic-syntax*
 ft-c-omni	insert.txt	/*ft-c-omni*
 ft-c-syntax	syntax.txt	/*ft-c-syntax*
+ft-cangjie-syntax	syntax.txt	/*ft-cangjie-syntax*
 ft-ch-syntax	syntax.txt	/*ft-ch-syntax*
 ft-changelog-plugin	filetype.txt	/*ft-changelog-plugin*
 ft-changelog-syntax	syntax.txt	/*ft-changelog-syntax*
@@ -6652,6 +6664,8 @@ hit-enter-prompt	message.txt	/*hit-enter-prompt*
 hit-return	message.txt	/*hit-return*
 hjkl	usr_02.txt	/*hjkl*
 hl-ColorColumn	syntax.txt	/*hl-ColorColumn*
+hl-ComplHint	syntax.txt	/*hl-ComplHint*
+hl-ComplHintMore	syntax.txt	/*hl-ComplHintMore*
 hl-ComplMatchIns	syntax.txt	/*hl-ComplMatchIns*
 hl-Conceal	syntax.txt	/*hl-Conceal*
 hl-CurSearch	syntax.txt	/*hl-CurSearch*
@@ -6813,6 +6827,7 @@ hl-Scrollbar	syntax.txt	/*hl-Scrollbar*
 hl-Search	syntax.txt	/*hl-Search*
 hl-SignColumn	syntax.txt	/*hl-SignColumn*
 hl-SnippetTabstop	syntax.txt	/*hl-SnippetTabstop*
+hl-SnippetTabstopActive	syntax.txt	/*hl-SnippetTabstopActive*
 hl-SpecialKey	syntax.txt	/*hl-SpecialKey*
 hl-SpellBad	syntax.txt	/*hl-SpellBad*
 hl-SpellCap	syntax.txt	/*hl-SpellCap*
@@ -7268,6 +7283,7 @@ lsp-highlight	lsp.txt	/*lsp-highlight*
 lsp-highlight-codelens	lsp.txt	/*lsp-highlight-codelens*
 lsp-highlight-signature	lsp.txt	/*lsp-highlight-signature*
 lsp-inlay_hint	lsp.txt	/*lsp-inlay_hint*
+lsp-inline_completion	lsp.txt	/*lsp-inline_completion*
 lsp-linked_editing_range	lsp.txt	/*lsp-linked_editing_range*
 lsp-lint	lsp.txt	/*lsp-lint*
 lsp-log	lsp.txt	/*lsp-log*
@@ -8094,6 +8110,7 @@ nvim_ui_attach()	api.txt	/*nvim_ui_attach()*
 nvim_ui_detach()	api.txt	/*nvim_ui_detach()*
 nvim_ui_pum_set_bounds()	api.txt	/*nvim_ui_pum_set_bounds()*
 nvim_ui_pum_set_height()	api.txt	/*nvim_ui_pum_set_height()*
+nvim_ui_send()	api.txt	/*nvim_ui_send()*
 nvim_ui_set_focus()	api.txt	/*nvim_ui_set_focus()*
 nvim_ui_set_option()	api.txt	/*nvim_ui_set_option()*
 nvim_ui_term_event()	api.txt	/*nvim_ui_term_event()*
@@ -10193,6 +10210,10 @@ vim.lsp.handlers.signature_help()	deprecated.txt	/*vim.lsp.handlers.signature_he
 vim.lsp.inlay_hint.enable()	lsp.txt	/*vim.lsp.inlay_hint.enable()*
 vim.lsp.inlay_hint.get()	lsp.txt	/*vim.lsp.inlay_hint.get()*
 vim.lsp.inlay_hint.is_enabled()	lsp.txt	/*vim.lsp.inlay_hint.is_enabled()*
+vim.lsp.inline_completion.enable()	lsp.txt	/*vim.lsp.inline_completion.enable()*
+vim.lsp.inline_completion.get()	lsp.txt	/*vim.lsp.inline_completion.get()*
+vim.lsp.inline_completion.is_enabled()	lsp.txt	/*vim.lsp.inline_completion.is_enabled()*
+vim.lsp.inline_completion.select()	lsp.txt	/*vim.lsp.inline_completion.select()*
 vim.lsp.is_enabled()	lsp.txt	/*vim.lsp.is_enabled()*
 vim.lsp.linked_editing_range.enable()	lsp.txt	/*vim.lsp.linked_editing_range.enable()*
 vim.lsp.log.get_filename()	lsp.txt	/*vim.lsp.log.get_filename()*
