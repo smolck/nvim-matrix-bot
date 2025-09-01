@@ -3501,6 +3501,9 @@ E152	helphelp.txt	/*E152*
 E153	helphelp.txt	/*E153*
 E154	helphelp.txt	/*E154*
 E1541	vi_diff.txt	/*E1541*
+E1542	options.txt	/*E1542*
+E1543	options.txt	/*E1543*
+E1546	autocmd.txt	/*E1546*
 E155	sign.txt	/*E155*
 E1550	options.txt	/*E1550*
 E156	sign.txt	/*E156*
@@ -4396,6 +4399,7 @@ Pos:lsp()	lua.txt	/*Pos:lsp()*
 Pos:to_cursor()	lua.txt	/*Pos:to_cursor()*
 Pos:to_extmark()	lua.txt	/*Pos:to_extmark()*
 Pos:to_lsp()	lua.txt	/*Pos:to_lsp()*
+Progress	autocmd.txt	/*Progress*
 Python	if_pyth.txt	/*Python*
 Q	repeat.txt	/*Q*
 Q_ab	quickref.txt	/*Q_ab*
@@ -7290,6 +7294,7 @@ lsp-log	lsp.txt	/*lsp-log*
 lsp-method	lsp.txt	/*lsp-method*
 lsp-new-config	lsp.txt	/*lsp-new-config*
 lsp-notification	lsp.txt	/*lsp-notification*
+lsp-on_type_formatting	lsp.txt	/*lsp-on_type_formatting*
 lsp-protocol	lsp.txt	/*lsp-protocol*
 lsp-quickstart	lsp.txt	/*lsp-quickstart*
 lsp-response	lsp.txt	/*lsp-response*
@@ -8326,6 +8331,7 @@ profiling	repeat.txt	/*profiling*
 profiling-variable	vvars.txt	/*profiling-variable*
 progname-variable	vvars.txt	/*progname-variable*
 progpath-variable	vvars.txt	/*progpath-variable*
+progress-message	message.txt	/*progress-message*
 progress.vim	syntax.txt	/*progress.vim*
 project-config	options.txt	/*project-config*
 prompt-buffer	channel.txt	/*prompt-buffer*
@@ -10223,6 +10229,7 @@ vim.lsp.log.set_level()	lsp.txt	/*vim.lsp.log.set_level()*
 vim.lsp.log.should_log()	deprecated.txt	/*vim.lsp.log.should_log()*
 vim.lsp.log_levels	lsp.txt	/*vim.lsp.log_levels*
 vim.lsp.omnifunc()	lsp.txt	/*vim.lsp.omnifunc()*
+vim.lsp.on_type_formatting.enable()	lsp.txt	/*vim.lsp.on_type_formatting.enable()*
 vim.lsp.protocol	lsp.txt	/*vim.lsp.protocol*
 vim.lsp.protocol.Methods	lsp.txt	/*vim.lsp.protocol.Methods*
 vim.lsp.protocol.make_client_capabilities()	lsp.txt	/*vim.lsp.protocol.make_client_capabilities()*
