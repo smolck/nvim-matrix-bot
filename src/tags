@@ -4799,7 +4799,6 @@ ab	motion.txt	/*ab*
 abandon	editing.txt	/*abandon*
 abbreviation	map.txt	/*abbreviation*
 abbreviations	map.txt	/*abbreviations*
-abel.vim	syntax.txt	/*abel.vim*
 abs()	vimfn.txt	/*abs()*
 acos()	vimfn.txt	/*acos()*
 active-buffer	windows.txt	/*active-buffer*
@@ -4812,7 +4811,6 @@ ada-compiler	ft_ada.txt	/*ada-compiler*
 ada-ctags	ft_ada.txt	/*ada-ctags*
 ada-extra-plugins	ft_ada.txt	/*ada-extra-plugins*
 ada-reference	ft_ada.txt	/*ada-reference*
-ada.vim	ft_ada.txt	/*ada.vim*
 add()	vimfn.txt	/*add()*
 add-filetype-plugin	usr_05.txt	/*add-filetype-plugin*
 add-global-plugin	usr_05.txt	/*add-global-plugin*
@@ -4828,9 +4826,7 @@ an	lsp.txt	/*an*
 and()	vimfn.txt	/*and()*
 anonymous-function	vimeval.txt	/*anonymous-function*
 ansi-colorize	api.txt	/*ansi-colorize*
-ant.vim	syntax.txt	/*ant.vim*
 ap	motion.txt	/*ap*
-apache.vim	syntax.txt	/*apache.vim*
 api	api.txt	/*api*
 api-autocmd	api.txt	/*api-autocmd*
 api-buffer	api.txt	/*api-buffer*
@@ -4840,12 +4836,12 @@ api-client	develop.txt	/*api-client*
 api-command	api.txt	/*api-command*
 api-contract	api.txt	/*api-contract*
 api-definitions	api.txt	/*api-definitions*
+api-events	api.txt	/*api-events*
 api-extended-marks	api.txt	/*api-extended-marks*
 api-extmark	api.txt	/*api-extmark*
 api-fast	api.txt	/*api-fast*
 api-floatwin	api.txt	/*api-floatwin*
 api-global	api.txt	/*api-global*
-api-global-events	api.txt	/*api-global-events*
 api-highlights	api.txt	/*api-highlights*
 api-indexing	api.txt	/*api-indexing*
 api-level	api.txt	/*api-level*
@@ -4882,9 +4878,7 @@ argv()	vimfn.txt	/*argv()*
 argv-variable	vvars.txt	/*argv-variable*
 as	motion.txt	/*as*
 asin()	vimfn.txt	/*asin()*
-asm.vim	syntax.txt	/*asm.vim*
 asm68k	syntax.txt	/*asm68k*
-asmh8300.vim	syntax.txt	/*asmh8300.vim*
 assert()	luaref.txt	/*assert()*
 assert-return	vvars.txt	/*assert-return*
 assert_beeps()	vimfn.txt	/*assert_beeps()*
@@ -4900,8 +4894,6 @@ assert_notequal()	vimfn.txt	/*assert_notequal()*
 assert_notmatch()	vimfn.txt	/*assert_notmatch()*
 assert_report()	vimfn.txt	/*assert_report()*
 assert_true()	vimfn.txt	/*assert_true()*
-astro.vim	syntax.txt	/*astro.vim*
-asy.vim	syntax.txt	/*asy.vim*
 at	motion.txt	/*at*
 atan()	vimfn.txt	/*atan()*
 atan2()	vimfn.txt	/*atan2()*
@@ -4962,7 +4954,6 @@ b:var	vimeval.txt	/*b:var*
 b:yaml_schema	syntax.txt	/*b:yaml_schema*
 baan-folding	syntax.txt	/*baan-folding*
 baan-syntax	syntax.txt	/*baan-syntax*
-baan.vim	syntax.txt	/*baan.vim*
 backers.txt	credits.txt	/*backers.txt*
 backslash	intro.txt	/*backslash*
 backspace	intro.txt	/*backspace*
@@ -4972,7 +4963,6 @@ backup-table	editing.txt	/*backup-table*
 bar	motion.txt	/*bar*
 bars	help.txt	/*bars*
 base-directories	starting.txt	/*base-directories*
-basic.vim	syntax.txt	/*basic.vim*
 binary-number	vimeval.txt	/*binary-number*
 bisect	starting.txt	/*bisect*
 bit.arshift()	lua-bit.txt	/*bit.arshift()*
@@ -5042,7 +5032,6 @@ byteidx()	vimfn.txt	/*byteidx()*
 byteidxcomp()	vimfn.txt	/*byteidxcomp()*
 bzip2	pi_gzip.txt	/*bzip2*
 c	change.txt	/*c*
-c.vim	syntax.txt	/*c.vim*
 cW	change.txt	/*cW*
 c_#	cmdline.txt	/*c_#*
 c_##	cmdline.txt	/*c_##*
@@ -5157,7 +5146,6 @@ c_space_errors	syntax.txt	/*c_space_errors*
 c_syntax_for_h	syntax.txt	/*c_syntax_for_h*
 c_wildchar	cmdline.txt	/*c_wildchar*
 call()	vimfn.txt	/*call()*
-cangjie.vim	syntax.txt	/*cangjie.vim*
 carriage-return	intro.txt	/*carriage-return*
 case	change.txt	/*case*
 catch-all	vimeval.txt	/*catch-all*
@@ -5168,14 +5156,12 @@ catch-text	vimeval.txt	/*catch-text*
 cc	change.txt	/*cc*
 ceil()	vimfn.txt	/*ceil()*
 cfilter-plugin	quickfix.txt	/*cfilter-plugin*
-ch.vim	syntax.txt	/*ch.vim*
 chanclose()	vimfn.txt	/*chanclose()*
 change-list-jumps	motion.txt	/*change-list-jumps*
 change-name	tips.txt	/*change-name*
 change-tabs	change.txt	/*change-tabs*
 change.txt	change.txt	/*change.txt*
 changelist	motion.txt	/*changelist*
-changelog.vim	syntax.txt	/*changelog.vim*
 changenr()	vimfn.txt	/*changenr()*
 changetick	vimeval.txt	/*changetick*
 changing	change.txt	/*changing*
@@ -5206,7 +5192,6 @@ charwise	motion.txt	/*charwise*
 charwise-register	change.txt	/*charwise-register*
 charwise-visual	visual.txt	/*charwise-visual*
 chdir()	vimfn.txt	/*chdir()*
-chill.vim	syntax.txt	/*chill.vim*
 chmod	vimfn.txt	/*chmod*
 cindent()	vimfn.txt	/*cindent()*
 cinkeys-format	indent.txt	/*cinkeys-format*
@@ -5281,10 +5266,8 @@ cmdline-window	cmdline.txt	/*cmdline-window*
 cmdline.txt	cmdline.txt	/*cmdline.txt*
 cmdwin	cmdline.txt	/*cmdwin*
 cmdwin-char	cmdline.txt	/*cmdwin-char*
-cobol.vim	syntax.txt	/*cobol.vim*
 codeset	mbyte.txt	/*codeset*
 col()	vimfn.txt	/*col()*
-coldfusion.vim	syntax.txt	/*coldfusion.vim*
 collapse	tips.txt	/*collapse*
 collate-variable	vvars.txt	/*collate-variable*
 collectgarbage()	luaref.txt	/*collectgarbage()*
@@ -5432,16 +5415,13 @@ cpo-v	options.txt	/*cpo-v*
 cpo-x	options.txt	/*cpo-x*
 cpo-y	options.txt	/*cpo-y*
 cpo-~	options.txt	/*cpo-~*
-cpp.vim	syntax.txt	/*cpp.vim*
 crash-recovery	recover.txt	/*crash-recovery*
 creating-menus	gui.txt	/*creating-menus*
 credits	credits.txt	/*credits*
 credits.txt	credits.txt	/*credits.txt*
 crontab	options.txt	/*crontab*
-cs.vim	syntax.txt	/*cs.vim*
 cscope	vim_diff.txt	/*cscope*
 cscope_connection()	vim_diff.txt	/*cscope_connection()*
-csh.vim	syntax.txt	/*csh.vim*
 ctags	tagsrch.txt	/*ctags*
 cterm-colors	syntax.txt	/*cterm-colors*
 ctermbg	syntax.txt	/*ctermbg*
@@ -5473,14 +5453,11 @@ cursor_left	intro.txt	/*cursor_left*
 cursor_right	intro.txt	/*cursor_right*
 cursor_up	intro.txt	/*cursor_up*
 cw	change.txt	/*cw*
-cweb.vim	syntax.txt	/*cweb.vim*
-cynlib.vim	syntax.txt	/*cynlib.vim*
 d	change.txt	/*d*
 daB	motion.txt	/*daB*
 daW	motion.txt	/*daW*
 dab	motion.txt	/*dab*
 dap	motion.txt	/*dap*
-dart.vim	syntax.txt	/*dart.vim*
 das	motion.txt	/*das*
 date-functions	usr_41.txt	/*date-functions*
 daw	motion.txt	/*daw*
@@ -5537,7 +5514,6 @@ design-improved	develop.txt	/*design-improved*
 design-maintain	develop.txt	/*design-maintain*
 design-not	develop.txt	/*design-not*
 design-speed-size	develop.txt	/*design-speed-size*
-desktop.vim	syntax.txt	/*desktop.vim*
 dev	develop.txt	/*dev*
 dev-api	develop.txt	/*dev-api*
 dev-api-client	develop.txt	/*dev-api-client*
@@ -5641,7 +5617,6 @@ digraphs-default	digraph.txt	/*digraphs-default*
 digraphs-define	digraph.txt	/*digraphs-define*
 digraphs-use	digraph.txt	/*digraphs-use*
 dip	motion.txt	/*dip*
-dircolors.vim	syntax.txt	/*dircolors.vim*
 dis	motion.txt	/*dis*
 disable-menus	gui.txt	/*disable-menus*
 disable-mouse	vim_diff.txt	/*disable-mouse*
@@ -5653,20 +5628,14 @@ diw	motion.txt	/*diw*
 dl	change.txt	/*dl*
 do	diff.txt	/*do*
 doc-file-list	help.txt	/*doc-file-list*
-docbk.vim	syntax.txt	/*docbk.vim*
-docbksgml.vim	syntax.txt	/*docbksgml.vim*
-docbkxml.vim	syntax.txt	/*docbkxml.vim*
 docbook	syntax.txt	/*docbook*
 dofile()	luaref.txt	/*dofile()*
 donate	uganda.txt	/*donate*
-dosbatch.vim	syntax.txt	/*dosbatch.vim*
 double-click	gui.txt	/*double-click*
 download	intro.txt	/*download*
 doxygen-syntax	syntax.txt	/*doxygen-syntax*
-doxygen.vim	syntax.txt	/*doxygen.vim*
 dp	diff.txt	/*dp*
 drag-n-drop	gui.txt	/*drag-n-drop*
-dtd.vim	syntax.txt	/*dtd.vim*
 dtd2vim	insert.txt	/*dtd2vim*
 dying-variable	vvars.txt	/*dying-variable*
 e	motion.txt	/*e*
@@ -5697,8 +5666,6 @@ editorconfig.txt	editorconfig.txt	/*editorconfig.txt*
 efm-%>	quickfix.txt	/*efm-%>*
 efm-entries	quickfix.txt	/*efm-entries*
 efm-ignore	quickfix.txt	/*efm-ignore*
-eiffel.vim	syntax.txt	/*eiffel.vim*
-elixir.vim	syntax.txt	/*elixir.vim*
 emacs-keys	tips.txt	/*emacs-keys*
 emoji	mbyte.txt	/*emoji*
 empty()	vimfn.txt	/*empty()*
@@ -5709,7 +5676,6 @@ end	intro.txt	/*end*
 end-of-file	pattern.txt	/*end-of-file*
 environ()	vimfn.txt	/*environ()*
 eol-and-eof	editing.txt	/*eol-and-eof*
-erlang.vim	syntax.txt	/*erlang.vim*
 err_teapot()	vim_diff.txt	/*err_teapot()*
 errmsg-variable	vvars.txt	/*errmsg-variable*
 error()	luaref.txt	/*error()*
@@ -5728,8 +5694,6 @@ errors	message.txt	/*errors*
 errors-variable	vvars.txt	/*errors-variable*
 escape	intro.txt	/*escape*
 escape()	vimfn.txt	/*escape()*
-euphoria3.vim	syntax.txt	/*euphoria3.vim*
-euphoria4.vim	syntax.txt	/*euphoria4.vim*
 euro	digraph.txt	/*euro*
 euro-digraph	digraph.txt	/*euro-digraph*
 eval	vimeval.txt	/*eval*
@@ -5867,7 +5831,6 @@ faq-design	faq.txt	/*faq-design*
 faq-general	faq.txt	/*faq-general*
 faq-runtime	faq.txt	/*faq-runtime*
 faq.txt	faq.txt	/*faq.txt*
-fasm.vim	syntax.txt	/*fasm.vim*
 fcs_choice-variable	vvars.txt	/*fcs_choice-variable*
 fcs_reason-variable	vvars.txt	/*fcs_reason-variable*
 feature-compile	vim_diff.txt	/*feature-compile*
@@ -5912,7 +5875,6 @@ finddir()	vimfn.txt	/*finddir()*
 findfile()	vimfn.txt	/*findfile()*
 flatten()	vimfn.txt	/*flatten()*
 flattennew()	vimfn.txt	/*flattennew()*
-flexwiki.vim	syntax.txt	/*flexwiki.vim*
 float-e	vimeval.txt	/*float-e*
 float-functions	usr_41.txt	/*float-functions*
 float-pi	vimeval.txt	/*float-pi*
@@ -5985,14 +5947,10 @@ for	luaref.txt	/*for*
 for-in	luaref.txt	/*for-in*
 forced-motion	motion.txt	/*forced-motion*
 foreach()	vimfn.txt	/*foreach()*
-form.vim	syntax.txt	/*form.vim*
 format-bullet-list	tips.txt	/*format-bullet-list*
 format-comments	change.txt	/*format-comments*
 format-formatexpr	change.txt	/*format-formatexpr*
 formatting	change.txt	/*formatting*
-forth.vim	syntax.txt	/*forth.vim*
-fortran.vim	syntax.txt	/*fortran.vim*
-freebasic.vim	syntax.txt	/*freebasic.vim*
 freebasic_no_comment_fold	syntax.txt	/*freebasic_no_comment_fold*
 freebasic_operators	syntax.txt	/*freebasic_operators*
 freebasic_space_errors	syntax.txt	/*freebasic_space_errors*
@@ -6230,7 +6188,6 @@ function-search-undo	userfunc.txt	/*function-search-undo*
 function_key	intro.txt	/*function_key*
 functions	vimeval.txt	/*functions*
 fuzzy-matching	pattern.txt	/*fuzzy-matching*
-fvwm.vim	syntax.txt	/*fvwm.vim*
 fvwm2rc	syntax.txt	/*fvwm2rc*
 fvwmrc	syntax.txt	/*fvwmrc*
 g	index.txt	/*g*
@@ -6558,13 +6515,11 @@ greek	options.txt	/*greek*
 grep	quickfix.txt	/*grep*
 gri	lsp.txt	/*gri*
 grn	lsp.txt	/*grn*
-groff.vim	syntax.txt	/*groff.vim*
 gross-national-happiness	credits.txt	/*gross-national-happiness*
 group-name	syntax.txt	/*group-name*
 grr	lsp.txt	/*grr*
 grt	lsp.txt	/*grt*
 gs	various.txt	/*gs*
-gsp.vim	syntax.txt	/*gsp.vim*
 gstar	pattern.txt	/*gstar*
 gt	tabpage.txt	/*gt*
 gu	change.txt	/*gu*
@@ -6609,7 +6564,6 @@ has-patch	vimfn.txt	/*has-patch*
 has-python	if_pyth.txt	/*has-python*
 has-pythonx	if_pyth.txt	/*has-pythonx*
 has_key()	vimfn.txt	/*has_key()*
-haskell.vim	syntax.txt	/*haskell.vim*
 haslocaldir()	vimfn.txt	/*haslocaldir()*
 hasmapto()	vimfn.txt	/*hasmapto()*
 health	health.txt	/*health*
@@ -6815,6 +6769,7 @@ hl-NvimTernaryColon	vimeval.txt	/*hl-NvimTernaryColon*
 hl-NvimUnaryMinus	vimeval.txt	/*hl-NvimUnaryMinus*
 hl-NvimUnaryOperator	vimeval.txt	/*hl-NvimUnaryOperator*
 hl-NvimUnaryPlus	vimeval.txt	/*hl-NvimUnaryPlus*
+hl-OkMsg	syntax.txt	/*hl-OkMsg*
 hl-Pmenu	syntax.txt	/*hl-Pmenu*
 hl-PmenuExtra	syntax.txt	/*hl-PmenuExtra*
 hl-PmenuExtraSel	syntax.txt	/*hl-PmenuExtraSel*
@@ -6876,8 +6831,6 @@ html-flavor	insert.txt	/*html-flavor*
 html-folding	syntax.txt	/*html-folding*
 html-indent	indent.txt	/*html-indent*
 html-indenting	indent.txt	/*html-indenting*
-html.vim	syntax.txt	/*html.vim*
-htmlos.vim	syntax.txt	/*htmlos.vim*
 i	insert.txt	/*i*
 i'	motion.txt	/*i'*
 i(	motion.txt	/*i(*
@@ -7004,7 +6957,6 @@ i_backspacing	insert.txt	/*i_backspacing*
 i_digraph	digraph.txt	/*i_digraph*
 i_esc	intro.txt	/*i_esc*
 i`	motion.txt	/*i`*
-ia64.vim	syntax.txt	/*ia64.vim*
 ib	motion.txt	/*ib*
 iccf	uganda.txt	/*iccf*
 iccf-donations	uganda.txt	/*iccf-donations*
@@ -7012,7 +6964,6 @@ iconv()	vimfn.txt	/*iconv()*
 id()	vimfn.txt	/*id()*
 ident-search	tips.txt	/*ident-search*
 idl-syntax	syntax.txt	/*idl-syntax*
-idl.vim	syntax.txt	/*idl.vim*
 if_lua	vim_diff.txt	/*if_lua*
 if_mzscheme	vim_diff.txt	/*if_mzscheme*
 if_perl	if_perl.txt	/*if_perl*
@@ -7037,7 +6988,6 @@ index	index.txt	/*index*
 index()	vimfn.txt	/*index()*
 index.txt	index.txt	/*index.txt*
 indexof()	vimfn.txt	/*indexof()*
-inform.vim	syntax.txt	/*inform.vim*
 informix	ft_sql.txt	/*informix*
 init.lua	starting.txt	/*init.lua*
 init.vim	starting.txt	/*init.vim*
@@ -7114,7 +7064,6 @@ jargon	intro.txt	/*jargon*
 java-cinoptions	indent.txt	/*java-cinoptions*
 java-indenting	indent.txt	/*java-indenting*
 java-package-info-url	syntax.txt	/*java-package-info-url*
-java.vim	syntax.txt	/*java.vim*
 javascript-cinoptions	indent.txt	/*javascript-cinoptions*
 javascript-indenting	indent.txt	/*javascript-indenting*
 job	job_control.txt	/*job*
@@ -7132,11 +7081,9 @@ jobstart-options	vimfn.txt	/*jobstart-options*
 jobstop()	vimfn.txt	/*jobstop()*
 jobwait()	vimfn.txt	/*jobwait()*
 join()	vimfn.txt	/*join()*
-jq.vim	syntax.txt	/*jq.vim*
 jq_quote_highlight	syntax.txt	/*jq_quote_highlight*
 js_decode()	vim_diff.txt	/*js_decode()*
 js_encode()	vim_diff.txt	/*js_encode()*
-json.vim	syntax.txt	/*json.vim*
 json_decode()	vimfn.txt	/*json_decode()*
 json_encode()	vimfn.txt	/*json_encode()*
 jump-motions	motion.txt	/*jump-motions*
@@ -7183,7 +7130,6 @@ l	motion.txt	/*l*
 l:	vimeval.txt	/*l:*
 l:var	vimeval.txt	/*l:var*
 lCursor	mbyte.txt	/*lCursor*
-lace.vim	syntax.txt	/*lace.vim*
 lambda	vimeval.txt	/*lambda*
 lang-variable	vvars.txt	/*lang-variable*
 language-mapping	map.txt	/*language-mapping*
@@ -7207,14 +7153,10 @@ lcs-trail	options.txt	/*lcs-trail*
 left-right-motions	motion.txt	/*left-right-motions*
 len()	vimfn.txt	/*len()*
 less	various.txt	/*less*
-lex.vim	syntax.txt	/*lex.vim*
-lf.vim	syntax.txt	/*lf.vim*
-lhaskell.vim	syntax.txt	/*lhaskell.vim*
 libcall()	vimfn.txt	/*libcall()*
 libcallnr()	vimfn.txt	/*libcallnr()*
 license	uganda.txt	/*license*
 lid	quickfix.txt	/*lid*
-lifelines.vim	syntax.txt	/*lifelines.vim*
 limits	vi_diff.txt	/*limits*
 line()	vimfn.txt	/*line()*
 line-continuation	repeat.txt	/*line-continuation*
@@ -7224,7 +7166,6 @@ linefeed	intro.txt	/*linefeed*
 linewise	motion.txt	/*linewise*
 linewise-register	change.txt	/*linewise-register*
 linewise-visual	visual.txt	/*linewise-visual*
-lisp.vim	syntax.txt	/*lisp.vim*
 lispindent()	vimfn.txt	/*lispindent()*
 list	vimeval.txt	/*list*
 list-concatenation	vimeval.txt	/*list-concatenation*
@@ -7236,7 +7177,6 @@ list-modification	vimeval.txt	/*list-modification*
 list-repeat	windows.txt	/*list-repeat*
 list2blob()	vimfn.txt	/*list2blob()*
 list2str()	vimfn.txt	/*list2str()*
-lite.vim	syntax.txt	/*lite.vim*
 literal-Dict	vimeval.txt	/*literal-Dict*
 literal-string	vimeval.txt	/*literal-string*
 lnum-variable	vvars.txt	/*lnum-variable*
@@ -7262,7 +7202,6 @@ log10()	vimfn.txt	/*log10()*
 log_levels	lua.txt	/*log_levels*
 love	credits.txt	/*love*
 lowercase	change.txt	/*lowercase*
-lpc.vim	syntax.txt	/*lpc.vim*
 lsp	lsp.txt	/*lsp*
 lsp-api	lsp.txt	/*lsp-api*
 lsp-attach	lsp.txt	/*lsp-attach*
@@ -7273,6 +7212,7 @@ lsp-codelens	lsp.txt	/*lsp-codelens*
 lsp-completion	lsp.txt	/*lsp-completion*
 lsp-config	lsp.txt	/*lsp-config*
 lsp-config-merge	lsp.txt	/*lsp-config-merge*
+lsp-copilot	lsp.txt	/*lsp-copilot*
 lsp-core	lsp.txt	/*lsp-core*
 lsp-defaults	lsp.txt	/*lsp-defaults*
 lsp-defaults-disable	lsp.txt	/*lsp-defaults-disable*
@@ -7430,6 +7370,19 @@ lua-options	lua.txt	/*lua-options*
 lua-or	luaref.txt	/*lua-or*
 lua-pattern	luaref.txt	/*lua-pattern*
 lua-patternitem	luaref.txt	/*lua-patternitem*
+lua-plugin	lua-plugin.txt	/*lua-plugin*
+lua-plugin-config	lua-plugin.txt	/*lua-plugin-config*
+lua-plugin-defer-require	lua-plugin.txt	/*lua-plugin-defer-require*
+lua-plugin-doc	lua-plugin.txt	/*lua-plugin-doc*
+lua-plugin-filetype	lua-plugin.txt	/*lua-plugin-filetype*
+lua-plugin-init	lua-plugin.txt	/*lua-plugin-init*
+lua-plugin-keymaps	lua-plugin.txt	/*lua-plugin-keymaps*
+lua-plugin-lazy	lua-plugin.txt	/*lua-plugin-lazy*
+lua-plugin-new	lua-plugin.txt	/*lua-plugin-new*
+lua-plugin-troubleshooting	lua-plugin.txt	/*lua-plugin-troubleshooting*
+lua-plugin-type-safety	lua-plugin.txt	/*lua-plugin-type-safety*
+lua-plugin-versioning	lua-plugin.txt	/*lua-plugin-versioning*
+lua-plugin.txt	lua-plugin.txt	/*lua-plugin.txt*
 lua-precedence	luaref.txt	/*lua-precedence*
 lua-profile	lua.txt	/*lua-profile*
 lua-pseudoindex	luaref.txt	/*lua-pseudoindex*
@@ -7482,7 +7435,6 @@ lua-visibility	luaref.txt	/*lua-visibility*
 lua-weaktable	luaref.txt	/*lua-weaktable*
 lua-while	luaref.txt	/*lua-while*
 lua.txt	lua.txt	/*lua.txt*
-lua.vim	syntax.txt	/*lua.vim*
 luaL_Buffer	luaref.txt	/*luaL_Buffer*
 luaL_Reg	luaref.txt	/*luaL_Reg*
 luaL_addchar()	luaref.txt	/*luaL_addchar()*
@@ -7679,8 +7631,6 @@ m[	motion.txt	/*m[*
 m]	motion.txt	/*m]*
 m`	motion.txt	/*m`*
 macro	repeat.txt	/*macro*
-mail.vim	syntax.txt	/*mail.vim*
-make.vim	syntax.txt	/*make.vim*
 man.lua	filetype.txt	/*man.lua*
 manual-copyright	usr_01.txt	/*manual-copyright*
 map()	vimfn.txt	/*map()*
@@ -7718,7 +7668,6 @@ map_space_in_lhs	map.txt	/*map_space_in_lhs*
 map_space_in_rhs	map.txt	/*map_space_in_rhs*
 maparg()	vimfn.txt	/*maparg()*
 mapcheck()	vimfn.txt	/*mapcheck()*
-maple.vim	syntax.txt	/*maple.vim*
 mapleader	map.txt	/*mapleader*
 maplist()	vimfn.txt	/*maplist()*
 maplocalleader	map.txt	/*maplocalleader*
@@ -7742,7 +7691,6 @@ mark	motion.txt	/*mark*
 mark-functions	usr_41.txt	/*mark-functions*
 mark-motions	motion.txt	/*mark-motions*
 mark-view	motion.txt	/*mark-view*
-masm.vim	syntax.txt	/*masm.vim*
 match()	vimfn.txt	/*match()*
 match-highlight	pattern.txt	/*match-highlight*
 match-parens	tips.txt	/*match-parens*
@@ -7794,7 +7742,6 @@ matlab-indent	indent.txt	/*matlab-indent*
 matlab-indenting	indent.txt	/*matlab-indenting*
 max()	vimfn.txt	/*max()*
 maxcol-variable	vvars.txt	/*maxcol-variable*
-mbsync.vim	syntax.txt	/*mbsync.vim*
 mbyte-combining	mbyte.txt	/*mbyte-combining*
 mbyte-composing	mbyte.txt	/*mbyte-composing*
 mbyte-conversion	mbyte.txt	/*mbyte-conversion*
@@ -7824,7 +7771,6 @@ method	vimeval.txt	/*method*
 min()	vimfn.txt	/*min()*
 mkdir()	vimfn.txt	/*mkdir()*
 mlang.txt	mlang.txt	/*mlang.txt*
-mma.vim	syntax.txt	/*mma.vim*
 mode()	vimfn.txt	/*mode()*
 mode-Ex	intro.txt	/*mode-Ex*
 mode-cmdline	cmdline.txt	/*mode-cmdline*
@@ -7834,7 +7780,6 @@ mode-switching	intro.txt	/*mode-switching*
 modeline	options.txt	/*modeline*
 modeline-local	options.txt	/*modeline-local*
 modeline-version	options.txt	/*modeline-version*
-modula2.vim	syntax.txt	/*modula2.vim*
 modula2_iso_allow_lowline	syntax.txt	/*modula2_iso_allow_lowline*
 modula2_iso_disallow_octals	syntax.txt	/*modula2_iso_disallow_octals*
 modula2_iso_disallow_synonyms	syntax.txt	/*modula2_iso_disallow_synonyms*
@@ -7843,7 +7788,6 @@ modula2_pim_disallow_octals	syntax.txt	/*modula2_pim_disallow_octals*
 modula2_pim_disallow_synonyms	syntax.txt	/*modula2_pim_disallow_synonyms*
 modula2_r10_allow_lowline	syntax.txt	/*modula2_r10_allow_lowline*
 module()	luaref.txt	/*module()*
-moo.vim	syntax.txt	/*moo.vim*
 more-prompt	message.txt	/*more-prompt*
 more-variables	vimeval.txt	/*more-variables*
 motion-count-multiplied	motion.txt	/*motion-count-multiplied*
@@ -7883,7 +7827,6 @@ msgpack_types-variable	vvars.txt	/*msgpack_types-variable*
 msgpackdump()	vimfn.txt	/*msgpackdump()*
 msgpackparse()	vimfn.txt	/*msgpackparse()*
 msgsep	vim_diff.txt	/*msgsep*
-msql.vim	syntax.txt	/*msql.vim*
 multi-byte	mbyte.txt	/*multi-byte*
 multi-lang	mlang.txt	/*multi-lang*
 multi-repeat	repeat.txt	/*multi-repeat*
@@ -7899,12 +7842,8 @@ mysyntaxfile	syntax.txt	/*mysyntaxfile*
 mysyntaxfile-add	syntax.txt	/*mysyntaxfile-add*
 mysyntaxfile-replace	syntax.txt	/*mysyntaxfile-replace*
 n	pattern.txt	/*n*
-n1ql.vim	syntax.txt	/*n1ql.vim*
 namespace	api.txt	/*namespace*
-nasm.vim	syntax.txt	/*nasm.vim*
 navigation	motion.txt	/*navigation*
-ncf.vim	syntax.txt	/*ncf.vim*
-neomutt.vim	syntax.txt	/*neomutt.vim*
 neovim	nvim.txt	/*neovim*
 new-filetype	filetype.txt	/*new-filetype*
 new-filetype-scripts	filetype.txt	/*new-filetype-scripts*
@@ -7937,7 +7876,6 @@ normal-index	index.txt	/*normal-index*
 not-edited	editing.txt	/*not-edited*
 notation	intro.txt	/*notation*
 nr2char()	vimfn.txt	/*nr2char()*
-nroff.vim	syntax.txt	/*nroff.vim*
 null-variable	vvars.txt	/*null-variable*
 number_relativenumber	options.txt	/*number_relativenumber*
 numbered-function	vimeval.txt	/*numbered-function*
@@ -8118,7 +8056,7 @@ nvim_ui_pum_set_height()	api.txt	/*nvim_ui_pum_set_height()*
 nvim_ui_send()	api.txt	/*nvim_ui_send()*
 nvim_ui_set_focus()	api.txt	/*nvim_ui_set_focus()*
 nvim_ui_set_option()	api.txt	/*nvim_ui_set_option()*
-nvim_ui_term_event()	api.txt	/*nvim_ui_term_event()*
+nvim_ui_term_event	api.txt	/*nvim_ui_term_event*
 nvim_ui_try_resize()	api.txt	/*nvim_ui_try_resize()*
 nvim_ui_try_resize_grid()	api.txt	/*nvim_ui_try_resize_grid()*
 nvim_win_call()	api.txt	/*nvim_win_call()*
@@ -8155,7 +8093,6 @@ o_v	motion.txt	/*o_v*
 object-motions	motion.txt	/*object-motions*
 object-select	motion.txt	/*object-select*
 objects	index.txt	/*objects*
-ocaml.vim	syntax.txt	/*ocaml.vim*
 octal	vimeval.txt	/*octal*
 octal-nrformats	options.txt	/*octal-nrformats*
 octal-number	vimeval.txt	/*octal-number*
@@ -8227,10 +8164,8 @@ page_down	intro.txt	/*page_down*
 page_up	intro.txt	/*page_up*
 pager	message.txt	/*pager*
 pairs()	luaref.txt	/*pairs()*
-papp.vim	syntax.txt	/*papp.vim*
 paragraph	motion.txt	/*paragraph*
 partial	vimfn.txt	/*partial*
-pascal.vim	syntax.txt	/*pascal.vim*
 paste	provider.txt	/*paste*
 pathshorten()	vimfn.txt	/*pathshorten()*
 pattern	pattern.txt	/*pattern*
@@ -8270,15 +8205,11 @@ perl-globals	if_perl.txt	/*perl-globals*
 perl-patterns	pattern.txt	/*perl-patterns*
 perl-vim	if_perl.txt	/*perl-vim*
 perl-window	if_perl.txt	/*perl-window*
-perl.vim	syntax.txt	/*perl.vim*
 perleval()	vimfn.txt	/*perleval()*
 persistent-undo	undo.txt	/*persistent-undo*
 php-comment	indent.txt	/*php-comment*
 php-indent	indent.txt	/*php-indent*
 php-indenting	indent.txt	/*php-indenting*
-php.vim	syntax.txt	/*php.vim*
-php3.vim	syntax.txt	/*php3.vim*
-phtml.vim	syntax.txt	/*phtml.vim*
 pi_gzip.txt	pi_gzip.txt	/*pi_gzip.txt*
 pi_msgpack.txt	pi_msgpack.txt	/*pi_msgpack.txt*
 pi_paren.txt	pi_paren.txt	/*pi_paren.txt*
@@ -8286,7 +8217,6 @@ pi_spec.txt	pi_spec.txt	/*pi_spec.txt*
 pi_tar.txt	pi_tar.txt	/*pi_tar.txt*
 pi_tutor.txt	pi_tutor.txt	/*pi_tutor.txt*
 pi_zip.txt	pi_zip.txt	/*pi_zip.txt*
-plaintex.vim	syntax.txt	/*plaintex.vim*
 plsql	ft_sql.txt	/*plsql*
 plugin	usr_05.txt	/*plugin*
 plugin-details	filetype.txt	/*plugin-details*
@@ -8299,9 +8229,7 @@ popupmenu-completion	insert.txt	/*popupmenu-completion*
 popupmenu-keys	insert.txt	/*popupmenu-keys*
 portable-config	nvim.txt	/*portable-config*
 postgresql	ft_sql.txt	/*postgresql*
-postscr.vim	syntax.txt	/*postscr.vim*
 pow()	vimfn.txt	/*pow()*
-ppwiz.vim	syntax.txt	/*ppwiz.vim*
 press-enter	message.txt	/*press-enter*
 press-return	message.txt	/*press-return*
 prevcount-variable	vvars.txt	/*prevcount-variable*
@@ -8332,7 +8260,6 @@ profiling-variable	vvars.txt	/*profiling-variable*
 progname-variable	vvars.txt	/*progname-variable*
 progpath-variable	vvars.txt	/*progpath-variable*
 progress-message	message.txt	/*progress-message*
-progress.vim	syntax.txt	/*progress.vim*
 project-config	options.txt	/*project-config*
 prompt-buffer	channel.txt	/*prompt-buffer*
 prompt_getinput()	vimfn.txt	/*prompt_getinput()*
@@ -8357,7 +8284,6 @@ ps1-folding	ft_ps1.txt	/*ps1-folding*
 ps1-keyword	ft_ps1.txt	/*ps1-keyword*
 ps1-syntax	ft_ps1.txt	/*ps1-syntax*
 psql	ft_sql.txt	/*psql*
-ptcap.vim	syntax.txt	/*ptcap.vim*
 pum_getpos()	vimfn.txt	/*pum_getpos()*
 pumvisible()	vimfn.txt	/*pumvisible()*
 put	change.txt	/*put*
@@ -8399,7 +8325,6 @@ python-virtualenv	provider.txt	/*python-virtualenv*
 python-vvars	if_pyth.txt	/*python-vvars*
 python-window	if_pyth.txt	/*python-window*
 python-windows	if_pyth.txt	/*python-windows*
-python.vim	syntax.txt	/*python.vim*
 python3	if_pyth.txt	/*python3*
 python3-directory	if_pyth.txt	/*python3-directory*
 python_x	if_pyth.txt	/*python_x*
@@ -8413,7 +8338,6 @@ q/	cmdline.txt	/*q\/*
 q:	cmdline.txt	/*q:*
 q?	cmdline.txt	/*q?*
 qf.vim	filetype.txt	/*qf.vim*
-quake.vim	syntax.txt	/*quake.vim*
 quickfix	quickfix.txt	/*quickfix*
 quickfix-ID	quickfix.txt	/*quickfix-ID*
 quickfix-buffer	quickfix.txt	/*quickfix-buffer*
@@ -8471,11 +8395,9 @@ quoteplus	provider.txt	/*quoteplus*
 quotequote	change.txt	/*quotequote*
 quotestar	provider.txt	/*quotestar*
 r	change.txt	/*r*
-r.vim	syntax.txt	/*r.vim*
 raku-unicode	ft_raku.txt	/*raku-unicode*
 rand()	vimfn.txt	/*rand()*
 range()	vimfn.txt	/*range()*
-rasi.vim	syntax.txt	/*rasi.vim*
 rawequal()	luaref.txt	/*rawequal()*
 rawget()	luaref.txt	/*rawget()*
 rawset()	luaref.txt	/*rawset()*
@@ -8484,7 +8406,6 @@ read-only-share	editing.txt	/*read-only-share*
 readblob()	vimfn.txt	/*readblob()*
 readdir()	vimfn.txt	/*readdir()*
 readfile()	vimfn.txt	/*readfile()*
-readline.vim	syntax.txt	/*readline.vim*
 recording	repeat.txt	/*recording*
 recover.txt	recover.txt	/*recover.txt*
 recovery	recover.txt	/*recovery*
@@ -8504,7 +8425,6 @@ regexp	pattern.txt	/*regexp*
 register-functions	usr_41.txt	/*register-functions*
 register-variable	vvars.txt	/*register-variable*
 registers	change.txt	/*registers*
-rego.vim	syntax.txt	/*rego.vim*
 regular-expression	pattern.txt	/*regular-expression*
 relnum-variable	vvars.txt	/*relnum-variable*
 reload	editing.txt	/*reload*
@@ -8537,11 +8457,9 @@ restore-position	tips.txt	/*restore-position*
 retab-example	change.txt	/*retab-example*
 rethrow	vimeval.txt	/*rethrow*
 reverse()	vimfn.txt	/*reverse()*
-rexx.vim	syntax.txt	/*rexx.vim*
 right-justify	change.txt	/*right-justify*
 rileft	rileft.txt	/*rileft*
 rileft.txt	rileft.txt	/*rileft.txt*
-rmd.vim	syntax.txt	/*rmd.vim*
 rot13	change.txt	/*rot13*
 round()	vimfn.txt	/*round()*
 rpc	api.txt	/*rpc*
@@ -8550,8 +8468,6 @@ rpcnotify()	vimfn.txt	/*rpcnotify()*
 rpcrequest()	vimfn.txt	/*rpcrequest()*
 rpcstart()	deprecated.txt	/*rpcstart()*
 rpcstop()	deprecated.txt	/*rpcstop()*
-rrst.vim	syntax.txt	/*rrst.vim*
-rst.vim	syntax.txt	/*rst.vim*
 ruby	if_ruby.txt	/*ruby*
 ruby-buffer	if_ruby.txt	/*ruby-buffer*
 ruby-command	if_ruby.txt	/*ruby-command*
@@ -8563,7 +8479,6 @@ ruby-rubyeval	if_ruby.txt	/*ruby-rubyeval*
 ruby-set_option	if_ruby.txt	/*ruby-set_option*
 ruby-vim	if_ruby.txt	/*ruby-vim*
 ruby-window	if_ruby.txt	/*ruby-window*
-ruby.vim	syntax.txt	/*ruby.vim*
 ruby_fold	syntax.txt	/*ruby_fold*
 ruby_foldable_groups	syntax.txt	/*ruby_foldable_groups*
 ruby_minlines	syntax.txt	/*ruby_minlines*
@@ -8613,7 +8528,6 @@ sandbox	vimeval.txt	/*sandbox*
 sandbox-option	vimeval.txt	/*sandbox-option*
 save-file	editing.txt	/*save-file*
 save-settings	starting.txt	/*save-settings*
-scheme.vim	syntax.txt	/*scheme.vim*
 scratch-buffer	windows.txt	/*scratch-buffer*
 screenattr()	vimfn.txt	/*screenattr()*
 screenchar()	vimfn.txt	/*screenchar()*
@@ -8640,7 +8554,6 @@ scrollbind-quickadj	scroll.txt	/*scrollbind-quickadj*
 scrollbind-relative	scroll.txt	/*scrollbind-relative*
 scrolling	scroll.txt	/*scrolling*
 scrollstart-variable	vvars.txt	/*scrollstart-variable*
-sdl.vim	syntax.txt	/*sdl.vim*
 search()	vimfn.txt	/*search()*
 search()-sub-match	vimfn.txt	/*search()-sub-match*
 search-commands	pattern.txt	/*search-commands*
@@ -8655,7 +8568,6 @@ searchpair()	vimfn.txt	/*searchpair()*
 searchpairpos()	vimfn.txt	/*searchpairpos()*
 searchpos()	vimfn.txt	/*searchpos()*
 section	motion.txt	/*section*
-sed.vim	syntax.txt	/*sed.vim*
 select()	luaref.txt	/*select()*
 self	vimeval.txt	/*self*
 sentence	motion.txt	/*sentence*
@@ -8696,10 +8608,8 @@ setting-tabline	tabpage.txt	/*setting-tabline*
 setuid	change.txt	/*setuid*
 setup-vimrc_example	usr_01.txt	/*setup-vimrc_example*
 setwinvar()	vimfn.txt	/*setwinvar()*
-sgml.vim	syntax.txt	/*sgml.vim*
 sh-awk	syntax.txt	/*sh-awk*
 sh-embed	syntax.txt	/*sh-embed*
-sh.vim	syntax.txt	/*sh.vim*
 sha256()	vimfn.txt	/*sha256()*
 shada	starting.txt	/*shada*
 shada-!	options.txt	/*shada-!*
@@ -8909,7 +8819,6 @@ split()	vimfn.txt	/*split()*
 splitfind	windows.txt	/*splitfind*
 splitview	windows.txt	/*splitview*
 sponsor	intro.txt	/*sponsor*
-spup.vim	syntax.txt	/*spup.vim*
 sql-adding-dialects	ft_sql.txt	/*sql-adding-dialects*
 sql-completion	ft_sql.txt	/*sql-completion*
 sql-completion-columns	ft_sql.txt	/*sql-completion-columns*
@@ -8930,16 +8839,12 @@ sql-object-motions	ft_sql.txt	/*sql-object-motions*
 sql-predefined-objects	ft_sql.txt	/*sql-predefined-objects*
 sql-type-default	ft_sql.txt	/*sql-type-default*
 sql-types	ft_sql.txt	/*sql-types*
-sql.vim	syntax.txt	/*sql.vim*
 sqlanywhere	ft_sql.txt	/*sqlanywhere*
-sqlanywhere.vim	syntax.txt	/*sqlanywhere.vim*
 sqlgettype	ft_sql.txt	/*sqlgettype*
-sqlinformix.vim	syntax.txt	/*sqlinformix.vim*
 sqlj	ft_sql.txt	/*sqlj*
 sqlserver	ft_sql.txt	/*sqlserver*
 sqlsettype	ft_sql.txt	/*sqlsettype*
 sqrt()	vimfn.txt	/*sqrt()*
-squirrel.vim	syntax.txt	/*squirrel.vim*
 srand()	vimfn.txt	/*srand()*
 sscanf	vimeval.txt	/*sscanf*
 stacktrace-variable	vvars.txt	/*stacktrace-variable*
@@ -9145,7 +9050,6 @@ tar-options	pi_tar.txt	/*tar-options*
 tar-usage	pi_tar.txt	/*tar-usage*
 tcp-server	lua.txt	/*tcp-server*
 tcsh-style	cmdline.txt	/*tcsh-style*
-tcsh.vim	syntax.txt	/*tcsh.vim*
 telnet-CTRL-]	tagsrch.txt	/*telnet-CTRL-]*
 tempdir	change.txt	/*tempdir*
 tempfile	change.txt	/*tempfile*
@@ -9219,12 +9123,10 @@ tex-style	syntax.txt	/*tex-style*
 tex-supersub	syntax.txt	/*tex-supersub*
 tex-sync	syntax.txt	/*tex-sync*
 tex-verb	syntax.txt	/*tex-verb*
-tex.vim	syntax.txt	/*tex.vim*
 text-functions	usr_41.txt	/*text-functions*
 text-objects	motion.txt	/*text-objects*
 textlock	vimeval.txt	/*textlock*
 textprop	vim_diff.txt	/*textprop*
-tf.vim	syntax.txt	/*tf.vim*
 third-party-guis	gui.txt	/*third-party-guis*
 this_session-variable	vvars.txt	/*this_session-variable*
 throw-catch	vimeval.txt	/*throw-catch*
@@ -9318,8 +9220,6 @@ tutor	usr_01.txt	/*tutor*
 two-engines	pattern.txt	/*two-engines*
 type()	vimfn.txt	/*type()*
 type-mistakes	tips.txt	/*type-mistakes*
-typescript.vim	syntax.txt	/*typescript.vim*
-typescriptreact.vim	syntax.txt	/*typescriptreact.vim*
 u	undo.txt	/*u*
 ubuntu	intro.txt	/*ubuntu*
 uganda	uganda.txt	/*uganda*
@@ -9923,7 +9823,6 @@ various-cmds	various.txt	/*various-cmds*
 various-functions	usr_41.txt	/*various-functions*
 various-motions	motion.txt	/*various-motions*
 various.txt	various.txt	/*various.txt*
-vb.vim	syntax.txt	/*vb.vim*
 verbose	starting.txt	/*verbose*
 version-range	lua.txt	/*version-range*
 version-variable	vvars.txt	/*version-variable*
@@ -10216,6 +10115,7 @@ vim.lsp.handlers.signature_help()	deprecated.txt	/*vim.lsp.handlers.signature_he
 vim.lsp.inlay_hint.enable()	lsp.txt	/*vim.lsp.inlay_hint.enable()*
 vim.lsp.inlay_hint.get()	lsp.txt	/*vim.lsp.inlay_hint.get()*
 vim.lsp.inlay_hint.is_enabled()	lsp.txt	/*vim.lsp.inlay_hint.is_enabled()*
+vim.lsp.inline_completion.Item	lsp.txt	/*vim.lsp.inline_completion.Item*
 vim.lsp.inline_completion.enable()	lsp.txt	/*vim.lsp.inline_completion.enable()*
 vim.lsp.inline_completion.get()	lsp.txt	/*vim.lsp.inline_completion.get()*
 vim.lsp.inline_completion.is_enabled()	lsp.txt	/*vim.lsp.inline_completion.is_enabled()*
@@ -10458,7 +10358,6 @@ vim.version.le()	lua.txt	/*vim.version.le()*
 vim.version.lt()	lua.txt	/*vim.version.lt()*
 vim.version.parse()	lua.txt	/*vim.version.parse()*
 vim.version.range()	lua.txt	/*vim.version.range()*
-vim.vim	syntax.txt	/*vim.vim*
 vim.w	lua.txt	/*vim.w*
 vim.wait()	lua.txt	/*vim.wait()*
 vim.wo	lua.txt	/*vim.wo*
@@ -10510,7 +10409,6 @@ wait()	vimfn.txt	/*wait()*
 warningmsg-variable	vvars.txt	/*warningmsg-variable*
 watch-file	lua.txt	/*watch-file*
 wdl-syntax	syntax.txt	/*wdl-syntax*
-wdl.vim	syntax.txt	/*wdl.vim*
 white-space	pattern.txt	/*white-space*
 whitespace	pattern.txt	/*whitespace*
 wildcard	editing.txt	/*wildcard*
@@ -10585,13 +10483,10 @@ x	change.txt	/*x*
 x11-selection	provider.txt	/*x11-selection*
 xattr	editing.txt	/*xattr*
 xdg	starting.txt	/*xdg*
-xf86conf.vim	syntax.txt	/*xf86conf.vim*
 xml-folding	syntax.txt	/*xml-folding*
 xml-omni-datafile	insert.txt	/*xml-omni-datafile*
-xml.vim	syntax.txt	/*xml.vim*
 xor()	vimfn.txt	/*xor()*
 xpcall()	luaref.txt	/*xpcall()*
-xpm.vim	syntax.txt	/*xpm.vim*
 xterm-8-bit	vim_diff.txt	/*xterm-8-bit*
 xterm-8bit	vim_diff.txt	/*xterm-8bit*
 xterm-color	syntax.txt	/*xterm-color*
@@ -10599,7 +10494,6 @@ xterm-resize	tui.txt	/*xterm-resize*
 xterm-scroll-region	tui.txt	/*xterm-scroll-region*
 xterm-true-color	tui.txt	/*xterm-true-color*
 y	change.txt	/*y*
-yaml.vim	syntax.txt	/*yaml.vim*
 yank	change.txt	/*yank*
 yankring	change.txt	/*yankring*
 your-runtime-dir	usr_43.txt	/*your-runtime-dir*
@@ -10655,7 +10549,6 @@ zo	fold.txt	/*zo*
 zp	change.txt	/*zp*
 zr	fold.txt	/*zr*
 zs	scroll.txt	/*zs*
-zsh.vim	syntax.txt	/*zsh.vim*
 zt	scroll.txt	/*zt*
 zuG	spell.txt	/*zuG*
 zuW	spell.txt	/*zuW*
