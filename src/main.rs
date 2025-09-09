@@ -10,6 +10,8 @@ use std::path::Path;
 
 use serde_json::Value as Json;
 
+use std::io::Read;
+
 const DEFAULT_HOMESERVER: &str = "https://matrix.org";
 
 #[derive(serde::Deserialize)]
@@ -263,7 +265,17 @@ impl MatrixClient {
             req = req.query("since", next_batch);
         }
 
-        let response: String = req.call()?.into_string()?;
+        // NOTE(smolck): We use into_reader.take here because since
+        // https://github.com/algesten/ureq/commit/3044ae7efd2f8494cba0679fe0d6f5d4a048b9bc
+        // ureq has had an "into string limit" of 1 MB and matrix can have more than that,
+        // we still limit it but we make it 10 MB instead of 1.
+        let mut buf: Vec<u8> = vec![];
+        req.call()?
+            .into_reader()
+            .take((10 * 1_024 * 1_024 * 10) + 1 as u64)
+            .read_to_end(&mut buf)
+            .expect("sync_once: Failure reading response into buffer");
+        let response = String::from_utf8_lossy(&buf);
         let response_json = serde_json::from_str::<Json>(&response).unwrap();
 
         self.handle_sync_response(&response_json);
