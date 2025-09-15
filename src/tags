@@ -1625,7 +1625,7 @@ $quote	vimeval.txt	/*$quote*
 :Source	terminal.txt	/*:Source*
 :Step	terminal.txt	/*:Step*
 :Stop	terminal.txt	/*:Stop*
-:TOhtml	lua.txt	/*:TOhtml*
+:TOhtml	plugins.txt	/*:TOhtml*
 :TarDiff	pi_tar.txt	/*:TarDiff*
 :Tbreak	terminal.txt	/*:Tbreak*
 :Termdebug	terminal.txt	/*:Termdebug*
@@ -1905,6 +1905,7 @@ $quote	vimeval.txt	/*$quote*
 :debug-name	repeat.txt	/*:debug-name*
 :debugg	repeat.txt	/*:debugg*
 :debuggreedy	repeat.txt	/*:debuggreedy*
+:defe	userfunc.txt	/*:defe*
 :defer	userfunc.txt	/*:defer*
 :del	change.txt	/*:del*
 :delc	map.txt	/*:delc*
@@ -4936,7 +4937,7 @@ b:changelog_name	filetype.txt	/*b:changelog_name*
 b:clojure_syntax_keywords	syntax.txt	/*b:clojure_syntax_keywords*
 b:clojure_syntax_without_core_keywords	syntax.txt	/*b:clojure_syntax_without_core_keywords*
 b:current_syntax-variable	syntax.txt	/*b:current_syntax-variable*
-b:editorconfig	editorconfig.txt	/*b:editorconfig*
+b:editorconfig	plugins.txt	/*b:editorconfig*
 b:lf_shell_syntax	syntax.txt	/*b:lf_shell_syntax*
 b:man_default_sects	filetype.txt	/*b:man_default_sects*
 b:rust_cargo_avoid_whole_workspace	ft_rust.txt	/*b:rust_cargo_avoid_whole_workspace*
@@ -5253,7 +5254,7 @@ cmdarg-variable	vvars.txt	/*cmdarg-variable*
 cmdbang-variable	vvars.txt	/*cmdbang-variable*
 cmdcomplete_info()	vimfn.txt	/*cmdcomplete_info()*
 cmdline	cmdline.txt	/*cmdline*
-cmdline-autocompletion	vimfn.txt	/*cmdline-autocompletion*
+cmdline-autocompletion	cmdline.txt	/*cmdline-autocompletion*
 cmdline-char	cmdline.txt	/*cmdline-char*
 cmdline-completion	cmdline.txt	/*cmdline-completion*
 cmdline-editing	cmdline.txt	/*cmdline-editing*
@@ -5545,6 +5546,7 @@ dev-tools	dev_tools.txt	/*dev-tools*
 dev-tools-backtrace	dev_tools.txt	/*dev-tools-backtrace*
 dev-tools-gdb	dev_tools.txt	/*dev-tools-gdb*
 dev-ui	develop.txt	/*dev-ui*
+dev-ui-multigrid	develop.txt	/*dev-ui-multigrid*
 dev-vimpatch	dev_vimpatch.txt	/*dev-vimpatch*
 dev-vimpatch-code-differences	dev_vimpatch.txt	/*dev-vimpatch-code-differences*
 dev-vimpatch-documentation	dev_vimpatch.txt	/*dev-vimpatch-documentation*
@@ -5649,20 +5651,19 @@ edit-no-break	usr_25.txt	/*edit-no-break*
 edit-paragraph-join	usr_25.txt	/*edit-paragraph-join*
 edit-window	windows.txt	/*edit-window*
 editing.txt	editing.txt	/*editing.txt*
-editorconfig	editorconfig.txt	/*editorconfig*
-editorconfig-custom-properties	editorconfig.txt	/*editorconfig-custom-properties*
-editorconfig-properties	editorconfig.txt	/*editorconfig-properties*
-editorconfig.charset	editorconfig.txt	/*editorconfig.charset*
-editorconfig.end_of_line	editorconfig.txt	/*editorconfig.end_of_line*
-editorconfig.indent_size	editorconfig.txt	/*editorconfig.indent_size*
-editorconfig.indent_style	editorconfig.txt	/*editorconfig.indent_style*
-editorconfig.insert_final_newline	editorconfig.txt	/*editorconfig.insert_final_newline*
-editorconfig.max_line_length	editorconfig.txt	/*editorconfig.max_line_length*
-editorconfig.root	editorconfig.txt	/*editorconfig.root*
-editorconfig.spelling_language	editorconfig.txt	/*editorconfig.spelling_language*
-editorconfig.tab_width	editorconfig.txt	/*editorconfig.tab_width*
-editorconfig.trim_trailing_whitespace	editorconfig.txt	/*editorconfig.trim_trailing_whitespace*
-editorconfig.txt	editorconfig.txt	/*editorconfig.txt*
+editorconfig	plugins.txt	/*editorconfig*
+editorconfig-custom-properties	plugins.txt	/*editorconfig-custom-properties*
+editorconfig-properties	plugins.txt	/*editorconfig-properties*
+editorconfig.charset	plugins.txt	/*editorconfig.charset*
+editorconfig.end_of_line	plugins.txt	/*editorconfig.end_of_line*
+editorconfig.indent_size	plugins.txt	/*editorconfig.indent_size*
+editorconfig.indent_style	plugins.txt	/*editorconfig.indent_style*
+editorconfig.insert_final_newline	plugins.txt	/*editorconfig.insert_final_newline*
+editorconfig.max_line_length	plugins.txt	/*editorconfig.max_line_length*
+editorconfig.root	plugins.txt	/*editorconfig.root*
+editorconfig.spelling_language	plugins.txt	/*editorconfig.spelling_language*
+editorconfig.tab_width	plugins.txt	/*editorconfig.tab_width*
+editorconfig.trim_trailing_whitespace	plugins.txt	/*editorconfig.trim_trailing_whitespace*
 efm-%>	quickfix.txt	/*efm-%>*
 efm-entries	quickfix.txt	/*efm-entries*
 efm-ignore	quickfix.txt	/*efm-ignore*
@@ -6187,6 +6188,7 @@ function-range-example	userfunc.txt	/*function-range-example*
 function-search-undo	userfunc.txt	/*function-search-undo*
 function_key	intro.txt	/*function_key*
 functions	vimeval.txt	/*functions*
+fuzzy-file-picker	cmdline.txt	/*fuzzy-file-picker*
 fuzzy-matching	pattern.txt	/*fuzzy-matching*
 fvwm2rc	syntax.txt	/*fvwm2rc*
 fvwmrc	syntax.txt	/*fvwmrc*
@@ -6247,7 +6249,7 @@ g:decada.Make()	ft_ada.txt	/*g:decada.Make()*
 g:decada.Make_Command	ft_ada.txt	/*g:decada.Make_Command*
 g:decada.Unit_Name()	ft_ada.txt	/*g:decada.Unit_Name()*
 g:did_load_filetypes	filetype.txt	/*g:did_load_filetypes*
-g:editorconfig	editorconfig.txt	/*g:editorconfig*
+g:editorconfig	plugins.txt	/*g:editorconfig*
 g:filetype_csh	syntax.txt	/*g:filetype_csh*
 g:filetype_haredoc	ft_hare.txt	/*g:filetype_haredoc*
 g:filetype_md	syntax.txt	/*g:filetype_md*
@@ -6780,6 +6782,7 @@ hl-PmenuMatchSel	syntax.txt	/*hl-PmenuMatchSel*
 hl-PmenuSbar	syntax.txt	/*hl-PmenuSbar*
 hl-PmenuSel	syntax.txt	/*hl-PmenuSel*
 hl-PmenuThumb	syntax.txt	/*hl-PmenuThumb*
+hl-PreInsert	syntax.txt	/*hl-PreInsert*
 hl-Question	syntax.txt	/*hl-Question*
 hl-QuickFixLine	syntax.txt	/*hl-QuickFixLine*
 hl-Scrollbar	syntax.txt	/*hl-Scrollbar*
@@ -7001,6 +7004,7 @@ inputrestore()	vimfn.txt	/*inputrestore()*
 inputsave()	vimfn.txt	/*inputsave()*
 inputsecret()	vimfn.txt	/*inputsecret()*
 ins-autocompletion	insert.txt	/*ins-autocompletion*
+ins-autocompletion-example	insert.txt	/*ins-autocompletion-example*
 ins-completion	insert.txt	/*ins-completion*
 ins-completion-menu	insert.txt	/*ins-completion-menu*
 ins-expandtab	insert.txt	/*ins-expandtab*
@@ -7179,6 +7183,7 @@ list2blob()	vimfn.txt	/*list2blob()*
 list2str()	vimfn.txt	/*list2str()*
 literal-Dict	vimeval.txt	/*literal-Dict*
 literal-string	vimeval.txt	/*literal-string*
+live-grep	cmdline.txt	/*live-grep*
 lnum-variable	vvars.txt	/*lnum-variable*
 load()	luaref.txt	/*load()*
 load-plugins	starting.txt	/*load-plugins*
@@ -8223,6 +8228,7 @@ plugin-details	filetype.txt	/*plugin-details*
 plugin-filetype	usr_41.txt	/*plugin-filetype*
 plugin-special	usr_41.txt	/*plugin-special*
 plugin_exec	filetype.txt	/*plugin_exec*
+plugins.txt	plugins.txt	/*plugins.txt*
 popup-menu	gui.txt	/*popup-menu*
 popup-window	vim_diff.txt	/*popup-window*
 popupmenu-completion	insert.txt	/*popupmenu-completion*
@@ -8850,7 +8856,7 @@ sscanf	vimeval.txt	/*sscanf*
 stacktrace-variable	vvars.txt	/*stacktrace-variable*
 standard-path	starting.txt	/*standard-path*
 standard-plugin	usr_05.txt	/*standard-plugin*
-standard-plugin-list	help.txt	/*standard-plugin-list*
+standard-plugin-list	plugins.txt	/*standard-plugin-list*
 standout	syntax.txt	/*standout*
 star	pattern.txt	/*star*
 starstar	editing.txt	/*starstar*
@@ -9147,7 +9153,8 @@ timestamps	editing.txt	/*timestamps*
 tips	tips.txt	/*tips*
 tips.txt	tips.txt	/*tips.txt*
 toggle	options.txt	/*toggle*
-tohtml.tohtml.tohtml()	lua.txt	/*tohtml.tohtml.tohtml()*
+tohtml	plugins.txt	/*tohtml*
+tohtml.tohtml()	plugins.txt	/*tohtml.tohtml()*
 tolower()	vimfn.txt	/*tolower()*
 tonumber()	luaref.txt	/*tonumber()*
 toolbar-icon	gui.txt	/*toolbar-icon*
@@ -10274,7 +10281,6 @@ vim.text.diff()	lua.txt	/*vim.text.diff()*
 vim.text.hexdecode()	lua.txt	/*vim.text.hexdecode()*
 vim.text.hexencode()	lua.txt	/*vim.text.hexencode()*
 vim.text.indent()	lua.txt	/*vim.text.indent()*
-vim.tohtml	lua.txt	/*vim.tohtml*
 vim.treesitter.Query	treesitter.txt	/*vim.treesitter.Query*
 vim.treesitter.add_directive()	deprecated.txt	/*vim.treesitter.add_directive()*
 vim.treesitter.add_predicate()	deprecated.txt	/*vim.treesitter.add_predicate()*
