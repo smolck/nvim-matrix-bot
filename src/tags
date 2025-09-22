@@ -1524,7 +1524,20 @@ $quote	vimeval.txt	/*$quote*
 :%	cmdline.txt	/*:%*
 :&	change.txt	/*:&*
 :&&	change.txt	/*:&&*
-:'	cmdline.txt	/*:'*
+:''	cmdline.txt	/*:''*
+:'(	cmdline.txt	/*:'(*
+:')	cmdline.txt	/*:')*
+:'.	cmdline.txt	/*:'.*
+:'<	cmdline.txt	/*:'<*
+:'>	cmdline.txt	/*:'>*
+:'X	cmdline.txt	/*:'X*
+:'[	cmdline.txt	/*:'[*
+:']	cmdline.txt	/*:']*
+:'^	cmdline.txt	/*:'^*
+:'quote	cmdline.txt	/*:'quote*
+:'x	cmdline.txt	/*:'x*
+:'{	cmdline.txt	/*:'{*
+:'}	cmdline.txt	/*:'}*
 :,	cmdline.txt	/*:,*
 :.	cmdline.txt	/*:.*
 :/	cmdline.txt	/*:\/*
@@ -4823,7 +4836,6 @@ aff-dic-format	spell.txt	/*aff-dic-format*
 after-directory	options.txt	/*after-directory*
 alternate-file	editing.txt	/*alternate-file*
 altfont	syntax.txt	/*altfont*
-an	lsp.txt	/*an*
 and()	vimfn.txt	/*and()*
 anonymous-function	vimeval.txt	/*anonymous-function*
 ansi-colorize	api.txt	/*ansi-colorize*
@@ -6055,6 +6067,7 @@ ft-lf-syntax	syntax.txt	/*ft-lf-syntax*
 ft-lifelines-syntax	syntax.txt	/*ft-lifelines-syntax*
 ft-lisp-syntax	syntax.txt	/*ft-lisp-syntax*
 ft-lite-syntax	syntax.txt	/*ft-lite-syntax*
+ft-log-syntax	syntax.txt	/*ft-log-syntax*
 ft-lpc-syntax	syntax.txt	/*ft-lpc-syntax*
 ft-lua-omni	insert.txt	/*ft-lua-omni*
 ft-lua-plugin	filetype.txt	/*ft-lua-plugin*
@@ -6978,7 +6991,6 @@ if_ruby.txt	if_ruby.txt	/*if_ruby.txt*
 if_tcl	vim_diff.txt	/*if_tcl*
 ignore-errors	vimeval.txt	/*ignore-errors*
 ignore-timestamp	editing.txt	/*ignore-timestamp*
-in	lsp.txt	/*in*
 inactive-buffer	windows.txt	/*inactive-buffer*
 include-search	tagsrch.txt	/*include-search*
 inclusive	motion.txt	/*inclusive*
@@ -8219,6 +8231,7 @@ pi_gzip.txt	pi_gzip.txt	/*pi_gzip.txt*
 pi_msgpack.txt	pi_msgpack.txt	/*pi_msgpack.txt*
 pi_paren.txt	pi_paren.txt	/*pi_paren.txt*
 pi_spec.txt	pi_spec.txt	/*pi_spec.txt*
+pi_swapmouse	gui.txt	/*pi_swapmouse*
 pi_tar.txt	pi_tar.txt	/*pi_tar.txt*
 pi_tutor.txt	pi_tutor.txt	/*pi_tutor.txt*
 pi_zip.txt	pi_zip.txt	/*pi_zip.txt*
@@ -9747,6 +9760,7 @@ v_a[	motion.txt	/*v_a[*
 v_a]	motion.txt	/*v_a]*
 v_a`	motion.txt	/*v_a`*
 v_ab	motion.txt	/*v_ab*
+v_an	lsp.txt	/*v_an*
 v_ap	motion.txt	/*v_ap*
 v_aquote	motion.txt	/*v_aquote*
 v_as	motion.txt	/*v_as*
@@ -9799,6 +9813,7 @@ v_i[	motion.txt	/*v_i[*
 v_i]	motion.txt	/*v_i]*
 v_i`	motion.txt	/*v_i`*
 v_ib	motion.txt	/*v_ib*
+v_in	lsp.txt	/*v_in*
 v_ip	motion.txt	/*v_ip*
 v_iquote	motion.txt	/*v_iquote*
 v_is	motion.txt	/*v_is*
