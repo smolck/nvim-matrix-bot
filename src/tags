@@ -10109,7 +10109,6 @@ vim.lsp.diagnostic.goto_prev()	deprecated.txt	/*vim.lsp.diagnostic.goto_prev()*
 vim.lsp.diagnostic.on_diagnostic()	lsp.txt	/*vim.lsp.diagnostic.on_diagnostic()*
 vim.lsp.diagnostic.on_publish_diagnostics()	lsp.txt	/*vim.lsp.diagnostic.on_publish_diagnostics()*
 vim.lsp.diagnostic.redraw()	deprecated.txt	/*vim.lsp.diagnostic.redraw()*
-vim.lsp.diagnostic.reset()	deprecated.txt	/*vim.lsp.diagnostic.reset()*
 vim.lsp.diagnostic.save()	deprecated.txt	/*vim.lsp.diagnostic.save()*
 vim.lsp.diagnostic.set_loclist()	deprecated.txt	/*vim.lsp.diagnostic.set_loclist()*
 vim.lsp.diagnostic.set_qflist()	deprecated.txt	/*vim.lsp.diagnostic.set_qflist()*
