@@ -8249,6 +8249,7 @@ popupmenu-keys	insert.txt	/*popupmenu-keys*
 portable-config	nvim.txt	/*portable-config*
 postgresql	ft_sql.txt	/*postgresql*
 pow()	vimfn.txt	/*pow()*
+preinserted()	vimfn.txt	/*preinserted()*
 press-enter	message.txt	/*press-enter*
 press-return	message.txt	/*press-return*
 prevcount-variable	vvars.txt	/*prevcount-variable*
@@ -10152,7 +10153,6 @@ vim.lsp.log_levels	lsp.txt	/*vim.lsp.log_levels*
 vim.lsp.omnifunc()	lsp.txt	/*vim.lsp.omnifunc()*
 vim.lsp.on_type_formatting.enable()	lsp.txt	/*vim.lsp.on_type_formatting.enable()*
 vim.lsp.protocol	lsp.txt	/*vim.lsp.protocol*
-vim.lsp.protocol.Methods	lsp.txt	/*vim.lsp.protocol.Methods*
 vim.lsp.protocol.make_client_capabilities()	lsp.txt	/*vim.lsp.protocol.make_client_capabilities()*
 vim.lsp.protocol.resolve_capabilities()	lsp.txt	/*vim.lsp.protocol.resolve_capabilities()*
 vim.lsp.rpc.PublicClient	lsp.txt	/*vim.lsp.rpc.PublicClient*
@@ -10230,6 +10230,7 @@ vim.opt_global	lua.txt	/*vim.opt_global*
 vim.opt_local	lua.txt	/*vim.opt_local*
 vim.pack	pack.txt	/*vim.pack*
 vim.pack-directory	pack.txt	/*vim.pack-directory*
+vim.pack-lockfile	pack.txt	/*vim.pack-lockfile*
 vim.pack.Spec	pack.txt	/*vim.pack.Spec*
 vim.pack.add()	pack.txt	/*vim.pack.add()*
 vim.pack.del()	pack.txt	/*vim.pack.del()*
