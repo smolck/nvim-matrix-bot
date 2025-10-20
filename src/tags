@@ -737,6 +737,7 @@ $quote	vimeval.txt	/*$quote*
 'prompt'	vim_diff.txt	/*'prompt'*
 'pt'	vim_diff.txt	/*'pt'*
 'pumblend'	options.txt	/*'pumblend'*
+'pumborder'	options.txt	/*'pumborder'*
 'pumheight'	options.txt	/*'pumheight'*
 'pummaxwidth'	options.txt	/*'pummaxwidth'*
 'pumwidth'	options.txt	/*'pumwidth'*
@@ -1601,6 +1602,7 @@ $quote	vimeval.txt	/*$quote*
 :Ctest	ft_rust.txt	/*:Ctest*
 :Cupdate	ft_rust.txt	/*:Cupdate*
 :DiffOrig	diff.txt	/*:DiffOrig*
+:DiffTool	plugins.txt	/*:DiffTool*
 :DoMatchParen	pi_paren.txt	/*:DoMatchParen*
 :Down	terminal.txt	/*:Down*
 :EditQuery	treesitter.txt	/*:EditQuery*
@@ -1644,6 +1646,7 @@ $quote	vimeval.txt	/*$quote*
 :Termdebug	terminal.txt	/*:Termdebug*
 :TermdebugCommand	terminal.txt	/*:TermdebugCommand*
 :Tutor	pi_tutor.txt	/*:Tutor*
+:Undotree	plugins.txt	/*:Undotree*
 :Until	terminal.txt	/*:Until*
 :Up	terminal.txt	/*:Up*
 :UpdateRemotePlugins	remote_plugin.txt	/*:UpdateRemotePlugins*
@@ -1802,6 +1805,7 @@ $quote	vimeval.txt	/*$quote*
 :cex	quickfix.txt	/*:cex*
 :cexpr	quickfix.txt	/*:cexpr*
 :cf	quickfix.txt	/*:cf*
+:cfd	quickfix.txt	/*:cfd*
 :cfdo	quickfix.txt	/*:cfdo*
 :cfi	quickfix.txt	/*:cfi*
 :cfile	quickfix.txt	/*:cfile*
@@ -2189,6 +2193,7 @@ $quote	vimeval.txt	/*$quote*
 :lchdir	editing.txt	/*:lchdir*
 :lcl	quickfix.txt	/*:lcl*
 :lclose	quickfix.txt	/*:lclose*
+:ld	quickfix.txt	/*:ld*
 :ldo	quickfix.txt	/*:ldo*
 :le	change.txt	/*:le*
 :left	change.txt	/*:left*
@@ -2214,6 +2219,7 @@ $quote	vimeval.txt	/*$quote*
 :lex	quickfix.txt	/*:lex*
 :lexpr	quickfix.txt	/*:lexpr*
 :lf	quickfix.txt	/*:lf*
+:lfd	quickfix.txt	/*:lfd*
 :lfdo	quickfix.txt	/*:lfdo*
 :lfi	quickfix.txt	/*:lfi*
 :lfile	quickfix.txt	/*:lfile*
@@ -2554,6 +2560,7 @@ $quote	vimeval.txt	/*$quote*
 :rubydo	if_ruby.txt	/*:rubydo*
 :rubyf	if_ruby.txt	/*:rubyf*
 :rubyfile	if_ruby.txt	/*:rubyfile*
+:rund	undo.txt	/*:rund*
 :rundo	undo.txt	/*:rundo*
 :runtime	repeat.txt	/*:runtime*
 :rv	deprecated.txt	/*:rv*
@@ -2840,6 +2847,7 @@ $quote	vimeval.txt	/*$quote*
 :syntax-off	syntax.txt	/*:syntax-off*
 :syntax-on	syntax.txt	/*:syntax-on*
 :syntax-reset	syntax.txt	/*:syntax-reset*
+:synti	syntax.txt	/*:synti*
 :syntime	syntax.txt	/*:syntime*
 :t	change.txt	/*:t*
 :tN	tagsrch.txt	/*:tN*
@@ -3020,6 +3028,7 @@ $quote	vimeval.txt	/*$quote*
 :write_f	editing.txt	/*:write_f*
 :wsh	starting.txt	/*:wsh*
 :wshada	starting.txt	/*:wshada*
+:wu	undo.txt	/*:wu*
 :wundo	undo.txt	/*:wundo*
 :wv	deprecated.txt	/*:wv*
 :wviminfo	deprecated.txt	/*:wviminfo*
@@ -5467,6 +5476,7 @@ cursor_right	intro.txt	/*cursor_right*
 cursor_up	intro.txt	/*cursor_up*
 cw	change.txt	/*cw*
 d	change.txt	/*d*
+d-special	change.txt	/*d-special*
 daB	motion.txt	/*daB*
 daW	motion.txt	/*daW*
 dab	motion.txt	/*dab*
@@ -5616,6 +5626,8 @@ diff.vim	syntax.txt	/*diff.vim*
 diff_filler()	vimfn.txt	/*diff_filler()*
 diff_hlID()	vimfn.txt	/*diff_hlID()*
 diff_translations	diff.txt	/*diff_translations*
+difftool	plugins.txt	/*difftool*
+difftool.open()	plugins.txt	/*difftool.open()*
 digraph	digraph.txt	/*digraph*
 digraph-arg	change.txt	/*digraph-arg*
 digraph-encoding	digraph.txt	/*digraph-encoding*
@@ -6689,8 +6701,10 @@ hl-DiffTextAdd	syntax.txt	/*hl-DiffTextAdd*
 hl-Directory	syntax.txt	/*hl-Directory*
 hl-EndOfBuffer	syntax.txt	/*hl-EndOfBuffer*
 hl-ErrorMsg	syntax.txt	/*hl-ErrorMsg*
+hl-FLoatShadowThrough	syntax.txt	/*hl-FLoatShadowThrough*
 hl-FloatBorder	syntax.txt	/*hl-FloatBorder*
 hl-FloatFooter	syntax.txt	/*hl-FloatFooter*
+hl-FloatShadow	syntax.txt	/*hl-FloatShadow*
 hl-FloatTitle	syntax.txt	/*hl-FloatTitle*
 hl-FoldColumn	syntax.txt	/*hl-FoldColumn*
 hl-Folded	syntax.txt	/*hl-Folded*
@@ -6786,6 +6800,7 @@ hl-NvimUnaryOperator	vimeval.txt	/*hl-NvimUnaryOperator*
 hl-NvimUnaryPlus	vimeval.txt	/*hl-NvimUnaryPlus*
 hl-OkMsg	syntax.txt	/*hl-OkMsg*
 hl-Pmenu	syntax.txt	/*hl-Pmenu*
+hl-PmenuBorder	syntax.txt	/*hl-PmenuBorder*
 hl-PmenuExtra	syntax.txt	/*hl-PmenuExtra*
 hl-PmenuExtraSel	syntax.txt	/*hl-PmenuExtraSel*
 hl-PmenuKind	syntax.txt	/*hl-PmenuKind*
@@ -6794,6 +6809,8 @@ hl-PmenuMatch	syntax.txt	/*hl-PmenuMatch*
 hl-PmenuMatchSel	syntax.txt	/*hl-PmenuMatchSel*
 hl-PmenuSbar	syntax.txt	/*hl-PmenuSbar*
 hl-PmenuSel	syntax.txt	/*hl-PmenuSel*
+hl-PmenuShadow	syntax.txt	/*hl-PmenuShadow*
+hl-PmenuShadowThrough	syntax.txt	/*hl-PmenuShadowThrough*
 hl-PmenuThumb	syntax.txt	/*hl-PmenuThumb*
 hl-PreInsert	syntax.txt	/*hl-PreInsert*
 hl-Question	syntax.txt	/*hl-Question*
@@ -9288,7 +9305,9 @@ undo.txt	undo.txt	/*undo.txt*
 undo_ftplugin	usr_41.txt	/*undo_ftplugin*
 undo_indent	usr_41.txt	/*undo_indent*
 undofile()	vimfn.txt	/*undofile()*
+undotree	plugins.txt	/*undotree*
 undotree()	vimfn.txt	/*undotree()*
+undotree.open()	plugins.txt	/*undotree.open()*
 unicode	mbyte.txt	/*unicode*
 uninstall	intro.txt	/*uninstall*
 uniq()	vimfn.txt	/*uniq()*
