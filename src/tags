@@ -3213,7 +3213,7 @@ ALT	intro.txt	/*ALT*
 API	api.txt	/*API*
 ATTENTION	usr_11.txt	/*ATTENTION*
 Abbreviations	map.txt	/*Abbreviations*
-Arabic	arabic.txt	/*Arabic*
+Arabic	l10n-arabic.txt	/*Arabic*
 B	motion.txt	/*B*
 Blob	vimeval.txt	/*Blob*
 Blobs	vimeval.txt	/*Blobs*
@@ -4344,6 +4344,7 @@ K	various.txt	/*K*
 K-lsp-default	various.txt	/*K-lsp-default*
 Kibaale	uganda.txt	/*Kibaale*
 Korean	mbyte.txt	/*Korean*
+Kuwasha	uganda.txt	/*Kuwasha*
 L	motion.txt	/*L*
 LSP	lsp.txt	/*LSP*
 LanguageTree	treesitter.txt	/*LanguageTree*
@@ -4489,7 +4490,7 @@ Ringbuf:peek()	lua.txt	/*Ringbuf:peek()*
 Ringbuf:pop()	lua.txt	/*Ringbuf:pop()*
 Ringbuf:push()	lua.txt	/*Ringbuf:push()*
 Ruby	if_ruby.txt	/*Ruby*
-Russian	russian.txt	/*Russian*
+Russian	l10n-russian.txt	/*Russian*
 S	change.txt	/*S*
 SHELL	starting.txt	/*SHELL*
 SHIFT-+	scroll.txt	/*SHIFT-+*
@@ -4622,7 +4623,7 @@ W13	message.txt	/*W13*
 W14	message.txt	/*W14*
 W15	repeat.txt	/*W15*
 W16	message.txt	/*W16*
-W17	arabic.txt	/*W17*
+W17	l10n-arabic.txt	/*W17*
 W19	autocmd.txt	/*W19*
 W22	userfunc.txt	/*W22*
 W325	recover.txt	/*W325*
@@ -4885,9 +4886,8 @@ api_info()	vimfn.txt	/*api_info()*
 append()	vimfn.txt	/*append()*
 appendbufline()	vimfn.txt	/*appendbufline()*
 aquote	motion.txt	/*aquote*
-arabic.txt	arabic.txt	/*arabic.txt*
-arabicfonts	arabic.txt	/*arabicfonts*
-arabickeymap	arabic.txt	/*arabickeymap*
+arabicfonts	l10n-arabic.txt	/*arabicfonts*
+arabickeymap	l10n-arabic.txt	/*arabickeymap*
 arg-functions	usr_41.txt	/*arg-functions*
 argc()	vimfn.txt	/*argc()*
 argidx()	vimfn.txt	/*argidx()*
@@ -5322,6 +5322,7 @@ compiler-ruff	quickfix.txt	/*compiler-ruff*
 compiler-select	quickfix.txt	/*compiler-select*
 compiler-spotbugs	quickfix.txt	/*compiler-spotbugs*
 compiler-tex	quickfix.txt	/*compiler-tex*
+compiler-tombi	quickfix.txt	/*compiler-tombi*
 compiler-tsc	quickfix.txt	/*compiler-tsc*
 compiler-typst	quickfix.txt	/*compiler-typst*
 compiler-vaxada	ft_ada.txt	/*compiler-vaxada*
@@ -6349,7 +6350,6 @@ g:rustfmt_command	ft_rust.txt	/*g:rustfmt_command*
 g:rustfmt_detect_version	ft_rust.txt	/*g:rustfmt_detect_version*
 g:rustfmt_emit_files	ft_rust.txt	/*g:rustfmt_emit_files*
 g:rustfmt_fail_silently	ft_rust.txt	/*g:rustfmt_fail_silently*
-g:rustfmt_find_toml	ft_rust.txt	/*g:rustfmt_find_toml*
 g:rustfmt_options	ft_rust.txt	/*g:rustfmt_options*
 g:shada#add_own_header	filetype.txt	/*g:shada#add_own_header*
 g:shada#keep_old_header	filetype.txt	/*g:shada#keep_old_header*
@@ -6608,8 +6608,7 @@ health-commands	health.txt	/*health-commands*
 health-dev	health.txt	/*health-dev*
 health-usage	health.txt	/*health-usage*
 health.txt	health.txt	/*health.txt*
-hebrew	hebrew.txt	/*hebrew*
-hebrew.txt	hebrew.txt	/*hebrew.txt*
+hebrew	l10n-hebrew.txt	/*hebrew*
 help	helphelp.txt	/*help*
 help-buffer-options	helphelp.txt	/*help-buffer-options*
 help-codeblock	helphelp.txt	/*help-codeblock*
@@ -6997,7 +6996,6 @@ i_esc	intro.txt	/*i_esc*
 i`	motion.txt	/*i`*
 ib	motion.txt	/*ib*
 iccf	uganda.txt	/*iccf*
-iccf-donations	uganda.txt	/*iccf-donations*
 iconv()	vimfn.txt	/*iconv()*
 id()	vimfn.txt	/*id()*
 ident-search	tips.txt	/*ident-search*
@@ -7165,6 +7163,10 @@ keytrans()	vimfn.txt	/*keytrans()*
 kickstart	nvim.txt	/*kickstart*
 kwargs	lua.txt	/*kwargs*
 l	motion.txt	/*l*
+l10n-arabic.txt	l10n-arabic.txt	/*l10n-arabic.txt*
+l10n-hebrew.txt	l10n-hebrew.txt	/*l10n-hebrew.txt*
+l10n-russian.txt	l10n-russian.txt	/*l10n-russian.txt*
+l10n-vietnamese.txt	l10n-vietnamese.txt	/*l10n-vietnamese.txt*
 l:	vimeval.txt	/*l:*
 l:var	vimeval.txt	/*l:var*
 lCursor	mbyte.txt	/*lCursor*
@@ -8265,6 +8267,7 @@ plugin-details	filetype.txt	/*plugin-details*
 plugin-filetype	usr_41.txt	/*plugin-filetype*
 plugin-special	usr_41.txt	/*plugin-special*
 plugin_exec	filetype.txt	/*plugin_exec*
+plugins	plugins.txt	/*plugins*
 plugins.txt	plugins.txt	/*plugins.txt*
 popup-menu	gui.txt	/*popup-menu*
 popup-window	vim_diff.txt	/*popup-window*
@@ -8400,6 +8403,7 @@ quickfix-perl	quickfix.txt	/*quickfix-perl*
 quickfix-size	quickfix.txt	/*quickfix-size*
 quickfix-stack	quickfix.txt	/*quickfix-stack*
 quickfix-title	quickfix.txt	/*quickfix-title*
+quickfix-toml	quickfix.txt	/*quickfix-toml*
 quickfix-valid	quickfix.txt	/*quickfix-valid*
 quickfix-window	quickfix.txt	/*quickfix-window*
 quickfix-window-ID	quickfix.txt	/*quickfix-window-ID*
@@ -8532,12 +8536,11 @@ ruby_space_errors	syntax.txt	/*ruby_space_errors*
 ruby_spellcheck_strings	syntax.txt	/*ruby_spellcheck_strings*
 rubyeval()	vimfn.txt	/*rubyeval()*
 runtime-search-path	pack.txt	/*runtime-search-path*
-russian	russian.txt	/*russian*
-russian-intro	russian.txt	/*russian-intro*
-russian-issues	russian.txt	/*russian-issues*
-russian-keymap	russian.txt	/*russian-keymap*
-russian-l18n	russian.txt	/*russian-l18n*
-russian.txt	russian.txt	/*russian.txt*
+russian	l10n-russian.txt	/*russian*
+russian-intro	l10n-russian.txt	/*russian-intro*
+russian-issues	l10n-russian.txt	/*russian-issues*
+russian-keymap	l10n-russian.txt	/*russian-keymap*
+russian-l18n	l10n-russian.txt	/*russian-l18n*
 rust	ft_rust.txt	/*rust*
 rust-auto-pairs	ft_rust.txt	/*rust-auto-pairs*
 rust-commands	ft_rust.txt	/*rust-commands*
@@ -9734,6 +9737,7 @@ v:var	vimeval.txt	/*v:var*
 v:version	vvars.txt	/*v:version*
 v:versionlong	vvars.txt	/*v:versionlong*
 v:vim_did_enter	vvars.txt	/*v:vim_did_enter*
+v:vim_did_init	vvars.txt	/*v:vim_did_init*
 v:virtnum	vvars.txt	/*v:virtnum*
 v:warningmsg	vvars.txt	/*v:warningmsg*
 v:windowid	vvars.txt	/*v:windowid*
@@ -9880,14 +9884,13 @@ vi-differences	vi_diff.txt	/*vi-differences*
 vi:	options.txt	/*vi:*
 vi_diff.txt	vi_diff.txt	/*vi_diff.txt*
 vib	motion.txt	/*vib*
-vietnamese-ime_diff	vietnamese.txt	/*vietnamese-ime_diff*
-vietnamese-intro	vietnamese.txt	/*vietnamese-intro*
-vietnamese-keymap	vietnamese.txt	/*vietnamese-keymap*
-vietnamese-l10n	vietnamese.txt	/*vietnamese-l10n*
-vietnamese-telex_utf-8	vietnamese.txt	/*vietnamese-telex_utf-8*
-vietnamese-viqr_utf-8	vietnamese.txt	/*vietnamese-viqr_utf-8*
-vietnamese-vni_utf-8	vietnamese.txt	/*vietnamese-vni_utf-8*
-vietnamese.txt	vietnamese.txt	/*vietnamese.txt*
+vietnamese-ime_diff	l10n-vietnamese.txt	/*vietnamese-ime_diff*
+vietnamese-intro	l10n-vietnamese.txt	/*vietnamese-intro*
+vietnamese-keymap	l10n-vietnamese.txt	/*vietnamese-keymap*
+vietnamese-l10n	l10n-vietnamese.txt	/*vietnamese-l10n*
+vietnamese-telex_utf-8	l10n-vietnamese.txt	/*vietnamese-telex_utf-8*
+vietnamese-viqr_utf-8	l10n-vietnamese.txt	/*vietnamese-viqr_utf-8*
+vietnamese-vni_utf-8	l10n-vietnamese.txt	/*vietnamese-vni_utf-8*
 view-diffs	diff.txt	/*view-diffs*
 view-file	starting.txt	/*view-file*
 views-sessions	starting.txt	/*views-sessions*
@@ -10409,6 +10412,7 @@ vim.wait()	lua.txt	/*vim.wait()*
 vim.wo	lua.txt	/*vim.wo*
 vim:	options.txt	/*vim:*
 vim_did_enter-variable	vvars.txt	/*vim_did_enter-variable*
+vim_did_init-variable	vvars.txt	/*vim_did_init-variable*
 vim_diff.txt	vim_diff.txt	/*vim_diff.txt*
 vim_starting	vimfn.txt	/*vim_starting*
 vimball	vim_diff.txt	/*vimball*
