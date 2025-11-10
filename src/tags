@@ -4478,6 +4478,7 @@ R	change.txt	/*R*
 RPC	api.txt	/*RPC*
 Range:has()	lua.txt	/*Range:has()*
 Range:intersect()	lua.txt	/*Range:intersect()*
+Range:is_empty()	lua.txt	/*Range:is_empty()*
 Range:lsp()	lua.txt	/*Range:lsp()*
 Range:to_lsp()	lua.txt	/*Range:to_lsp()*
 RecordingEnter	autocmd.txt	/*RecordingEnter*
@@ -7937,6 +7938,7 @@ nvim-missing	vim_diff.txt	/*nvim-missing*
 nvim-quickstart	nvim.txt	/*nvim-quickstart*
 nvim-removed	vim_diff.txt	/*nvim-removed*
 nvim-upstreamed	vim_diff.txt	/*nvim-upstreamed*
+nvim.spellfile.Opts	plugins.txt	/*nvim.spellfile.Opts*
 nvim.txt	nvim.txt	/*nvim.txt*
 nvim_...()	vimfn.txt	/*nvim_...()*
 nvim__complete_set()	api.txt	/*nvim__complete_set()*
@@ -8860,7 +8862,10 @@ spell-yiddish	spell.txt	/*spell-yiddish*
 spell.txt	spell.txt	/*spell.txt*
 spellbadword()	vimfn.txt	/*spellbadword()*
 spellfile-cleanup	spell.txt	/*spellfile-cleanup*
-spellfile.vim	spell.txt	/*spellfile.vim*
+spellfile.config()	plugins.txt	/*spellfile.config()*
+spellfile.get()	plugins.txt	/*spellfile.get()*
+spellfile.lua	plugins.txt	/*spellfile.lua*
+spellfile.vim	vim_diff.txt	/*spellfile.vim*
 spellsuggest()	vimfn.txt	/*spellsuggest()*
 split()	vimfn.txt	/*split()*
 splitfind	windows.txt	/*splitfind*
