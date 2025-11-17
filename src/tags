@@ -131,7 +131,7 @@ $quote	vimeval.txt	/*$quote*
 'cfu'	options.txt	/*'cfu'*
 'ch'	options.txt	/*'ch'*
 'channel'	options.txt	/*'channel'*
-'character'	intro.txt	/*'character'*
+'character'	helphelp.txt	/*'character'*
 'charconvert'	options.txt	/*'charconvert'*
 'chi'	options.txt	/*'chi'*
 'chistory'	options.txt	/*'chistory'*
@@ -707,7 +707,7 @@ $quote	vimeval.txt	/*$quote*
 'opendevice'	vim_diff.txt	/*'opendevice'*
 'operatorfunc'	options.txt	/*'operatorfunc'*
 'opfunc'	options.txt	/*'opfunc'*
-'option'	intro.txt	/*'option'*
+'option'	helphelp.txt	/*'option'*
 'pa'	options.txt	/*'pa'*
 'packpath'	options.txt	/*'packpath'*
 'para'	options.txt	/*'para'*
@@ -3159,7 +3159,7 @@ $quote	vimeval.txt	/*$quote*
 <cWORD>	cmdline.txt	/*<cWORD>*
 <cexpr>	cmdline.txt	/*<cexpr>*
 <cfile>	cmdline.txt	/*<cfile>*
-<character>	intro.txt	/*<character>*
+<character>	helphelp.txt	/*<character>*
 <count>	map.txt	/*<count>*
 <cword>	cmdline.txt	/*<cword>*
 <f-args>	map.txt	/*<f-args>*
@@ -3360,7 +3360,7 @@ CTRL-\_CTRL-G	intro.txt	/*CTRL-\\_CTRL-G*
 CTRL-\_CTRL-N	intro.txt	/*CTRL-\\_CTRL-N*
 CTRL-]	tagsrch.txt	/*CTRL-]*
 CTRL-^	editing.txt	/*CTRL-^*
-CTRL-{char}	intro.txt	/*CTRL-{char}*
+CTRL-{char}	helphelp.txt	/*CTRL-{char}*
 ChanInfo	autocmd.txt	/*ChanInfo*
 ChanOpen	autocmd.txt	/*ChanOpen*
 Chinese	mbyte.txt	/*Chinese*
@@ -4700,7 +4700,7 @@ ZZ	editing.txt	/*ZZ*
 [a	editing.txt	/*[a*
 [b	windows.txt	/*[b*
 [c	diff.txt	/*[c*
-[count]	intro.txt	/*[count]*
+[count]	helphelp.txt	/*[count]*
 [d	tagsrch.txt	/*[d*
 [d-default	tagsrch.txt	/*[d-default*
 [f	deprecated.txt	/*[f*
@@ -4710,7 +4710,7 @@ ZZ	editing.txt	/*ZZ*
 [p	change.txt	/*[p*
 [pattern]	pattern.txt	/*[pattern]*
 [q	quickfix.txt	/*[q*
-[quotex]	intro.txt	/*[quotex]*
+[quotex]	helphelp.txt	/*[quotex]*
 [r	spell.txt	/*[r*
 [range]	cmdline.txt	/*[range]*
 [s	spell.txt	/*[s*
@@ -5302,6 +5302,7 @@ command-line-functions	usr_41.txt	/*command-line-functions*
 command-line-window	cmdline.txt	/*command-line-window*
 command-mode	intro.txt	/*command-mode*
 commenting	various.txt	/*commenting*
+compiler-biome	quickfix.txt	/*compiler-biome*
 compiler-compaqada	ft_ada.txt	/*compiler-compaqada*
 compiler-cppcheck	quickfix.txt	/*compiler-cppcheck*
 compiler-decada	ft_ada.txt	/*compiler-decada*
@@ -5386,7 +5387,7 @@ coroutine.wrap()	luaref.txt	/*coroutine.wrap()*
 coroutine.yield()	luaref.txt	/*coroutine.yield()*
 cos()	vimfn.txt	/*cos()*
 cosh()	vimfn.txt	/*cosh()*
-count	intro.txt	/*count*
+count	helphelp.txt	/*count*
 count()	vimfn.txt	/*count()*
 count-bytes	tips.txt	/*count-bytes*
 count-items	tips.txt	/*count-items*
@@ -5585,15 +5586,15 @@ dev-vimpatch-pull-requests	dev_vimpatch.txt	/*dev-vimpatch-pull-requests*
 dev-vimpatch-quickstart	dev_vimpatch.txt	/*dev-vimpatch-quickstart*
 dev-vimpatch-version.c	dev_vimpatch.txt	/*dev-vimpatch-version.c*
 dev-write-test	dev_test.txt	/*dev-write-test*
+dev.txt	dev.txt	/*dev.txt*
 dev_arch.txt	dev_arch.txt	/*dev_arch.txt*
 dev_style.txt	dev_style.txt	/*dev_style.txt*
-dev_test	dev_test.txt	/*dev_test*
+dev_test.txt	dev_test.txt	/*dev_test.txt*
 dev_theme.txt	dev_theme.txt	/*dev_theme.txt*
 dev_tools.txt	dev_tools.txt	/*dev_tools.txt*
 dev_vimpatch.txt	dev_vimpatch.txt	/*dev_vimpatch.txt*
 develop-spell	spell.txt	/*develop-spell*
 develop-spell-suggestions	spell.txt	/*develop-spell-suggestions*
-develop.txt	dev.txt	/*develop.txt*
 development	dev.txt	/*development*
 dgn	motion.txt	/*dgn*
 dh	change.txt	/*dh*
@@ -5661,7 +5662,6 @@ distribution	intro.txt	/*distribution*
 diw	motion.txt	/*diw*
 dl	change.txt	/*dl*
 do	diff.txt	/*do*
-doc-file-list	help.txt	/*doc-file-list*
 docbook	syntax.txt	/*docbook*
 dofile()	luaref.txt	/*dofile()*
 donate	uganda.txt	/*donate*
@@ -6613,7 +6613,7 @@ hebrew	l10n-hebrew.txt	/*hebrew*
 help	helphelp.txt	/*help*
 help-buffer-options	helphelp.txt	/*help-buffer-options*
 help-codeblock	helphelp.txt	/*help-codeblock*
-help-context	help.txt	/*help-context*
+help-context	helphelp.txt	/*help-context*
 help-curwin	tips.txt	/*help-curwin*
 help-notation	helphelp.txt	/*help-notation*
 help-summary	usr_02.txt	/*help-summary*
@@ -7458,6 +7458,7 @@ lua-treesitter	treesitter.txt	/*lua-treesitter*
 lua-treesitter-core	treesitter.txt	/*lua-treesitter-core*
 lua-treesitter-query	treesitter.txt	/*lua-treesitter-query*
 lua-true	luaref.txt	/*lua-true*
+lua-truthy	lua.txt	/*lua-truthy*
 lua-type()	luaref.txt	/*lua-type()*
 lua-types	luaref.txt	/*lua-types*
 lua-until	luaref.txt	/*lua-until*
@@ -7844,7 +7845,7 @@ mouse_col-variable	vvars.txt	/*mouse_col-variable*
 mouse_lnum-variable	vvars.txt	/*mouse_lnum-variable*
 mouse_win-variable	vvars.txt	/*mouse_win-variable*
 mouse_winid-variable	vvars.txt	/*mouse_winid-variable*
-movement	intro.txt	/*movement*
+movement	helphelp.txt	/*movement*
 msgpack#deepcopy()	pi_msgpack.txt	/*msgpack#deepcopy()*
 msgpack#equal	pi_msgpack.txt	/*msgpack#equal*
 msgpack#equal()	pi_msgpack.txt	/*msgpack#equal()*
@@ -7918,7 +7919,7 @@ non-zero-arg	vimeval.txt	/*non-zero-arg*
 normal-index	index.txt	/*normal-index*
 not	dev_arch.txt	/*not*
 not-edited	editing.txt	/*not-edited*
-notation	intro.txt	/*notation*
+notation	helphelp.txt	/*notation*
 nr2char()	vimfn.txt	/*nr2char()*
 null-variable	vvars.txt	/*null-variable*
 number_relativenumber	options.txt	/*number_relativenumber*
@@ -8389,6 +8390,7 @@ q?	cmdline.txt	/*q?*
 qf.vim	filetype.txt	/*qf.vim*
 quickfix	quickfix.txt	/*quickfix*
 quickfix-ID	quickfix.txt	/*quickfix-ID*
+quickfix-biome	quickfix.txt	/*quickfix-biome*
 quickfix-buffer	quickfix.txt	/*quickfix-buffer*
 quickfix-changedtick	quickfix.txt	/*quickfix-changedtick*
 quickfix-context	quickfix.txt	/*quickfix-context*
@@ -8440,7 +8442,7 @@ quote_alpha	change.txt	/*quote_alpha*
 quote_number	change.txt	/*quote_number*
 quote_quote	change.txt	/*quote_quote*
 quotea	change.txt	/*quotea*
-quotecommandquote	intro.txt	/*quotecommandquote*
+quotecommandquote	helphelp.txt	/*quotecommandquote*
 quoteplus	provider.txt	/*quoteplus*
 quotequote	change.txt	/*quotequote*
 quotestar	provider.txt	/*quotestar*
@@ -9320,8 +9322,8 @@ undo.txt	undo.txt	/*undo.txt*
 undo_ftplugin	usr_41.txt	/*undo_ftplugin*
 undo_indent	usr_41.txt	/*undo_indent*
 undofile()	vimfn.txt	/*undofile()*
-undotree	plugins.txt	/*undotree*
 undotree()	vimfn.txt	/*undotree()*
+undotree-plugin	plugins.txt	/*undotree-plugin*
 undotree.open()	plugins.txt	/*undotree.open()*
 unicode	mbyte.txt	/*unicode*
 uninstall	intro.txt	/*uninstall*
@@ -9992,6 +9994,7 @@ vim.fs.find()	lua.txt	/*vim.fs.find()*
 vim.fs.joinpath()	lua.txt	/*vim.fs.joinpath()*
 vim.fs.normalize()	lua.txt	/*vim.fs.normalize()*
 vim.fs.parents()	lua.txt	/*vim.fs.parents()*
+vim.fs.read()	lua.txt	/*vim.fs.read()*
 vim.fs.relpath()	lua.txt	/*vim.fs.relpath()*
 vim.fs.rm()	lua.txt	/*vim.fs.rm()*
 vim.fs.root()	lua.txt	/*vim.fs.root()*
@@ -10161,7 +10164,7 @@ vim.lsp.foldtext()	lsp.txt	/*vim.lsp.foldtext()*
 vim.lsp.for_each_buffer_client()	deprecated.txt	/*vim.lsp.for_each_buffer_client()*
 vim.lsp.formatexpr()	lsp.txt	/*vim.lsp.formatexpr()*
 vim.lsp.get_active_clients()	deprecated.txt	/*vim.lsp.get_active_clients()*
-vim.lsp.get_buffers_by_client_id()	lsp.txt	/*vim.lsp.get_buffers_by_client_id()*
+vim.lsp.get_buffers_by_client_id()	deprecated.txt	/*vim.lsp.get_buffers_by_client_id()*
 vim.lsp.get_client_by_id()	lsp.txt	/*vim.lsp.get_client_by_id()*
 vim.lsp.get_clients()	lsp.txt	/*vim.lsp.get_clients()*
 vim.lsp.get_log_path()	deprecated.txt	/*vim.lsp.get_log_path()*
@@ -10205,7 +10208,7 @@ vim.lsp.semantic_tokens.stop()	deprecated.txt	/*vim.lsp.semantic_tokens.stop()*
 vim.lsp.set_log_level()	deprecated.txt	/*vim.lsp.set_log_level()*
 vim.lsp.start()	lsp.txt	/*vim.lsp.start()*
 vim.lsp.status()	lsp.txt	/*vim.lsp.status()*
-vim.lsp.stop_client()	lsp.txt	/*vim.lsp.stop_client()*
+vim.lsp.stop_client()	deprecated.txt	/*vim.lsp.stop_client()*
 vim.lsp.tagfunc()	lsp.txt	/*vim.lsp.tagfunc()*
 vim.lsp.util.apply_text_document_edit()	lsp.txt	/*vim.lsp.util.apply_text_document_edit()*
 vim.lsp.util.apply_text_edits()	lsp.txt	/*vim.lsp.util.apply_text_edits()*
@@ -10615,17 +10618,17 @@ zx	fold.txt	/*zx*
 zy	change.txt	/*zy*
 zz	scroll.txt	/*zz*
 {	motion.txt	/*{*
-{Visual}	intro.txt	/*{Visual}*
+{Visual}	helphelp.txt	/*{Visual}*
 {address}	cmdline.txt	/*{address}*
 {arglist}	editing.txt	/*{arglist}*
 {aupat}	autocmd.txt	/*{aupat}*
 {bufname}	windows.txt	/*{bufname}*
-{char1-char2}	intro.txt	/*{char1-char2}*
+{char1-char2}	helphelp.txt	/*{char1-char2}*
 {event}	autocmd.txt	/*{event}*
 {file}	editing.txt	/*{file}*
 {group-name}	syntax.txt	/*{group-name}*
 {lhs}	map.txt	/*{lhs}*
-{motion}	intro.txt	/*{motion}*
+{motion}	helphelp.txt	/*{motion}*
 {move-around}	visual.txt	/*{move-around}*
 {msgpack-integer}	pi_msgpack.txt	/*{msgpack-integer}*
 {msgpack-special-int}	pi_msgpack.txt	/*{msgpack-special-int}*
@@ -10635,7 +10638,7 @@ zz	scroll.txt	/*zz*
 {rhs}	map.txt	/*{rhs}*
 {subject}	helphelp.txt	/*{subject}*
 {{{	fold.txt	/*{{{*
-{}	intro.txt	/*{}*
+{}	helphelp.txt	/*{}*
 }	motion.txt	/*}*
 }}}	fold.txt	/*}}}*
 ~	change.txt	/*~*
