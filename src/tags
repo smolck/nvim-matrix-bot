@@ -127,7 +127,6 @@ $quote	vimeval.txt	/*$quote*
 'cdpath'	options.txt	/*'cdpath'*
 'cedit'	options.txt	/*'cedit'*
 'cf'	options.txt	/*'cf'*
-'cfc'	options.txt	/*'cfc'*
 'cfu'	options.txt	/*'cfu'*
 'ch'	options.txt	/*'ch'*
 'channel'	options.txt	/*'channel'*
@@ -164,7 +163,6 @@ $quote	vimeval.txt	/*$quote*
 'compatible'	vim_diff.txt	/*'compatible'*
 'complete'	options.txt	/*'complete'*
 'completefunc'	options.txt	/*'completefunc'*
-'completefuzzycollect'	options.txt	/*'completefuzzycollect'*
 'completeitemalign'	options.txt	/*'completeitemalign'*
 'completeopt'	options.txt	/*'completeopt'*
 'completepopup'	vim_diff.txt	/*'completepopup'*
@@ -369,8 +367,6 @@ $quote	vimeval.txt	/*$quote*
 'infercase'	options.txt	/*'infercase'*
 'insertmode'	vim_diff.txt	/*'insertmode'*
 'is'	options.txt	/*'is'*
-'ise'	options.txt	/*'ise'*
-'isexpand'	options.txt	/*'isexpand'*
 'isf'	options.txt	/*'isf'*
 'isfname'	options.txt	/*'isfname'*
 'isi'	options.txt	/*'isi'*
@@ -5357,7 +5353,6 @@ complete_add()	vimfn.txt	/*complete_add()*
 complete_check()	vimfn.txt	/*complete_check()*
 complete_info()	vimfn.txt	/*complete_info()*
 complete_info_mode	vimfn.txt	/*complete_info_mode*
-complete_match()	vimfn.txt	/*complete_match()*
 completed_item-variable	vvars.txt	/*completed_item-variable*
 completion-functions	usr_41.txt	/*completion-functions*
 complex-change	change.txt	/*complex-change*
@@ -7943,6 +7938,7 @@ nvim.spellfile.Opts	plugins.txt	/*nvim.spellfile.Opts*
 nvim.txt	nvim.txt	/*nvim.txt*
 nvim_...()	vimfn.txt	/*nvim_...()*
 nvim__complete_set()	api.txt	/*nvim__complete_set()*
+nvim__exec_lua_fast()	api.txt	/*nvim__exec_lua_fast()*
 nvim__get_runtime()	api.txt	/*nvim__get_runtime()*
 nvim__id()	api.txt	/*nvim__id()*
 nvim__id_array()	api.txt	/*nvim__id_array()*
@@ -9944,6 +9940,7 @@ vim.diagnostic.Opts	diagnostic.txt	/*vim.diagnostic.Opts*
 vim.diagnostic.Opts.Float	diagnostic.txt	/*vim.diagnostic.Opts.Float*
 vim.diagnostic.Opts.Jump	diagnostic.txt	/*vim.diagnostic.Opts.Jump*
 vim.diagnostic.Opts.Signs	diagnostic.txt	/*vim.diagnostic.Opts.Signs*
+vim.diagnostic.Opts.Status	diagnostic.txt	/*vim.diagnostic.Opts.Status*
 vim.diagnostic.Opts.Underline	diagnostic.txt	/*vim.diagnostic.Opts.Underline*
 vim.diagnostic.Opts.VirtualLines	diagnostic.txt	/*vim.diagnostic.Opts.VirtualLines*
 vim.diagnostic.Opts.VirtualText	diagnostic.txt	/*vim.diagnostic.Opts.VirtualText*
