@@ -4376,6 +4376,7 @@ META	intro.txt	/*META*
 Mac-format	editing.txt	/*Mac-format*
 Mac-format-write	editing.txt	/*Mac-format-write*
 Mark	motion.txt	/*Mark*
+MarkSet	autocmd.txt	/*MarkSet*
 MenuPopup	autocmd.txt	/*MenuPopup*
 ModeChanged	autocmd.txt	/*ModeChanged*
 Moolenaar	intro.txt	/*Moolenaar*
