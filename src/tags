@@ -12,6 +12,7 @@ $NVIM_APPNAME	starting.txt	/*$NVIM_APPNAME*
 $NVIM_LISTEN_ADDRESS	deprecated.txt	/*$NVIM_LISTEN_ADDRESS*
 $NVIM_LOG_FILE	starting.txt	/*$NVIM_LOG_FILE*
 $NVIM_RPLUGIN_MANIFEST	remote_plugin.txt	/*$NVIM_RPLUGIN_MANIFEST*
+$NoDefaultCurrentDirectoryInExePath	vimfn.txt	/*$NoDefaultCurrentDirectoryInExePath*
 $TERM	tui.txt	/*$TERM*
 $VIM	starting.txt	/*$VIM*
 $VIMRUNTIME	starting.txt	/*$VIMRUNTIME*
@@ -4387,7 +4388,6 @@ N:	cmdline.txt	/*N:*
 N<Del>	various.txt	/*N<Del>*
 NFA	pattern.txt	/*NFA*
 NL-used-for-Nul	pattern.txt	/*NL-used-for-Nul*
-NoDefaultCurrentDirectoryInExePath	vimfn.txt	/*NoDefaultCurrentDirectoryInExePath*
 Normal	intro.txt	/*Normal*
 Normal-mode	intro.txt	/*Normal-mode*
 Number	vimeval.txt	/*Number*
@@ -8688,6 +8688,7 @@ shada-write	starting.txt	/*shada-write*
 shell-powershell	options.txt	/*shell-powershell*
 shell-prompt	terminal.txt	/*shell-prompt*
 shell-prompt-signs	terminal.txt	/*shell-prompt-signs*
+shell-pwsh	options.txt	/*shell-pwsh*
 shell-unquoting	options.txt	/*shell-unquoting*
 shell_error-variable	vvars.txt	/*shell_error-variable*
 shellescape()	vimfn.txt	/*shellescape()*
