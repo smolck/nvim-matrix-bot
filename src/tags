@@ -296,8 +296,7 @@ $quote	vimeval.txt	/*$quote*
 'fsync'	options.txt	/*'fsync'*
 'ft'	options.txt	/*'ft'*
 'gcr'	options.txt	/*'gcr'*
-'gd'	options.txt	/*'gd'*
-'gdefault'	options.txt	/*'gdefault'*
+'gdefault'	deprecated.txt	/*'gdefault'*
 'gfm'	options.txt	/*'gfm'*
 'gfn'	options.txt	/*'gfn'*
 'gfs'	vim_diff.txt	/*'gfs'*
@@ -417,7 +416,7 @@ $quote	vimeval.txt	/*$quote*
 'lz'	options.txt	/*'lz'*
 'ma'	options.txt	/*'ma'*
 'macatsui'	vim_diff.txt	/*'macatsui'*
-'magic'	options.txt	/*'magic'*
+'magic'	deprecated.txt	/*'magic'*
 'makeef'	options.txt	/*'makeef'*
 'makeencoding'	options.txt	/*'makeencoding'*
 'makeprg'	options.txt	/*'makeprg'*
@@ -545,8 +544,6 @@ $quote	vimeval.txt	/*$quote*
 'nofoldenable'	options.txt	/*'nofoldenable'*
 'nofs'	options.txt	/*'nofs'*
 'nofsync'	options.txt	/*'nofsync'*
-'nogd'	options.txt	/*'nogd'*
-'nogdefault'	options.txt	/*'nogdefault'*
 'nohid'	options.txt	/*'nohid'*
 'nohidden'	options.txt	/*'nohidden'*
 'nohls'	options.txt	/*'nohls'*
@@ -575,7 +572,7 @@ $quote	vimeval.txt	/*$quote*
 'nolrm'	options.txt	/*'nolrm'*
 'nolz'	options.txt	/*'nolz'*
 'noma'	options.txt	/*'noma'*
-'nomagic'	options.txt	/*'nomagic'*
+'nomagic'	deprecated.txt	/*'nomagic'*
 'nomh'	options.txt	/*'nomh'*
 'noml'	options.txt	/*'noml'*
 'nomle'	options.txt	/*'nomle'*
@@ -2280,6 +2277,11 @@ $quote	vimeval.txt	/*$quote*
 :lr	quickfix.txt	/*:lr*
 :lrewind	quickfix.txt	/*:lrewind*
 :ls	windows.txt	/*:ls*
+:lsp	lsp.txt	/*:lsp*
+:lsp-disable	lsp.txt	/*:lsp-disable*
+:lsp-enable	lsp.txt	/*:lsp-enable*
+:lsp-restart	lsp.txt	/*:lsp-restart*
+:lsp-stop	lsp.txt	/*:lsp-stop*
 :lt	tagsrch.txt	/*:lt*
 :ltag	tagsrch.txt	/*:ltag*
 :lu	map.txt	/*:lu*
@@ -5323,6 +5325,7 @@ compiler-spotbugs	quickfix.txt	/*compiler-spotbugs*
 compiler-tex	quickfix.txt	/*compiler-tex*
 compiler-tombi	quickfix.txt	/*compiler-tombi*
 compiler-tsc	quickfix.txt	/*compiler-tsc*
+compiler-ty	quickfix.txt	/*compiler-ty*
 compiler-typst	quickfix.txt	/*compiler-typst*
 compiler-vaxada	ft_ada.txt	/*compiler-vaxada*
 compl-current	insert.txt	/*compl-current*
@@ -7247,6 +7250,7 @@ lsp-autocompletion	lsp.txt	/*lsp-autocompletion*
 lsp-buf	lsp.txt	/*lsp-buf*
 lsp-client	lsp.txt	/*lsp-client*
 lsp-codelens	lsp.txt	/*lsp-codelens*
+lsp-commands	lsp.txt	/*lsp-commands*
 lsp-completion	lsp.txt	/*lsp-completion*
 lsp-config	lsp.txt	/*lsp-config*
 lsp-config-merge	lsp.txt	/*lsp-config-merge*
@@ -7276,7 +7280,6 @@ lsp-on_type_formatting	lsp.txt	/*lsp-on_type_formatting*
 lsp-protocol	lsp.txt	/*lsp-protocol*
 lsp-quickstart	lsp.txt	/*lsp-quickstart*
 lsp-response	lsp.txt	/*lsp-response*
-lsp-restart	lsp.txt	/*lsp-restart*
 lsp-root_dir()	lsp.txt	/*lsp-root_dir()*
 lsp-root_markers	lsp.txt	/*lsp-root_markers*
 lsp-rpc	lsp.txt	/*lsp-rpc*
@@ -7860,7 +7863,6 @@ msgpack-rpc	api.txt	/*msgpack-rpc*
 msgpack-special-dict	vimfn.txt	/*msgpack-special-dict*
 msgpack-special-map	vimfn.txt	/*msgpack-special-map*
 msgpack.vim-arguments	pi_msgpack.txt	/*msgpack.vim-arguments*
-msgpack.vim-contents	pi_msgpack.txt	/*msgpack.vim-contents*
 msgpack.vim-intro	pi_msgpack.txt	/*msgpack.vim-intro*
 msgpack.vim-manual	pi_msgpack.txt	/*msgpack.vim-manual*
 msgpack_types-variable	vvars.txt	/*msgpack_types-variable*
@@ -8196,7 +8198,7 @@ package.cpath	luaref.txt	/*package.cpath*
 package.loaded	luaref.txt	/*package.loaded*
 package.loadlib()	luaref.txt	/*package.loadlib()*
 package.path	luaref.txt	/*package.path*
-package.preload()	luaref.txt	/*package.preload()*
+package.preload	luaref.txt	/*package.preload*
 package.seeall()	luaref.txt	/*package.seeall()*
 packages	pack.txt	/*packages*
 packages-runtimepath	options.txt	/*packages-runtimepath*
