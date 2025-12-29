@@ -10267,6 +10267,8 @@ vim.opt_global	lua.txt	/*vim.opt_global*
 vim.opt_local	lua.txt	/*vim.opt_local*
 vim.pack	pack.txt	/*vim.pack*
 vim.pack-directory	pack.txt	/*vim.pack-directory*
+vim.pack-events	pack.txt	/*vim.pack-events*
+vim.pack-examples	pack.txt	/*vim.pack-examples*
 vim.pack-lockfile	pack.txt	/*vim.pack-lockfile*
 vim.pack.Spec	pack.txt	/*vim.pack.Spec*
 vim.pack.add()	pack.txt	/*vim.pack.add()*
