@@ -5546,6 +5546,7 @@ dev-filter-test	dev_test.txt	/*dev-filter-test*
 dev-fix-test	dev_test.txt	/*dev-fix-test*
 dev-guidelines	dev.txt	/*dev-guidelines*
 dev-lua	dev.txt	/*dev-lua*
+dev-lua-builtin	dev_arch.txt	/*dev-lua-builtin*
 dev-lua-doc	dev.txt	/*dev-lua-doc*
 dev-name-common	dev.txt	/*dev-name-common*
 dev-name-events	dev.txt	/*dev-name-events*
@@ -7915,7 +7916,6 @@ nohlsearch-install	usr_05.txt	/*nohlsearch-install*
 non-greedy	pattern.txt	/*non-greedy*
 non-zero-arg	vimeval.txt	/*non-zero-arg*
 normal-index	index.txt	/*normal-index*
-not	dev_arch.txt	/*not*
 not-edited	editing.txt	/*not-edited*
 notation	helphelp.txt	/*notation*
 nr2char()	vimfn.txt	/*nr2char()*
