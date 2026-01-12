@@ -9114,6 +9114,7 @@ term-list	syntax.txt	/*term-list*
 term_background	deprecated.txt	/*term_background*
 termcap	vim_diff.txt	/*termcap*
 termcap-options	vim_diff.txt	/*termcap-options*
+termdebug	terminal.txt	/*termdebug*
 termdebug-commands	terminal.txt	/*termdebug-commands*
 termdebug-communication	terminal.txt	/*termdebug-communication*
 termdebug-customizing	terminal.txt	/*termdebug-customizing*
