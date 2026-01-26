@@ -4567,6 +4567,7 @@ TSTree:root()	treesitter.txt	/*TSTree:root()*
 TUI	tui.txt	/*TUI*
 Tab	intro.txt	/*Tab*
 TabClosed	autocmd.txt	/*TabClosed*
+TabClosedPre	autocmd.txt	/*TabClosedPre*
 TabEnter	autocmd.txt	/*TabEnter*
 TabLeave	autocmd.txt	/*TabLeave*
 TabNew	autocmd.txt	/*TabNew*
