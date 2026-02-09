@@ -5319,6 +5319,7 @@ compiler-mypy	quickfix.txt	/*compiler-mypy*
 compiler-pandoc	quickfix.txt	/*compiler-pandoc*
 compiler-perl	quickfix.txt	/*compiler-perl*
 compiler-pylint	quickfix.txt	/*compiler-pylint*
+compiler-pyright	quickfix.txt	/*compiler-pyright*
 compiler-pytest	quickfix.txt	/*compiler-pytest*
 compiler-pyunit	quickfix.txt	/*compiler-pyunit*
 compiler-ruff	quickfix.txt	/*compiler-ruff*
@@ -6057,6 +6058,7 @@ ft-fortran-syntax	syntax.txt	/*ft-fortran-syntax*
 ft-freebasic-plugin	filetype.txt	/*ft-freebasic-plugin*
 ft-freebasic-syntax	syntax.txt	/*ft-freebasic-syntax*
 ft-fvwm-syntax	syntax.txt	/*ft-fvwm-syntax*
+ft-gdb-syntax	syntax.txt	/*ft-gdb-syntax*
 ft-gdscript-plugin	filetype.txt	/*ft-gdscript-plugin*
 ft-gitcommit-plugin	filetype.txt	/*ft-gitcommit-plugin*
 ft-gitrebase-plugin	filetype.txt	/*ft-gitrebase-plugin*
@@ -9925,7 +9927,7 @@ vim.Ringbuf	lua.txt	/*vim.Ringbuf*
 vim.SystemCompleted	lua.txt	/*vim.SystemCompleted*
 vim.SystemObj	lua.txt	/*vim.SystemObj*
 vim.VersionRange	lua.txt	/*vim.VersionRange*
-vim._extui	lua.txt	/*vim._extui*
+vim._core.ui2	lua.txt	/*vim._core.ui2*
 vim.api	lua.txt	/*vim.api*
 vim.b	lua.txt	/*vim.b*
 vim.base64	lua.txt	/*vim.base64*
@@ -10120,13 +10122,15 @@ vim.lsp.buf_notify()	lsp.txt	/*vim.lsp.buf_notify()*
 vim.lsp.buf_request_all()	lsp.txt	/*vim.lsp.buf_request_all()*
 vim.lsp.buf_request_sync()	lsp.txt	/*vim.lsp.buf_request_sync()*
 vim.lsp.client_is_stopped()	deprecated.txt	/*vim.lsp.client_is_stopped()*
-vim.lsp.codelens.clear()	lsp.txt	/*vim.lsp.codelens.clear()*
-vim.lsp.codelens.display()	lsp.txt	/*vim.lsp.codelens.display()*
+vim.lsp.codelens.clear()	deprecated.txt	/*vim.lsp.codelens.clear()*
+vim.lsp.codelens.display()	deprecated.txt	/*vim.lsp.codelens.display()*
+vim.lsp.codelens.enable()	lsp.txt	/*vim.lsp.codelens.enable()*
 vim.lsp.codelens.get()	lsp.txt	/*vim.lsp.codelens.get()*
-vim.lsp.codelens.on_codelens()	lsp.txt	/*vim.lsp.codelens.on_codelens()*
-vim.lsp.codelens.refresh()	lsp.txt	/*vim.lsp.codelens.refresh()*
+vim.lsp.codelens.is_enabled()	lsp.txt	/*vim.lsp.codelens.is_enabled()*
+vim.lsp.codelens.on_codelens()	deprecated.txt	/*vim.lsp.codelens.on_codelens()*
+vim.lsp.codelens.refresh()	deprecated.txt	/*vim.lsp.codelens.refresh()*
 vim.lsp.codelens.run()	lsp.txt	/*vim.lsp.codelens.run()*
-vim.lsp.codelens.save()	lsp.txt	/*vim.lsp.codelens.save()*
+vim.lsp.codelens.save()	deprecated.txt	/*vim.lsp.codelens.save()*
 vim.lsp.commands	lsp.txt	/*vim.lsp.commands*
 vim.lsp.completion.enable()	lsp.txt	/*vim.lsp.completion.enable()*
 vim.lsp.completion.get()	lsp.txt	/*vim.lsp.completion.get()*
