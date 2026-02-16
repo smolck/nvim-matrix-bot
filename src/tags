@@ -3867,6 +3867,16 @@ E5080	options.txt	/*E5080*
 E509	editing.txt	/*E509*
 E51	pattern.txt	/*E51*
 E510	editing.txt	/*E510*
+E5107	message.txt	/*E5107*
+E5108	message.txt	/*E5108*
+E5109	message.txt	/*E5109*
+E5110	message.txt	/*E5110*
+E5111	message.txt	/*E5111*
+E5112	message.txt	/*E5112*
+E5113	message.txt	/*E5113*
+E5114	message.txt	/*E5114*
+E5115	message.txt	/*E5115*
+E5116	message.txt	/*E5116*
 E512	editing.txt	/*E512*
 E513	options.txt	/*E513*
 E514	editing.txt	/*E514*
@@ -4240,6 +4250,7 @@ E961	cmdline.txt	/*E961*
 E962	vimfn.txt	/*E962*
 E963	vimeval.txt	/*E963*
 E97	diff.txt	/*E97*
+E970	message.txt	/*E970*
 E972	vimeval.txt	/*E972*
 E973	vimeval.txt	/*E973*
 E974	vimeval.txt	/*E974*
@@ -4336,6 +4347,7 @@ Iter:skip()	lua.txt	/*Iter:skip()*
 Iter:slice()	lua.txt	/*Iter:slice()*
 Iter:take()	lua.txt	/*Iter:take()*
 Iter:totable()	lua.txt	/*Iter:totable()*
+Iter:unique()	lua.txt	/*Iter:unique()*
 J	change.txt	/*J*
 Japanese	mbyte.txt	/*Japanese*
 Justify()	usr_25.txt	/*Justify()*
@@ -4509,6 +4521,7 @@ SessionLoadPost	autocmd.txt	/*SessionLoadPost*
 SessionWritePost	autocmd.txt	/*SessionWritePost*
 ShellCmdPost	autocmd.txt	/*ShellCmdPost*
 ShellFilterPost	autocmd.txt	/*ShellFilterPost*
+Shift-<Enter>	channel.txt	/*Shift-<Enter>*
 SigUSR1	vim_diff.txt	/*SigUSR1*
 Signal	autocmd.txt	/*Signal*
 SourceCmd	autocmd.txt	/*SourceCmd*
@@ -4681,9 +4694,6 @@ ZZ	editing.txt	/*ZZ*
 [==]	pattern.txt	/*[==]*
 [A	editing.txt	/*[A*
 [B	windows.txt	/*[B*
-[CTRL-L	quickfix.txt	/*[CTRL-L*
-[CTRL-Q	quickfix.txt	/*[CTRL-Q*
-[CTRL-T	tagsrch.txt	/*[CTRL-T*
 [D	tagsrch.txt	/*[D*
 [D-default	tagsrch.txt	/*[D-default*
 [I	tagsrch.txt	/*[I*
@@ -4697,6 +4707,9 @@ ZZ	editing.txt	/*ZZ*
 []	motion.txt	/*[]*
 [_CTRL-D	tagsrch.txt	/*[_CTRL-D*
 [_CTRL-I	tagsrch.txt	/*[_CTRL-I*
+[_CTRL-L	quickfix.txt	/*[_CTRL-L*
+[_CTRL-Q	quickfix.txt	/*[_CTRL-Q*
+[_CTRL-T	tagsrch.txt	/*[_CTRL-T*
 [`	motion.txt	/*[`*
 [a	editing.txt	/*[a*
 [b	windows.txt	/*[b*
@@ -4729,9 +4742,6 @@ ZZ	editing.txt	/*ZZ*
 ]<Space>	insert.txt	/*]<Space>*
 ]A	editing.txt	/*]A*
 ]B	windows.txt	/*]B*
-]CTRL-L	quickfix.txt	/*]CTRL-L*
-]CTRL-Q	quickfix.txt	/*]CTRL-Q*
-]CTRL-T	tagsrch.txt	/*]CTRL-T*
 ]D	tagsrch.txt	/*]D*
 ]D-default	tagsrch.txt	/*]D-default*
 ]I	tagsrch.txt	/*]I*
@@ -4745,6 +4755,9 @@ ZZ	editing.txt	/*ZZ*
 ]]	motion.txt	/*]]*
 ]_CTRL-D	tagsrch.txt	/*]_CTRL-D*
 ]_CTRL-I	tagsrch.txt	/*]_CTRL-I*
+]_CTRL-L	quickfix.txt	/*]_CTRL-L*
+]_CTRL-Q	quickfix.txt	/*]_CTRL-Q*
+]_CTRL-T	tagsrch.txt	/*]_CTRL-T*
 ]`	motion.txt	/*]`*
 ]a	editing.txt	/*]a*
 ]b	windows.txt	/*]b*
