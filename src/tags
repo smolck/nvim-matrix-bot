@@ -5014,6 +5014,7 @@ bit.rshift()	lua-bit.txt	/*bit.rshift()*
 bit.tobit()	lua-bit.txt	/*bit.tobit()*
 bit.tohex()	lua-bit.txt	/*bit.tohex()*
 bitwise-function	usr_41.txt	/*bitwise-function*
+blink	syntax.txt	/*blink*
 blob	vimeval.txt	/*blob*
 blob-concatenation	vimeval.txt	/*blob-concatenation*
 blob-functions	usr_41.txt	/*blob-functions*
@@ -5667,6 +5668,7 @@ digraphs	digraph.txt	/*digraphs*
 digraphs-default	digraph.txt	/*digraphs-default*
 digraphs-define	digraph.txt	/*digraphs-define*
 digraphs-use	digraph.txt	/*digraphs-use*
+dim	syntax.txt	/*dim*
 dip	motion.txt	/*dip*
 dis	motion.txt	/*dis*
 disable-menus	gui.txt	/*disable-menus*
@@ -6873,6 +6875,7 @@ hl-WildMenu	syntax.txt	/*hl-WildMenu*
 hl-WinBar	syntax.txt	/*hl-WinBar*
 hl-WinBarNC	syntax.txt	/*hl-WinBarNC*
 hl-WinSeparator	syntax.txt	/*hl-WinSeparator*
+hl-conceal	syntax.txt	/*hl-conceal*
 hl-debugBreakpoint	terminal.txt	/*hl-debugBreakpoint*
 hl-debugPC	terminal.txt	/*hl-debugPC*
 hl-lCursor	syntax.txt	/*hl-lCursor*
@@ -8204,6 +8207,7 @@ os.rename()	luaref.txt	/*os.rename()*
 os.setlocale()	luaref.txt	/*os.setlocale()*
 os.time()	luaref.txt	/*os.time()*
 os.tmpname()	luaref.txt	/*os.tmpname()*
+overline	syntax.txt	/*overline*
 p	change.txt	/*p*
 pack-add	pack.txt	/*pack-add*
 pack.txt	pack.txt	/*pack.txt*
