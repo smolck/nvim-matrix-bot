@@ -4518,6 +4518,7 @@ Select-mode-mapping	visual.txt	/*Select-mode-mapping*
 Session	starting.txt	/*Session*
 SessionLoad-variable	starting.txt	/*SessionLoad-variable*
 SessionLoadPost	autocmd.txt	/*SessionLoadPost*
+SessionLoadPre	autocmd.txt	/*SessionLoadPre*
 SessionWritePost	autocmd.txt	/*SessionWritePost*
 ShellCmdPost	autocmd.txt	/*ShellCmdPost*
 ShellFilterPost	autocmd.txt	/*ShellFilterPost*
@@ -4905,6 +4906,7 @@ arabicfonts	l10n-arabic.txt	/*arabicfonts*
 arabickeymap	l10n-arabic.txt	/*arabickeymap*
 arg-functions	usr_41.txt	/*arg-functions*
 argc()	vimfn.txt	/*argc()*
+argf-variable	vvars.txt	/*argf-variable*
 argidx()	vimfn.txt	/*argidx()*
 arglist	editing.txt	/*arglist*
 arglist-position	editing.txt	/*arglist-position*
@@ -9325,6 +9327,7 @@ ui-startup	api-ui-events.txt	/*ui-startup*
 ui-startup-stdin	api-ui-events.txt	/*ui-startup-stdin*
 ui-tabline	api-ui-events.txt	/*ui-tabline*
 ui-wildmenu	deprecated.txt	/*ui-wildmenu*
+ui2	lua.txt	/*ui2*
 undercurl	syntax.txt	/*undercurl*
 underdashed	syntax.txt	/*underdashed*
 underdotted	syntax.txt	/*underdotted*
@@ -9671,6 +9674,7 @@ uv_tty_t	luvref.txt	/*uv_tty_t*
 uv_udp_t	luvref.txt	/*uv_udp_t*
 v	visual.txt	/*v*
 v:	vimeval.txt	/*v:*
+v:argf	vvars.txt	/*v:argf*
 v:argv	vvars.txt	/*v:argv*
 v:char	vvars.txt	/*v:char*
 v:charconvert_from	vvars.txt	/*v:charconvert_from*
@@ -9944,7 +9948,6 @@ vim.Ringbuf	lua.txt	/*vim.Ringbuf*
 vim.SystemCompleted	lua.txt	/*vim.SystemCompleted*
 vim.SystemObj	lua.txt	/*vim.SystemObj*
 vim.VersionRange	lua.txt	/*vim.VersionRange*
-vim._core.ui2	lua.txt	/*vim._core.ui2*
 vim.api	lua.txt	/*vim.api*
 vim.b	lua.txt	/*vim.b*
 vim.base64	lua.txt	/*vim.base64*
