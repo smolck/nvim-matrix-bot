@@ -3531,6 +3531,7 @@ E1550	options.txt	/*E1550*
 E156	sign.txt	/*E156*
 E1562	options.txt	/*E1562*
 E157	sign.txt	/*E157*
+E1572	options.txt	/*E1572*
 E158	sign.txt	/*E158*
 E159	sign.txt	/*E159*
 E16	cmdline.txt	/*E16*
@@ -7208,6 +7209,7 @@ lcs-eol	options.txt	/*lcs-eol*
 lcs-extends	options.txt	/*lcs-extends*
 lcs-lead	options.txt	/*lcs-lead*
 lcs-leadmultispace	options.txt	/*lcs-leadmultispace*
+lcs-leadtab	options.txt	/*lcs-leadtab*
 lcs-multispace	options.txt	/*lcs-multispace*
 lcs-nbsp	options.txt	/*lcs-nbsp*
 lcs-precedes	options.txt	/*lcs-precedes*
@@ -9236,6 +9238,7 @@ tostring()	luaref.txt	/*tostring()*
 toupper()	vimfn.txt	/*toupper()*
 tr()	vimfn.txt	/*tr()*
 treesitter	treesitter.txt	/*treesitter*
+treesitter-defaults	treesitter.txt	/*treesitter-defaults*
 treesitter-directive-gsub!	treesitter.txt	/*treesitter-directive-gsub!*
 treesitter-directive-offset!	treesitter.txt	/*treesitter-directive-offset!*
 treesitter-directive-set!	treesitter.txt	/*treesitter-directive-set!*
@@ -9813,6 +9816,8 @@ v_U	change.txt	/*v_U*
 v_V	visual.txt	/*v_V*
 v_X	change.txt	/*v_X*
 v_Y	change.txt	/*v_Y*
+v_[n	treesitter.txt	/*v_[n*
+v_]n	treesitter.txt	/*v_]n*
 v_a	motion.txt	/*v_a*
 v_a'	motion.txt	/*v_a'*
 v_a(	motion.txt	/*v_a(*
@@ -9825,7 +9830,7 @@ v_a[	motion.txt	/*v_a[*
 v_a]	motion.txt	/*v_a]*
 v_a`	motion.txt	/*v_a`*
 v_ab	motion.txt	/*v_ab*
-v_an	lsp.txt	/*v_an*
+v_an	treesitter.txt	/*v_an*
 v_ap	motion.txt	/*v_ap*
 v_aquote	motion.txt	/*v_aquote*
 v_as	motion.txt	/*v_as*
@@ -9878,7 +9883,7 @@ v_i[	motion.txt	/*v_i[*
 v_i]	motion.txt	/*v_i]*
 v_i`	motion.txt	/*v_i`*
 v_ib	motion.txt	/*v_ib*
-v_in	lsp.txt	/*v_in*
+v_in	treesitter.txt	/*v_in*
 v_ip	motion.txt	/*v_ip*
 v_iquote	motion.txt	/*v_iquote*
 v_is	motion.txt	/*v_is*
