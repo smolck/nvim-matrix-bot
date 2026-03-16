@@ -2072,6 +2072,7 @@ $quote	vimeval.txt	/*$quote*
 :gvim	vim_diff.txt	/*:gvim*
 :h	helphelp.txt	/*:h*
 :help	helphelp.txt	/*:help*
+:help!	helphelp.txt	/*:help!*
 :helpc	helphelp.txt	/*:helpc*
 :helpclose	helphelp.txt	/*:helpclose*
 :helpg	helphelp.txt	/*:helpg*
@@ -6672,9 +6673,8 @@ histget()	vimfn.txt	/*histget()*
 histnr()	vimfn.txt	/*histnr()*
 history	cmdline.txt	/*history*
 history-functions	usr_41.txt	/*history-functions*
-hit-enter	message.txt	/*hit-enter*
-hit-enter-prompt	message.txt	/*hit-enter-prompt*
-hit-return	message.txt	/*hit-return*
+hit-enter	deprecated.txt	/*hit-enter*
+hit-enter-prompt	deprecated.txt	/*hit-enter-prompt*
 hjkl	usr_02.txt	/*hjkl*
 hl-ColorColumn	syntax.txt	/*hl-ColorColumn*
 hl-ComplHint	syntax.txt	/*hl-ComplHint*
@@ -7243,6 +7243,7 @@ list-modification	vimeval.txt	/*list-modification*
 list-repeat	windows.txt	/*list-repeat*
 list2blob()	vimfn.txt	/*list2blob()*
 list2str()	vimfn.txt	/*list2str()*
+listener_add()	vim_diff.txt	/*listener_add()*
 literal-Dict	vimeval.txt	/*literal-Dict*
 literal-string	vimeval.txt	/*literal-string*
 live-grep	cmdline.txt	/*live-grep*
@@ -8305,8 +8306,6 @@ portable-config	nvim.txt	/*portable-config*
 postgresql	ft_sql.txt	/*postgresql*
 pow()	vimfn.txt	/*pow()*
 preinserted()	vimfn.txt	/*preinserted()*
-press-enter	message.txt	/*press-enter*
-press-return	message.txt	/*press-return*
 prevcount-variable	vvars.txt	/*prevcount-variable*
 preview-window	windows.txt	/*preview-window*
 prevnonblank()	vimfn.txt	/*prevnonblank()*
@@ -8489,6 +8488,7 @@ recovery	recover.txt	/*recovery*
 recursive_mapping	map.txt	/*recursive_mapping*
 redo	undo.txt	/*redo*
 redo-register	undo.txt	/*redo-register*
+redraw_listener_add()	vim_diff.txt	/*redraw_listener_add()*
 reduce()	vimfn.txt	/*reduce()*
 ref	intro.txt	/*ref*
 reference	intro.txt	/*reference*
