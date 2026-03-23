@@ -4278,7 +4278,7 @@ EXINIT	starting.txt	/*EXINIT*
 Elvis	credits.txt	/*Elvis*
 EncodingChanged	deprecated.txt	/*EncodingChanged*
 Ex	intro.txt	/*Ex*
-Ex-commands	index.txt	/*Ex-commands*
+Ex-command	index.txt	/*Ex-command*
 Ex-mode	intro.txt	/*Ex-mode*
 ExitPre	autocmd.txt	/*ExitPre*
 Exuberant_ctags	tagsrch.txt	/*Exuberant_ctags*
@@ -4865,6 +4865,7 @@ after-directory	options.txt	/*after-directory*
 alternate-file	editing.txt	/*alternate-file*
 altfont	syntax.txt	/*altfont*
 and()	vimfn.txt	/*and()*
+android	vimfn.txt	/*android*
 anonymous-function	vimeval.txt	/*anonymous-function*
 ansi-colorize	api.txt	/*ansi-colorize*
 ap	motion.txt	/*ap*
@@ -6576,6 +6577,7 @@ gross-national-happiness	credits.txt	/*gross-national-happiness*
 group-name	syntax.txt	/*group-name*
 grr	lsp.txt	/*grr*
 grt	lsp.txt	/*grt*
+grx	lsp.txt	/*grx*
 gs	various.txt	/*gs*
 gstar	pattern.txt	/*gstar*
 gt	tabpage.txt	/*gt*
@@ -8088,6 +8090,7 @@ nvim_list_tabpages()	api.txt	/*nvim_list_tabpages()*
 nvim_list_uis()	api.txt	/*nvim_list_uis()*
 nvim_list_wins()	api.txt	/*nvim_list_wins()*
 nvim_load_context()	api.txt	/*nvim_load_context()*
+nvim_open_tabpage()	api.txt	/*nvim_open_tabpage()*
 nvim_open_term()	api.txt	/*nvim_open_term()*
 nvim_open_win()	api.txt	/*nvim_open_win()*
 nvim_parse_cmd()	api.txt	/*nvim_parse_cmd()*
@@ -9183,6 +9186,7 @@ terminfo	tui.txt	/*terminfo*
 termopen()	deprecated.txt	/*termopen()*
 termrequest-variable	vvars.txt	/*termrequest-variable*
 termresponse-variable	vvars.txt	/*termresponse-variable*
+termux	vimfn.txt	/*termux*
 ternary	vimeval.txt	/*ternary*
 test-functions	usr_41.txt	/*test-functions*
 test_garbagecollect_now()	vimfn.txt	/*test_garbagecollect_now()*
@@ -10022,6 +10026,7 @@ vim.fs.basename()	lua.txt	/*vim.fs.basename()*
 vim.fs.dir()	lua.txt	/*vim.fs.dir()*
 vim.fs.dirname()	lua.txt	/*vim.fs.dirname()*
 vim.fs.exists()	lua.txt	/*vim.fs.exists()*
+vim.fs.ext()	lua.txt	/*vim.fs.ext()*
 vim.fs.find()	lua.txt	/*vim.fs.find()*
 vim.fs.joinpath()	lua.txt	/*vim.fs.joinpath()*
 vim.fs.normalize()	lua.txt	/*vim.fs.normalize()*
@@ -10201,6 +10206,7 @@ vim.lsp.get_active_clients()	deprecated.txt	/*vim.lsp.get_active_clients()*
 vim.lsp.get_buffers_by_client_id()	deprecated.txt	/*vim.lsp.get_buffers_by_client_id()*
 vim.lsp.get_client_by_id()	lsp.txt	/*vim.lsp.get_client_by_id()*
 vim.lsp.get_clients()	lsp.txt	/*vim.lsp.get_clients()*
+vim.lsp.get_configs()	lsp.txt	/*vim.lsp.get_configs()*
 vim.lsp.get_log_path()	deprecated.txt	/*vim.lsp.get_log_path()*
 vim.lsp.handlers	lsp.txt	/*vim.lsp.handlers*
 vim.lsp.handlers.signature_help()	deprecated.txt	/*vim.lsp.handlers.signature_help()*
@@ -10425,6 +10431,7 @@ vim.types	lua.txt	/*vim.types*
 vim.ui	lua.txt	/*vim.ui*
 vim.ui.input()	lua.txt	/*vim.ui.input()*
 vim.ui.open()	lua.txt	/*vim.ui.open()*
+vim.ui.progress_status()	lua.txt	/*vim.ui.progress_status()*
 vim.ui.select()	lua.txt	/*vim.ui.select()*
 vim.ui_attach()	lua.txt	/*vim.ui_attach()*
 vim.ui_detach()	lua.txt	/*vim.ui_detach()*
