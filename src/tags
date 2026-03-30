@@ -4489,10 +4489,14 @@ Quickfix	quickfix.txt	/*Quickfix*
 QuitPre	autocmd.txt	/*QuitPre*
 R	change.txt	/*R*
 RPC	api.txt	/*RPC*
+Range:cursor()	lua.txt	/*Range:cursor()*
+Range:extmark()	lua.txt	/*Range:extmark()*
 Range:has()	lua.txt	/*Range:has()*
 Range:intersect()	lua.txt	/*Range:intersect()*
 Range:is_empty()	lua.txt	/*Range:is_empty()*
 Range:lsp()	lua.txt	/*Range:lsp()*
+Range:to_cursor()	lua.txt	/*Range:to_cursor()*
+Range:to_extmark()	lua.txt	/*Range:to_extmark()*
 Range:to_lsp()	lua.txt	/*Range:to_lsp()*
 RecordingEnter	autocmd.txt	/*RecordingEnter*
 RecordingLeave	autocmd.txt	/*RecordingLeave*
@@ -5011,6 +5015,7 @@ bit.arshift()	lua-bit.txt	/*bit.arshift()*
 bit.band()	lua-bit.txt	/*bit.band()*
 bit.bnot()	lua-bit.txt	/*bit.bnot()*
 bit.bor()	lua-bit.txt	/*bit.bor()*
+bit.bswap()	lua-bit.txt	/*bit.bswap()*
 bit.bxor()	lua-bit.txt	/*bit.bxor()*
 bit.lshift()	lua-bit.txt	/*bit.lshift()*
 bit.rol()	lua-bit.txt	/*bit.rol()*
@@ -5386,6 +5391,7 @@ complex-repeat	repeat.txt	/*complex-repeat*
 compress	pi_gzip.txt	/*compress*
 conceal	syntax.txt	/*conceal*
 config	starting.txt	/*config*
+config-example	nvim.txt	/*config-example*
 confirm()	vimfn.txt	/*confirm()*
 console-menus	gui.txt	/*console-menus*
 context	repeat.txt	/*context*
@@ -5545,6 +5551,7 @@ deprecated	deprecated.txt	/*deprecated*
 deprecated-0.10	deprecated.txt	/*deprecated-0.10*
 deprecated-0.11	deprecated.txt	/*deprecated-0.11*
 deprecated-0.12	deprecated.txt	/*deprecated-0.12*
+deprecated-0.13	deprecated.txt	/*deprecated-0.13*
 deprecated-0.9	deprecated.txt	/*deprecated-0.9*
 deprecated.txt	deprecated.txt	/*deprecated.txt*
 design-documented	dev.txt	/*design-documented*
@@ -5768,6 +5775,7 @@ ex-cmd-index	index.txt	/*ex-cmd-index*
 ex-edit-index	index.txt	/*ex-edit-index*
 ex-flags	cmdline.txt	/*ex-flags*
 ex:	options.txt	/*ex:*
+example-init	nvim.txt	/*example-init*
 except-autocmd	vimeval.txt	/*except-autocmd*
 except-autocmd-Cmd	vimeval.txt	/*except-autocmd-Cmd*
 except-autocmd-Post	vimeval.txt	/*except-autocmd-Post*
@@ -7308,6 +7316,7 @@ lsp-notification	lsp.txt	/*lsp-notification*
 lsp-on_type_formatting	lsp.txt	/*lsp-on_type_formatting*
 lsp-protocol	lsp.txt	/*lsp-protocol*
 lsp-quickstart	lsp.txt	/*lsp-quickstart*
+lsp-request	lsp.txt	/*lsp-request*
 lsp-response	lsp.txt	/*lsp-response*
 lsp-root_dir()	lsp.txt	/*lsp-root_dir()*
 lsp-root_markers	lsp.txt	/*lsp-root_markers*
@@ -7923,10 +7932,11 @@ news-0.10	news-0.10.txt	/*news-0.10*
 news-0.10.txt	news-0.10.txt	/*news-0.10.txt*
 news-0.11	news-0.11.txt	/*news-0.11*
 news-0.11.txt	news-0.11.txt	/*news-0.11.txt*
+news-0.12	news-0.12.txt	/*news-0.12*
+news-0.12.txt	news-0.12.txt	/*news-0.12.txt*
 news-0.9	news-0.9.txt	/*news-0.9*
 news-0.9.txt	news-0.9.txt	/*news-0.9.txt*
 news-breaking	news.txt	/*news-breaking*
-news-breaking-dev	news.txt	/*news-breaking-dev*
 news-changed	news.txt	/*news-changed*
 news-deprecations	news.txt	/*news-deprecations*
 news-features	news.txt	/*news-features*
@@ -7968,6 +7978,7 @@ nvim-upstreamed	vim_diff.txt	/*nvim-upstreamed*
 nvim.spellfile.Opts	plugins.txt	/*nvim.spellfile.Opts*
 nvim.txt	nvim.txt	/*nvim.txt*
 nvim_...()	vimfn.txt	/*nvim_...()*
+nvim__chan_set_detach()	api.txt	/*nvim__chan_set_detach()*
 nvim__complete_set()	api.txt	/*nvim__complete_set()*
 nvim__exec_lua_fast()	api.txt	/*nvim__exec_lua_fast()*
 nvim__get_runtime()	api.txt	/*nvim__get_runtime()*
@@ -8223,7 +8234,10 @@ package-cfilter	quickfix.txt	/*package-cfilter*
 package-create	pack.txt	/*package-create*
 package-justify	usr_25.txt	/*package-justify*
 package-nohlsearch	usr_05.txt	/*package-nohlsearch*
+package-spellfile	plugins.txt	/*package-spellfile*
 package-termdebug	terminal.txt	/*package-termdebug*
+package-tohtml	plugins.txt	/*package-tohtml*
+package-undotree	plugins.txt	/*package-undotree*
 package.cpath	luaref.txt	/*package.cpath*
 package.loaded	luaref.txt	/*package.loaded*
 package.loadlib()	luaref.txt	/*package.loadlib()*
@@ -8339,6 +8353,7 @@ progpath-variable	vvars.txt	/*progpath-variable*
 progress-message	message.txt	/*progress-message*
 project-config	options.txt	/*project-config*
 prompt-buffer	channel.txt	/*prompt-buffer*
+prompt_appendbuf()	vimfn.txt	/*prompt_appendbuf()*
 prompt_getinput()	vimfn.txt	/*prompt_getinput()*
 prompt_getprompt()	vimfn.txt	/*prompt_getprompt()*
 prompt_setcallback()	vimfn.txt	/*prompt_setcallback()*
@@ -8607,6 +8622,7 @@ sandbox	vimeval.txt	/*sandbox*
 sandbox-option	vimeval.txt	/*sandbox-option*
 save-file	editing.txt	/*save-file*
 save-settings	starting.txt	/*save-settings*
+schedule	api.txt	/*schedule*
 scratch-buffer	windows.txt	/*scratch-buffer*
 screenattr()	vimfn.txt	/*screenattr()*
 screenchar()	vimfn.txt	/*screenchar()*
@@ -8895,7 +8911,6 @@ spellbadword()	vimfn.txt	/*spellbadword()*
 spellfile-cleanup	spell.txt	/*spellfile-cleanup*
 spellfile.config()	plugins.txt	/*spellfile.config()*
 spellfile.get()	plugins.txt	/*spellfile.get()*
-spellfile.lua	plugins.txt	/*spellfile.lua*
 spellfile.vim	vim_diff.txt	/*spellfile.vim*
 spellsuggest()	vimfn.txt	/*spellsuggest()*
 split()	vimfn.txt	/*split()*
@@ -9232,7 +9247,6 @@ timestamps	editing.txt	/*timestamps*
 tips	tips.txt	/*tips*
 tips.txt	tips.txt	/*tips.txt*
 toggle	options.txt	/*toggle*
-tohtml	plugins.txt	/*tohtml*
 tohtml.tohtml()	plugins.txt	/*tohtml.tohtml()*
 tolower()	vimfn.txt	/*tolower()*
 tonumber()	luaref.txt	/*tonumber()*
@@ -9356,7 +9370,6 @@ undo_ftplugin	usr_41.txt	/*undo_ftplugin*
 undo_indent	usr_41.txt	/*undo_indent*
 undofile()	vimfn.txt	/*undofile()*
 undotree()	vimfn.txt	/*undotree()*
-undotree-plugin	plugins.txt	/*undotree-plugin*
 undotree.open()	plugins.txt	/*undotree.open()*
 unicode	mbyte.txt	/*unicode*
 uninstall	intro.txt	/*uninstall*
@@ -10023,6 +10036,7 @@ vim.fn	lua.txt	/*vim.fn*
 vim.fs	lua.txt	/*vim.fs*
 vim.fs.abspath()	lua.txt	/*vim.fs.abspath()*
 vim.fs.basename()	lua.txt	/*vim.fs.basename()*
+vim.fs.copy()	lua.txt	/*vim.fs.copy()*
 vim.fs.dir()	lua.txt	/*vim.fs.dir()*
 vim.fs.dirname()	lua.txt	/*vim.fs.dirname()*
 vim.fs.exists()	lua.txt	/*vim.fs.exists()*
@@ -10293,6 +10307,7 @@ vim.mpack.decode()	lua.txt	/*vim.mpack.decode()*
 vim.mpack.encode()	lua.txt	/*vim.mpack.encode()*
 vim.net	lua.txt	/*vim.net*
 vim.net.request()	lua.txt	/*vim.net.request()*
+vim.net.request.Response	lua.txt	/*vim.net.request.Response*
 vim.notify()	lua.txt	/*vim.notify()*
 vim.notify_once()	lua.txt	/*vim.notify_once()*
 vim.o	lua.txt	/*vim.o*
