@@ -4992,6 +4992,7 @@ b:rust_cargo_check_benches	ft_rust.txt	/*b:rust_cargo_check_benches*
 b:rust_cargo_check_examples	ft_rust.txt	/*b:rust_cargo_check_examples*
 b:rust_cargo_check_tests	ft_rust.txt	/*b:rust_cargo_check_tests*
 b:rustfmt_autosave	ft_rust.txt	/*b:rustfmt_autosave*
+b:rustfmt_autosave_if_config_present	ft_rust.txt	/*b:rustfmt_autosave_if_config_present*
 b:term_title	terminal.txt	/*b:term_title*
 b:terminal_job_id	deprecated.txt	/*b:terminal_job_id*
 b:terminal_job_pid	deprecated.txt	/*b:terminal_job_pid*
@@ -9268,6 +9269,7 @@ treesitter-highlight-conceal	treesitter.txt	/*treesitter-highlight-conceal*
 treesitter-highlight-groups	treesitter.txt	/*treesitter-highlight-groups*
 treesitter-highlight-priority	treesitter.txt	/*treesitter-highlight-priority*
 treesitter-highlight-spell	treesitter.txt	/*treesitter-highlight-spell*
+treesitter-incremental-selection	treesitter.txt	/*treesitter-incremental-selection*
 treesitter-language	treesitter.txt	/*treesitter-language*
 treesitter-language-injections	treesitter.txt	/*treesitter-language-injections*
 treesitter-languagetree	treesitter.txt	/*treesitter-languagetree*
@@ -10125,8 +10127,7 @@ vim.lsp.Client.Progress	lsp.txt	/*vim.lsp.Client.Progress*
 vim.lsp.ClientConfig	lsp.txt	/*vim.lsp.ClientConfig*
 vim.lsp.Config	lsp.txt	/*vim.lsp.Config*
 vim.lsp.ListOpts	lsp.txt	/*vim.lsp.ListOpts*
-vim.lsp.LocationOpts	lsp.txt	/*vim.lsp.LocationOpts*
-vim.lsp.LocationOpts.OnList	lsp.txt	/*vim.lsp.LocationOpts.OnList*
+vim.lsp.ListOpts.OnList	lsp.txt	/*vim.lsp.ListOpts.OnList*
 vim.lsp.buf.add_workspace_folder()	lsp.txt	/*vim.lsp.buf.add_workspace_folder()*
 vim.lsp.buf.clear_references()	lsp.txt	/*vim.lsp.buf.clear_references()*
 vim.lsp.buf.code_action()	lsp.txt	/*vim.lsp.buf.code_action()*
@@ -10245,7 +10246,7 @@ vim.lsp.on_type_formatting.enable()	lsp.txt	/*vim.lsp.on_type_formatting.enable(
 vim.lsp.protocol	lsp.txt	/*vim.lsp.protocol*
 vim.lsp.protocol.make_client_capabilities()	lsp.txt	/*vim.lsp.protocol.make_client_capabilities()*
 vim.lsp.protocol.resolve_capabilities()	lsp.txt	/*vim.lsp.protocol.resolve_capabilities()*
-vim.lsp.rpc.PublicClient	lsp.txt	/*vim.lsp.rpc.PublicClient*
+vim.lsp.rpc.Client	lsp.txt	/*vim.lsp.rpc.Client*
 vim.lsp.rpc.connect()	lsp.txt	/*vim.lsp.rpc.connect()*
 vim.lsp.rpc.format_rpc_error()	lsp.txt	/*vim.lsp.rpc.format_rpc_error()*
 vim.lsp.rpc.notify()	lsp.txt	/*vim.lsp.rpc.notify()*
