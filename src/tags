@@ -2266,6 +2266,7 @@ $quote	vimeval.txt	/*$quote*
 :lockmarks	motion.txt	/*:lockmarks*
 :lockv	vimeval.txt	/*:lockv*
 :lockvar	vimeval.txt	/*:lockvar*
+:log	editing.txt	/*:log*
 :lol	quickfix.txt	/*:lol*
 :lolder	quickfix.txt	/*:lolder*
 :lop	quickfix.txt	/*:lop*
@@ -4430,9 +4431,6 @@ PackChangedPre	pack.txt	/*PackChangedPre*
 Partial	vimeval.txt	/*Partial*
 Pattern	pattern.txt	/*Pattern*
 Pattern:match()	lua.txt	/*Pattern:match()*
-Pos:cursor()	lua.txt	/*Pos:cursor()*
-Pos:extmark()	lua.txt	/*Pos:extmark()*
-Pos:lsp()	lua.txt	/*Pos:lsp()*
 Pos:to_cursor()	lua.txt	/*Pos:to_cursor()*
 Pos:to_extmark()	lua.txt	/*Pos:to_extmark()*
 Pos:to_lsp()	lua.txt	/*Pos:to_lsp()*
@@ -4489,12 +4487,9 @@ Quickfix	quickfix.txt	/*Quickfix*
 QuitPre	autocmd.txt	/*QuitPre*
 R	change.txt	/*R*
 RPC	api.txt	/*RPC*
-Range:cursor()	lua.txt	/*Range:cursor()*
-Range:extmark()	lua.txt	/*Range:extmark()*
 Range:has()	lua.txt	/*Range:has()*
 Range:intersect()	lua.txt	/*Range:intersect()*
 Range:is_empty()	lua.txt	/*Range:is_empty()*
-Range:lsp()	lua.txt	/*Range:lsp()*
 Range:to_cursor()	lua.txt	/*Range:to_cursor()*
 Range:to_extmark()	lua.txt	/*Range:to_extmark()*
 Range:to_lsp()	lua.txt	/*Range:to_lsp()*
@@ -6111,6 +6106,7 @@ ft-inform-syntax	syntax.txt	/*ft-inform-syntax*
 ft-java-plugin	filetype.txt	/*ft-java-plugin*
 ft-java-syntax	syntax.txt	/*ft-java-syntax*
 ft-javascript-omni	insert.txt	/*ft-javascript-omni*
+ft-jjdescription-plugin	filetype.txt	/*ft-jjdescription-plugin*
 ft-jq-syntax	syntax.txt	/*ft-jq-syntax*
 ft-json-syntax	syntax.txt	/*ft-json-syntax*
 ft-kconfig-syntax	syntax.txt	/*ft-kconfig-syntax*
@@ -7277,6 +7273,7 @@ location-list-file-window	quickfix.txt	/*location-list-file-window*
 location-list-window	quickfix.txt	/*location-list-window*
 log	starting.txt	/*log*
 log()	vimfn.txt	/*log()*
+log-files	editing.txt	/*log-files*
 log10()	vimfn.txt	/*log10()*
 log_levels	lua.txt	/*log_levels*
 love	credits.txt	/*love*
@@ -7938,6 +7935,7 @@ news-0.12.txt	news-0.12.txt	/*news-0.12.txt*
 news-0.9	news-0.9.txt	/*news-0.9*
 news-0.9.txt	news-0.9.txt	/*news-0.9.txt*
 news-breaking	news.txt	/*news-breaking*
+news-breaking-dev	news.txt	/*news-breaking-dev*
 news-changed	news.txt	/*news-changed*
 news-deprecations	news.txt	/*news-deprecations*
 news-features	news.txt	/*news-features*
@@ -8314,7 +8312,6 @@ plugin-details	filetype.txt	/*plugin-details*
 plugin-filetype	usr_41.txt	/*plugin-filetype*
 plugin-special	usr_41.txt	/*plugin-special*
 plugin_exec	filetype.txt	/*plugin_exec*
-plugins	plugins.txt	/*plugins*
 plugins.txt	plugins.txt	/*plugins.txt*
 popup-menu	gui.txt	/*popup-menu*
 popup-window	vim_diff.txt	/*popup-window*
@@ -8948,7 +8945,7 @@ srand()	vimfn.txt	/*srand()*
 sscanf	vimeval.txt	/*sscanf*
 stacktrace-variable	vvars.txt	/*stacktrace-variable*
 standard-path	starting.txt	/*standard-path*
-standard-plugin	usr_05.txt	/*standard-plugin*
+standard-plugin	plugins.txt	/*standard-plugin*
 standard-plugin-list	plugins.txt	/*standard-plugin-list*
 standout	syntax.txt	/*standout*
 star	pattern.txt	/*star*
@@ -10033,6 +10030,7 @@ vim.env	lua.txt	/*vim.env*
 vim.filetype	lua.txt	/*vim.filetype*
 vim.filetype.add()	lua.txt	/*vim.filetype.add()*
 vim.filetype.get_option()	lua.txt	/*vim.filetype.get_option()*
+vim.filetype.inspect()	lua.txt	/*vim.filetype.inspect()*
 vim.filetype.match()	lua.txt	/*vim.filetype.match()*
 vim.fn	lua.txt	/*vim.fn*
 vim.fs	lua.txt	/*vim.fs*
@@ -10333,9 +10331,15 @@ vim.pack.update()	pack.txt	/*vim.pack.update()*
 vim.paste()	lua.txt	/*vim.paste()*
 vim.pesc()	lua.txt	/*vim.pesc()*
 vim.pos	lua.txt	/*vim.pos*
+vim.pos.cursor()	lua.txt	/*vim.pos.cursor()*
+vim.pos.extmark()	lua.txt	/*vim.pos.extmark()*
+vim.pos.lsp()	lua.txt	/*vim.pos.lsp()*
 vim.pretty_print()	deprecated.txt	/*vim.pretty_print()*
 vim.print()	lua.txt	/*vim.print()*
 vim.range	lua.txt	/*vim.range*
+vim.range.cursor()	lua.txt	/*vim.range.cursor()*
+vim.range.extmark()	lua.txt	/*vim.range.extmark()*
+vim.range.lsp()	lua.txt	/*vim.range.lsp()*
 vim.re	lua.txt	/*vim.re*
 vim.re.compile()	lua.txt	/*vim.re.compile()*
 vim.re.find()	lua.txt	/*vim.re.find()*
