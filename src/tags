@@ -11,6 +11,7 @@ $NVIM	vvars.txt	/*$NVIM*
 $NVIM_APPNAME	starting.txt	/*$NVIM_APPNAME*
 $NVIM_LISTEN_ADDRESS	deprecated.txt	/*$NVIM_LISTEN_ADDRESS*
 $NVIM_LOG_FILE	starting.txt	/*$NVIM_LOG_FILE*
+$NVIM_NOTTYFAST	options.txt	/*$NVIM_NOTTYFAST*
 $NVIM_RPLUGIN_MANIFEST	remote_plugin.txt	/*$NVIM_RPLUGIN_MANIFEST*
 $NoDefaultCurrentDirectoryInExePath	vimfn.txt	/*$NoDefaultCurrentDirectoryInExePath*
 $TERM	tui.txt	/*$TERM*
@@ -655,7 +656,7 @@ $quote	vimeval.txt	/*$quote*
 'notermguicolors'	options.txt	/*'notermguicolors'*
 'notermsync'	options.txt	/*'notermsync'*
 'noterse'	vim_diff.txt	/*'noterse'*
-'notf'	vim_diff.txt	/*'notf'*
+'notf'	options.txt	/*'notf'*
 'notgc'	options.txt	/*'notgc'*
 'notgst'	options.txt	/*'notgst'*
 'notildeop'	options.txt	/*'notildeop'*
@@ -666,7 +667,7 @@ $quote	vimeval.txt	/*$quote*
 'notr'	options.txt	/*'notr'*
 'nottimeout'	options.txt	/*'nottimeout'*
 'nottybuiltin'	vim_diff.txt	/*'nottybuiltin'*
-'nottyfast'	vim_diff.txt	/*'nottyfast'*
+'nottyfast'	options.txt	/*'nottyfast'*
 'noudf'	options.txt	/*'noudf'*
 'noundofile'	options.txt	/*'noundofile'*
 'novb'	options.txt	/*'novb'*
@@ -786,6 +787,7 @@ $quote	vimeval.txt	/*$quote*
 'scrollbind'	options.txt	/*'scrollbind'*
 'scrolljump'	options.txt	/*'scrolljump'*
 'scrolloff'	options.txt	/*'scrolloff'*
+'scrolloffpad'	options.txt	/*'scrolloffpad'*
 'scrollopt'	options.txt	/*'scrollopt'*
 'scs'	options.txt	/*'scs'*
 'sd'	options.txt	/*'sd'*
@@ -845,6 +847,7 @@ $quote	vimeval.txt	/*$quote*
 'so'	options.txt	/*'so'*
 'softtabstop'	options.txt	/*'softtabstop'*
 'sol'	options.txt	/*'sol'*
+'sop'	options.txt	/*'sop'*
 'sp'	options.txt	/*'sp'*
 'spc'	options.txt	/*'spc'*
 'spell'	options.txt	/*'spell'*
@@ -921,7 +924,7 @@ $quote	vimeval.txt	/*$quote*
 'termsync'	options.txt	/*'termsync'*
 'terse'	vim_diff.txt	/*'terse'*
 'textwidth'	options.txt	/*'textwidth'*
-'tf'	vim_diff.txt	/*'tf'*
+'tf'	options.txt	/*'tf'*
 'tfu'	options.txt	/*'tfu'*
 'tgc'	options.txt	/*'tgc'*
 'tgst'	options.txt	/*'tgst'*
@@ -952,7 +955,7 @@ $quote	vimeval.txt	/*$quote*
 'ttm'	options.txt	/*'ttm'*
 'tty'	vim_diff.txt	/*'tty'*
 'ttybuiltin'	vim_diff.txt	/*'ttybuiltin'*
-'ttyfast'	vim_diff.txt	/*'ttyfast'*
+'ttyfast'	options.txt	/*'ttyfast'*
 'ttym'	vim_diff.txt	/*'ttym'*
 'ttymouse'	vim_diff.txt	/*'ttymouse'*
 'ttyscroll'	vim_diff.txt	/*'ttyscroll'*
@@ -2960,6 +2963,8 @@ $quote	vimeval.txt	/*$quote*
 :unsilent	various.txt	/*:unsilent*
 :up	editing.txt	/*:up*
 :update	editing.txt	/*:update*
+:upt	various.txt	/*:upt*
+:uptime	various.txt	/*:uptime*
 :v	repeat.txt	/*:v*
 :ve	various.txt	/*:ve*
 :ver	various.txt	/*:ver*
@@ -3568,6 +3573,7 @@ E155	sign.txt	/*E155*
 E1550	options.txt	/*E1550*
 E156	sign.txt	/*E156*
 E1562	options.txt	/*E1562*
+E1568	options.txt	/*E1568*
 E157	sign.txt	/*E157*
 E1572	options.txt	/*E1572*
 E158	sign.txt	/*E158*
@@ -4734,6 +4740,7 @@ X2Release	gui.txt	/*X2Release*
 Y	change.txt	/*Y*
 Y-default	change.txt	/*Y-default*
 ZQ	editing.txt	/*ZQ*
+ZR	editing.txt	/*ZR*
 ZZ	editing.txt	/*ZZ*
 [	index.txt	/*[*
 [#	motion.txt	/*[#*
@@ -4932,6 +4939,9 @@ add-package	usr_05.txt	/*add-package*
 add-plugin	usr_05.txt	/*add-plugin*
 aff-dic-format	spell.txt	/*aff-dic-format*
 after-directory	options.txt	/*after-directory*
+algol68	syntax.txt	/*algol68*
+algol68_no_preludes	syntax.txt	/*algol68_no_preludes*
+algol68_symbolic_operators	syntax.txt	/*algol68_symbolic_operators*
 alternate-file	editing.txt	/*alternate-file*
 altfont	syntax.txt	/*altfont*
 and()	vimfn.txt	/*and()*
@@ -5639,6 +5649,7 @@ dev-doc	dev.txt	/*dev-doc*
 dev-error-codes	dev.txt	/*dev-error-codes*
 dev-error-patterns	dev.txt	/*dev-error-patterns*
 dev-events	dev_arch.txt	/*dev-events*
+dev-filesystem	dev_arch.txt	/*dev-filesystem*
 dev-filter-test	dev_test.txt	/*dev-filter-test*
 dev-fix-test	dev_test.txt	/*dev-fix-test*
 dev-guidelines	dev.txt	/*dev-guidelines*
@@ -5650,6 +5661,9 @@ dev-name-common	dev.txt	/*dev-name-common*
 dev-name-events	dev.txt	/*dev-name-events*
 dev-namespace-name	dev.txt	/*dev-namespace-name*
 dev-naming	dev.txt	/*dev-naming*
+dev-new-event	dev_arch.txt	/*dev-new-event*
+dev-new-excmd	dev_arch.txt	/*dev-new-excmd*
+dev-new-vimfn	dev_arch.txt	/*dev-new-vimfn*
 dev-patterns	dev.txt	/*dev-patterns*
 dev-provider	dev.txt	/*dev-provider*
 dev-quickstart	dev_tools.txt	/*dev-quickstart*
@@ -5871,6 +5885,7 @@ exepath()	vimfn.txt	/*exepath()*
 exists()	vimfn.txt	/*exists()*
 exiting	starting.txt	/*exiting*
 exiting-variable	vvars.txt	/*exiting-variable*
+exitreason-variable	vvars.txt	/*exitreason-variable*
 exp()	vimfn.txt	/*exp()*
 expand()	vimfn.txt	/*expand()*
 expand-env	options.txt	/*expand-env*
@@ -6103,6 +6118,7 @@ ft-ada-options	ft_ada.txt	/*ft-ada-options*
 ft-ada-plugin	ft_ada.txt	/*ft-ada-plugin*
 ft-ada-syntax	ft_ada.txt	/*ft-ada-syntax*
 ft-ada-variables	ft_ada.txt	/*ft-ada-variables*
+ft-algol68-syntax	syntax.txt	/*ft-algol68-syntax*
 ft-ant-syntax	syntax.txt	/*ft-ant-syntax*
 ft-apache-syntax	syntax.txt	/*ft-apache-syntax*
 ft-arduino-plugin	filetype.txt	/*ft-arduino-plugin*
@@ -9031,6 +9047,7 @@ start-of-file	pattern.txt	/*start-of-file*
 start-vimdiff	diff.txt	/*start-vimdiff*
 starting	starting.txt	/*starting*
 starting.txt	starting.txt	/*starting.txt*
+starttime-variable	vvars.txt	/*starttime-variable*
 startup	starting.txt	/*startup*
 startup-options	starting.txt	/*startup-options*
 startup-terminal	tui.txt	/*startup-terminal*
@@ -9788,6 +9805,7 @@ v:errors	vvars.txt	/*v:errors*
 v:event	vvars.txt	/*v:event*
 v:exception	vvars.txt	/*v:exception*
 v:exiting	vvars.txt	/*v:exiting*
+v:exitreason	vvars.txt	/*v:exitreason*
 v:false	vvars.txt	/*v:false*
 v:fcs_choice	vvars.txt	/*v:fcs_choice*
 v:fcs_reason	vvars.txt	/*v:fcs_reason*
@@ -9841,6 +9859,7 @@ v:sizeofint	vim_diff.txt	/*v:sizeofint*
 v:sizeoflong	vim_diff.txt	/*v:sizeoflong*
 v:sizeofpointer	vim_diff.txt	/*v:sizeofpointer*
 v:stacktrace	vvars.txt	/*v:stacktrace*
+v:starttime	vvars.txt	/*v:starttime*
 v:statusmsg	vvars.txt	/*v:statusmsg*
 v:stderr	vvars.txt	/*v:stderr*
 v:swapchoice	vvars.txt	/*v:swapchoice*
@@ -9908,7 +9927,9 @@ v_U	change.txt	/*v_U*
 v_V	visual.txt	/*v_V*
 v_X	change.txt	/*v_X*
 v_Y	change.txt	/*v_Y*
+v_[N	treesitter.txt	/*v_[N*
 v_[n	treesitter.txt	/*v_[n*
+v_]N	treesitter.txt	/*v_]N*
 v_]n	treesitter.txt	/*v_]n*
 v_a	motion.txt	/*v_a*
 v_a'	motion.txt	/*v_a'*
@@ -10125,6 +10146,7 @@ vim.fs.read()	lua.txt	/*vim.fs.read()*
 vim.fs.relpath()	lua.txt	/*vim.fs.relpath()*
 vim.fs.rm()	lua.txt	/*vim.fs.rm()*
 vim.fs.root()	lua.txt	/*vim.fs.root()*
+vim.fs.write()	lua.txt	/*vim.fs.write()*
 vim.g	lua.txt	/*vim.g*
 vim.glob	lua.txt	/*vim.glob*
 vim.glob.to_lpeg()	lua.txt	/*vim.glob.to_lpeg()*
@@ -10533,6 +10555,10 @@ vim.trim()	lua.txt	/*vim.trim()*
 vim.type_idx	lua.txt	/*vim.type_idx*
 vim.types	lua.txt	/*vim.types*
 vim.ui	lua.txt	/*vim.ui*
+vim.ui.img	lua.txt	/*vim.ui.img*
+vim.ui.img.del()	lua.txt	/*vim.ui.img.del()*
+vim.ui.img.get()	lua.txt	/*vim.ui.img.get()*
+vim.ui.img.set()	lua.txt	/*vim.ui.img.set()*
 vim.ui.input()	lua.txt	/*vim.ui.input()*
 vim.ui.open()	lua.txt	/*vim.ui.open()*
 vim.ui.progress_status()	lua.txt	/*vim.ui.progress_status()*
