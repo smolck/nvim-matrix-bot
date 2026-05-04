@@ -3238,7 +3238,7 @@ BufFilePost	autocmd.txt	/*BufFilePost*
 BufFilePre	autocmd.txt	/*BufFilePre*
 BufHidden	autocmd.txt	/*BufHidden*
 BufLeave	autocmd.txt	/*BufLeave*
-BufModifiedSet	autocmd.txt	/*BufModifiedSet*
+BufModifiedSet	deprecated.txt	/*BufModifiedSet*
 BufNew	autocmd.txt	/*BufNew*
 BufNewFile	autocmd.txt	/*BufNewFile*
 BufRead	autocmd.txt	/*BufRead*
@@ -5616,6 +5616,7 @@ default-autocmds	vim_diff.txt	/*default-autocmds*
 default-mappings	vim_diff.txt	/*default-mappings*
 default-mouse	vim_diff.txt	/*default-mouse*
 defaults	vim_diff.txt	/*defaults*
+deferred	api.txt	/*deferred*
 define-function	userfunc.txt	/*define-function*
 definition-search	tagsrch.txt	/*definition-search*
 definitions	intro.txt	/*definitions*
@@ -8852,6 +8853,7 @@ shm-q	options.txt	/*shm-q*
 shm-r	options.txt	/*shm-r*
 shm-s	options.txt	/*shm-s*
 shm-t	options.txt	/*shm-t*
+shm-u	options.txt	/*shm-u*
 shm-w	options.txt	/*shm-w*
 shm-x	vim_diff.txt	/*shm-x*
 showing-menus	gui.txt	/*showing-menus*
@@ -9427,6 +9429,7 @@ ui-ext-options	api-ui-events.txt	/*ui-ext-options*
 ui-global	api-ui-events.txt	/*ui-global*
 ui-grid-old	api-ui-events.txt	/*ui-grid-old*
 ui-hlstate	api-ui-events.txt	/*ui-hlstate*
+ui-lifecycle	gui.txt	/*ui-lifecycle*
 ui-linegrid	api-ui-events.txt	/*ui-linegrid*
 ui-messages	api-ui-events.txt	/*ui-messages*
 ui-multigrid	api-ui-events.txt	/*ui-multigrid*
