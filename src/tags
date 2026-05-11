@@ -1627,6 +1627,7 @@ $quote	vimeval.txt	/*$quote*
 :Over	terminal.txt	/*:Over*
 :Program	terminal.txt	/*:Program*
 :Run	terminal.txt	/*:Run*
+:RunOrContinue	terminal.txt	/*:RunOrContinue*
 :RustEmitAsm	ft_rust.txt	/*:RustEmitAsm*
 :RustEmitIr	ft_rust.txt	/*:RustEmitIr*
 :RustExpand	ft_rust.txt	/*:RustExpand*
@@ -1646,6 +1647,7 @@ $quote	vimeval.txt	/*$quote*
 :Tbreak	terminal.txt	/*:Tbreak*
 :Termdebug	terminal.txt	/*:Termdebug*
 :TermdebugCommand	terminal.txt	/*:TermdebugCommand*
+:ToggleBreak	terminal.txt	/*:ToggleBreak*
 :Tutor	pi_tutor.txt	/*:Tutor*
 :Undotree	plugins.txt	/*:Undotree*
 :Until	terminal.txt	/*:Until*
@@ -3264,7 +3266,7 @@ CTRL-<PageUp>	tabpage.txt	/*CTRL-<PageUp>*
 CTRL-<Tab>	tabpage.txt	/*CTRL-<Tab>*
 CTRL-A	change.txt	/*CTRL-A*
 CTRL-B	scroll.txt	/*CTRL-B*
-CTRL-C	pattern.txt	/*CTRL-C*
+CTRL-C	various.txt	/*CTRL-C*
 CTRL-D	scroll.txt	/*CTRL-D*
 CTRL-E	scroll.txt	/*CTRL-E*
 CTRL-F	scroll.txt	/*CTRL-F*
@@ -3576,6 +3578,7 @@ E1562	options.txt	/*E1562*
 E1568	options.txt	/*E1568*
 E157	sign.txt	/*E157*
 E1572	options.txt	/*E1572*
+E1577	options.txt	/*E1577*
 E158	sign.txt	/*E158*
 E159	sign.txt	/*E159*
 E16	cmdline.txt	/*E16*
@@ -4418,7 +4421,6 @@ Iter:each()	lua.txt	/*Iter:each()*
 Iter:enumerate()	lua.txt	/*Iter:enumerate()*
 Iter:filter()	lua.txt	/*Iter:filter()*
 Iter:find()	lua.txt	/*Iter:find()*
-Iter:flatten()	lua.txt	/*Iter:flatten()*
 Iter:fold()	lua.txt	/*Iter:fold()*
 Iter:join()	lua.txt	/*Iter:join()*
 Iter:last()	lua.txt	/*Iter:last()*
@@ -4426,17 +4428,18 @@ Iter:map()	lua.txt	/*Iter:map()*
 Iter:next()	lua.txt	/*Iter:next()*
 Iter:nth()	lua.txt	/*Iter:nth()*
 Iter:peek()	lua.txt	/*Iter:peek()*
-Iter:pop()	lua.txt	/*Iter:pop()*
 Iter:reduce()	lua.txt	/*Iter:reduce()*
-Iter:rev()	lua.txt	/*Iter:rev()*
-Iter:rfind()	lua.txt	/*Iter:rfind()*
-Iter:rpeek()	lua.txt	/*Iter:rpeek()*
-Iter:rskip()	lua.txt	/*Iter:rskip()*
 Iter:skip()	lua.txt	/*Iter:skip()*
-Iter:slice()	lua.txt	/*Iter:slice()*
 Iter:take()	lua.txt	/*Iter:take()*
 Iter:totable()	lua.txt	/*Iter:totable()*
 Iter:unique()	lua.txt	/*Iter:unique()*
+IterArray:flatten()	lua.txt	/*IterArray:flatten()*
+IterArray:pop()	lua.txt	/*IterArray:pop()*
+IterArray:rev()	lua.txt	/*IterArray:rev()*
+IterArray:rfind()	lua.txt	/*IterArray:rfind()*
+IterArray:rpeek()	lua.txt	/*IterArray:rpeek()*
+IterArray:rskip()	lua.txt	/*IterArray:rskip()*
+IterArray:slice()	lua.txt	/*IterArray:slice()*
 J	change.txt	/*J*
 Japanese	mbyte.txt	/*Japanese*
 Justify()	usr_25.txt	/*Justify()*
@@ -7394,6 +7397,7 @@ lsp-handler-resolution	lsp.txt	/*lsp-handler-resolution*
 lsp-highlight	lsp.txt	/*lsp-highlight*
 lsp-highlight-codelens	lsp.txt	/*lsp-highlight-codelens*
 lsp-highlight-signature	lsp.txt	/*lsp-highlight-signature*
+lsp-incremental-selection	lsp.txt	/*lsp-incremental-selection*
 lsp-inlay_hint	lsp.txt	/*lsp-inlay_hint*
 lsp-inline_completion	lsp.txt	/*lsp-inline_completion*
 lsp-linked_editing_range	lsp.txt	/*lsp-linked_editing_range*
@@ -7489,6 +7493,7 @@ lua-guide-commands-create	lua-guide.txt	/*lua-guide-commands-create*
 lua-guide-commands-delete	lua-guide.txt	/*lua-guide-commands-delete*
 lua-guide-config	lua-guide.txt	/*lua-guide-config*
 lua-guide-credits	lua-guide.txt	/*lua-guide-credits*
+lua-guide-interrupt	lua-guide.txt	/*lua-guide-interrupt*
 lua-guide-mappings	lua-guide.txt	/*lua-guide-mappings*
 lua-guide-mappings-del	lua-guide.txt	/*lua-guide-mappings-del*
 lua-guide-mappings-set	lua-guide.txt	/*lua-guide-mappings-set*
@@ -9182,9 +9187,6 @@ t_xx	vim_diff.txt	/*t_xx*
 tab	intro.txt	/*tab*
 tab-ID	tabpage.txt	/*tab-ID*
 tab-page	tabpage.txt	/*tab-page*
-tab-page-commands	tabpage.txt	/*tab-page-commands*
-tab-page-intro	tabpage.txt	/*tab-page-intro*
-tab-page-other	tabpage.txt	/*tab-page-other*
 tabid	tabpage.txt	/*tabid*
 table.concat()	luaref.txt	/*table.concat()*
 table.foreach()	luaref.txt	/*table.foreach()*
@@ -9196,6 +9198,10 @@ table.sort()	luaref.txt	/*table.sort()*
 tabline-menu	tabpage.txt	/*tabline-menu*
 tabnew-autocmd	tabpage.txt	/*tabnew-autocmd*
 tabpage	tabpage.txt	/*tabpage*
+tabpage-commands	tabpage.txt	/*tabpage-commands*
+tabpage-intro	tabpage.txt	/*tabpage-intro*
+tabpage-number	tabpage.txt	/*tabpage-number*
+tabpage-other	tabpage.txt	/*tabpage-other*
 tabpage-variable	vimeval.txt	/*tabpage-variable*
 tabpage.txt	tabpage.txt	/*tabpage.txt*
 tabpagebuflist()	vimfn.txt	/*tabpagebuflist()*
@@ -9481,6 +9487,7 @@ user-cmd-ambiguous	map.txt	/*user-cmd-ambiguous*
 user-commands	map.txt	/*user-commands*
 user-function	vimeval.txt	/*user-function*
 user-manual	usr_toc.txt	/*user-manual*
+useractive-variable	vvars.txt	/*useractive-variable*
 userdata	luaref.txt	/*userdata*
 userfunc.txt	userfunc.txt	/*userfunc.txt*
 using-<Plug>	usr_41.txt	/*using-<Plug>*
@@ -9883,6 +9890,7 @@ v:testing	vvars.txt	/*v:testing*
 v:this_session	vvars.txt	/*v:this_session*
 v:throwpoint	vvars.txt	/*v:throwpoint*
 v:true	vvars.txt	/*v:true*
+v:useractive	vvars.txt	/*v:useractive*
 v:val	vvars.txt	/*v:val*
 v:var	vimeval.txt	/*v:var*
 v:version	vvars.txt	/*v:version*
@@ -10062,6 +10070,7 @@ vim-tutor-usage	pi_tutor.txt	/*vim-tutor-usage*
 vim-variable	vimeval.txt	/*vim-variable*
 vim.Diagnostic	diagnostic.txt	/*vim.Diagnostic*
 vim.Diagnostic.Set	diagnostic.txt	/*vim.Diagnostic.Set*
+vim.Log	lua.txt	/*vim.Log*
 vim.NIL	lua.txt	/*vim.NIL*
 vim.Pos	lua.txt	/*vim.Pos*
 vim.Range	lua.txt	/*vim.Range*
@@ -10179,6 +10188,7 @@ vim.inspector	lua.txt	/*vim.inspector*
 vim.is_callable()	lua.txt	/*vim.is_callable()*
 vim.isarray()	lua.txt	/*vim.isarray()*
 vim.islist()	lua.txt	/*vim.islist()*
+vim.isnil()	lua.txt	/*vim.isnil()*
 vim.iter	lua.txt	/*vim.iter*
 vim.iter()	lua.txt	/*vim.iter()*
 vim.json	lua.txt	/*vim.json*
@@ -10197,7 +10207,12 @@ vim.loader	lua.txt	/*vim.loader*
 vim.loader.enable()	lua.txt	/*vim.loader.enable()*
 vim.loader.find()	lua.txt	/*vim.loader.find()*
 vim.loader.reset()	lua.txt	/*vim.loader.reset()*
+vim.log	lua.txt	/*vim.log*
+vim.log.get_level()	lua.txt	/*vim.log.get_level()*
 vim.log.levels	lua.txt	/*vim.log.levels*
+vim.log.new()	lua.txt	/*vim.log.new()*
+vim.log.set_format_func()	lua.txt	/*vim.log.set_format_func()*
+vim.log.set_level()	lua.txt	/*vim.log.set_level()*
 vim.loop	deprecated.txt	/*vim.loop*
 vim.lpeg	lua.txt	/*vim.lpeg*
 vim.lpeg.B()	lua.txt	/*vim.lpeg.B()*
@@ -10221,6 +10236,7 @@ vim.lpeg.match()	lua.txt	/*vim.lpeg.match()*
 vim.lpeg.setmaxstack()	lua.txt	/*vim.lpeg.setmaxstack()*
 vim.lpeg.type()	lua.txt	/*vim.lpeg.type()*
 vim.lpeg.version()	lua.txt	/*vim.lpeg.version()*
+vim.lsp	lsp.txt	/*vim.lsp*
 vim.lsp.Client	lsp.txt	/*vim.lsp.Client*
 vim.lsp.Client.Progress	lsp.txt	/*vim.lsp.Client.Progress*
 vim.lsp.ClientConfig	lsp.txt	/*vim.lsp.ClientConfig*
@@ -10407,8 +10423,10 @@ vim.mpack.encode()	lua.txt	/*vim.mpack.encode()*
 vim.net	lua.txt	/*vim.net*
 vim.net.request()	lua.txt	/*vim.net.request()*
 vim.net.request.Response	lua.txt	/*vim.net.request.Response*
+vim.nonnil()	lua.txt	/*vim.nonnil()*
 vim.notify()	lua.txt	/*vim.notify()*
 vim.notify_once()	lua.txt	/*vim.notify_once()*
+vim.npcall()	lua.txt	/*vim.npcall()*
 vim.o	lua.txt	/*vim.o*
 vim.on_key()	lua.txt	/*vim.on_key()*
 vim.opt	lua.txt	/*vim.opt*
@@ -10434,9 +10452,11 @@ vim.pos	lua.txt	/*vim.pos*
 vim.pos.cursor()	lua.txt	/*vim.pos.cursor()*
 vim.pos.extmark()	lua.txt	/*vim.pos.extmark()*
 vim.pos.lsp()	lua.txt	/*vim.pos.lsp()*
+vim.pos.offset()	lua.txt	/*vim.pos.offset()*
 vim.pos.to_cursor()	lua.txt	/*vim.pos.to_cursor()*
 vim.pos.to_extmark()	lua.txt	/*vim.pos.to_extmark()*
 vim.pos.to_lsp()	lua.txt	/*vim.pos.to_lsp()*
+vim.pos.to_offset()	lua.txt	/*vim.pos.to_offset()*
 vim.pretty_print()	deprecated.txt	/*vim.pretty_print()*
 vim.print()	lua.txt	/*vim.print()*
 vim.range	lua.txt	/*vim.range*
@@ -10503,6 +10523,7 @@ vim.text.diff()	lua.txt	/*vim.text.diff()*
 vim.text.hexdecode()	lua.txt	/*vim.text.hexdecode()*
 vim.text.hexencode()	lua.txt	/*vim.text.hexencode()*
 vim.text.indent()	lua.txt	/*vim.text.indent()*
+vim.treesitter	treesitter.txt	/*vim.treesitter*
 vim.treesitter.Query	treesitter.txt	/*vim.treesitter.Query*
 vim.treesitter.add_directive()	deprecated.txt	/*vim.treesitter.add_directive()*
 vim.treesitter.add_predicate()	deprecated.txt	/*vim.treesitter.add_predicate()*
@@ -10551,6 +10572,7 @@ vim.treesitter.query.parse()	treesitter.txt	/*vim.treesitter.query.parse()*
 vim.treesitter.query.parse_query()	deprecated.txt	/*vim.treesitter.query.parse_query()*
 vim.treesitter.query.set()	treesitter.txt	/*vim.treesitter.query.set()*
 vim.treesitter.query.set_query()	deprecated.txt	/*vim.treesitter.query.set_query()*
+vim.treesitter.select()	treesitter.txt	/*vim.treesitter.select()*
 vim.treesitter.set_query()	deprecated.txt	/*vim.treesitter.set_query()*
 vim.treesitter.start()	treesitter.txt	/*vim.treesitter.start()*
 vim.treesitter.stop()	treesitter.txt	/*vim.treesitter.stop()*
@@ -10672,6 +10694,7 @@ window-exit	editing.txt	/*window-exit*
 window-functions	usr_41.txt	/*window-functions*
 window-move-cursor	windows.txt	/*window-move-cursor*
 window-moving	windows.txt	/*window-moving*
+window-number	windows.txt	/*window-number*
 window-resize	windows.txt	/*window-resize*
 window-size	tui.txt	/*window-size*
 window-size-functions	usr_41.txt	/*window-size-functions*
