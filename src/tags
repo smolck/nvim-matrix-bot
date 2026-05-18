@@ -13,6 +13,7 @@ $NVIM_LISTEN_ADDRESS	deprecated.txt	/*$NVIM_LISTEN_ADDRESS*
 $NVIM_LOG_FILE	starting.txt	/*$NVIM_LOG_FILE*
 $NVIM_NOTTYFAST	options.txt	/*$NVIM_NOTTYFAST*
 $NVIM_RPLUGIN_MANIFEST	remote_plugin.txt	/*$NVIM_RPLUGIN_MANIFEST*
+$NVIM_TERMDEFS	tui.txt	/*$NVIM_TERMDEFS*
 $NoDefaultCurrentDirectoryInExePath	vimfn.txt	/*$NoDefaultCurrentDirectoryInExePath*
 $TERM	tui.txt	/*$TERM*
 $VIM	starting.txt	/*$VIM*
@@ -2451,8 +2452,12 @@ $quote	vimeval.txt	/*$quote*
 :p	various.txt	/*:p*
 :pa	repeat.txt	/*:pa*
 :packadd	repeat.txt	/*:packadd*
+:packd	pack.txt	/*:packd*
+:packdel	pack.txt	/*:packdel*
 :packl	repeat.txt	/*:packl*
 :packloadall	repeat.txt	/*:packloadall*
+:packu	pack.txt	/*:packu*
+:packupdate	pack.txt	/*:packupdate*
 :pb	windows.txt	/*:pb*
 :pbuffer	windows.txt	/*:pbuffer*
 :pc	windows.txt	/*:pc*
@@ -4021,7 +4026,12 @@ E5803	lsp.txt	/*E5803*
 E5804	lsp.txt	/*E5804*
 E5805	lsp.txt	/*E5805*
 E5806	lsp.txt	/*E5806*
+E5807	pack.txt	/*E5807*
+E5808	pack.txt	/*E5808*
+E5809	pack.txt	/*E5809*
 E581	vimeval.txt	/*E581*
+E5810	pack.txt	/*E5810*
+E5811	pack.txt	/*E5811*
 E582	vimeval.txt	/*E582*
 E583	vimeval.txt	/*E583*
 E584	vimeval.txt	/*E584*
@@ -4665,6 +4675,7 @@ TabClosed	autocmd.txt	/*TabClosed*
 TabClosedPre	autocmd.txt	/*TabClosedPre*
 TabEnter	autocmd.txt	/*TabEnter*
 TabLeave	autocmd.txt	/*TabLeave*
+TabMoved	autocmd.txt	/*TabMoved*
 TabNew	autocmd.txt	/*TabNew*
 TabNewEntered	autocmd.txt	/*TabNewEntered*
 TermClose	autocmd.txt	/*TermClose*
@@ -4683,6 +4694,8 @@ TextChanged	autocmd.txt	/*TextChanged*
 TextChangedI	autocmd.txt	/*TextChangedI*
 TextChangedP	autocmd.txt	/*TextChangedP*
 TextChangedT	autocmd.txt	/*TextChangedT*
+TextPutPost	autocmd.txt	/*TextPutPost*
+TextPutPre	autocmd.txt	/*TextPutPre*
 TextYankPost	autocmd.txt	/*TextYankPost*
 Transact-SQL	ft_sql.txt	/*Transact-SQL*
 U	undo.txt	/*U*
@@ -5653,11 +5666,14 @@ dev-doc	dev.txt	/*dev-doc*
 dev-error-codes	dev.txt	/*dev-error-codes*
 dev-error-patterns	dev.txt	/*dev-error-patterns*
 dev-events	dev_arch.txt	/*dev-events*
+dev-excmd	dev.txt	/*dev-excmd*
 dev-filesystem	dev_arch.txt	/*dev-filesystem*
 dev-filter-test	dev_test.txt	/*dev-filter-test*
 dev-fix-test	dev_test.txt	/*dev-fix-test*
 dev-guidelines	dev.txt	/*dev-guidelines*
+dev-interface-patterns	dev.txt	/*dev-interface-patterns*
 dev-internals-howto	dev_arch.txt	/*dev-internals-howto*
+dev-layout	dev_arch.txt	/*dev-layout*
 dev-lua	dev.txt	/*dev-lua*
 dev-lua-builtin	dev_arch.txt	/*dev-lua-builtin*
 dev-lua-doc	dev.txt	/*dev-lua-doc*
@@ -5668,7 +5684,6 @@ dev-naming	dev.txt	/*dev-naming*
 dev-new-event	dev_arch.txt	/*dev-new-event*
 dev-new-excmd	dev_arch.txt	/*dev-new-excmd*
 dev-new-vimfn	dev_arch.txt	/*dev-new-vimfn*
-dev-patterns	dev.txt	/*dev-patterns*
 dev-provider	dev.txt	/*dev-provider*
 dev-quickstart	dev_tools.txt	/*dev-quickstart*
 dev-run-test	dev_test.txt	/*dev-run-test*
@@ -5817,6 +5832,7 @@ editorconfig.trim_trailing_whitespace	plugins.txt	/*editorconfig.trim_trailing_w
 efm-%>	quickfix.txt	/*efm-%>*
 efm-entries	quickfix.txt	/*efm-entries*
 efm-ignore	quickfix.txt	/*efm-ignore*
+emacs-eshell	channel.txt	/*emacs-eshell*
 emacs-keys	tips.txt	/*emacs-keys*
 emoji	mbyte.txt	/*emoji*
 empty()	vimfn.txt	/*empty()*
@@ -7143,6 +7159,7 @@ inclusive	motion.txt	/*inclusive*
 inclusive-motion-selection-exclusive	motion.txt	/*inclusive-motion-selection-exclusive*
 indent()	vimfn.txt	/*indent()*
 indent-expression	indent.txt	/*indent-expression*
+indent-guides	options.txt	/*indent-guides*
 indent.txt	indent.txt	/*indent.txt*
 indentkeys-format	indent.txt	/*indentkeys-format*
 index	index.txt	/*index*
@@ -8088,6 +8105,7 @@ nvim__invalidate_glyph_cache()	api.txt	/*nvim__invalidate_glyph_cache()*
 nvim__ns_get()	api.txt	/*nvim__ns_get()*
 nvim__ns_set()	api.txt	/*nvim__ns_set()*
 nvim__redraw()	api.txt	/*nvim__redraw()*
+nvim__set_restart_on_crash()	api.txt	/*nvim__set_restart_on_crash()*
 nvim__stats()	api.txt	/*nvim__stats()*
 nvim_buf_attach()	api.txt	/*nvim_buf_attach()*
 nvim_buf_call()	api.txt	/*nvim_buf_call()*
@@ -8637,6 +8655,7 @@ rename-files	tips.txt	/*rename-files*
 repeat()	vimfn.txt	/*repeat()*
 repeat.txt	repeat.txt	/*repeat.txt*
 repeating	repeat.txt	/*repeating*
+repl	channel.txt	/*repl*
 replacing	change.txt	/*replacing*
 replacing-ex	insert.txt	/*replacing-ex*
 require()	luaref.txt	/*require()*
@@ -10177,7 +10196,7 @@ vim.health.start()	health.txt	/*vim.health.start()*
 vim.health.warn()	health.txt	/*vim.health.warn()*
 vim.highlight	deprecated.txt	/*vim.highlight*
 vim.hl	lua.txt	/*vim.hl*
-vim.hl.on_yank()	lua.txt	/*vim.hl.on_yank()*
+vim.hl.hl_op()	lua.txt	/*vim.hl.hl_op()*
 vim.hl.priorities	lua.txt	/*vim.hl.priorities*
 vim.hl.range()	lua.txt	/*vim.hl.range()*
 vim.iconv()	lua.txt	/*vim.iconv()*
@@ -10437,6 +10456,7 @@ vim.opt:remove()	lua.txt	/*vim.opt:remove()*
 vim.opt_global	lua.txt	/*vim.opt_global*
 vim.opt_local	lua.txt	/*vim.opt_local*
 vim.pack	pack.txt	/*vim.pack*
+vim.pack-commands	pack.txt	/*vim.pack-commands*
 vim.pack-directory	pack.txt	/*vim.pack-directory*
 vim.pack-events	pack.txt	/*vim.pack-events*
 vim.pack-examples	pack.txt	/*vim.pack-examples*
