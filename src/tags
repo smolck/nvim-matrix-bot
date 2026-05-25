@@ -1090,8 +1090,8 @@ $quote	vimeval.txt	/*$quote*
 --remote-wait	remote.txt	/*--remote-wait*
 --remote-wait-silent	remote.txt	/*--remote-wait-silent*
 --server	remote.txt	/*--server*
---serverlist	remote.txt	/*--serverlist*
---servername	remote.txt	/*--servername*
+--serverlist	vim_diff.txt	/*--serverlist*
+--servername	vim_diff.txt	/*--servername*
 --startuptime	starting.txt	/*--startuptime*
 --version	starting.txt	/*--version*
 ->	vimeval.txt	/*->*
@@ -3584,6 +3584,7 @@ E1568	options.txt	/*E1568*
 E157	sign.txt	/*E157*
 E1572	options.txt	/*E1572*
 E1577	options.txt	/*E1577*
+E1578	spell.txt	/*E1578*
 E158	sign.txt	/*E158*
 E159	sign.txt	/*E159*
 E16	cmdline.txt	/*E16*
@@ -4955,6 +4956,7 @@ add-package	usr_05.txt	/*add-package*
 add-plugin	usr_05.txt	/*add-plugin*
 aff-dic-format	spell.txt	/*aff-dic-format*
 after-directory	options.txt	/*after-directory*
+al	motion.txt	/*al*
 algol68	syntax.txt	/*algol68*
 algol68_no_preludes	syntax.txt	/*algol68_no_preludes*
 algol68_symbolic_operators	syntax.txt	/*algol68_symbolic_operators*
@@ -5378,7 +5380,6 @@ clear-undo	undo.txt	/*clear-undo*
 clearmatches()	vimfn.txt	/*clearmatches()*
 cli-arguments	starting.txt	/*cli-arguments*
 client-server	remote.txt	/*client-server*
-client-server-name	remote.txt	/*client-server-name*
 clientserver	remote.txt	/*clientserver*
 clientserver-missing	remote.txt	/*clientserver-missing*
 clipboard	provider.txt	/*clipboard*
@@ -7153,6 +7154,7 @@ if_ruby.txt	if_ruby.txt	/*if_ruby.txt*
 if_tcl	vim_diff.txt	/*if_tcl*
 ignore-errors	vimeval.txt	/*ignore-errors*
 ignore-timestamp	editing.txt	/*ignore-timestamp*
+il	motion.txt	/*il*
 inactive-buffer	windows.txt	/*inactive-buffer*
 include-search	tagsrch.txt	/*include-search*
 inclusive	motion.txt	/*inclusive*
@@ -9342,6 +9344,7 @@ tex-supersub	syntax.txt	/*tex-supersub*
 tex-sync	syntax.txt	/*tex-sync*
 tex-verb	syntax.txt	/*tex-verb*
 text-functions	usr_41.txt	/*text-functions*
+text-object-define	motion.txt	/*text-object-define*
 text-objects	motion.txt	/*text-objects*
 textlock	vimeval.txt	/*textlock*
 textprop	vim_diff.txt	/*textprop*
@@ -9435,6 +9438,7 @@ tui-cursor-shape	tui.txt	/*tui-cursor-shape*
 tui-cursor-tmux	tui.txt	/*tui-cursor-tmux*
 tui-input	tui.txt	/*tui-input*
 tui-modifyOtherKeys	tui.txt	/*tui-modifyOtherKeys*
+tui-termdefs	tui.txt	/*tui-termdefs*
 tui.txt	tui.txt	/*tui.txt*
 tutor	usr_01.txt	/*tutor*
 two-engines	pattern.txt	/*two-engines*
@@ -9973,6 +9977,7 @@ v_a[	motion.txt	/*v_a[*
 v_a]	motion.txt	/*v_a]*
 v_a`	motion.txt	/*v_a`*
 v_ab	motion.txt	/*v_ab*
+v_al	motion.txt	/*v_al*
 v_an	treesitter.txt	/*v_an*
 v_ap	motion.txt	/*v_ap*
 v_aquote	motion.txt	/*v_aquote*
@@ -10026,6 +10031,7 @@ v_i[	motion.txt	/*v_i[*
 v_i]	motion.txt	/*v_i]*
 v_i`	motion.txt	/*v_i`*
 v_ib	motion.txt	/*v_ib*
+v_il	motion.txt	/*v_il*
 v_in	treesitter.txt	/*v_in*
 v_ip	motion.txt	/*v_ip*
 v_iquote	motion.txt	/*v_iquote*
@@ -10403,7 +10409,6 @@ vim.lsp.util.apply_text_edits()	lsp.txt	/*vim.lsp.util.apply_text_edits()*
 vim.lsp.util.apply_workspace_edit()	lsp.txt	/*vim.lsp.util.apply_workspace_edit()*
 vim.lsp.util.buf_clear_references()	lsp.txt	/*vim.lsp.util.buf_clear_references()*
 vim.lsp.util.buf_highlight_references()	lsp.txt	/*vim.lsp.util.buf_highlight_references()*
-vim.lsp.util.character_offset()	lsp.txt	/*vim.lsp.util.character_offset()*
 vim.lsp.util.convert_input_to_markdown_lines()	lsp.txt	/*vim.lsp.util.convert_input_to_markdown_lines()*
 vim.lsp.util.convert_signature_help_to_markdown_lines()	lsp.txt	/*vim.lsp.util.convert_signature_help_to_markdown_lines()*
 vim.lsp.util.diagnostics_to_items()	deprecated.txt	/*vim.lsp.util.diagnostics_to_items()*
@@ -10472,23 +10477,25 @@ vim.pos	lua.txt	/*vim.pos*
 vim.pos.cursor()	lua.txt	/*vim.pos.cursor()*
 vim.pos.extmark()	lua.txt	/*vim.pos.extmark()*
 vim.pos.lsp()	lua.txt	/*vim.pos.lsp()*
+vim.pos.mark()	lua.txt	/*vim.pos.mark()*
 vim.pos.offset()	lua.txt	/*vim.pos.offset()*
 vim.pos.to_cursor()	lua.txt	/*vim.pos.to_cursor()*
 vim.pos.to_extmark()	lua.txt	/*vim.pos.to_extmark()*
 vim.pos.to_lsp()	lua.txt	/*vim.pos.to_lsp()*
+vim.pos.to_mark()	lua.txt	/*vim.pos.to_mark()*
 vim.pos.to_offset()	lua.txt	/*vim.pos.to_offset()*
 vim.pretty_print()	deprecated.txt	/*vim.pretty_print()*
 vim.print()	lua.txt	/*vim.print()*
 vim.range	lua.txt	/*vim.range*
-vim.range.cursor()	lua.txt	/*vim.range.cursor()*
 vim.range.extmark()	lua.txt	/*vim.range.extmark()*
 vim.range.has()	lua.txt	/*vim.range.has()*
 vim.range.intersect()	lua.txt	/*vim.range.intersect()*
 vim.range.is_empty()	lua.txt	/*vim.range.is_empty()*
 vim.range.lsp()	lua.txt	/*vim.range.lsp()*
-vim.range.to_cursor()	lua.txt	/*vim.range.to_cursor()*
+vim.range.mark()	lua.txt	/*vim.range.mark()*
 vim.range.to_extmark()	lua.txt	/*vim.range.to_extmark()*
 vim.range.to_lsp()	lua.txt	/*vim.range.to_lsp()*
+vim.range.to_mark()	lua.txt	/*vim.range.to_mark()*
 vim.re	lua.txt	/*vim.re*
 vim.re.compile()	lua.txt	/*vim.re.compile()*
 vim.re.find()	lua.txt	/*vim.re.find()*
