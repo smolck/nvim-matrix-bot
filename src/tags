@@ -4959,7 +4959,6 @@ after-directory	options.txt	/*after-directory*
 al	motion.txt	/*al*
 algol68	syntax.txt	/*algol68*
 algol68_no_preludes	syntax.txt	/*algol68_no_preludes*
-algol68_symbolic_operators	syntax.txt	/*algol68_symbolic_operators*
 alternate-file	editing.txt	/*alternate-file*
 altfont	syntax.txt	/*altfont*
 and()	vimfn.txt	/*and()*
@@ -9090,6 +9089,7 @@ stderr-variable	vvars.txt	/*stderr-variable*
 stdioopen()	vimfn.txt	/*stdioopen()*
 stdpath()	vimfn.txt	/*stdpath()*
 stl-%!	options.txt	/*stl-%!*
+stl-%0{	options.txt	/*stl-%0{*
 stl-%{	options.txt	/*stl-%{*
 str2float()	vimfn.txt	/*str2float()*
 str2list()	vimfn.txt	/*str2list()*
@@ -10719,6 +10719,7 @@ window-ID	windows.txt	/*window-ID*
 window-contents	intro.txt	/*window-contents*
 window-exit	editing.txt	/*window-exit*
 window-functions	usr_41.txt	/*window-functions*
+window-hidden	windows.txt	/*window-hidden*
 window-move-cursor	windows.txt	/*window-move-cursor*
 window-moving	windows.txt	/*window-moving*
 window-number	windows.txt	/*window-number*
