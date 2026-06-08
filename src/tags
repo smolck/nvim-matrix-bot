@@ -1117,7 +1117,6 @@ $quote	vimeval.txt	/*$quote*
 -h	starting.txt	/*-h*
 -i	starting.txt	/*-i*
 -l	starting.txt	/*-l*
--ll	starting.txt	/*-ll*
 -m	starting.txt	/*-m*
 -n	starting.txt	/*-n*
 -o	starting.txt	/*-o*
