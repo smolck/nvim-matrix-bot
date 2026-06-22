@@ -5070,7 +5070,6 @@ a{	motion.txt	/*a{*
 a}	motion.txt	/*a}*
 b	motion.txt	/*b*
 b:	vimeval.txt	/*b:*
-b:beancount_root	filetype.txt	/*b:beancount_root*
 b:changedtick	vimeval.txt	/*b:changedtick*
 b:changelog_name	filetype.txt	/*b:changelog_name*
 b:clojure_syntax_keywords	syntax.txt	/*b:clojure_syntax_keywords*
@@ -6234,6 +6233,7 @@ ft-lpc-syntax	syntax.txt	/*ft-lpc-syntax*
 ft-lua-omni	insert.txt	/*ft-lua-omni*
 ft-lua-plugin	filetype.txt	/*ft-lua-plugin*
 ft-lua-syntax	syntax.txt	/*ft-lua-syntax*
+ft-luau-plugin	filetype.txt	/*ft-luau-plugin*
 ft-mail-plugin	filetype.txt	/*ft-mail-plugin*
 ft-mail.vim	syntax.txt	/*ft-mail.vim*
 ft-make-syntax	syntax.txt	/*ft-make-syntax*
@@ -6404,10 +6404,6 @@ g:ada_space_errors	ft_ada.txt	/*g:ada_space_errors*
 g:ada_standard_types	ft_ada.txt	/*g:ada_standard_types*
 g:ada_with_gnat_project_files	ft_ada.txt	/*g:ada_with_gnat_project_files*
 g:ada_withuse_ordinary	ft_ada.txt	/*g:ada_withuse_ordinary*
-g:beancount_account_completion	filetype.txt	/*g:beancount_account_completion*
-g:beancount_completion_enable	filetype.txt	/*g:beancount_completion_enable*
-g:beancount_detailed_first	filetype.txt	/*g:beancount_detailed_first*
-g:beancount_separator_col	filetype.txt	/*g:beancount_separator_col*
 g:cargo_makeprg_params	ft_rust.txt	/*g:cargo_makeprg_params*
 g:cargo_shell_command_runner	ft_rust.txt	/*g:cargo_shell_command_runner*
 g:clipboard	provider.txt	/*g:clipboard*
@@ -6459,6 +6455,7 @@ g:loaded_python3_provider	provider.txt	/*g:loaded_python3_provider*
 g:loaded_ruby_provider	provider.txt	/*g:loaded_ruby_provider*
 g:lua_subversion	filetype.txt	/*g:lua_subversion*
 g:lua_version	filetype.txt	/*g:lua_version*
+g:luau_folding	filetype.txt	/*g:luau_folding*
 g:man_hardwrap	filetype.txt	/*g:man_hardwrap*
 g:markdown_fenced_languages	syntax.txt	/*g:markdown_fenced_languages*
 g:markdown_minlines	syntax.txt	/*g:markdown_minlines*
@@ -6546,7 +6543,6 @@ g:zipPlugin_ext	pi_zip.txt	/*g:zipPlugin_ext*
 g:zip_exec	pi_zip.txt	/*g:zip_exec*
 g:zip_extractcmd	pi_zip.txt	/*g:zip_extractcmd*
 g:zip_nomax	pi_zip.txt	/*g:zip_nomax*
-g:zip_shq	pi_zip.txt	/*g:zip_shq*
 g:zip_unzipcmd	pi_zip.txt	/*g:zip_unzipcmd*
 g:zip_zipcmd	pi_zip.txt	/*g:zip_zipcmd*
 g;	motion.txt	/*g;*
@@ -9080,6 +9076,7 @@ start-of-file	pattern.txt	/*start-of-file*
 start-vimdiff	diff.txt	/*start-vimdiff*
 starting	starting.txt	/*starting*
 starting.txt	starting.txt	/*starting.txt*
+startreason-variable	vvars.txt	/*startreason-variable*
 starttime-variable	vvars.txt	/*starttime-variable*
 startup	starting.txt	/*startup*
 startup-options	starting.txt	/*startup-options*
@@ -9898,6 +9895,7 @@ v:sizeofint	vim_diff.txt	/*v:sizeofint*
 v:sizeoflong	vim_diff.txt	/*v:sizeoflong*
 v:sizeofpointer	vim_diff.txt	/*v:sizeofpointer*
 v:stacktrace	vvars.txt	/*v:stacktrace*
+v:startreason	vvars.txt	/*v:startreason*
 v:starttime	vvars.txt	/*v:starttime*
 v:statusmsg	vvars.txt	/*v:statusmsg*
 v:stderr	vvars.txt	/*v:stderr*
