@@ -2554,6 +2554,7 @@ $quote	vimeval.txt	/*$quote*
 :res	windows.txt	/*:res*
 :resize	windows.txt	/*:resize*
 :restart	gui.txt	/*:restart*
+:restart!	gui.txt	/*:restart!*
 :ret	change.txt	/*:ret*
 :retab	change.txt	/*:retab*
 :retab!	change.txt	/*:retab!*
@@ -3378,6 +3379,7 @@ CTRL-\_CTRL-N	intro.txt	/*CTRL-\\_CTRL-N*
 CTRL-]	tagsrch.txt	/*CTRL-]*
 CTRL-^	editing.txt	/*CTRL-^*
 CTRL-{char}	helphelp.txt	/*CTRL-{char}*
+ChanClose	autocmd.txt	/*ChanClose*
 ChanInfo	autocmd.txt	/*ChanInfo*
 ChanOpen	autocmd.txt	/*ChanOpen*
 Chinese	mbyte.txt	/*Chinese*
@@ -6532,6 +6534,7 @@ g:typst_conceal	filetype.txt	/*g:typst_conceal*
 g:typst_embedded_languages	syntax.txt	/*g:typst_embedded_languages*
 g:typst_folding	filetype.txt	/*g:typst_folding*
 g:typst_foldnested	filetype.txt	/*g:typst_foldnested*
+g:typst_recommended_style	filetype.txt	/*g:typst_recommended_style*
 g:var	vimeval.txt	/*g:var*
 g:vim_indent_cont	indent.txt	/*g:vim_indent_cont*
 g:vim_json_conceal	syntax.txt	/*g:vim_json_conceal*
@@ -8285,14 +8288,15 @@ nvim_win_get_var()	api.txt	/*nvim_win_get_var()*
 nvim_win_get_width()	api.txt	/*nvim_win_get_width()*
 nvim_win_hide()	api.txt	/*nvim_win_hide()*
 nvim_win_is_valid()	api.txt	/*nvim_win_is_valid()*
+nvim_win_resize()	api.txt	/*nvim_win_resize()*
 nvim_win_set_buf()	api.txt	/*nvim_win_set_buf()*
 nvim_win_set_config()	api.txt	/*nvim_win_set_config()*
 nvim_win_set_cursor()	api.txt	/*nvim_win_set_cursor()*
-nvim_win_set_height()	api.txt	/*nvim_win_set_height()*
+nvim_win_set_height()	deprecated.txt	/*nvim_win_set_height()*
 nvim_win_set_hl_ns()	api.txt	/*nvim_win_set_hl_ns()*
 nvim_win_set_option()	deprecated.txt	/*nvim_win_set_option()*
 nvim_win_set_var()	api.txt	/*nvim_win_set_var()*
-nvim_win_set_width()	api.txt	/*nvim_win_set_width()*
+nvim_win_set_width()	deprecated.txt	/*nvim_win_set_width()*
 nvim_win_text_height()	api.txt	/*nvim_win_text_height()*
 o	insert.txt	/*o*
 o_CTRL-V	motion.txt	/*o_CTRL-V*
@@ -9313,13 +9317,16 @@ termdebug_use_prompt	terminal.txt	/*termdebug_use_prompt*
 termdebug_variables_window	terminal.txt	/*termdebug_variables_window*
 termdebug_wide	terminal.txt	/*termdebug_wide*
 terminal	terminal.txt	/*terminal*
+terminal-concepts	terminal.txt	/*terminal-concepts*
 terminal-config	terminal.txt	/*terminal-config*
+terminal-conpty	terminal.txt	/*terminal-conpty*
 terminal-debug	terminal.txt	/*terminal-debug*
 terminal-debugger	terminal.txt	/*terminal-debugger*
 terminal-emulator	terminal.txt	/*terminal-emulator*
 terminal-events	terminal.txt	/*terminal-events*
 terminal-input	terminal.txt	/*terminal-input*
 terminal-mode-index	index.txt	/*terminal-mode-index*
+terminal-ms-windows	terminal.txt	/*terminal-ms-windows*
 terminal-osc133	terminal.txt	/*terminal-osc133*
 terminal-osc52	terminal.txt	/*terminal-osc52*
 terminal-osc7	terminal.txt	/*terminal-osc7*
@@ -9521,6 +9528,7 @@ useful-mappings	tips.txt	/*useful-mappings*
 user-cmd-ambiguous	map.txt	/*user-cmd-ambiguous*
 user-commands	map.txt	/*user-commands*
 user-function	vimeval.txt	/*user-function*
+user-idle	vvars.txt	/*user-idle*
 user-manual	usr_toc.txt	/*user-manual*
 useractive-variable	vvars.txt	/*useractive-variable*
 userdata	luaref.txt	/*userdata*
@@ -9830,7 +9838,7 @@ uv_timer_t	luvref.txt	/*uv_timer_t*
 uv_tty_t	luvref.txt	/*uv_tty_t*
 uv_udp_t	luvref.txt	/*uv_udp_t*
 v	visual.txt	/*v*
-v:	vimeval.txt	/*v:*
+v:	vvars.txt	/*v:*
 v:argf	vvars.txt	/*v:argf*
 v:argv	vvars.txt	/*v:argv*
 v:char	vvars.txt	/*v:char*
@@ -9928,7 +9936,7 @@ v:throwpoint	vvars.txt	/*v:throwpoint*
 v:true	vvars.txt	/*v:true*
 v:useractive	vvars.txt	/*v:useractive*
 v:val	vvars.txt	/*v:val*
-v:var	vimeval.txt	/*v:var*
+v:var	vvars.txt	/*v:var*
 v:version	vvars.txt	/*v:version*
 v:versionlong	vvars.txt	/*v:versionlong*
 v:vim_did_enter	vvars.txt	/*v:vim_did_enter*
@@ -10401,8 +10409,6 @@ vim.lsp.protocol.resolve_capabilities()	lsp.txt	/*vim.lsp.protocol.resolve_capab
 vim.lsp.rpc.Client	lsp.txt	/*vim.lsp.rpc.Client*
 vim.lsp.rpc.connect()	lsp.txt	/*vim.lsp.rpc.connect()*
 vim.lsp.rpc.format_rpc_error()	lsp.txt	/*vim.lsp.rpc.format_rpc_error()*
-vim.lsp.rpc.notify()	lsp.txt	/*vim.lsp.rpc.notify()*
-vim.lsp.rpc.request()	lsp.txt	/*vim.lsp.rpc.request()*
 vim.lsp.rpc.rpc_response_error()	lsp.txt	/*vim.lsp.rpc.rpc_response_error()*
 vim.lsp.rpc.start()	lsp.txt	/*vim.lsp.rpc.start()*
 vim.lsp.semantic_tokens.enable()	lsp.txt	/*vim.lsp.semantic_tokens.enable()*
