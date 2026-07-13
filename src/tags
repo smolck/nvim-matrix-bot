@@ -707,6 +707,7 @@ $quote	vimeval.txt	/*$quote*
 'opfunc'	options.txt	/*'opfunc'*
 'option'	helphelp.txt	/*'option'*
 'pa'	options.txt	/*'pa'*
+'packlockfile'	options.txt	/*'packlockfile'*
 'packpath'	options.txt	/*'packpath'*
 'para'	options.txt	/*'para'*
 'paragraphs'	options.txt	/*'paragraphs'*
@@ -719,6 +720,7 @@ $quote	vimeval.txt	/*$quote*
 'pex'	options.txt	/*'pex'*
 'ph'	options.txt	/*'ph'*
 'pi'	options.txt	/*'pi'*
+'plf'	options.txt	/*'plf'*
 'pm'	options.txt	/*'pm'*
 'pmw'	options.txt	/*'pmw'*
 'pp'	options.txt	/*'pp'*
@@ -10198,6 +10200,7 @@ vim.fs.exists()	lua.txt	/*vim.fs.exists()*
 vim.fs.ext()	lua.txt	/*vim.fs.ext()*
 vim.fs.find()	lua.txt	/*vim.fs.find()*
 vim.fs.joinpath()	lua.txt	/*vim.fs.joinpath()*
+vim.fs.mkdir()	lua.txt	/*vim.fs.mkdir()*
 vim.fs.normalize()	lua.txt	/*vim.fs.normalize()*
 vim.fs.parents()	lua.txt	/*vim.fs.parents()*
 vim.fs.read()	lua.txt	/*vim.fs.read()*
