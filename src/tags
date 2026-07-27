@@ -726,7 +726,7 @@ $quote	vimeval.txt	/*$quote*
 'pp'	options.txt	/*'pp'*
 'preserveindent'	options.txt	/*'preserveindent'*
 'previewheight'	options.txt	/*'previewheight'*
-'previewpopup'	vim_diff.txt	/*'previewpopup'*
+'previewpopup'	options.txt	/*'previewpopup'*
 'previewwindow'	options.txt	/*'previewwindow'*
 'printdevice'	vim_diff.txt	/*'printdevice'*
 'printencoding'	vim_diff.txt	/*'printencoding'*
@@ -742,6 +742,7 @@ $quote	vimeval.txt	/*$quote*
 'pummaxwidth'	options.txt	/*'pummaxwidth'*
 'pumwidth'	options.txt	/*'pumwidth'*
 'pvh'	options.txt	/*'pvh'*
+'pvp'	options.txt	/*'pvp'*
 'pvw'	options.txt	/*'pvw'*
 'pw'	options.txt	/*'pw'*
 'pyx'	options.txt	/*'pyx'*
@@ -3743,7 +3744,6 @@ E334	gui.txt	/*E334*
 E335	gui.txt	/*E335*
 E336	gui.txt	/*E336*
 E337	gui.txt	/*E337*
-E338	editing.txt	/*E338*
 E339	message.txt	/*E339*
 E34	various.txt	/*E34*
 E341	message.txt	/*E341*
@@ -4068,9 +4068,6 @@ E61	pattern.txt	/*E61*
 E610	editing.txt	/*E610*
 E6100	vimfn.txt	/*E6100*
 E612	sign.txt	/*E612*
-E614	editing.txt	/*E614*
-E615	editing.txt	/*E615*
-E616	editing.txt	/*E616*
 E62	pattern.txt	/*E62*
 E63	pattern.txt	/*E63*
 E64	pattern.txt	/*E64*
@@ -4432,6 +4429,7 @@ Integer	vimeval.txt	/*Integer*
 Iter	lua.txt	/*Iter*
 Iter:all()	lua.txt	/*Iter:all()*
 Iter:any()	lua.txt	/*Iter:any()*
+Iter:count()	lua.txt	/*Iter:count()*
 Iter:each()	lua.txt	/*Iter:each()*
 Iter:enumerate()	lua.txt	/*Iter:enumerate()*
 Iter:filter()	lua.txt	/*Iter:filter()*
@@ -7400,6 +7398,7 @@ log_levels	lua.txt	/*log_levels*
 love	credits.txt	/*love*
 lowercase	change.txt	/*lowercase*
 lsp	lsp.txt	/*lsp*
+lsp-activate	lsp.txt	/*lsp-activate*
 lsp-api	lsp.txt	/*lsp-api*
 lsp-attach	lsp.txt	/*lsp-attach*
 lsp-autocompletion	lsp.txt	/*lsp-autocompletion*
@@ -8452,6 +8451,7 @@ postgresql	ft_sql.txt	/*postgresql*
 pow()	vimfn.txt	/*pow()*
 preinserted()	vimfn.txt	/*preinserted()*
 prevcount-variable	vvars.txt	/*prevcount-variable*
+preview-popup	windows.txt	/*preview-popup*
 preview-window	windows.txt	/*preview-window*
 prevnonblank()	vimfn.txt	/*prevnonblank()*
 primary-selection	provider.txt	/*primary-selection*
