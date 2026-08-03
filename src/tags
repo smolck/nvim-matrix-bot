@@ -1111,6 +1111,7 @@ $quote	vimeval.txt	/*$quote*
 -S	starting.txt	/*-S*
 -V	starting.txt	/*-V*
 -W	starting.txt	/*-W*
+-_default	motion.txt	/*-_default*
 -b	starting.txt	/*-b*
 -c	starting.txt	/*-c*
 -d	starting.txt	/*-d*
@@ -2025,6 +2026,8 @@ $quote	vimeval.txt	/*$quote*
 :execute	vimeval.txt	/*:execute*
 :exi	editing.txt	/*:exi*
 :exit	editing.txt	/*:exit*
+:exm	intro.txt	/*:exm*
+:exmode	intro.txt	/*:exmode*
 :exu	helphelp.txt	/*:exu*
 :exusage	helphelp.txt	/*:exusage*
 :f	editing.txt	/*:f*
@@ -6432,6 +6435,7 @@ g:filetype_haredoc	ft_hare.txt	/*g:filetype_haredoc*
 g:filetype_md	syntax.txt	/*g:filetype_md*
 g:filetype_r	syntax.txt	/*g:filetype_r*
 g:ft_man_folding_enable	filetype.txt	/*g:ft_man_folding_enable*
+g:ftplugin_java_source_path	filetype.txt	/*g:ftplugin_java_source_path*
 g:ftplugin_rust_source_path	ft_rust.txt	/*g:ftplugin_rust_source_path*
 g:gnat	ft_ada.txt	/*g:gnat*
 g:gnat.Error_Format	ft_ada.txt	/*g:gnat.Error_Format*
@@ -6453,6 +6457,7 @@ g:health	health.txt	/*g:health*
 g:lf_shell_syntax	syntax.txt	/*g:lf_shell_syntax*
 g:loaded_node_provider	provider.txt	/*g:loaded_node_provider*
 g:loaded_nvim_dir_plugin	plugins.txt	/*g:loaded_nvim_dir_plugin*
+g:loaded_nvim_zip_plugin	zip.txt	/*g:loaded_nvim_zip_plugin*
 g:loaded_perl_provider	provider.txt	/*g:loaded_perl_provider*
 g:loaded_python3_provider	provider.txt	/*g:loaded_python3_provider*
 g:loaded_ruby_provider	provider.txt	/*g:loaded_ruby_provider*
@@ -6543,12 +6548,6 @@ g:vimsyn_noerror	syntax.txt	/*g:vimsyn_noerror*
 g:yaml_schema	syntax.txt	/*g:yaml_schema*
 g:zig_recommended_style	filetype.txt	/*g:zig_recommended_style*
 g:zig_std_dir	filetype.txt	/*g:zig_std_dir*
-g:zipPlugin_ext	pi_zip.txt	/*g:zipPlugin_ext*
-g:zip_exec	pi_zip.txt	/*g:zip_exec*
-g:zip_extractcmd	pi_zip.txt	/*g:zip_extractcmd*
-g:zip_nomax	pi_zip.txt	/*g:zip_nomax*
-g:zip_unzipcmd	pi_zip.txt	/*g:zip_unzipcmd*
-g:zip_zipcmd	pi_zip.txt	/*g:zip_zipcmd*
 g;	motion.txt	/*g;*
 g<	message.txt	/*g<*
 g<Down>	motion.txt	/*g<Down>*
@@ -8308,6 +8307,7 @@ objects	index.txt	/*objects*
 octal	vimeval.txt	/*octal*
 octal-nrformats	options.txt	/*octal-nrformats*
 octal-number	vimeval.txt	/*octal-number*
+old-zip	zip.txt	/*old-zip*
 oldfiles-variable	vvars.txt	/*oldfiles-variable*
 omap-info	map.txt	/*omap-info*
 omni-sql-completion	ft_sql.txt	/*omni-sql-completion*
@@ -8434,7 +8434,6 @@ pi_spec.txt	pi_spec.txt	/*pi_spec.txt*
 pi_swapmouse	gui.txt	/*pi_swapmouse*
 pi_tar.txt	pi_tar.txt	/*pi_tar.txt*
 pi_tutor.txt	pi_tutor.txt	/*pi_tutor.txt*
-pi_zip.txt	pi_zip.txt	/*pi_zip.txt*
 plsql	ft_sql.txt	/*plsql*
 plugin	usr_05.txt	/*plugin*
 plugin-details	filetype.txt	/*plugin-details*
@@ -10809,14 +10808,11 @@ zf	fold.txt	/*zf*
 zg	spell.txt	/*zg*
 zh	scroll.txt	/*zh*
 zi	fold.txt	/*zi*
-zip	pi_zip.txt	/*zip*
-zip-contents	pi_zip.txt	/*zip-contents*
-zip-copyright	pi_zip.txt	/*zip-copyright*
-zip-extension	pi_zip.txt	/*zip-extension*
-zip-history	pi_zip.txt	/*zip-history*
-zip-manual	pi_zip.txt	/*zip-manual*
-zip-usage	pi_zip.txt	/*zip-usage*
-zip-x	pi_zip.txt	/*zip-x*
+zip	zip.txt	/*zip*
+zip-integrations	zip.txt	/*zip-integrations*
+zip-limitations	zip.txt	/*zip-limitations*
+zip-listing	zip.txt	/*zip-listing*
+zip.txt	zip.txt	/*zip.txt*
 zj	fold.txt	/*zj*
 zk	fold.txt	/*zk*
 zl	scroll.txt	/*zl*
