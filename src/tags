@@ -1726,6 +1726,12 @@ $quote	vimeval.txt	/*$quote*
 :ball	windows.txt	/*:ball*
 :balt	windows.txt	/*:balt*
 :bar	cmdline.txt	/*:bar*
+:bc	editing.txt	/*:bc*
+:bcd	editing.txt	/*:bcd*
+:bcd!	editing.txt	/*:bcd!*
+:bcd-	editing.txt	/*:bcd-*
+:bch	editing.txt	/*:bch*
+:bchdir	editing.txt	/*:bchdir*
 :bd	windows.txt	/*:bd*
 :bdel	windows.txt	/*:bdel*
 :bdelete	windows.txt	/*:bdelete*
@@ -1940,6 +1946,7 @@ $quote	vimeval.txt	/*$quote*
 :delm	motion.txt	/*:delm*
 :delmarks	motion.txt	/*:delmarks*
 :detach	gui.txt	/*:detach*
+:detach!	gui.txt	/*:detach!*
 :di	change.txt	/*:di*
 :dif	diff.txt	/*:dif*
 :diff	diff.txt	/*:diff*
@@ -2198,6 +2205,7 @@ $quote	vimeval.txt	/*$quote*
 :lbuffer	quickfix.txt	/*:lbuffer*
 :lc	editing.txt	/*:lc*
 :lcd	editing.txt	/*:lcd*
+:lcd!	editing.txt	/*:lcd!*
 :lcd-	editing.txt	/*:lcd-*
 :lch	editing.txt	/*:lch*
 :lchdir	editing.txt	/*:lchdir*
@@ -2905,6 +2913,7 @@ $quote	vimeval.txt	/*$quote*
 :tags	tagsrch.txt	/*:tags*
 :tc	editing.txt	/*:tc*
 :tcd	editing.txt	/*:tcd*
+:tcd!	editing.txt	/*:tcd!*
 :tcd-	editing.txt	/*:tcd-*
 :tch	editing.txt	/*:tch*
 :tchdir	editing.txt	/*:tchdir*
@@ -3907,12 +3916,14 @@ E498	cmdline.txt	/*E498*
 E499	cmdline.txt	/*E499*
 E50	syntax.txt	/*E50*
 E500	cmdline.txt	/*E500*
-E5000	vim_diff.txt	/*E5000*
-E5001	vim_diff.txt	/*E5001*
-E5002	vim_diff.txt	/*E5002*
+E5000	vimfn.txt	/*E5000*
+E5001	vimfn.txt	/*E5001*
+E5002	vimfn.txt	/*E5002*
 E5003	options.txt	/*E5003*
 E5004	vimfn.txt	/*E5004*
 E5005	vimfn.txt	/*E5005*
+E5006	vimfn.txt	/*E5006*
+E5007	vimfn.txt	/*E5007*
 E5009	health.txt	/*E5009*
 E501	intro.txt	/*E501*
 E5010	vimeval.txt	/*E5010*
@@ -5786,6 +5797,7 @@ dim	syntax.txt	/*dim*
 dip	motion.txt	/*dip*
 dir	plugins.txt	/*dir*
 dir-buffer-mappings	plugins.txt	/*dir-buffer-mappings*
+dir-config	plugins.txt	/*dir-config*
 dir-disable	plugins.txt	/*dir-disable*
 dir-mappings	plugins.txt	/*dir-mappings*
 dis	motion.txt	/*dis*
@@ -7402,6 +7414,7 @@ lsp-api	lsp.txt	/*lsp-api*
 lsp-attach	lsp.txt	/*lsp-attach*
 lsp-autocompletion	lsp.txt	/*lsp-autocompletion*
 lsp-buf	lsp.txt	/*lsp-buf*
+lsp-buf-working-dir	lsp.txt	/*lsp-buf-working-dir*
 lsp-client	lsp.txt	/*lsp-client*
 lsp-codelens	lsp.txt	/*lsp-codelens*
 lsp-commands	lsp.txt	/*lsp-commands*
@@ -8479,6 +8492,7 @@ progname-variable	vvars.txt	/*progname-variable*
 progpath-variable	vvars.txt	/*progpath-variable*
 progress-message	message.txt	/*progress-message*
 project-config	options.txt	/*project-config*
+project-dir	editing.txt	/*project-dir*
 prompt-buffer	channel.txt	/*prompt-buffer*
 prompt_appendbuf()	vimfn.txt	/*prompt_appendbuf()*
 prompt_getinput()	vimfn.txt	/*prompt_getinput()*
@@ -10200,6 +10214,7 @@ vim.fs.read()	lua.txt	/*vim.fs.read()*
 vim.fs.relpath()	lua.txt	/*vim.fs.relpath()*
 vim.fs.rm()	lua.txt	/*vim.fs.rm()*
 vim.fs.root()	lua.txt	/*vim.fs.root()*
+vim.fs.slug()	lua.txt	/*vim.fs.slug()*
 vim.fs.write()	lua.txt	/*vim.fs.write()*
 vim.g	lua.txt	/*vim.g*
 vim.glob	lua.txt	/*vim.glob*
@@ -10740,6 +10755,7 @@ word-count	editing.txt	/*word-count*
 word-motions	motion.txt	/*word-motions*
 wordcount()	vimfn.txt	/*wordcount()*
 workspace-config	options.txt	/*workspace-config*
+workspace-dir	editing.txt	/*workspace-dir*
 wrap-off	intro.txt	/*wrap-off*
 write-compiler-plugin	usr_41.txt	/*write-compiler-plugin*
 write-device	editing.txt	/*write-device*
@@ -10809,9 +10825,8 @@ zg	spell.txt	/*zg*
 zh	scroll.txt	/*zh*
 zi	fold.txt	/*zi*
 zip	zip.txt	/*zip*
-zip-integrations	zip.txt	/*zip-integrations*
 zip-limitations	zip.txt	/*zip-limitations*
-zip-listing	zip.txt	/*zip-listing*
+zip-mappings	zip.txt	/*zip-mappings*
 zip.txt	zip.txt	/*zip.txt*
 zj	fold.txt	/*zj*
 zk	fold.txt	/*zk*
