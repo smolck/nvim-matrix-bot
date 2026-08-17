@@ -1373,6 +1373,7 @@ $quote	vimeval.txt	/*$quote*
 09.2	usr_09.txt	/*09.2*
 09.3	usr_09.txt	/*09.3*
 09.4	usr_09.txt	/*09.4*
+0b	vimeval.txt	/*0b*
 0o	vimeval.txt	/*0o*
 0x	vimeval.txt	/*0x*
 10.1	usr_10.txt	/*10.1*
@@ -3408,6 +3409,7 @@ Client:request_sync()	lsp.txt	/*Client:request_sync()*
 Client:stop()	lsp.txt	/*Client:stop()*
 Client:supports_method()	lsp.txt	/*Client:supports_method()*
 Cmd-event	autocmd.txt	/*Cmd-event*
+CmdAtom	autocmd.txt	/*CmdAtom*
 CmdUndefined	autocmd.txt	/*CmdUndefined*
 Cmdline	cmdline.txt	/*Cmdline*
 Cmdline-mode	cmdline.txt	/*Cmdline-mode*
@@ -3445,6 +3447,7 @@ DiffUpdated	autocmd.txt	/*DiffUpdated*
 Digraphs	digraph.txt	/*Digraphs*
 DirChanged	autocmd.txt	/*DirChanged*
 DirChangedPre	autocmd.txt	/*DirChangedPre*
+DirReadPost	plugins.txt	/*DirReadPost*
 E	motion.txt	/*E*
 E10	message.txt	/*E10*
 E100	diff.txt	/*E100*
@@ -5672,6 +5675,7 @@ dev-api-name	dev.txt	/*dev-api-name*
 dev-api-patterns	dev.txt	/*dev-api-patterns*
 dev-arch	dev_arch.txt	/*dev-arch*
 dev-augroup-name	dev.txt	/*dev-augroup-name*
+dev-cmdatom	dev_arch.txt	/*dev-cmdatom*
 dev-doc	dev.txt	/*dev-doc*
 dev-error-codes	dev.txt	/*dev-error-codes*
 dev-error-patterns	dev.txt	/*dev-error-patterns*
@@ -5687,6 +5691,7 @@ dev-layout	dev_arch.txt	/*dev-layout*
 dev-lua	dev.txt	/*dev-lua*
 dev-lua-builtin	dev_arch.txt	/*dev-lua-builtin*
 dev-lua-doc	dev.txt	/*dev-lua-doc*
+dev-multicursor	dev_arch.txt	/*dev-multicursor*
 dev-name-common	dev.txt	/*dev-name-common*
 dev-name-events	dev.txt	/*dev-name-events*
 dev-namespace-name	dev.txt	/*dev-namespace-name*
@@ -5697,6 +5702,7 @@ dev-new-vimfn	dev_arch.txt	/*dev-new-vimfn*
 dev-provider	dev.txt	/*dev-provider*
 dev-quickstart	dev_tools.txt	/*dev-quickstart*
 dev-run-test	dev_test.txt	/*dev-run-test*
+dev-state	dev_arch.txt	/*dev-state*
 dev-style	dev_style.txt	/*dev-style*
 dev-style-comments	dev_style.txt	/*dev-style-comments*
 dev-style-features	dev_style.txt	/*dev-style-features*
@@ -5800,6 +5806,7 @@ dir-buffer-mappings	plugins.txt	/*dir-buffer-mappings*
 dir-config	plugins.txt	/*dir-config*
 dir-disable	plugins.txt	/*dir-disable*
 dir-mappings	plugins.txt	/*dir-mappings*
+dir-render	plugins.txt	/*dir-render*
 dis	motion.txt	/*dis*
 disable-menus	gui.txt	/*disable-menus*
 disable-mouse	vim_diff.txt	/*disable-mouse*
@@ -7201,6 +7208,7 @@ ins-autocompletion-example	insert.txt	/*ins-autocompletion-example*
 ins-completion	insert.txt	/*ins-completion*
 ins-completion-menu	insert.txt	/*ins-completion-menu*
 ins-expandtab	insert.txt	/*ins-expandtab*
+ins-repeat	insert.txt	/*ins-repeat*
 ins-reverse	rileft.txt	/*ins-reverse*
 ins-smarttab	insert.txt	/*ins-smarttab*
 ins-softtabstop	insert.txt	/*ins-softtabstop*
@@ -7967,6 +7975,7 @@ mbyte-locale	mbyte.txt	/*mbyte-locale*
 mbyte-options	mbyte.txt	/*mbyte-options*
 mbyte-utf8	mbyte.txt	/*mbyte-utf8*
 mbyte.txt	mbyte.txt	/*mbyte.txt*
+mcursor	repeat.txt	/*mcursor*
 menu-examples	gui.txt	/*menu-examples*
 menu-priority	gui.txt	/*menu-priority*
 menu-separator	gui.txt	/*menu-separator*
@@ -8006,6 +8015,7 @@ module()	luaref.txt	/*module()*
 more-prompt	message.txt	/*more-prompt*
 more-variables	vimeval.txt	/*more-variables*
 motion-count-multiplied	motion.txt	/*motion-count-multiplied*
+motion-repeat	repeat.txt	/*motion-repeat*
 motion.txt	motion.txt	/*motion.txt*
 mouse-hover	options.txt	/*mouse-hover*
 mouse-mode-table	gui.txt	/*mouse-mode-table*
@@ -8045,6 +8055,7 @@ multi-byte	mbyte.txt	/*multi-byte*
 multi-lang	mlang.txt	/*multi-lang*
 multi-repeat	repeat.txt	/*multi-repeat*
 multibyte	mbyte.txt	/*multibyte*
+multicursor	repeat.txt	/*multicursor*
 multilang	mlang.txt	/*multilang*
 multilang-menus	mlang.txt	/*multilang-menus*
 multilang-messages	mlang.txt	/*multilang-messages*
@@ -9986,6 +9997,7 @@ v_K	various.txt	/*v_K*
 v_META	visual.txt	/*v_META*
 v_O	visual.txt	/*v_O*
 v_P	change.txt	/*v_P*
+v_Q	repeat.txt	/*v_Q*
 v_Q-default	repeat.txt	/*v_Q-default*
 v_R	change.txt	/*v_R*
 v_S	change.txt	/*v_S*
@@ -10472,6 +10484,8 @@ vim.pack-directory	pack.txt	/*vim.pack-directory*
 vim.pack-events	pack.txt	/*vim.pack-events*
 vim.pack-examples	pack.txt	/*vim.pack-examples*
 vim.pack-lockfile	pack.txt	/*vim.pack-lockfile*
+vim.pack-manifest	pack.txt	/*vim.pack-manifest*
+vim.pack.Manifest	pack.txt	/*vim.pack.Manifest*
 vim.pack.Spec	pack.txt	/*vim.pack.Spec*
 vim.pack.add()	pack.txt	/*vim.pack.add()*
 vim.pack.del()	pack.txt	/*vim.pack.del()*
@@ -10676,6 +10690,7 @@ virtual-text	api.txt	/*virtual-text*
 visual-block	visual.txt	/*visual-block*
 visual-change	visual.txt	/*visual-change*
 visual-examples	visual.txt	/*visual-examples*
+visual-fixed-size	visual.txt	/*visual-fixed-size*
 visual-index	index.txt	/*visual-index*
 visual-mode	visual.txt	/*visual-mode*
 visual-operators	visual.txt	/*visual-operators*
