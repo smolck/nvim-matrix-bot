@@ -3463,7 +3463,6 @@ E108	vimeval.txt	/*E108*
 E1085	vimeval.txt	/*E1085*
 E109	vimeval.txt	/*E109*
 E1098	vimeval.txt	/*E1098*
-E11	cmdline.txt	/*E11*
 E110	vimeval.txt	/*E110*
 E1109	vimfn.txt	/*E1109*
 E111	vimeval.txt	/*E111*
@@ -3960,6 +3959,7 @@ E5113	message.txt	/*E5113*
 E5114	message.txt	/*E5114*
 E5115	message.txt	/*E5115*
 E5116	message.txt	/*E5116*
+E5117	message.txt	/*E5117*
 E512	editing.txt	/*E512*
 E513	options.txt	/*E513*
 E514	editing.txt	/*E514*
@@ -8476,6 +8476,7 @@ portable-config	nvim.txt	/*portable-config*
 postgresql	ft_sql.txt	/*postgresql*
 pow()	vimfn.txt	/*pow()*
 preinserted()	vimfn.txt	/*preinserted()*
+press-enter	deprecated.txt	/*press-enter*
 prevcount-variable	vvars.txt	/*prevcount-variable*
 preview-popup	windows.txt	/*preview-popup*
 preview-window	windows.txt	/*preview-window*
