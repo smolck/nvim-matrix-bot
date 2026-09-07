@@ -3107,7 +3107,7 @@ $quote	vimeval.txt	/*$quote*
 <C-End>	motion.txt	/*<C-End>*
 <C-Home>	motion.txt	/*<C-Home>*
 <C-Left>	motion.txt	/*<C-Left>*
-<C-LeftMouse>	tagsrch.txt	/*<C-LeftMouse>*
+<C-LeftMouse>	repeat.txt	/*<C-LeftMouse>*
 <C-PageDown>	tabpage.txt	/*<C-PageDown>*
 <C-PageUp>	tabpage.txt	/*<C-PageUp>*
 <C-Right>	motion.txt	/*<C-Right>*
@@ -4624,6 +4624,9 @@ SearchWrapped	autocmd.txt	/*SearchWrapped*
 Select	visual.txt	/*Select*
 Select-mode	visual.txt	/*Select-mode*
 Select-mode-mapping	visual.txt	/*Select-mode-mapping*
+Semaphore:acquire()	lua-async.txt	/*Semaphore:acquire()*
+Semaphore:release()	lua-async.txt	/*Semaphore:release()*
+Semaphore:with()	lua-async.txt	/*Semaphore:with()*
 Session	starting.txt	/*Session*
 SessionLoad-variable	starting.txt	/*SessionLoad-variable*
 SessionLoadPost	autocmd.txt	/*SessionLoadPost*
@@ -4697,6 +4700,15 @@ TabLeave	autocmd.txt	/*TabLeave*
 TabMoved	autocmd.txt	/*TabMoved*
 TabNew	autocmd.txt	/*TabNew*
 TabNewEntered	autocmd.txt	/*TabNewEntered*
+Task:close()	lua-async.txt	/*Task:close()*
+Task:completed()	lua-async.txt	/*Task:completed()*
+Task:detach()	lua-async.txt	/*Task:detach()*
+Task:on_complete()	lua-async.txt	/*Task:on_complete()*
+Task:pwait()	lua-async.txt	/*Task:pwait()*
+Task:raise_on_error()	lua-async.txt	/*Task:raise_on_error()*
+Task:status()	lua-async.txt	/*Task:status()*
+Task:traceback()	lua-async.txt	/*Task:traceback()*
+Task:wait()	lua-async.txt	/*Task:wait()*
 TermClose	autocmd.txt	/*TermClose*
 TermCursorNC	deprecated.txt	/*TermCursorNC*
 TermEnter	autocmd.txt	/*TermEnter*
@@ -4809,6 +4821,7 @@ ZZ	editing.txt	/*ZZ*
 [==]	pattern.txt	/*[==]*
 [A	editing.txt	/*[A*
 [B	windows.txt	/*[B*
+[C	repeat.txt	/*[C*
 [D	tagsrch.txt	/*[D*
 [D-default	tagsrch.txt	/*[D-default*
 [I	tagsrch.txt	/*[I*
@@ -4857,6 +4870,7 @@ ZZ	editing.txt	/*ZZ*
 ]<Space>	insert.txt	/*]<Space>*
 ]A	editing.txt	/*]A*
 ]B	windows.txt	/*]B*
+]C	repeat.txt	/*]C*
 ]D	tagsrch.txt	/*]D*
 ]D-default	tagsrch.txt	/*]D-default*
 ]I	tagsrch.txt	/*]I*
@@ -6594,7 +6608,7 @@ gM	motion.txt	/*gM*
 gN	visual.txt	/*gN*
 gO	various.txt	/*gO*
 gP	change.txt	/*gP*
-gQ	intro.txt	/*gQ*
+gQ	repeat.txt	/*gQ*
 gR	change.txt	/*gR*
 gT	tabpage.txt	/*gT*
 gU	change.txt	/*gU*
@@ -6604,6 +6618,7 @@ gV	visual.txt	/*gV*
 g]	tagsrch.txt	/*g]*
 g^	motion.txt	/*g^*
 g_	motion.txt	/*g_*
+g_CTRL-A	repeat.txt	/*g_CTRL-A*
 g_CTRL-G	editing.txt	/*g_CTRL-G*
 g_CTRL-H	visual.txt	/*g_CTRL-H*
 g_CTRL-]	tagsrch.txt	/*g_CTRL-]*
@@ -6892,6 +6907,8 @@ hl-LspReferenceTarget	lsp.txt	/*hl-LspReferenceTarget*
 hl-LspReferenceText	lsp.txt	/*hl-LspReferenceText*
 hl-LspReferenceWrite	lsp.txt	/*hl-LspReferenceWrite*
 hl-LspSignatureActiveParameter	lsp.txt	/*hl-LspSignatureActiveParameter*
+hl-MCursor	syntax.txt	/*hl-MCursor*
+hl-MCursorVisual	syntax.txt	/*hl-MCursorVisual*
 hl-MatchParen	syntax.txt	/*hl-MatchParen*
 hl-Menu	syntax.txt	/*hl-Menu*
 hl-ModeMsg	syntax.txt	/*hl-ModeMsg*
@@ -7480,6 +7497,7 @@ lua-apiStackSize	luaref.txt	/*lua-apiStackSize*
 lua-args	starting.txt	/*lua-args*
 lua-arithmetic	luaref.txt	/*lua-arithmetic*
 lua-assign	luaref.txt	/*lua-assign*
+lua-async	lua-async.txt	/*lua-async*
 lua-aux	luaref.txt	/*lua-aux*
 lua-auxFunctions	luaref.txt	/*lua-auxFunctions*
 lua-bit	lua-bit.txt	/*lua-bit*
@@ -7978,6 +7996,10 @@ mbyte-options	mbyte.txt	/*mbyte-options*
 mbyte-utf8	mbyte.txt	/*mbyte-utf8*
 mbyte.txt	mbyte.txt	/*mbyte.txt*
 mcursor	repeat.txt	/*mcursor*
+mcursor-clear	repeat.txt	/*mcursor-clear*
+mcursor-examples	repeat.txt	/*mcursor-examples*
+mcursor-limitations	repeat.txt	/*mcursor-limitations*
+mcursor-mouse	repeat.txt	/*mcursor-mouse*
 menu-examples	gui.txt	/*menu-examples*
 menu-priority	gui.txt	/*menu-priority*
 menu-separator	gui.txt	/*menu-separator*
@@ -8253,6 +8275,7 @@ nvim_list_tabpages()	api.txt	/*nvim_list_tabpages()*
 nvim_list_uis()	api.txt	/*nvim_list_uis()*
 nvim_list_wins()	api.txt	/*nvim_list_wins()*
 nvim_load_context()	api.txt	/*nvim_load_context()*
+nvim_mcursor()	api.txt	/*nvim_mcursor()*
 nvim_open_tabpage()	api.txt	/*nvim_open_tabpage()*
 nvim_open_term()	api.txt	/*nvim_open_term()*
 nvim_open_win()	api.txt	/*nvim_open_win()*
@@ -8584,6 +8607,7 @@ q	repeat.txt	/*q*
 q-args-example	map.txt	/*q-args-example*
 q/	cmdline.txt	/*q\/*
 q:	cmdline.txt	/*q:*
+q=	repeat.txt	/*q=*
 q?	cmdline.txt	/*q?*
 qf.vim	filetype.txt	/*qf.vim*
 quickfix	quickfix.txt	/*quickfix*
@@ -8610,6 +8634,7 @@ quickfix-valid	quickfix.txt	/*quickfix-valid*
 quickfix-window	quickfix.txt	/*quickfix-window*
 quickfix-window-ID	quickfix.txt	/*quickfix-window-ID*
 quickfix-window-function	quickfix.txt	/*quickfix-window-function*
+quickfix-winfixbuf	quickfix.txt	/*quickfix-winfixbuf*
 quickfix.txt	quickfix.txt	/*quickfix.txt*
 quickref	quickref.txt	/*quickref*
 quickref.txt	quickref.txt	/*quickref.txt*
@@ -10003,7 +10028,6 @@ v_META	visual.txt	/*v_META*
 v_O	visual.txt	/*v_O*
 v_P	change.txt	/*v_P*
 v_Q	repeat.txt	/*v_Q*
-v_Q-default	repeat.txt	/*v_Q-default*
 v_R	change.txt	/*v_R*
 v_S	change.txt	/*v_S*
 v_U	change.txt	/*v_U*
@@ -10153,6 +10177,18 @@ vim.SystemCompleted	lua.txt	/*vim.SystemCompleted*
 vim.SystemObj	lua.txt	/*vim.SystemObj*
 vim.VersionRange	lua.txt	/*vim.VersionRange*
 vim.api	lua.txt	/*vim.api*
+vim.async.Closable	lua-async.txt	/*vim.async.Closable*
+vim.async.Semaphore	lua-async.txt	/*vim.async.Semaphore*
+vim.async.Task	lua-async.txt	/*vim.async.Task*
+vim.async.await()	lua-async.txt	/*vim.async.await()*
+vim.async.checkpoint()	lua-async.txt	/*vim.async.checkpoint()*
+vim.async.is_closing()	lua-async.txt	/*vim.async.is_closing()*
+vim.async.iter()	lua-async.txt	/*vim.async.iter()*
+vim.async.pawait()	lua-async.txt	/*vim.async.pawait()*
+vim.async.run()	lua-async.txt	/*vim.async.run()*
+vim.async.sleep()	lua-async.txt	/*vim.async.sleep()*
+vim.async.timeout()	lua-async.txt	/*vim.async.timeout()*
+vim.async.wrap()	lua-async.txt	/*vim.async.wrap()*
 vim.b	lua.txt	/*vim.b*
 vim.base64	lua.txt	/*vim.base64*
 vim.base64.decode()	lua.txt	/*vim.base64.decode()*
