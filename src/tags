@@ -10177,6 +10177,7 @@ vim.SystemCompleted	lua.txt	/*vim.SystemCompleted*
 vim.SystemObj	lua.txt	/*vim.SystemObj*
 vim.VersionRange	lua.txt	/*vim.VersionRange*
 vim.api	lua.txt	/*vim.api*
+vim.async	lua-async.txt	/*vim.async*
 vim.async.Closable	lua-async.txt	/*vim.async.Closable*
 vim.async.Semaphore	lua-async.txt	/*vim.async.Semaphore*
 vim.async.Task	lua-async.txt	/*vim.async.Task*
