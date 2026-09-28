@@ -289,6 +289,7 @@ $quote	vimeval.txt	/*$quote*
 'foldnestmax'	options.txt	/*'foldnestmax'*
 'foldopen'	options.txt	/*'foldopen'*
 'foldtext'	options.txt	/*'foldtext'*
+'follow'	options.txt	/*'follow'*
 'formatexpr'	options.txt	/*'formatexpr'*
 'formatlistpat'	options.txt	/*'formatlistpat'*
 'formatoptions'	options.txt	/*'formatoptions'*
@@ -375,8 +376,8 @@ $quote	vimeval.txt	/*$quote*
 'isident'	options.txt	/*'isident'*
 'isk'	options.txt	/*'isk'*
 'iskeyword'	options.txt	/*'iskeyword'*
-'isp'	options.txt	/*'isp'*
-'isprint'	options.txt	/*'isprint'*
+'isp'	deprecated.txt	/*'isp'*
+'isprint	deprecated.txt	/*'isprint*
 'joinspaces'	options.txt	/*'joinspaces'*
 'jop'	options.txt	/*'jop'*
 'js'	options.txt	/*'js'*
@@ -544,6 +545,7 @@ $quote	vimeval.txt	/*$quote*
 'nofixendofline'	options.txt	/*'nofixendofline'*
 'nofixeol'	options.txt	/*'nofixeol'*
 'nofoldenable'	options.txt	/*'nofoldenable'*
+'nofollow'	options.txt	/*'nofollow'*
 'nofs'	options.txt	/*'nofs'*
 'nofsync'	options.txt	/*'nofsync'*
 'nohid'	options.txt	/*'nohid'*
@@ -5311,6 +5313,7 @@ c_no_bracket_error	syntax.txt	/*c_no_bracket_error*
 c_no_bsd	syntax.txt	/*c_no_bsd*
 c_no_c11	syntax.txt	/*c_no_c11*
 c_no_c23	syntax.txt	/*c_no_c23*
+c_no_c29	syntax.txt	/*c_no_c29*
 c_no_c99	syntax.txt	/*c_no_c99*
 c_no_cformat	syntax.txt	/*c_no_cformat*
 c_no_curly_error	syntax.txt	/*c_no_curly_error*
@@ -5834,6 +5837,7 @@ do	diff.txt	/*do*
 docbook	syntax.txt	/*docbook*
 dofile()	luaref.txt	/*dofile()*
 donate	uganda.txt	/*donate*
+dot-repeat	repeat.txt	/*dot-repeat*
 double-click	gui.txt	/*double-click*
 download	intro.txt	/*download*
 doxygen-syntax	syntax.txt	/*doxygen-syntax*
@@ -6251,6 +6255,8 @@ ft-html-plugin	filetype.txt	/*ft-html-plugin*
 ft-html-syntax	syntax.txt	/*ft-html-syntax*
 ft-htmlos-syntax	syntax.txt	/*ft-htmlos-syntax*
 ft-ia64-syntax	syntax.txt	/*ft-ia64-syntax*
+ft-icalendar-plugin	filetype.txt	/*ft-icalendar-plugin*
+ft-icalendar-syntax	syntax.txt	/*ft-icalendar-syntax*
 ft-idris2-indent	indent.txt	/*ft-idris2-indent*
 ft-idris2-plugin	filetype.txt	/*ft-idris2-plugin*
 ft-inform-syntax	syntax.txt	/*ft-inform-syntax*
@@ -6489,6 +6495,7 @@ g:hare_recommended_style	ft_hare.txt	/*g:hare_recommended_style*
 g:hare_space_error	ft_hare.txt	/*g:hare_space_error*
 g:haredoc_search_depth	ft_hare.txt	/*g:haredoc_search_depth*
 g:health	health.txt	/*g:health*
+g:icalendar_folding	filetype.txt	/*g:icalendar_folding*
 g:lf_shell_syntax	syntax.txt	/*g:lf_shell_syntax*
 g:loaded_node_provider	provider.txt	/*g:loaded_node_provider*
 g:loaded_nvim_dir_plugin	plugins.txt	/*g:loaded_nvim_dir_plugin*
@@ -10617,8 +10624,9 @@ vim.treesitter.Query	treesitter.txt	/*vim.treesitter.Query*
 vim.treesitter.add_directive()	deprecated.txt	/*vim.treesitter.add_directive()*
 vim.treesitter.add_predicate()	deprecated.txt	/*vim.treesitter.add_predicate()*
 vim.treesitter.foldexpr()	treesitter.txt	/*vim.treesitter.foldexpr()*
+vim.treesitter.get_captures()	treesitter.txt	/*vim.treesitter.get_captures()*
 vim.treesitter.get_captures_at_cursor()	treesitter.txt	/*vim.treesitter.get_captures_at_cursor()*
-vim.treesitter.get_captures_at_pos()	treesitter.txt	/*vim.treesitter.get_captures_at_pos()*
+vim.treesitter.get_captures_at_pos()	deprecated.txt	/*vim.treesitter.get_captures_at_pos()*
 vim.treesitter.get_node()	treesitter.txt	/*vim.treesitter.get_node()*
 vim.treesitter.get_node_at_cursor()	deprecated.txt	/*vim.treesitter.get_node_at_cursor()*
 vim.treesitter.get_node_at_pos()	deprecated.txt	/*vim.treesitter.get_node_at_pos()*
