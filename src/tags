@@ -8003,6 +8003,7 @@ mbyte-options	mbyte.txt	/*mbyte-options*
 mbyte-utf8	mbyte.txt	/*mbyte-utf8*
 mbyte.txt	mbyte.txt	/*mbyte.txt*
 mcursor	repeat.txt	/*mcursor*
+mcursor-api	repeat.txt	/*mcursor-api*
 mcursor-clear	repeat.txt	/*mcursor-clear*
 mcursor-examples	repeat.txt	/*mcursor-examples*
 mcursor-limitations	repeat.txt	/*mcursor-limitations*
@@ -8154,7 +8155,7 @@ nvim-missing	vim_diff.txt	/*nvim-missing*
 nvim-quickstart	nvim.txt	/*nvim-quickstart*
 nvim-removed	vim_diff.txt	/*nvim-removed*
 nvim-upstreamed	vim_diff.txt	/*nvim-upstreamed*
-nvim.spellfile.Opts	plugins.txt	/*nvim.spellfile.Opts*
+nvim.spellfile.Config	plugins.txt	/*nvim.spellfile.Config*
 nvim.txt	nvim.txt	/*nvim.txt*
 nvim_...()	vimfn.txt	/*nvim_...()*
 nvim__chan_set_detach()	api.txt	/*nvim__chan_set_detach()*
@@ -8282,7 +8283,6 @@ nvim_list_tabpages()	api.txt	/*nvim_list_tabpages()*
 nvim_list_uis()	api.txt	/*nvim_list_uis()*
 nvim_list_wins()	api.txt	/*nvim_list_wins()*
 nvim_load_context()	api.txt	/*nvim_load_context()*
-nvim_mcursor()	api.txt	/*nvim_mcursor()*
 nvim_open_tabpage()	api.txt	/*nvim_open_tabpage()*
 nvim_open_term()	api.txt	/*nvim_open_term()*
 nvim_open_win()	api.txt	/*nvim_open_win()*
@@ -10130,6 +10130,7 @@ v_u	change.txt	/*v_u*
 v_v	visual.txt	/*v_v*
 v_x	change.txt	/*v_x*
 v_y	change.txt	/*v_y*
+v_zq	repeat.txt	/*v_zq*
 v_zy	change.txt	/*v_zy*
 v_~	change.txt	/*v_~*
 vab	motion.txt	/*vab*
@@ -10194,6 +10195,7 @@ vim.async.is_closing()	lua-async.txt	/*vim.async.is_closing()*
 vim.async.iter()	lua-async.txt	/*vim.async.iter()*
 vim.async.pawait()	lua-async.txt	/*vim.async.pawait()*
 vim.async.run()	lua-async.txt	/*vim.async.run()*
+vim.async.semaphore()	lua-async.txt	/*vim.async.semaphore()*
 vim.async.sleep()	lua-async.txt	/*vim.async.sleep()*
 vim.async.timeout()	lua-async.txt	/*vim.async.timeout()*
 vim.async.wrap()	lua-async.txt	/*vim.async.wrap()*
@@ -10901,6 +10903,7 @@ zm	fold.txt	/*zm*
 zn	fold.txt	/*zn*
 zo	fold.txt	/*zo*
 zp	change.txt	/*zp*
+zq	repeat.txt	/*zq*
 zr	fold.txt	/*zr*
 zs	scroll.txt	/*zs*
 zt	scroll.txt	/*zt*
