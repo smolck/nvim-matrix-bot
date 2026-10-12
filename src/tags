@@ -5326,6 +5326,7 @@ c_syntax_for_h	syntax.txt	/*c_syntax_for_h*
 c_wildchar	cmdline.txt	/*c_wildchar*
 call()	vimfn.txt	/*call()*
 carriage-return	intro.txt	/*carriage-return*
+cascading-variable	vvars.txt	/*cascading-variable*
 case	change.txt	/*case*
 catch-all	vimeval.txt	/*catch-all*
 catch-errors	vimeval.txt	/*catch-errors*
@@ -8158,7 +8159,6 @@ nvim-upstreamed	vim_diff.txt	/*nvim-upstreamed*
 nvim.spellfile.Config	plugins.txt	/*nvim.spellfile.Config*
 nvim.txt	nvim.txt	/*nvim.txt*
 nvim_...()	vimfn.txt	/*nvim_...()*
-nvim__chan_set_detach()	api.txt	/*nvim__chan_set_detach()*
 nvim__cmdwin_set()	api.txt	/*nvim__cmdwin_set()*
 nvim__complete_set()	api.txt	/*nvim__complete_set()*
 nvim__exec_lua_fast()	api.txt	/*nvim__exec_lua_fast()*
@@ -8217,6 +8217,7 @@ nvim_call_atomic()	deprecated.txt	/*nvim_call_atomic()*
 nvim_call_dict_function()	api.txt	/*nvim_call_dict_function()*
 nvim_call_function()	api.txt	/*nvim_call_function()*
 nvim_chan_send()	api.txt	/*nvim_chan_send()*
+nvim_chan_set()	api.txt	/*nvim_chan_set()*
 nvim_clear_autocmds()	api.txt	/*nvim_clear_autocmds()*
 nvim_cmd()	api.txt	/*nvim_cmd()*
 nvim_command()	api.txt	/*nvim_command()*
@@ -9531,6 +9532,7 @@ ui-cmdline	api-ui-events.txt	/*ui-cmdline*
 ui-event-grid_line	api-ui-events.txt	/*ui-event-grid_line*
 ui-event-highlight_set	api-ui-events.txt	/*ui-event-highlight_set*
 ui-event-hl_attr_define	api-ui-events.txt	/*ui-event-hl_attr_define*
+ui-event-restart	api-ui-events.txt	/*ui-event-restart*
 ui-events	api-ui-events.txt	/*ui-events*
 ui-ext-options	api-ui-events.txt	/*ui-ext-options*
 ui-global	api-ui-events.txt	/*ui-global*
@@ -9900,6 +9902,7 @@ v	visual.txt	/*v*
 v:	vvars.txt	/*v:*
 v:argf	vvars.txt	/*v:argf*
 v:argv	vvars.txt	/*v:argv*
+v:cascading	vvars.txt	/*v:cascading*
 v:char	vvars.txt	/*v:char*
 v:charconvert_from	vvars.txt	/*v:charconvert_from*
 v:charconvert_to	vvars.txt	/*v:charconvert_to*
