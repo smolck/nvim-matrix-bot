@@ -4084,6 +4084,8 @@ E608	vimeval.txt	/*E608*
 E61	pattern.txt	/*E61*
 E610	editing.txt	/*E610*
 E6100	vimfn.txt	/*E6100*
+E6101	gui.txt	/*E6101*
+E6102	gui.txt	/*E6102*
 E612	sign.txt	/*E612*
 E62	pattern.txt	/*E62*
 E63	pattern.txt	/*E63*
@@ -4647,6 +4649,7 @@ StdinReadPre	autocmd.txt	/*StdinReadPre*
 String	vimeval.txt	/*String*
 SwapExists	autocmd.txt	/*SwapExists*
 Syntax	autocmd.txt	/*Syntax*
+SystemObj:close()	lua.txt	/*SystemObj:close()*
 SystemObj:is_closing()	lua.txt	/*SystemObj:is_closing()*
 SystemObj:kill()	lua.txt	/*SystemObj:kill()*
 SystemObj:wait()	lua.txt	/*SystemObj:wait()*
@@ -7037,6 +7040,7 @@ hl-SpellLocal	syntax.txt	/*hl-SpellLocal*
 hl-SpellRare	syntax.txt	/*hl-SpellRare*
 hl-StatusLine	syntax.txt	/*hl-StatusLine*
 hl-StatusLineNC	syntax.txt	/*hl-StatusLineNC*
+hl-StatusLineRemote	syntax.txt	/*hl-StatusLineRemote*
 hl-StatusLineTerm	syntax.txt	/*hl-StatusLineTerm*
 hl-StatusLineTermNC	syntax.txt	/*hl-StatusLineTermNC*
 hl-StderrMsg	syntax.txt	/*hl-StderrMsg*
@@ -8735,6 +8739,7 @@ remote-plugin-example	remote_plugin.txt	/*remote-plugin-example*
 remote-plugin-hosts	remote_plugin.txt	/*remote-plugin-hosts*
 remote-plugin-intro	remote_plugin.txt	/*remote-plugin-intro*
 remote-plugin-manifest	remote_plugin.txt	/*remote-plugin-manifest*
+remote-ssh	gui.txt	/*remote-ssh*
 remote.txt	remote.txt	/*remote.txt*
 remote_plugin.txt	remote_plugin.txt	/*remote_plugin.txt*
 remove()	vimfn.txt	/*remove()*
@@ -8765,8 +8770,8 @@ rot13	change.txt	/*rot13*
 round()	vimfn.txt	/*round()*
 rpc	api.txt	/*rpc*
 rpc-connecting	api.txt	/*rpc-connecting*
-rpcnotify()	vimfn.txt	/*rpcnotify()*
-rpcrequest()	vimfn.txt	/*rpcrequest()*
+rpcnotify()	deprecated.txt	/*rpcnotify()*
+rpcrequest()	deprecated.txt	/*rpcrequest()*
 rpcstart()	deprecated.txt	/*rpcstart()*
 rpcstop()	deprecated.txt	/*rpcstop()*
 ruby	if_ruby.txt	/*ruby*
@@ -10715,9 +10720,14 @@ vim.ui_attach()	lua.txt	/*vim.ui_attach()*
 vim.ui_detach()	lua.txt	/*vim.ui_detach()*
 vim.uri	lua.txt	/*vim.uri*
 vim.uri.decode()	lua.txt	/*vim.uri.decode()*
+vim.uri.decode_query()	lua.txt	/*vim.uri.decode_query()*
 vim.uri.encode()	lua.txt	/*vim.uri.encode()*
+vim.uri.encode_query()	lua.txt	/*vim.uri.encode_query()*
 vim.uri.from_buf()	lua.txt	/*vim.uri.from_buf()*
 vim.uri.from_fname()	lua.txt	/*vim.uri.from_fname()*
+vim.uri.join()	lua.txt	/*vim.uri.join()*
+vim.uri.new()	lua.txt	/*vim.uri.new()*
+vim.uri.normalize()	lua.txt	/*vim.uri.normalize()*
 vim.uri.parse()	lua.txt	/*vim.uri.parse()*
 vim.uri.to_buf()	lua.txt	/*vim.uri.to_buf()*
 vim.uri.to_fname()	lua.txt	/*vim.uri.to_fname()*
