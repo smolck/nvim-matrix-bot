@@ -304,6 +304,7 @@ $quote	vimeval.txt	/*$quote*
 'gfn'	options.txt	/*'gfn'*
 'gfs'	vim_diff.txt	/*'gfs'*
 'gfw'	options.txt	/*'gfw'*
+'ghr'	vim_diff.txt	/*'ghr'*
 'go'	vim_diff.txt	/*'go'*
 'gp'	options.txt	/*'gp'*
 'grepformat'	options.txt	/*'grepformat'*
@@ -314,6 +315,7 @@ $quote	vimeval.txt	/*$quote*
 'guifont'	options.txt	/*'guifont'*
 'guifontset'	vim_diff.txt	/*'guifontset'*
 'guifontwide'	options.txt	/*'guifontwide'*
+'guiheadroom	vim_diff.txt	/*'guiheadroom*
 'guioptions'	vim_diff.txt	/*'guioptions'*
 'guipty'	vim_diff.txt	/*'guipty'*
 'guitablabel'	vim_diff.txt	/*'guitablabel'*
@@ -5020,11 +5022,13 @@ api-global	api.txt	/*api-global*
 api-highlights	api.txt	/*api-highlights*
 api-indexing	api.txt	/*api-indexing*
 api-level	api.txt	/*api-level*
+api-lines	api.txt	/*api-lines*
 api-lua-detach	api.txt	/*api-lua-detach*
 api-mapping	api.txt	/*api-mapping*
 api-metadata	api.txt	/*api-metadata*
 api-options	api.txt	/*api-options*
 api-rpc	api.txt	/*api-rpc*
+api-string	api.txt	/*api-string*
 api-tabpage	api.txt	/*api-tabpage*
 api-types	api.txt	/*api-types*
 api-ui	api.txt	/*api-ui*
